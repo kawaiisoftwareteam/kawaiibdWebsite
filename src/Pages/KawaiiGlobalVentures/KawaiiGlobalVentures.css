@@ -189,3 +189,60 @@
     margin: 0 auto;
   }
 }
+
+/* Custom Header Overlay and Legibility Override for Kawaii Global Ventures */
+.kgvl-page .header_main_top::after {
+  background-color: rgba(34, 34, 34, 0.25) !important;
+}
+
+.kgvl-page .text_header_ {
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Text Size Enhancements for Readability */
+.kgvl-page .overview-desc {
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+}
+
+.kgvl-page .card-text {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}
+
+.kgvl-page .service-desc {
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+}
+
+.kgvl-page .service-title {
+  font-size: 1.4rem !important;
+}
+
+.kgvl-page .leader-name {
+  font-weight: 800 !important;
+}
+
+.kgvl-page .leader-role {
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+}
+
+.kgvl-page .leader-desc {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  color: #4b5563 !important;
+}
+
+.kgvl-page .commitment-box p {
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+}
+
+.kgvl-page .stat-num {
+  font-size: 2.5rem !important;
+}
+
+.kgvl-page .stat-lbl {
+  font-size: 0.95rem !important;
+}

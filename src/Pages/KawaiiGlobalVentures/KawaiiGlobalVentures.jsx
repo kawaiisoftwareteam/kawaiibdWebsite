@@ -93,7 +93,7 @@ const KawaiiGlobalVentures = () => {
     <div className="kgvl-page">
       <HeaderContact 
         text="Kawaii Global Ventures" 
-        backgroundImage={require('../../Assets/sisterconcernCover.png')} 
+        backgroundImage={require('../../Assets/kgvl_cover.png')} 
       />
 
       {/* Overview Hero Section */}
@@ -199,24 +199,50 @@ const KawaiiGlobalVentures = () => {
             <div className="h-1 w-16 bg-[#BE1E2D] mx-auto mt-4 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
-            {leaders.map((leader, idx) => (
-              <div key={idx} className="leader-card bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition-all duration-300">
-                <div className="leader-avatar w-16 h-16 rounded-full bg-gradient-to-tr from-[#BE1E2D] to-red-500 text-white flex items-center justify-center font-bold text-xl mb-4 shadow-inner">
+          {/* Top Leadership (2 Cards) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12 justify-center">
+            {leaders.slice(0, 2).map((leader, idx) => (
+              <div key={idx} className="leader-card bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg border border-gray-100 flex flex-col items-center text-center transition-all duration-300">
+                <div className="leader-avatar w-20 h-20 rounded-full bg-gradient-to-tr from-[#BE1E2D] to-red-500 text-white flex items-center justify-center font-extrabold text-2xl mb-4 shadow-md">
                   {leader.initials}
                 </div>
-                <h4 className="leader-name font-bold text-[#0C0C0C] text-base leading-tight">
+                <h4 className="leader-name font-extrabold text-[#0C0C0C] text-2xl leading-tight">
                   {leader.name}
                 </h4>
-                <p className="leader-role text-xs font-semibold text-[#BE1E2D] mt-1">
+                <p className="leader-role text-base font-bold text-[#BE1E2D] mt-2 uppercase tracking-wide">
                   {leader.role}
                 </p>
                 {leader.region && (
-                  <span className="leader-region text-[10px] text-gray-400 bg-gray-100 py-0.5 px-2 rounded-full mt-2">
+                  <span className="leader-region text-xs font-semibold text-gray-500 bg-gray-100 py-1 px-3 rounded-full mt-2">
                     {leader.region}
                   </span>
                 )}
-                <p className="leader-desc text-[11px] text-gray-500 mt-4 leading-relaxed border-t border-gray-50 pt-3">
+                <p className="leader-desc text-gray-600 mt-5 leading-relaxed border-t border-gray-100 pt-4">
+                  {leader.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Operational Executive Leaders (3 Cards) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-center">
+            {leaders.slice(2).map((leader, idx) => (
+              <div key={idx} className="leader-card bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg border border-gray-100 flex flex-col items-center text-center transition-all duration-300">
+                <div className="leader-avatar w-20 h-20 rounded-full bg-gradient-to-tr from-[#BE1E2D] to-red-500 text-white flex items-center justify-center font-extrabold text-2xl mb-4 shadow-md">
+                  {leader.initials}
+                </div>
+                <h4 className="leader-name font-extrabold text-[#0C0C0C] text-xl leading-tight">
+                  {leader.name}
+                </h4>
+                <p className="leader-role text-sm font-bold text-[#BE1E2D] mt-2 uppercase tracking-wide">
+                  {leader.role}
+                </p>
+                {leader.region && (
+                  <span className="leader-region text-xs font-semibold text-gray-500 bg-gray-100 py-1 px-3 rounded-full mt-2">
+                    {leader.region}
+                  </span>
+                )}
+                <p className="leader-desc text-gray-600 mt-5 leading-relaxed border-t border-gray-100 pt-4">
                   {leader.description}
                 </p>
               </div>

@@ -38,6 +38,8 @@ body {
   width: 125%;
   min-height: 125vh;
   overflow-y: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .main-wrapper {
