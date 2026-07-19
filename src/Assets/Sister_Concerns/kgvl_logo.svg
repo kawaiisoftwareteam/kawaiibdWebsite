@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="56" viewBox="0 0 280 56" fill="none">
+  <g>
+    <!-- Red Kawaii Emblem -->
+    <path d="M39.2816 6.84912H16.1027L4.51398 26.9126L16.1027 46.9775H39.2816L50.8744 26.9126L39.2816 6.84912ZM18.9815 10.4973H35.4118C33.7322 13.7475 31.4097 16.6225 28.5854 18.948C25.7611 21.2736 22.4937 23.001 18.9815 24.0256V10.4973ZM18.9815 29.7983C22.4936 30.8231 25.7609 32.5506 28.5852 34.8761C31.4095 37.2016 33.732 40.0765 35.4118 43.3266H18.9815V29.7983ZM25.953 28.734H45.6074L38.4035 41.2035C35.5603 35.924 31.2354 31.5911 25.9612 28.7381L25.953 28.734ZM25.953 25.0858C31.2293 22.2346 35.5555 17.9013 38.3981 12.6204L45.6019 25.0899H25.953V25.0858ZM15.332 15.4829V38.3505L8.72621 26.9194L15.332 15.4951V15.4829Z" fill="#BE1E2D" />
+    
+    <!-- Text Label -->
+    <text x="62" y="26" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="800" fill="#0C0C0C" letter-spacing="1">KAWAII</text>
+    <text x="62" y="42" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#BE1E2D" letter-spacing="0.5">GLOBAL VENTURES</text>
+  </g>
+</svg>

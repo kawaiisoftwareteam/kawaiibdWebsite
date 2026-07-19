@@ -1,0 +1,29 @@
+.button_cta 
+{
+display: flex;
+padding: 12px 24px !important;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: 3px;
+border-bottom: 4px solid #000;
+background: #BE1E2D!important;
+transition: background-color 0.3s ease;
+}
+.button_cta:hover {
+    background: #1A1A1A !important;
+}
+.btn_sub
+{
+display: flex;
+align-items: flex-start;
+}
+.btn_text
+{
+color: #FFF;
+font-family: "Segoe UI";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px; /* 137.5% */
+}

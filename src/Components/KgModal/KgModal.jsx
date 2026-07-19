@@ -1,0 +1,17 @@
+import React from 'react';
+import './KgModal.css';
+
+const KgModal = ({ isOpen, onClose, children }) => {
+  if (!isOpen) return null;
+
+  return (
+      <div className="modal-overlay" onClick={onClose}>
+          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={onClose}>✖</button>
+              {children}
+          </div>
+      </div>
+  );
+};
+
+export default KgModal;

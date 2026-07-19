@@ -1,0 +1,157 @@
+.meet_team_main {
+    display: flex;
+    min-height: 400px;
+    padding: 150px 240px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    align-self: stretch;
+    position: relative;
+    background-image: url('../../Assets/meet_team_pic.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    box-sizing: border-box; /* Ensure padding is accounted for */
+  }
+  
+  .meet_team_main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay effect */
+  }
+  
+  .meet_team_box {
+    display: flex;
+    padding: 48px 0px;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    gap: 62px;
+    align-self: stretch;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.meet_team_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from center */
+    align-items: flex-start;
+    gap: 36px;
+    flex: 1 0 0;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0; /* Removed padding */
+    min-height: 373px; /* Match height of images */
+}
+
+.meet_teem_content {
+    display: flex;
+    padding: 0px 24px 36px 24px;
+    flex-direction: column;
+    justify-content: center; /* Changed from center */
+    align-items: flex-start;
+    gap: 36px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.meet_img_1 {
+    position: absolute;
+    left: 10px;
+top: -48px;
+    display: flex;
+    padding: 0px 66.83px 100px 0px;
+    align-items: center;
+    z-index: 1;
+}
+
+.meet_img_2 {
+    position: absolute;
+    width: 560px;
+    height: 373px;
+    right: -74px;
+    top: 10.5px;
+    border-radius: 8px;
+    border: 5px solid #FFF;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.meet_img_3 {
+    position: absolute;
+    width: 560px;
+    height: 373px;
+    right: -66px;
+    top: 0.5px;
+    border-radius: 8px;
+    background-image: url('../../Assets/meet_team_pic.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.meet_team_title {
+    color: #FFF;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    align-self: stretch;
+}
+
+.meet_team_description {
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (max-width: 768px) {
+    .meet_team_main {
+padding: 32px 16px;
+      }
+      .meet_team_box {
+       min-height: 450px;
+flex-direction: column;
+align-items: center;
+gap:100px;
+    }
+    
+    .meet_team_image {
+        gap: 0px;
+        min-height: 184px;
+    }
+
+    .meet_img_1 {
+        width: 330px;
+        height: 220px;
+        top: 23px;
+        left:10px;
+    }
+    
+    .meet_img_2 {
+        width: 330px;
+        height: 220px;
+        right: 61px;
+        top: 10.5px;
+    }
+    
+    .meet_img_3 {
+        width: 330px;
+        height: 220px;
+        right: 69px;
+        top: 0.5px;
+    }
+}

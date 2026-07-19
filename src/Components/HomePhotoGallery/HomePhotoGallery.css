@@ -1,0 +1,34 @@
+.HPgalleryMain
+{
+    display: flex;
+min-height: 400px;
+padding: 140px 240px;
+flex-direction: column;
+align-items: center;
+gap: 48px;
+background: #FFF;
+align-self: stretch;
+}
+.HPGcontentBox
+{
+    display: flex;
+align-items: flex-end;
+gap: 24px;
+align-self: stretch;
+}
+.HPGcontentText
+{
+    color: #5F6368;
+font-size: 55px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 109.091% */
+}
+
+@media (max-width: 768px) {
+    .HPgalleryMain
+{
+padding: 32px 16px;
+gap: 32px;
+}
+}

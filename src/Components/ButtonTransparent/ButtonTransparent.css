@@ -1,0 +1,28 @@
+.btn_transparent
+{
+display: flex;
+align-items: flex-start;
+}
+.btn_transparent_text
+{
+color: #FFF;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px; /* 137.5% */
+}
+
+.button_transparent
+{
+display: flex;
+padding: 12px 24px !important;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: 2px;
+border: 1px solid #FFF;
+transition: background-color 0.3s ease;
+}
+.button_transparent:hover {
+    background: #1A1A1A !important;
+}

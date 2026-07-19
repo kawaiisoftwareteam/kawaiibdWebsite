@@ -1,0 +1,33 @@
+.cp_info_text
+{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+color: #1A1A1A;
+font-size: 44px;
+font-style: normal;
+font-weight: 400;
+line-height: 66px; /* 150% */
+}
+.cp_info_row
+{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    border-top: 1px solid #C1C1C1; /* Top border */
+    border-bottom: 1px solid #C1C1C1; /* Bottom border */
+    flex-shrink: 0;
+}
+
+.cp_info_row_text
+{
+display: flex;
+width: 50%;
+padding: 25px;
+align-items: center;
+color: #1A1A1A;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}

@@ -1,0 +1,191 @@
+/* Kawaii Global Ventures Page Styles */
+
+.kgvl-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Badge Styling */
+.badge-jp-bd {
+  display: inline-block;
+  background-color: #FFE9E9;
+  color: #BE1E2D;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(190, 30, 45, 0.1);
+  animation: pulse-badge 2s infinite alternate;
+}
+
+@keyframes pulse-badge {
+  0% {
+    box-shadow: 0 0 0 0 rgba(190, 30, 45, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 6px rgba(190, 30, 45, 0.05);
+  }
+}
+
+/* Section Title and Typography */
+.section-title {
+  color: #0c0c0c;
+  line-height: 1.2;
+}
+
+.section-subtitle-red {
+  color: #BE1E2D;
+}
+
+/* Overview Graphic & Images */
+.overview-graphic img {
+  filter: brightness(0.95);
+}
+
+.overview-graphic:hover img {
+  filter: brightness(1.05);
+}
+
+/* Stat Cards */
+.stat-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  background-color: #ffffff;
+  border-color: #FFE9E9;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Vision and Mission Cards */
+.vision-card,
+.mission-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vision-card:hover {
+  border-color: #FFE9E9;
+  transform: translateY(-5px);
+}
+
+.mission-card:hover {
+  border-color: #e5e7eb;
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.vision-card:hover .icon-wrapper,
+.mission-card:hover .icon-wrapper {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Service Grid Cards */
+.service-card {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(190, 30, 45, 0.05);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.service-card:hover {
+  border-color: #FFE9E9;
+  transform: translateY(-6px);
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
+.service-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+}
+
+.service-icon {
+  font-size: 22px;
+}
+
+/* Leadership Team Grid */
+.leader-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leader-card:hover {
+  transform: translateY(-4px);
+  border-color: #FFE9E9;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.leader-avatar {
+  transition: transform 0.3s ease;
+}
+
+.leader-card:hover .leader-avatar {
+  transform: scale(1.05);
+}
+
+/* Commitment Container */
+.commitment-box {
+  position: relative;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .kgvl-overview-sec,
+  .kgvl-vision-mission,
+  .kgvl-services,
+  .kgvl-leadership,
+  .kgvl-commitment {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-container {
+    padding: 32px 24px;
+    gap: 32px;
+  }
+  
+  .overview-stats {
+    grid-template-cols: 1fr;
+    gap: 16px;
+  }
+
+  .kgvl-leadership .grid {
+    grid-template-cols: 1fr;
+    max-w: 320px;
+    margin: 0 auto;
+  }
+}

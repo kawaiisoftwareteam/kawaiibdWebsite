@@ -1,0 +1,68 @@
+/* Hide Google Translate bar and elements */
+.skiptranslate iframe {
+    display: none !important;
+  }
+  
+  .skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  .goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  #goog-gt-tt {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  .goog-te-spinner-pos {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  .goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  
+  
+  
+  /* Hide the Google Translate toolbar */
+  .goog-te-gadget {
+    height: 0px !important;
+    overflow: hidden !important;
+  }
+  
+  .VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    display: none !important;
+  }
+  
+  /* Additional rules to ensure complete hiding */
+  .goog-tooltip {
+    display: none !important;
+  }
+  
+  .goog-tooltip:hover {
+    display: none !important;
+  }
+  
+  .goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Hide translation button */
+  .VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    display: none !important;
+  }
+  
+  #goog-gt- {
+    display: none !important;
+  }
+  body {
+    top: 0 !important;
+  }

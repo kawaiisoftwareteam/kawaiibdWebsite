@@ -1,0 +1,238 @@
+.makenews
+{
+display: flex;
+min-height: 400px;
+padding: 140px 240px;
+flex-direction: column;
+align-items: center;
+gap: 48px;
+background: #FFF;
+align-self: stretch;
+position:relative
+}
+.textBoxnews
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+    flex: 1 0 0;
+}
+.titlenews
+{
+    color: #5F6368;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    align-self: stretch;
+    align-self: stretch;
+}
+.titledescription
+{
+    color: #202124;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+align-self: stretch;
+}
+.newsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* max-width: 464px; */
+    /* gap: 24px; */
+    flex: 1 0 0;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10), 0px 24px 44px 0px rgba(20, 20, 43, 0.04);
+    align-self: stretch;
+    overflow: hidden; /* Ensure child elements don't break border radius */
+    position: relative;
+}
+
+.newsCardImg {
+    display: flex;
+    height: 100%;
+    padding: 110px 145px 17px 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+    position: relative;
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px 6px 0 0; /* Only top corners rounded */
+}
+
+.readMoreArrow{
+    color: rgba(0, 0, 0, 0.40);
+}
+
+.newsCard .newsCardImg,
+.newsCard .newsCardBack,
+.newsCard .newsCardContentBox,
+.newsCard .newsCardContentDescription,
+.newsCard .newsDate,
+.newsCard .newsReadMoreText
+.newscard .readMoreArrow {
+    transition: all 0.3s ease;
+}
+
+.newsCard:hover {
+    .newsCardImg {
+        padding: 17px 145px 110px 0;
+    }
+    
+    .newsCardBack,
+    .newsCardContentBox {
+        background: #BE1E2D;
+    }
+    
+    .newsCardBack {
+        border-bottom: 0;
+        backdrop-filter: blur(5px);
+    }
+    
+    .newsCardContentDescription,
+    .newsDate,
+    .newsReadMoreText,
+    .readMoreArrow {
+        color: #fff;
+    }
+}
+
+
+/* Overlay using pseudo-element */
+.newsCardImg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% black overlay */
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit; /* Inherit border-radius from parent */
+}
+.newsCardImg > * {
+    position: relative;
+    z-index: 2;
+}
+.newsCardBack
+{
+    border-bottom: 2px solid #FFF;
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(5px);
+}
+.newsCardTitle
+{
+    padding:14px 13px 13px 26px;
+    overflow: hidden;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+}
+
+.newsCardCornerBg
+{
+position: absolute;
+left: 0;
+top: 0;
+}
+.newsCardCornerDownBg
+{
+position: absolute;
+right: 0px;
+bottom: -9px;
+}
+.newsCardContentBox
+{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+    background: #F9F9F9;
+    align-self: stretch;
+}
+.newsCardContentDescription
+{
+    overflow: hidden;
+    height: 138px;
+    align-self: stretch;
+    color: rgba(0, 0, 0, 0.60);
+    /* font-family: "Segoe UI"; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+}
+.newsCardMainBottomCorner
+{
+display: flex;
+padding: 88px 19px 0px 0px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+position: absolute;
+z-index:0;
+right: 0px;
+bottom: 0px;
+}
+.newsCardBottom
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.newsDate
+{
+    color: #999;
+/* font-family: Lato; */
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px; /* 178.571% */
+}
+.newsReadMore
+{
+    display: flex;
+align-items: center;
+gap: 6px;
+}
+.newsReadMoreText
+{
+    color: rgba(0, 0, 0, 0.40);
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 25px; /* 208.333% */
+text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .makenews
+{
+padding: 32px 16px;
+align-items: flex-start;
+}
+
+.titlenews
+{
+flex: 1 0 0;
+font-size: 30px;
+font-weight: 700;
+line-height: normal;
+}
+}

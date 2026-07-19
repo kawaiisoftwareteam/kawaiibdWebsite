@@ -1,0 +1,47 @@
+.heroMain
+{
+height: 668px;
+align-self: stretch;
+background: #FFEAF1;
+position: relative;
+}
+.heroCornerLeft
+{
+display: flex;
+width: 400px;
+height: 300px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0.3;
+}
+.heroCornerRight
+{
+    display: flex;
+width: 400px;
+height: 300px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .heroCornerLeft
+{
+    display: none;
+}
+.heroCornerRight
+{
+    display: none;
+}
+.heroMain
+{
+height: 300px;
+}
+}

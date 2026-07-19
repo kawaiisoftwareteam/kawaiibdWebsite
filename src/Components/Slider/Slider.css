@@ -1,0 +1,237 @@
+.heroSlider
+{
+width: 1350px;
+height: 670px;
+margin: 100px 240px;
+position: absolute;
+border-radius: 15px;
+background: #FFF;
+z-index:1;
+}
+.heroSlide {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: center;
+    background-size: cover;
+    height: 670px;
+    position: relative;
+}
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    z-index: 1;
+}
+.heroCopyBox
+{
+    display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 6px;
+left: 0;
+bottom:33px;
+position:absolute;
+z-index:2;
+}
+.heroSpanStyle {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+.heroHeaderText
+{
+color: #FFF;
+font-family: Inter;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: 80px; /* 133.333% */
+}
+
+.heroDesText
+{
+    overflow: hidden;
+color: #FFF;
+text-overflow: ellipsis;
+/* font-family: "Segoe UI"; */
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 125% */
+}
+
+.heroButton
+{
+    display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+background: var(--Kawaii-Red, #BE1E2D);
+}
+
+.heroBtnWrap
+{
+    display: flex;
+align-items: flex-start;
+}
+
+.heroBtnText
+{
+    color: var(--Neutral-Foreground-On-Brand-Rest, #FFF);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 137.5% */
+text-transform: uppercase;
+}
+.heroPrevNext
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute; /* Added position */
+    right: 32px;
+    bottom: 30px;
+    z-index:2;
+}
+.sliderArrowDirection
+{
+display: flex;
+width: 64px;
+height: 64px;
+padding: 4px;
+justify-content: center;
+align-items: center;
+border-radius: 64px;
+border: 1px solid #FFF;
+cursor: pointer;
+}
+.herosliderArrow
+{
+display: flex;
+width: 56px;
+height: 56px;
+padding: 4px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 64px;
+background: rgba(0, 0, 0, 0.30);
+backdrop-filter: blur(15px);
+}
+
+/* Hide default navigation buttons */
+.react-slideshow-container .nav:first-of-type,
+.react-slideshow-container .nav:last-of-type {
+    display: none !important;
+}
+
+/* or try this alternative if the above doesn't work */
+.react-slideshow-container button[data-type="prev"],
+.react-slideshow-container button[data-type="next"] {
+    display: none !important;
+}
+
+/* If you're using Fade component specifically */
+.react-slideshow-fade-wrapper .nav {
+    display: none !important;
+}
+.heroMobileSlide
+{
+display: inline-flex;
+padding: 16px;
+align-items: flex-start;
+gap: 3px;
+position: absolute; /* Added position */
+    left: 0px;
+    top: 0px;
+    z-index:2;
+}
+.heroActiveRectangle
+{
+    width: 20px;
+height: 6px;
+border-radius: 6px;
+background: #FFF;
+}
+.heroActiveCircle
+{
+    width: 6px;
+height: 6px;
+border-radius: 6px;
+background: rgba(255, 255, 255, 0.70);
+}
+
+@media (max-width: 768px) {
+    .heroSlider
+{
+width: 100%;
+height: 300px;
+margin: 0px 0px;
+border-radius: 0px;
+background: #FFF;
+z-index:1;
+
+/* display: flex;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch; */
+}
+    .heroSlide {
+        height: 300px;          /* adjust height for smaller screens */
+        width: 100%;
+        border-radius: 0;       /* remove border radius */
+        background-size: cover; /* cover the full width of the slider */
+    }
+
+    .heroOverlay {
+        border-radius: 0;
+    }
+
+
+    /* Adjust other elements within the slider */
+    .heroCopyBox
+    {
+    display: flex;
+    width: 100%;
+    padding-top: 24px;
+    align-items: center;
+    gap: 12px;
+    }
+
+    .heroHeaderText, .heroDesText {
+        font-size: 1rem; /* scale down text for mobile */
+    }
+    .heroSpanStyle {
+        background: none;
+        backdrop-filter: none;
+padding: 6px;
+gap: 14px;
+    }
+    .heroHeaderText
+{
+text-align: center;
+font-size: 30px;
+font-weight: 600;
+line-height: 30px; /* 100% */
+}
+.heroDesText
+{
+text-align: center;
+font-size: 18px;
+line-height: 20px; /* 111.111% */
+}
+}

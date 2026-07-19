@@ -1,0 +1,86 @@
+.OurventureCardBox {
+display: flex;
+width: 30%;
+flex-direction: column;
+align-items: flex-start;
+flex-shrink: 0;
+align-self: stretch;
+border-radius: 6px;
+background: #FFF;
+box-shadow: 0px 12px 36px 0px rgba(20, 20, 43, 0.04);
+position:relative;
+overflow:hidden;
+}
+.ventureSvg
+{
+    width: 150px;
+height: 112.5px;
+position: absolute;
+right: -11px;
+bottom: -9px;
+z-index: 1;
+opacity: 0.4;
+}
+.OurVentureCardTitleBox
+{
+    display: flex;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+background: #3C4043;
+align-self: stretch;
+}
+.OurVentureCardTitle
+{
+color: #FFF;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+align-self: stretch;
+}
+.OurVentureCardContentBox
+{
+display: flex;
+padding: 24px 24px 24px 12px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+background: #FFF;
+align-self: stretch;
+transition: background 0.3s ease;
+border-top: 1px solid #FFF;
+}
+.OurventureCardBox:hover .OurVentureCardContentBox
+{
+    background:#3C4043;
+    border-top: 0.5px solid #FFF;
+}
+
+.OurVentureCardContent
+{
+    color: #5F6368;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+transition: color 0.3s ease;
+align-self: stretch;
+}
+
+.OurventureCardBox:hover .OurVentureCardContent
+{
+    color: #FFF;
+}
+
+
+@media (max-width: 768px) {
+    .OurventureCardBox {
+        width: 45%;
+    }
+  }

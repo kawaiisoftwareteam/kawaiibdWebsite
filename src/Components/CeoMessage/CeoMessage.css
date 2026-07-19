@@ -1,0 +1,261 @@
+.ceoMessage
+{
+display: flex;
+min-height: 400px;
+padding: 250px 240px 146px 240px;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+background: #FFF;
+align-self: stretch;
+position: relative;
+}
+.commaCeoMsg
+{
+position: absolute;
+left: 262px;
+top: 338px;
+}
+.contentBoxMsg
+{
+display: flex;
+padding: 0px 60px;
+justify-content: center;
+align-items: center;
+border-radius: 15px;
+align-self: stretch;
+}
+.contentLeftMsg
+{
+    display: flex;
+padding: 24px 0px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 36px;
+flex: 1 0 0;
+align-self: stretch;
+}
+.contentLeftMsgtext1
+{
+    color: #5F6368;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+align-self: stretch;
+}
+.contentLeftMsgHeader
+{
+    color: #5F6368;
+font-size: 45px;
+font-style: italic;
+font-weight: 700;
+line-height: 50px; /* 111.111% */
+}
+.contentLeftMsgSignBox
+{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+align-self: stretch;
+}
+.cotentMsgName
+{
+    overflow: hidden;
+color: #5F6368;
+text-overflow: ellipsis;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.cotentMsgDesignation
+{
+    overflow: hidden;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+color: rgba(95, 99, 104, 0.60);
+text-overflow: ellipsis;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.contentLeftMsgJoinBox
+{
+    display: flex;
+height: 44px;
+padding: 6px 12px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-left: 3px solid var(--Kawaii-Red, #BE1E2D);
+align-self: stretch;
+}
+.contentLeftMsgJoinText
+{
+    overflow: hidden;
+color: #5F6368;
+text-overflow: ellipsis;
+font-size: 16px;
+font-style: italic;
+font-weight: 350;
+line-height: normal;
+}
+
+.contentRightMsg
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    flex: 1 0 0;
+    position: relative;
+    /* padding: 0px 83px 50px 110px; */
+    align-self: stretch;
+}
+.contentRightMsgBox{
+width: 466.83px;
+height: 400px;
+position: absolute;
+right: 83.17px;
+}
+.contentRightImage {
+    display: flex;
+    width: 306px;
+    height: 306px;
+    padding: 9px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 315px;
+    border: 10px solid #FFEAF1;
+    position: absolute;
+    top: 53px;
+    left: 130px;
+    z-index: 3; /* Top layer */
+    overflow: hidden; 
+}
+
+.contentRightImageFrame {
+    display: flex;
+    width: 288px;
+    height: 288px;
+    padding: 7px 16.687px 0px 16px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 290px;
+    background: #FFF;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    z-index: 1; /* Middle layer */
+}
+
+.contentRightImgDS {
+    width: 255.313px;
+    height: 320px;
+    flex-shrink: 0;
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    z-index: 2; /* Bottom layer */
+}
+
+
+.blobMsg
+{
+    position: absolute;
+right: -0.17px;
+bottom: 0px;
+}
+.contentRightPattern
+{
+display: inline-flex;
+padding: 0px 66.83px 100px 0px;
+align-items: center;
+}
+.msgKgPattern
+{
+position: absolute;
+left: 0px;
+top: 0px;
+}
+
+@media (max-width: 768px) {
+    .ceoMessage {
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+        margin-top: 100px; /* Add space for the image */
+    }
+
+    .commaCeoMsg {
+        left: 16px;
+        bottom: 205px;
+    }
+
+    .contentBoxMsg {
+        padding: 0px;
+        gap: 16px;
+        flex-direction: column-reverse;
+    }
+
+    /* Add these new styles */
+    .contentRightMsg {
+        position: relative;
+        height: 350px; /* Fixed height for mobile */
+        width: 100%;
+        padding: 0;
+    }
+
+    .contentRightMsgBox {
+        width: 100%;
+        height: 350px;
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contentRightImage {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 250px; /* Smaller size for mobile */
+        height: 250px;
+    }
+
+    .contentRightImageFrame {
+        width: 232px; /* Adjust according to new image size */
+        height: 232px;
+    }
+
+    .contentRightImgDS {
+        width: 200px; /* Adjust according to new image size */
+        height: auto;
+    }
+
+    .contentLeftMsg {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .contentLeftMsgHeader {
+        font-size: 32px; /* Smaller font for mobile */
+        line-height: 38px;
+    }
+
+    .blobMsg {
+        width: 100%;
+        right: 0;
+    }
+    .msgKgPattern
+{
+top: -60px;
+}
+}

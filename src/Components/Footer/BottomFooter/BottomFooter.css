@@ -1,0 +1,83 @@
+.mainBottom{
+display: flex;
+padding: 20px 240px;
+align-items: center;
+gap: 24px;
+align-self: stretch;
+background: rgba(0, 0, 0, 0.30);
+}
+.bottom_button
+{
+display: flex;
+padding: 6px 0px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: var(--Medium, 4px);
+background: var(--Neutral-Background-Subtle-Rest, rgba(255, 255, 255, 0.00));
+}
+.bText{
+color: #FFF;
+font-family: "Segoe UI";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 114.286% */
+}
+.bCopyright {
+    flex: 1 0 0;
+    color: #FFF;
+text-align: center;
+/* Body/M */
+font-family: "Segoe UI";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 114.286% */
+}
+.lnFrame
+{
+display: flex;
+align-items: center;
+gap: 10px;
+/* align-self: stretch; */
+}
+.lnButton
+{
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: var(--Medium, 4px);
+border: 0.5px solid #FFF;
+background: var(--Neutral-Background-Transparent-Selected, rgba(255, 255, 255, 0.00));
+}
+
+.textWrapper
+{
+display: flex;
+padding: 0px 0px 2px 4px;
+align-items: flex-start;
+}
+.wrapText
+{
+color: #FFF;
+font-family: "Segoe UI";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 114.286% */
+}
+
+@media (max-width: 768px) {
+    .mainBottom{
+        display: flex;
+padding: 20px 16px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+    }
+  }

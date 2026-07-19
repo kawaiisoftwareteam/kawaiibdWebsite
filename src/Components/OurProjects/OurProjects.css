@@ -1,0 +1,75 @@
+.ourProjectsMain
+{
+display: flex;
+min-height: 400px;
+padding: 200px 240px;
+flex-direction: column;
+align-items: center;
+gap: 48px;
+align-self: stretch;
+position: relative;
+background-repeat: no-repeat; 
+background-size: cover;
+}
+.ourProjectsMain::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely within the parent */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(255,255,255, 0.85); /* 85% black overlay */
+    z-index: 1; /* Ensure it sits above the background but below content */
+}
+
+.ourProjectsMain > * {
+    position: relative; /* Ensure child elements are above the overlay */
+    z-index: 2; /* Bring content above the overlay */
+}
+
+.projectSvg
+{
+position: absolute;
+right: 0px;
+bottom: 0px;
+z-index: 1;
+}
+.ourProjectTitle
+{
+color: #222;
+font-size: 55px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 109.091% */
+}
+.ourProjectDescription
+{
+    color: #222;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.OurprojectSliderBox {
+    display: flex;
+    width: 100%;
+    min-height: 420px;
+    align-items: flex-start;
+    gap: 24px;
+    overflow: hidden;
+  }
+  
+  .embla__container {
+    display: flex;
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 768px) {
+    .ourProjectsMain
+{
+padding: 32px 16px;
+gap: 32px;
+}
+  }
+

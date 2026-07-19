@@ -1,0 +1,140 @@
+.mainTop {
+  display: flex;
+  padding: 80px 240px;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+
+  /* Background image */
+  background-image: url('../../../Assets/Footer/db60b37bc84379f89ce568b2d99841d7.png');
+  background-size: cover;
+  background-position: center;
+  position: relative; /* To position the overlay */
+  }
+  .mainTop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(34, 34, 34, .98); /* #222 with 20% transparency */
+    z-index: 1;
+    pointer-events: none; /* Allow interaction with content */
+}
+
+/* Ensuring the content is above the overlay */
+.mainTop > * {
+    position: relative;
+    z-index: 2;
+}
+
+.colLeft
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+align-self: stretch;
+border-right: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+.colRight 
+{
+display: flex;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+color: #fff;
+}
+
+.rLeft
+{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+align-self: stretch;
+}
+.countryTitle
+{
+display: flex;
+padding: 6px 0px;
+gap: 10px;
+align-self: stretch;
+font-size: 16px;
+font-style: normal;
+/* font-weight: 700; */
+line-height: 140%; /* 22.4px */
+text-transform: uppercase;
+}
+
+.frame
+{
+display: flex;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+align-items: center; 
+}
+.iconF {
+  font-size: 24px; /* Correct property for font size */
+  /* padding: 10px 0; 10px for top and bottom, 0 for left and right */
+}
+
+@media (max-width: 768px) {
+  .mainTop {
+    display: flex;
+padding: 32px 16px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+    }
+    .colLeft
+    {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center; 
+gap: 12px;
+align-self: stretch;
+border-right: none;
+    }
+    .rLeft
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+.frame
+{
+display: flex;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+align-items: center; 
+}
+.colRight 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.countryTitle
+{
+  text-align: center;      /* Center align the text */
+  display: block;          /* Ensure it's treated as a block-level element */
+  width: 100%;             /* Ensure it takes full width to center properly */
+  margin: 0 auto;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.40); 
+}
+}
