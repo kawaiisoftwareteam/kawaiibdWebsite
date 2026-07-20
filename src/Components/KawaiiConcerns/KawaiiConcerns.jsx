@@ -5,24 +5,24 @@ import hwch_1 from "../../Assets/ssw2.jpeg"
 import hwch_2 from "../../Assets/foodfest2.jpg"
 import hwch_2_1 from "../../Assets/tredmigcover.jpg"
 import hwch_3 from "../../Assets/SaaSKats.png"
-import hwch_4 from "../../Assets/KCCardImg/kflCard.jpeg"
-import hwch_5 from "../../Assets/KCCardImg/kecCard.png"
+// import hwch_4 from "../../Assets/KCCardImg/kflCard.jpeg"
+// import hwch_5 from "../../Assets/KCCardImg/kecCard.png"
 import hwch_6 from "../../Assets/KCCardImg/kgjCard.png"
 import hwch_6_1 from "../../Assets/bimanh.jpg"
 import hwch_7 from "../../Assets/KCCardImg/kddlCard.png"
 import hwch_8 from "../../Assets/KCCardImg/kielCard.png"
-import hwch_9 from "../../Assets/KCCardImg/kgcCard.png"
+// import hwch_9 from "../../Assets/KCCardImg/kgcCard.png"
 import sanajanaLogo from "../../Assets/Sister_Concerns/sanjana_logo.png"
 import ajLogo from "../../Assets/Sister_Concerns/aj_logo.png"
 import tredmig from "../../Assets/Sister_Concerns/tredmig.svg"
 import kastlLogo from "../../Assets/Sister_Concerns/KATSL_Logo.png"
-import kflLogo from "../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png"
-import keclLogo from "../../Assets/Sister_Concerns/2_logo.png"
+// import kflLogo from "../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png"
+// import keclLogo from "../../Assets/Sister_Concerns/2_logo.png"
 import kgjLogo from "../../Assets/Sister_Concerns/3_logo.png"
 import bhLogo from "../../Assets/Sister_Concerns/bimanholidays.webp"
 import kddlLogo from "../../Assets/Sister_Concerns/4_logo.png"
 import kiecLogo from "../../Assets/Sister_Concerns/5_logo.png"
-import kgcLogo from "../../Assets/Sister_Concerns/7_logo.png"
+// import kgcLogo from "../../Assets/Sister_Concerns/7_logo.png"
 import kgvlLogo from "../../Assets/Sister_Concerns/kgvl_logo.svg"
 import jpBusinessCenter from "../../Assets/jpBusinessCenter.png"
 import leftWhite from '../../Assets/top-left-corner-kg.svg'
@@ -68,25 +68,24 @@ const concernCards = [
         cardImg: hwch_3,
         cardLogo: kastlLogo
     },
-    {
-        cardId: 'kfl',
-        backgroundColor: '#E1F8DC',
-        concernName: 'Kawaii Fashion',
-        concernContent: 'Fashion sourcing company. ',
-        contentDescription: 'We provide comprehensive services including fashion brand establishment in Japan, OEM, ODM, wholesale, and e-commerce solutions, all tailored to meet the exact requirements of the Japanese market.',
-        cardImg: hwch_4,
-        cardLogo: kflLogo
-    }
-    ,
-    {
-        cardId: 'kecl',
-        backgroundColor: '#ACCAFF',
-        concernName: 'Kawaii Engineering & Construction',
-        concernContent: 'Construction focused company',
-        contentDescription: 'This division brings Japanese construction standards to Bangladesh. We undertake projects with a focus on quality, efficiency, and innovation.',
-        cardImg: hwch_5,
-        cardLogo: keclLogo
-    },
+    // {
+    //     cardId: 'kfl',
+    //     backgroundColor: '#E1F8DC',
+    //     concernName: 'Kawaii Fashion',
+    //     concernContent: 'Fashion sourcing company. ',
+    //     contentDescription: 'We provide comprehensive services including fashion brand establishment in Japan, OEM, ODM, wholesale, and e-commerce solutions, all tailored to meet the exact requirements of the Japanese market.',
+    //     cardImg: hwch_4,
+    //     cardLogo: kflLogo
+    // },
+    // {
+    //     cardId: 'kecl',
+    //     backgroundColor: '#ACCAFF',
+    //     concernName: 'Kawaii Engineering & Construction',
+    //     concernContent: 'Construction focused company',
+    //     contentDescription: 'This division brings Japanese construction standards to Bangladesh. We undertake projects with a focus on quality, efficiency, and innovation.',
+    //     cardImg: hwch_5,
+    //     cardLogo: keclLogo
+    // },
     {
         cardId: 'kgj',
         backgroundColor: '#DCC1F8',
@@ -122,17 +121,16 @@ const concernCards = [
         contentDescription: 'We assist students in pursuing international education opportunities, with a focus on countries like Europe, and Australia.',
         cardImg: hwch_8,
         cardLogo: kiecLogo
-    }
-    ,
-    {
-        cardId: 'kgc',
-        backgroundColor: '#FBEACC',
-        concernName: 'Kawaii Group Canada',
-        concernContent: 'Our Canada focused company',
-        contentDescription: 'This branch explores business opportunities and partnerships in the Canadian market.',
-        cardImg: hwch_9,
-        cardLogo: kgcLogo
     },
+    // {
+    //     cardId: 'kgc',
+    //     backgroundColor: '#FBEACC',
+    //     concernName: 'Kawaii Group Canada',
+    //     concernContent: 'Our Canada focused company',
+    //     contentDescription: 'This branch explores business opportunities and partnerships in the Canadian market.',
+    //     cardImg: hwch_9,
+    //     cardLogo: kgcLogo
+    // },
     {
         cardId: 'kgvl',
         backgroundColor: '#FFE9E9',

@@ -6,15 +6,15 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import kawaiiLogo from '../../Assets/kawaiiLogoMain.svg';
 import kawaiiLogobh from '../../Assets/kawaiiGroupLogobw.svg';
 import mobileCross from '../../Assets/mobileCross.svg';
-import kfLogo from '../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png'
+// import kfLogo from '../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png'
 import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png'
-import keclLogo from '../../Assets/Sister_Concerns/2_logo.png'
+// import keclLogo from '../../Assets/Sister_Concerns/2_logo.png'
 import kgjLogo from '../../Assets/Sister_Concerns/3_logo.png'
 import kddLogo from '../../Assets/Sister_Concerns/4_logo.png'
 import khcLogo from '../../Assets/Sister_Concerns/1_logo.png'
 import kiecLogo from '../../Assets/Sister_Concerns/5_logo.png'
 import kjdlLogo from '../../Assets/Sister_Concerns/6_logo.png'
-import kgclLogo from '../../Assets/Sister_Concerns/7_logo.png'
+// import kgclLogo from '../../Assets/Sister_Concerns/7_logo.png'
 import aj_logo from '../../Assets/Sister_Concerns/aj_logo.png'
 import sanjana_logo from '../../Assets/Sister_Concerns/sanjana_logo.png'
 import tredmig_logo from '../../Assets/Sister_Concerns/tredmig.svg'
@@ -24,15 +24,15 @@ import dropdownArrow from '../../Assets/Sister_Concerns/dropdownArrowConcerns.sv
 import mobiledropdownArrow from '../../Assets/Sister_Concerns/mobile_arrow_drop_down.svg'
 
 const concernLinks = [
-  // 1
-  {
-    id: 1,
-    path: "/kf",
-    name: "Kawaii Fashion Limited",
-    logo: kfLogo,
-    alt: "kfLogo",
-    isExternal: false
-  },
+  // 1 — commented out
+  // {
+  //   id: 1,
+  //   path: "/kf",
+  //   name: "Kawaii Fashion Limited",
+  //   logo: kfLogo,
+  //   alt: "kfLogo",
+  //   isExternal: false
+  // },
   // 2
   {
     id: 2,
@@ -42,15 +42,15 @@ const concernLinks = [
     alt: "KAtslLogo",
     isExternal: true
   },
-  // 3
-  {
-    id: 3,
-    path: "/kecl",
-    name: "Kawaii Engineer & Constructions Limited",
-    logo: keclLogo,
-    alt: "keclLogo",
-    isExternal: false
-  },
+  // 3 — commented out
+  // {
+  //   id: 3,
+  //   path: "/kecl",
+  //   name: "Kawaii Engineer & Constructions Limited",
+  //   logo: keclLogo,
+  //   alt: "keclLogo",
+  //   isExternal: false
+  // },
   // 4
   {
     id: 4,
@@ -60,15 +60,15 @@ const concernLinks = [
     alt: "kgjLogo",
     isExternal: true
   },
-  // 5
-  {
-    id: 5,
-    path: "/kgcl",
-    name: "Kawaii Group Canada Limited",
-    logo: kgclLogo,
-    alt: "kgclLogo",
-    isExternal: false
-  },
+  // 5 — commented out
+  // {
+  //   id: 5,
+  //   path: "/kgcl",
+  //   name: "Kawaii Group Canada Limited",
+  //   logo: kgclLogo,
+  //   alt: "kgclLogo",
+  //   isExternal: false
+  // },
   // 6
   {
     id: 6,

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import sanjanaLogo from '../../Assets/Sister_Concerns/sanjana_logo.png'
 import ajLogo from '../../Assets/Sister_Concerns/aj_logo.png'
 import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png'
-import kflLogo from '../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png'
+// import kflLogo from '../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png'
 import ButtonNormal from '../ButtonNormal/ButtonNormal'
 import ButtonTransparent from '../ButtonTransparent/ButtonTransparent'
 import arrow from '../../Assets/kg_button_indicator.svg'
@@ -81,6 +81,7 @@ const HowCanWeHelp = () => {
                         <NavLink className='hcwh_card_btn' to="/katsl"><ButtonNormal arrow={arrow} text="Read More" /></NavLink>
                     </div>
                 </div>
+                {/* Kawaii Fashion Ltd — commented out
                 <div
                     className='hcwh_card'
                     style={{
@@ -100,6 +101,7 @@ const HowCanWeHelp = () => {
                         <NavLink className='hcwh_card_btn' to="/kfl"><ButtonNormal arrow={arrow} text="Read More" /></NavLink>
                     </div>
                 </div>
+                */}
             </div>
         </div>
     )

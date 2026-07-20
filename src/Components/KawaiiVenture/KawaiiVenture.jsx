@@ -24,15 +24,15 @@ const ventureData = [
         "Extensive network of experts providing personalized guidance",
       ],
     },
-    {
-      title: "Kawaii Fashion Ltd",
-      content: [
-        "At the forefront of fashion and textile research and development",
-        "Features a dedicated buying house for quick response to market demands",
-        "Partnered with a textile factory for oversight of the entire production process",
-        "Diverse product range including T-shirts, polo shirts, knit and woven garments",
-      ],
-    },
+    // {
+    //   title: "Kawaii Fashion Ltd",
+    //   content: [
+    //     "At the forefront of fashion and textile research and development",
+    //     "Features a dedicated buying house for quick response to market demands",
+    //     "Partnered with a textile factory for oversight of the entire production process",
+    //     "Diverse product range including T-shirts, polo shirts, knit and woven garments",
+    //   ],
+    // },
     {
       title: "Kawaii Advanced Technology and Solution Ltd",
       content: [
