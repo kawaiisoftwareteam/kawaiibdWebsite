@@ -36,7 +36,7 @@ const concernLinks = [
   // 2
   {
     id: 2,
-    path: "https://kawaiitechsol.com/",
+    path: "https://katsl.vercel.app/",
     name: "Kawaii Advanced Technology & Solution Ltd.",
     logo: katslLogo,
     alt: "KAtslLogo",

@@ -1,6 +1,5 @@
 import React from 'react'
 import './HowCanWeHelp.css'
-import { NavLink } from 'react-router-dom'
 import sanjanaLogo from '../../Assets/Sister_Concerns/sanjana_logo.png'
 import ajLogo from '../../Assets/Sister_Concerns/aj_logo.png'
 import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png'
@@ -78,7 +77,7 @@ const HowCanWeHelp = () => {
                         <div className='hcwh_card_header'>Drive Business Efficiency integrating software solutions</div>
                         <div className='hcwh_card_Content'>with KATSL</div>
                         <div className='hcwh_card_description'>Kawaii Technology equips businesses with transformative SaaS solutions, enhancing operational efficiency and driving sustainable growth.</div>
-                        <NavLink className='hcwh_card_btn' to="/katsl"><ButtonNormal arrow={arrow} text="Read More" /></NavLink>
+                        <a className='hcwh_card_btn' href="https://katsl.vercel.app/" target='_blank' rel="noreferrer"><ButtonNormal arrow={arrow} text="Read More" /></a>
                     </div>
                 </div>
                 {/* Kawaii Fashion Ltd — commented out

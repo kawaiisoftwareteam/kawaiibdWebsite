@@ -315,7 +315,7 @@ const KawaiiConcerns = () => {
                                 </div>
                             </div>
                             <div className='flex justify-end ml-auto'>
-                                <a href="https://kawaiitechsol.com/" className='inline-flex' target='_blank' rel="noreferrer">
+                                <a href="https://katsl.vercel.app/" className='inline-flex' target='_blank' rel="noreferrer">
                                     <ButtonKg text="Discover Our Solutions" />
                                 </a>
                             </div>
