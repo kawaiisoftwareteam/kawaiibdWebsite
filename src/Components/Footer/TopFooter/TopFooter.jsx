@@ -84,7 +84,7 @@ const TopFooter = () => {
                     <div className='frame'>
                         <FontAwesomeIcon icon={faEnvelope} className='iconF' />
                         <div>
-                            <a href="mailto:info@kawaiijapanbd.com" target='_blank' rel="noreferrer">info@kawaiijapanbd.com</a>
+                            <a href="mailto:japan@achievejapan.com" target='_blank' rel="noreferrer">japan@achievejapan.com</a>
                         </div>
 
                     </div>
@@ -92,12 +92,12 @@ const TopFooter = () => {
                         <FontAwesomeIcon icon={faLocationDot} className='iconF' />
                         <div>
                             <a
-                                href="https://maps.app.goo.gl/PBZN65RFqJVbaPZP9"
+                                href="https://www.google.com/maps/search/?api=1&query=ITO+Daikanyama,+2-17-8+Ebisu-Nishi,+Shibuya-ku,+Tokyo+150-0021,+Japan"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                433 Soft Town Aoyama 3-1-24
-                                Jingumae Shibuya-Ku Tokyo 150-0001 Japan.
+                                ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi,
+                                Shibuya-ku, Tokyo 150-0021, Japan
                             </a>
                         </div>
                     </div>

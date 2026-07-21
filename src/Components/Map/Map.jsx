@@ -64,18 +64,18 @@ const Map = () => {
             </div>
             <div className='mobile_frame'>
               <FontAwesomeIcon icon={faEnvelope} className='h-6 w-6' style={{ color: '#475569' }} />
-              <div className='number_style'><a href="mailto:info@kawaiijapanbd.com" target='_blank' rel="noreferrer">info@kawaiijapanbd.com</a></div>
+              <div className='number_style'><a href="mailto:japan@achievejapan.com" target='_blank' rel="noreferrer">japan@achievejapan.com</a></div>
             </div>
           </div>
           <div className='mobile_frame'>
             <FontAwesomeIcon icon={faLocationDot} className='h-6 w-6' style={{ color: '#475569' }} />
             <div className='number_style'><a
-              href="https://maps.app.goo.gl/PBZN65RFqJVbaPZP9"
+              href="https://www.google.com/maps/search/?api=1&query=ITO+Daikanyama,+2-17-8+Ebisu-Nishi,+Shibuya-ku,+Tokyo+150-0021,+Japan"
               target="_blank"
               rel="noopener noreferrer"
             >
-              433 Soft Town Aoyama 3-1-24
-              Jingumae Shibuya-Ku Tokyo 150-0001 Japan.
+              ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi,
+              Shibuya-ku, Tokyo 150-0021, Japan
             </a></div>
           </div>
         </div>

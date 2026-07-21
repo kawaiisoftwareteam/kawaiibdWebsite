@@ -6,7 +6,7 @@ const CorporateProfileSection = () => {
     const kawaiiGroupCorporate = {
         "Company Name": "Kawaii Group Limited",
         "Head Office Location": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219",
-        "Japan Office Location": "433 Soft Town Aoyama 3-1-24 Jingumae Shibuya-Ku Tokyo 150-0001 Japan.",
+        "Japan Office Location": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan",
         "TEL": "+88 02-55123797, +81 03-4363-5903",
         "Managing Director & Group CEO": "Dewan Samir",
         "Incorporated": 2015,
