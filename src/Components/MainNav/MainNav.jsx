@@ -20,6 +20,7 @@ import sanjana_logo from '../../Assets/Sister_Concerns/sanjana_logo.png'
 import tredmig_logo from '../../Assets/Sister_Concerns/tredmig.svg'
 import letsfly_logo from '../../Assets/Sister_Concerns/bimanholidays.webp'
 import kgvlLogo from '../../Assets/Sister_Concerns/kgvl_logo.svg'
+import kjchsLogo from '../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.png'
 import dropdownArrow from '../../Assets/Sister_Concerns/dropdownArrowConcerns.svg'
 import mobiledropdownArrow from '../../Assets/Sister_Concerns/mobile_arrow_drop_down.svg'
 
@@ -148,6 +149,15 @@ const concernLinks = [
     name: "Kawaii Global Ventures Limited",
     logo: kgvlLogo,
     alt: "kgvlLogo",
+    isExternal: false
+  },
+  // 15
+  {
+    id: 15,
+    path: "/kawaii-japan-career-hr",
+    name: "Kawaii Japan Career & HR Solutions",
+    logo: kjchsLogo,
+    alt: "kjchsLogo",
     isExternal: false
   }
 ];

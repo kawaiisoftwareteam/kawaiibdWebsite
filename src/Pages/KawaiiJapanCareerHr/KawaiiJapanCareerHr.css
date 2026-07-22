@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+
+/* Kawaii Japan Career & HR Solutions Page Styles */
+
+.kjchs-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* 50/50 Split Screen Hero Section */
+.split-hero {
+  display: flex;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #0c0c0c;
+}
+
+.split-side {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.split-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.split-side:hover {
+  flex: 1.05;
+}
+
+.split-side:hover .split-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.split-content-box {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 600px;
+}
+
+.split-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  margin-bottom: 28px;
+}
+
+.split-btn {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background-color: #BE1E2D;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 52px;
+  border-radius: 9999px; /* Complete pill oval */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(190, 30, 45, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.split-btn:hover {
+  transform: translateY(-2px);
+  background-color: #df2232;
+  box-shadow: 0 6px 22px rgba(190, 30, 45, 0.5);
+}
+
+/* Badge Styling */
+.badge-jp-bd {
+  display: inline-block;
+  background-color: #FFE9E9;
+  color: #BE1E2D;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(190, 30, 45, 0.1);
+  animation: pulse-badge 2s infinite alternate;
+}
+
+@keyframes pulse-badge {
+  0% {
+    box-shadow: 0 0 0 0 rgba(190, 30, 45, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 6px rgba(190, 30, 45, 0.05);
+  }
+}
+
+/* Section Title and Typography */
+.section-title {
+  color: #0c0c0c;
+  line-height: 1.2;
+}
+
+.section-subtitle-red {
+  color: #BE1E2D;
+}
+
+/* Overview Graphic & Images */
+.overview-graphic img {
+  filter: brightness(0.95);
+}
+
+.overview-graphic:hover img {
+  filter: brightness(1.05);
+}
+
+/* Stat Cards */
+.stat-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  background-color: #ffffff;
+  border-color: #FFE9E9;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Vision and Mission Cards */
+.vision-card,
+.mission-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vision-card:hover {
+  border-color: #FFE9E9;
+  transform: translateY(-5px);
+}
+
+.mission-card:hover {
+  border-color: #e5e7eb;
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.vision-card:hover .icon-wrapper,
+.mission-card:hover .icon-wrapper {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Detail Section Grid Cards */
+.kjchs-detail-section {
+  scroll-margin-top: 80px;
+}
+
+/* Industry Sectors Cards */
+.sector-card {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 28px !important;
+}
+
+.sector-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.sector-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+}
+
+.sector-icon {
+  font-size: 24px;
+}
+
+.sector-title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-top: 8px;
+}
+
+.sector-desc {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+.kjchs-sectors .section-title {
+  font-size: 44px !important;
+  font-weight: 800 !important;
+}
+
+.kjchs-sectors p {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Achievements Counter section */
+.achievement-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 36px 28px !important;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: #FFE9E9;
+}
+
+.achievement-card .rounded-full {
+  width: 60px !important;
+  height: 60px !important;
+  margin-bottom: 20px !important;
+}
+
+.achievement-card .rounded-full svg {
+  font-size: 24px !important;
+}
+
+.achievement-card span:first-of-type {
+  font-size: 3.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+}
+
+.achievement-card span:nth-of-type(2) {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  margin-top: 12px !important;
+  line-height: 1.3 !important;
+}
+
+.achievement-card p {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-top: 8px !important;
+}
+
+.kjchs-achievements .section-title {
+  font-size: 44px !important;
+  font-weight: 800 !important;
+}
+
+/* Typography Overrides */
+.kjchs-page .overview-desc {
+  font-size: 1.35rem !important;
+  line-height: 1.85 !important;
+}
+
+.kjchs-page .card-text {
+  font-size: 1.25rem !important;
+  line-height: 1.75 !important;
+}
+
+.kjchs-page .stat-num {
+  font-size: 3rem !important;
+}
+
+.kjchs-page .stat-lbl {
+  font-size: 1.05rem !important;
+}
+
+/* Detailed lists & body text size enhancement */
+.kjchs-detail-section p,
+.kjchs-detail-section li {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+}
+
+.kjchs-detail-section h3 {
+  font-size: 1.65rem !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .kjchs-overview-sec,
+  .kjchs-about-sec,
+  .kjchs-vision-mission,
+  .kjchs-detail-section,
+  .kjchs-sectors,
+  .kjchs-achievements {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-hero {
+    flex-direction: row;
+    height: 65vh;
+  }
+
+  .split-side {
+    height: 100%;
+  }
+
+  .split-content-box {
+    padding: 0 8px;
+  }
+
+  .split-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+
+  .split-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .overview-container {
+    padding: 32px 24px;
+    gap: 32px;
+  }
+  
+  .overview-stats {
+    grid-template-cols: 1fr;
+    gap: 16px;
+  }
+
+  .achievement-card {
+    padding: 24px !important;
+  }
+}

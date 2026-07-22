@@ -24,6 +24,7 @@ import kddlLogo from "../../Assets/Sister_Concerns/4_logo.png"
 import kiecLogo from "../../Assets/Sister_Concerns/5_logo.png"
 // import kgcLogo from "../../Assets/Sister_Concerns/7_logo.png"
 import kgvlLogo from "../../Assets/Sister_Concerns/kgvl_logo.svg"
+import kjchsLogo from "../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.png"
 import jpBusinessCenter from "../../Assets/jpBusinessCenter.png"
 import leftWhite from '../../Assets/top-left-corner-kg.svg'
 import rightWhite from '../../Assets/KG_symbol_right_white.png'
@@ -139,6 +140,15 @@ const concernCards = [
         contentDescription: 'Promoting partnerships, investment, HR development, and digital transformation across Japan and Bangladesh.',
         cardImg: jpBusinessCenter,
         cardLogo: kgvlLogo
+    },
+    {
+        cardId: 'kjchs',
+        backgroundColor: '#FFE0E0',
+        concernName: 'Kawaii Japan Career & HR Solutions',
+        concernContent: 'Career development and HR solutions for Japan.',
+        contentDescription: 'We connect talent with Japanese career opportunities and deliver comprehensive HR solutions that support workforce growth across borders.',
+        cardImg: hwch_1,
+        cardLogo: kjchsLogo
     }
 ];
 
@@ -362,6 +372,52 @@ const KawaiiConcerns = () => {
                             </div>
                             <div className='flex justify-end ml-auto'>
                                 <a href="/kawaii-global-ventures" className='inline-flex'>
+                                    <ButtonKg text="View Full Profile" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
+                </div>
+
+                {/* Kawaii Japan Career & HR Solutions detail section */}
+                <div id="kjchs" className='concern_detail_main_top' style={{ backgroundImage: `url(${hwch_1})` }}>
+                    <div
+                        className="absolute inset-0 z-[1] pointer-events-none"
+                        style={{
+                            backgroundColor: 'rgba(255, 224, 224, 0.85)',
+                        }}
+                    ></div>
+                    <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
+                    <div className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
+                        style={{ height: '100%' }}>
+                        <div className='concertTitleText'>
+                            Career & HR Solutions
+                        </div>
+                        <div className="flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white">
+                            <div>
+                                <div className='concernBoxTitle'>Kawaii Japan Career & HR Solutions</div>
+                                <div className='concernBoxDes'>Building Careers and Strengthening Workforces for Japan</div>
+                            </div>
+                            <div className='concernBoxDetailText'>
+                                Kawaii Japan Career & HR Solutions specializes in career placement and human resource services, helping individuals and organizations succeed in the Japanese employment market through tailored recruitment, training, and workforce support.
+                            </div>
+                            <div className='flex flex-col gap-[10px]'>
+                                <div className='flex gap-[10px] items-center'>
+                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
+                                    <div>Japan-focused career placement</div>
+                                </div>
+                                <div className='flex gap-[10px] items-center'>
+                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
+                                    <div>End-to-end HR and workforce solutions</div>
+                                </div>
+                                <div className='flex gap-[10px] items-center'>
+                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
+                                    <div>Candidate preparation and employer matching</div>
+                                </div>
+                            </div>
+                            <div className='flex justify-end ml-auto'>
+                                <a href="/kawaii-japan-career-hr" className='inline-flex'>
                                     <ButtonKg text="View Full Profile" />
                                 </a>
                             </div>
