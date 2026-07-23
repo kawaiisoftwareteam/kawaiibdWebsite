@@ -83,6 +83,26 @@ position: relative;
   letter-spacing: -0.3px;
   transition: color 0.3s ease-in-out;
 }
+
+/* Featured hot link — BIM Masterclass */
+.navMenuHot .menuText {
+  font-weight: 700;
+  color: #BE1E2D;
+}
+
+.navMenuHot:hover .menuText {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.navMenuHot.active .menuText {
+  font-weight: 700;
+  color: #BE1E2D;
+}
+
+.navMenuHot.active:hover .menuText {
+  color: #FFFFFF;
+}
 .fa-icon{
     color: #202124;
 }
@@ -166,6 +186,11 @@ font-weight: 400;
 letter-spacing: var(--Body-Large-Tracking, 0.5px);
 align-self: stretch;
  }
+
+.mobileNavItemHot .mobileNavItemText {
+  font-weight: 700;
+  color: #FFD2D6;
+}
 
 .mobileNavBottom
  {

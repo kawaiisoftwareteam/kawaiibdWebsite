@@ -17,6 +17,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
 import CorporateProfile from './Pages/CorporateProfile/CorporateProfile';
 import KawaiiGlobalVentures from './Pages/KawaiiGlobalVentures/KawaiiGlobalVentures';
 import KawaiiJapanCareerHr from './Pages/KawaiiJapanCareerHr/KawaiiJapanCareerHr';
+import Masterclass from './Pages/Masterclass/Masterclass';
 function App() {
   const [currentLang, setCurrentLang] = useState('English');
   const isLoading = useRouteLoading();
@@ -40,6 +41,7 @@ function App() {
             <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
             <Route path='/kawaii-global-ventures' element={<KawaiiGlobalVentures/>}/>
             <Route path='/kawaii-japan-career-hr' element={<KawaiiJapanCareerHr/>}/>
+            <Route path='/masterclass' element={<Masterclass/>}/>
             <Route path='*' element={<NoPages/>}/>
           </Routes>
         </main>

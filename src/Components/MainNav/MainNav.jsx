@@ -261,6 +261,10 @@ const MainNav = () => {
           </div>
         </div>
 
+        <NavLink to="/masterclass" className={({ isActive }) => `navMenu navMenuHot ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>BIM Masterclass</div>
+        </NavLink>
+
         <NavLink to="/contact" className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
           <div className='menuText'>Get in Touch</div>
         </NavLink>
@@ -355,6 +359,14 @@ const MainNav = () => {
                   )}
                 </div>
               )}
+
+            <NavLink
+              to="/masterclass"
+              className={({ isActive }) => `mobileNavItem mobileNavItemHot ${isActive ? 'active-mobile-nav-item' : ''}`}
+              onClick={closeSidebar}
+            >
+              <div className='mobileNavItemText'>BIM Masterclass</div>
+            </NavLink>
 
             <NavLink
               to="/contact"
