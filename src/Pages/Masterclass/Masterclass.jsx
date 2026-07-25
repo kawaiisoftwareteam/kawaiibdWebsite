@@ -280,7 +280,7 @@ const Masterclass = () => {
       {/* Visual Hero Banner */}
       <div className="max-w-6xl mx-auto mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
         <img 
-          src={require('../../Assets/bim_masterclass_banner.jpg')} 
+          src={require('../../Assets/bim_masterclass_banner.jpeg')} 
           alt="BIM & Construction DX Masterclass with Dr. Shunsuke Someya" 
           className="w-full h-auto block"
         />
