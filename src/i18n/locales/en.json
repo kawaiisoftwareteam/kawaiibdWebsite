@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "whoWeAre": "Who We Are",
+    "whatWeDo": "What We Do",
+    "sisterConcerns": "Sister Concerns",
+    "bimMasterclass": "BIM Masterclass",
+    "getInTouch": "Get in Touch",
+    "joinUsOn": "Join us on:",
+    "tagline": "A Japan-Bangladesh Joint Venture Company",
+    "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
+  },
+  "footer": {
+    "aboutBlurb": "Kawaii Group was founded with one core idea: to create opportunities. Whether it's helping businesses thrive or guiding individuals to new career paths, we are passionate about making a difference. With roots deep in both Japan and Bangladesh, our journey over the past 37 years has been about fostering connections—between countries, businesses, and people. Through innovation, education, and strategic partnerships, we aim to uplift communities and empower futures.",
+    "readMore": "read more",
+    "quickLinks": "QUICK LINKS",
+    "bangladeshOffice": "Bangladesh Office",
+    "japanOffice": "Japan Office",
+    "joinUsOn": "Join us on:",
+    "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
+  },
+  "banner": {
+    "bn": "Viewing in Bangla. Switch to English?",
+    "ja": "日本語で表示しています。英語で表示しますか？",
+    "switchToEnglish": "Switch to English",
+    "dismiss": "Dismiss"
+  },
+  "language": {
+    "english": "English",
+    "bengali": "বাংলা",
+    "japanese": "日本語"
+  },
+  "common": {
+    "loading": "Loading…"
+  }
+}

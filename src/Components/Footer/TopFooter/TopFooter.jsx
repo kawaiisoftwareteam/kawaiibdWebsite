@@ -6,33 +6,41 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot'
 import kgLogobh from '../../../Assets/kawaiiGroupLogobw.svg'
+import { useLocale } from '../../../i18n/LocaleContext'
 
 const TopFooter = () => {
+    const { t, localizedPath } = useLocale();
+
     return (
         <div className="mainTop">
             <div className='colLeft'>
-                <NavLink to="/home">
+                <NavLink to={localizedPath('/home')}>
                     <img src={kgLogobh} alt="kawaiiGroupgreyscale" />
                 </NavLink>
-                <div className="text-white text-base font-normal font-main leading-snug pr-5">Kawaii Group was founded with one core idea: to create opportunities. Whether it's helping businesses thrive or guiding individuals to new career paths, we are passionate about making a difference. With roots deep in both Japan and Bangladesh. read more          , our journey over the past 37 years has been about fostering connections—between countries, businesses, and people. Through innovation, education, and strategic partnerships, we aim to uplift communities and empower futures.</div>
+                <div className="text-white text-base font-normal font-main leading-snug pr-5">
+                    {t('footer.aboutBlurb')}{' '}
+                    <Link to={localizedPath('/about')} className="underline">
+                        {t('footer.readMore')}
+                    </Link>
+                </div>
                 <div style={{ color: '#fff' }}>
-                    <b> QUICK LINKS</b>
+                    <b> {t('footer.quickLinks')}</b>
                     <br />
-                    <span style={{ display: 'flex', gap: '15px' }}>
-                        <Link to="/home">
-                            Home
+                    <span style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                        <Link to={localizedPath('/home')}>
+                            {t('nav.home')}
                         </Link>
-                        <Link to="/about">
-                            Who We Are
+                        <Link to={localizedPath('/about')}>
+                            {t('nav.whoWeAre')}
                         </Link>
-                        <Link to="/services">
-                            What We Do
+                        <Link to={localizedPath('/services')}>
+                            {t('nav.whatWeDo')}
                         </Link>
-                        <Link to="/concerns">
-                            Sister Concerns
+                        <Link to={localizedPath('/concerns')}>
+                            {t('nav.sisterConcerns')}
                         </Link>
-                        <Link to="/contact">
-                            Get in Touch
+                        <Link to={localizedPath('/contact')}>
+                            {t('nav.getInTouch')}
                         </Link>
                     </span>
                 </div>
@@ -40,7 +48,7 @@ const TopFooter = () => {
             <div className='colRight'>
                 <div className='rLeft'>
                     <div className='countryTitle'>
-                        <b>Bangladesh Office</b>
+                        <b>{t('footer.bangladeshOffice')}</b>
                     </div>
                     <div className='frame'>
                         <FontAwesomeIcon icon={faPhone} className='iconF' />
@@ -73,7 +81,7 @@ const TopFooter = () => {
                 </div>
                 <div className='rLeft'>
                     <div className='countryTitle'>
-                        <b>Japan Office</b>
+                        <b>{t('footer.japanOffice')}</b>
                     </div>
                     <div className='frame'>
                         <FontAwesomeIcon icon={faPhone} className='iconF' />

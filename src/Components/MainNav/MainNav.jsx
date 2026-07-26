@@ -23,6 +23,7 @@ import kgvlLogo from '../../Assets/Sister_Concerns/kgvl_logo.svg'
 import kjchsLogo from '../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.png'
 import dropdownArrow from '../../Assets/Sister_Concerns/dropdownArrowConcerns.svg'
 import mobiledropdownArrow from '../../Assets/Sister_Concerns/mobile_arrow_drop_down.svg'
+import { useLocale } from '../../i18n/LocaleContext';
 
 const concernLinks = [
   // 1 — commented out
@@ -88,6 +89,7 @@ const concernLinks = [
     alt: "khcLogo",
     isExternal: false
   },
+  // note: internal concern paths are localized at render time
   // 8
   {
     id: 8,
@@ -164,6 +166,7 @@ const concernLinks = [
 
 const MainNav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { t, localizedPath } = useLocale();
 
   // Add useEffect to handle viewport changes
   useEffect(() => {
@@ -198,11 +201,14 @@ const MainNav = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const navigate = useNavigate();
 
+  const resolveConcernPath = (path, isExternal) =>
+    isExternal ? path : localizedPath(path);
+
   const handleSisterConcernsClick = () => {
     if (dropdownVisible) {
       // Redirect to /concern if dropdown is already open and close dropdown
       setDropdownVisible(false);
-      navigate('/concerns');
+      navigate(localizedPath('/concerns'));
       closeSidebar();
     } else {
       // Show dropdown if it's not already open
@@ -212,25 +218,25 @@ const MainNav = () => {
 
   return (
     <div className='bottomHeader'>
-      <NavLink to="/home" className='logoFrame'>
+      <NavLink to={localizedPath('/home')} className='logoFrame'>
         <img src={kawaiiLogo} alt="kawaiiGroupLogo" />
       </NavLink>
       <div className='navFrame'>
-        <NavLink to="/home" className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>Home</div>
+        <NavLink to={localizedPath('/home')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>{t('nav.home')}</div>
         </NavLink>
-        <NavLink to="/about" className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>Who We Are</div>
+        <NavLink to={localizedPath('/about')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>{t('nav.whoWeAre')}</div>
         </NavLink>
-        <NavLink to="/services" className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>What We Do</div>
+        <NavLink to={localizedPath('/services')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>{t('nav.whatWeDo')}</div>
         </NavLink>
         <div className="navMenu-wrapper">
           <NavLink
-            to="/concerns"
+            to={localizedPath('/concerns')}
             className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}
           >
-            <div className='menuText'>Sister Concerns</div>
+            <div className='menuText'>{t('nav.sisterConcerns')}</div>
             <img src={dropdownArrow} alt="dropdown" className='dropdownArrow' />
           </NavLink>
 
@@ -239,7 +245,7 @@ const MainNav = () => {
               {concernLinks.map((item) => (
                 item.isExternal ? (
                   <a
-                    key={item.id}  // changed to use id instead of index
+                    key={item.id}
                     href={item.path}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -249,8 +255,8 @@ const MainNav = () => {
                   </a>
                 ) : (
                   <NavLink
-                    key={item.id}  // changed to use id instead of index
-                    to={item.path}
+                    key={item.id}
+                    to={resolveConcernPath(item.path, item.isExternal)}
                     className='dropdownIconBox'
                   >
                     <img src={item.logo} alt={item.alt} className='dropdownLogo' />
@@ -261,12 +267,12 @@ const MainNav = () => {
           </div>
         </div>
 
-        <NavLink to="/masterclass" className={({ isActive }) => `navMenu navMenuHot ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>BIM Masterclass</div>
+        <NavLink to={localizedPath('/masterclass')} className={({ isActive }) => `navMenu navMenuHot ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>{t('nav.bimMasterclass')}</div>
         </NavLink>
 
-        <NavLink to="/contact" className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>Get in Touch</div>
+        <NavLink to={localizedPath('/contact')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>{t('nav.getInTouch')}</div>
         </NavLink>
       </div>
 
@@ -279,51 +285,50 @@ const MainNav = () => {
       {isSidebarOpen && (
         <div className='mobileNavSideBar'>
           <div className='mobileSidebarTop'>
-            <NavLink to="/home" onClick={closeSidebar}>
+            <NavLink to={localizedPath('/home')} onClick={closeSidebar}>
               <img src={kawaiiLogobh} alt="" />
             </NavLink>
             <img src={mobileCross} alt="mobileSideBarCross" onClick={toggleSidebar} />
           </div>
           <div className='mobileNavItemBox'>
             <NavLink
-              to="/home"
+              to={localizedPath('/home')}
               className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
               onClick={closeSidebar}
             >
-              <div className='mobileNavItemText'>Home</div>
+              <div className='mobileNavItemText'>{t('nav.home')}</div>
             </NavLink>
             <NavLink
-              to="/about"
+              to={localizedPath('/about')}
               className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
               onClick={closeSidebar}
             >
-              <div className='mobileNavItemText'>Who We Are</div>
+              <div className='mobileNavItemText'>{t('nav.whoWeAre')}</div>
             </NavLink>
             <NavLink
-              to="/services"
+              to={localizedPath('/services')}
               className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
               onClick={closeSidebar}
             >
-              <div className='mobileNavItemText'>What We Do</div>
+              <div className='mobileNavItemText'>{t('nav.whatWeDo')}</div>
             </NavLink>
            {/* Sister Concerns clickable item */}
            <div
                 className={`mobileNavItem ${dropdownVisible ? 'active-mobile-nav-item' : ''}`}
                 onClick={handleSisterConcernsClick}
               >
-                <div className='mobileNavItemText'>Sister Concerns</div>
+                <div className='mobileNavItemText'>{t('nav.sisterConcerns')}</div>
                 <img
                   src={mobiledropdownArrow}
                   alt="mobiledropdownArrow"
                   className={`sidemobileDropdownArrow ${dropdownVisible ? 'rotate-arrow' : ''}`}
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevents the parent onClick from triggering
+                    e.stopPropagation();
                     setDropdownVisible(!dropdownVisible);
                   }}
                 />
               </div>
 
-              {/* Dropdown box that appears when dropdownVisible is true */}
               {dropdownVisible && (
                 <div className="dropdownMobileBox">
                   {concernLinks.map((item) =>
@@ -344,7 +349,7 @@ const MainNav = () => {
                     ) : (
                       <NavLink
                         key={item.id}
-                        to={item.path}
+                        to={resolveConcernPath(item.path, item.isExternal)}
                         className={({ isActive }) =>
                           `mobileNavItemDropdown ${isActive ? 'active-mobile-nav-item' : ''}`
                         }
@@ -361,30 +366,28 @@ const MainNav = () => {
               )}
 
             <NavLink
-              to="/masterclass"
+              to={localizedPath('/masterclass')}
               className={({ isActive }) => `mobileNavItem mobileNavItemHot ${isActive ? 'active-mobile-nav-item' : ''}`}
               onClick={closeSidebar}
             >
-              <div className='mobileNavItemText'>BIM Masterclass</div>
+              <div className='mobileNavItemText'>{t('nav.bimMasterclass')}</div>
             </NavLink>
 
             <NavLink
-              to="/contact"
+              to={localizedPath('/contact')}
               className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
               onClick={closeSidebar}
             >
-              <div className='mobileNavItemText'>Get in Touch</div>
+              <div className='mobileNavItemText'>{t('nav.getInTouch')}</div>
             </NavLink>
           </div>
           <div className='mobileNavBottom'>
             <div className='mobileNavBottomIconBox'>
-              <div className='mobileNavBottomJoin'>Join us on:</div>
+              <div className='mobileNavBottomJoin'>{t('nav.joinUsOn')}</div>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" /></svg>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" width="21" viewBox="0 0 448 512"><path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg>
             </div>
-            <div className='mobileNavBottomText'>Copyright © 2024 Kawaii Group Bangladesh. <br />
-              All rights reserved.
-            </div>
+            <div className='mobileNavBottomText'>{t('nav.copyright')}</div>
           </div>
         </div>
       )}

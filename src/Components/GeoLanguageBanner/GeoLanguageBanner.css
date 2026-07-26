@@ -1,0 +1,79 @@
+.geo-lang-banner {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  width: 100%;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.geo-lang-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.geo-lang-banner__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.geo-lang-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.geo-lang-banner__switch {
+  appearance: none;
+  border: 1px solid #be1e2d;
+  background: #be1e2d;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.geo-lang-banner__switch:hover {
+  background: #9e1825;
+  border-color: #9e1825;
+}
+
+.geo-lang-banner__dismiss {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 22px;
+  line-height: 1;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+.geo-lang-banner__dismiss:hover {
+  color: #222;
+}
+
+@media (max-width: 640px) {
+  .geo-lang-banner__inner {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .geo-lang-banner__text {
+    flex: 1;
+    font-size: 13px;
+  }
+}

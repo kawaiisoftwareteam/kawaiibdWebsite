@@ -1,9 +1,8 @@
 import React from 'react'
 import NavHead from '../NavHead/NavHead'
 import MainNav from '../MainNav/MainNav'
-// import DropDown from './Navbar1/DropDown'
 
-const Navbar = ({ currentLang, setCurrentLang }) => {
+const Navbar = () => {
   return (
     <div  style={{
       position: 'fixed',
@@ -15,9 +14,8 @@ const Navbar = ({ currentLang, setCurrentLang }) => {
       transform: 'scale(0.8)',
       transformOrigin: 'top left',
     }}>
-    <NavHead currentLang={currentLang} setCurrentLang={setCurrentLang}/>
+    <NavHead />
     <MainNav/>
-    {/* <DropDown/> */}
     </div>
   )
 }

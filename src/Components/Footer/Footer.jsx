@@ -3,11 +3,11 @@ import "./Footer.css"
 import TopFooter from './TopFooter/TopFooter'
 import BottomFooter from './BottomFooter/BottomFooter'
 
-const Footer = ({ currentLang, setCurrentLang }) => {
+const Footer = () => {
   return (
     <div className='mainFoot'>
       <TopFooter/>
-      <BottomFooter currentLang={currentLang} setCurrentLang={setCurrentLang}/>
+      <BottomFooter />
     </div>
   )
 }

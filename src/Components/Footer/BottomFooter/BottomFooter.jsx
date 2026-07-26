@@ -4,13 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
 import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher'
+import { useLocale } from '../../../i18n/LocaleContext'
 
-const BottomFooter = ({ currentLang, setCurrentLang }) => {
+const BottomFooter = () => {
+  const { t } = useLocale();
+
   return (
     <div className='mainBottom'>
       <div className='bottom_button'>
         <div className='bText'>
-          Join us on:
+          {t('footer.joinUsOn')}
         </div>
         <a href='https://www.facebook.com/profile.php?id=61563359894758' target='_blank' rel="noreferrer" className="text-white">
             <FontAwesomeIcon icon={faFacebook} size='xl' />
@@ -19,10 +22,10 @@ const BottomFooter = ({ currentLang, setCurrentLang }) => {
             <FontAwesomeIcon icon={faLinkedin} size='xl' />
           </a>
       </div>
-      <div className='bCopyright'>Copyright © 2024 Kawaii Group Bangladesh. All rights reserved.</div>
+      <div className='bCopyright'>{t('footer.copyright')}</div>
       <div className='lnFrame'>
         <div className='lnButton'>
-          <LanguageSwitcher currentLang={currentLang} setCurrentLang={setCurrentLang} isNavbar={false}/>
+          <LanguageSwitcher isNavbar={false}/>
         </div>
       </div>
     </div>

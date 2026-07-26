@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "whoWeAre": "私たちについて",
+    "whatWeDo": "事業内容",
+    "sisterConcerns": "グループ企業",
+    "bimMasterclass": "BIMマスタークラス",
+    "getInTouch": "お問い合わせ",
+    "joinUsOn": "フォローする:",
+    "tagline": "日本・バングラデシュ合弁企業",
+    "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
+  },
+  "footer": {
+    "aboutBlurb": "カワイグループは「機会を創る」という一つの理念のもと設立されました。企業が成長できるよう支援すること、個人が新しいキャリアへ進む道を示すこと——私たちは社会に変化をもたらすことに情熱を注いでいます。日本とバングラデシュ双方に深いルーツを持ち、過去37年間、国・企業・人々のあいだに絆を育んできました。イノベーション、教育、戦略的パートナーシップを通じて、コミュニティを支え、未来に力を与えることを目指しています。",
+    "readMore": "続きを読む",
+    "quickLinks": "クイックリンク",
+    "bangladeshOffice": "バングラデシュ事務所",
+    "japanOffice": "日本事務所",
+    "joinUsOn": "フォローする:",
+    "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
+  },
+  "banner": {
+    "bn": "বাংলায় দেখানো হচ্ছে। ইংরেজিতে দেখতে চান?",
+    "ja": "日本語で表示しています。英語で表示しますか？",
+    "switchToEnglish": "英語に切り替える",
+    "dismiss": "閉じる"
+  },
+  "language": {
+    "english": "English",
+    "bengali": "বাংলা",
+    "japanese": "日本語"
+  },
+  "common": {
+    "loading": "読み込み中…"
+  }
+}

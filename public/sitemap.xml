@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home -->
+  <url>
+    <loc>https://kawaiibd.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en"/>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://kawaiibd.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/about"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/about"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/about"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/about"/>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://kawaiibd.com/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/services"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/services"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/services"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/services"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/services"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/services"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/services"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/services"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/services"/>
+  </url>
+
+  <!-- Concerns -->
+  <url>
+    <loc>https://kawaiibd.com/en/concerns</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/concerns"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/concerns"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/concerns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/concerns"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/concerns</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/concerns"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/concerns"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/concerns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/concerns"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/concerns</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/concerns"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/concerns"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/concerns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/concerns"/>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://kawaiibd.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/contact"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/contact"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/contact"/>
+  </url>
+
+  <!-- Masterclass -->
+  <url>
+    <loc>https://kawaiibd.com/en/masterclass</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/masterclass"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/masterclass</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/masterclass"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/masterclass</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/masterclass"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/masterclass"/>
+  </url>
+</urlset>
