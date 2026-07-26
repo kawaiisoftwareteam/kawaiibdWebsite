@@ -1,29 +1,33 @@
 import React from 'react'
 import './CorporateProfileSection.css'
 import CorporateProfileInfo from '../CorporateProfileInfo/CorporateProfileInfo';
+import { useLocale } from '../../i18n/LocaleContext';
+
+const FIELD_KEYS = [
+  'companyName',
+  'headOffice',
+  'japanOffice',
+  'tel',
+  'managingDirector',
+  'incorporated',
+  'capital',
+  'employees',
+  'sisterConcerns',
+];
 
 const CorporateProfileSection = () => {
-    const kawaiiGroupCorporate = {
-        "Company Name": "Kawaii Group Limited",
-        "Head Office Location": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219",
-        "Japan Office Location": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan",
-        "TEL": "+88 02-55123797, +81 03-4363-5903",
-        "Managing Director & Group CEO": "Dewan Samir",
-        "Incorporated": 2015,
-        "Company Capital": "10 Crore BDT",
-        "Number Of Employees": 20,
-        "Sister Concerns": "8+"
-      };
+    const { t } = useLocale();
+
   return (
     <div className='cp_main relative'>
       <div className='cp_bar'>
-      <div className="cp_bar_box"><div className='cp_bar_text'>Corporate Profile</div></div>
-      <div className="cp_bar_box"><div className='cp_bar_text'>History</div></div>
-      <div className="cp_bar_box"><div className='cp_bar_text'>Senior Management</div></div>
-      <div className="cp_bar_box"><div className='cp_bar_text'>Corporate Governance</div></div>
+      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.profile')}</div></div>
+      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.history')}</div></div>
+      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.management')}</div></div>
+      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.governance')}</div></div>
       </div>
-      <div className='cp_company_header'>Kawaii Group</div>
-      <CorporateProfileInfo corporateData={kawaiiGroupCorporate}/>
+      <div className='cp_company_header'>{t('corporate.companyHeader')}</div>
+      <CorporateProfileInfo fieldKeys={FIELD_KEYS} />
     </div>
   )
 }

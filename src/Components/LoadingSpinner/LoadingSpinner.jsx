@@ -1,6 +1,15 @@
 import React from 'react';
+import { translate, useOptionalLocale } from '../../i18n/LocaleContext';
+import { DEFAULT_LOCALE } from '../../i18n/config';
+import { getStoredLocale } from '../../Hooks/useGeoLanguage/useGeoLanguage';
 
 const LoadingSpinner = () => {
+  // Rendered both inside the app shell and during pre-provider locale redirects
+  const locale = useOptionalLocale();
+  const label = locale
+    ? locale.t('common.loading')
+    : translate(getStoredLocale() || DEFAULT_LOCALE, 'common.loading');
+
   return (
     <div 
       className="fixed z-50 flex items-center justify-center" 
@@ -23,7 +32,7 @@ const LoadingSpinner = () => {
           }}
         ></div>
         <p className="mt-4 text-lg font-medium" style={{ color: '#BE1E2D' }}>
-          Loading...
+          {label}
         </p>
       </div>
     </div>

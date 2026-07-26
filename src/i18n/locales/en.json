@@ -31,6 +31,910 @@
     "japanese": "日本語"
   },
   "common": {
-    "loading": "Loading…"
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "letsConnect": "Let's Connect",
+    "exploreNow": "Explore Now",
+    "loading": "Loading…",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "cta": {
+    "leftTitle": "Bridging Cultures, Connecting Opportunities",
+    "button": "Let's Connect"
+  },
+  "home": {
+    "slides": [
+      {
+        "head1": "Your Global",
+        "head2": "Growth Partner",
+        "des": "Empowering businesses with diverse Japanese expertise on a global scale",
+        "button": "Partner with us",
+        "link": "/contact"
+      },
+      {
+        "head1": "A 35-Year Legacy of",
+        "head2": "Japan-Bangladesh Business Excellence",
+        "des": "With roots in Japan and Bangladesh, we offer integrated solutions that drive growth worldwide",
+        "button": "Know our story",
+        "link": "/about"
+      },
+      {
+        "head1": "Driving Success",
+        "head2": "Across Diverse Industries",
+        "des": "From human resources to Japanese language training, fashion, engineering, and beyond, we deliver tailored solutions for every industry.",
+        "button": "Explore our expertise",
+        "link": "/concerns"
+      },
+      {
+        "head1": "Innovation Begins Here,",
+        "head2": "Growth Follows",
+        "des": "Where Bangladesh meets Japan, and innovative ideas meet powerful execution.",
+        "button": "Lets build success together",
+        "link": "/contact"
+      }
+    ],
+    "ceo": {
+      "intro": "At Kawaii Group, we believe in the power of global collaboration and the fusion of diverse expertise. Our message to you is simple yet profound:",
+      "headline": "Building Bridges, Creating Smiles",
+      "join": "Join us in creating a future where borders are no barrier to success, and where every challenge is an opportunity for growth.",
+      "cta": "Let's Grow Together"
+    },
+    "help": {
+      "title": "How We Can Help You Grow",
+      "subtitle": "We support business from staffing to software having expertise in recruitment, international education, and software solutions.",
+      "cta": "Start Your Journey With Us",
+      "cards": [
+        {
+          "title": "Simplify Global Hiring",
+          "with": "with M/S Sanjana International",
+          "desc": "M/S Sanjana International connects businesses with skilled professionals worldwide, ensuring the right fit for your organizational needs."
+        },
+        {
+          "title": "Build Your Career in Japan",
+          "with": "with Achieve Japan",
+          "desc": "Achieve Japan empowers individuals with educational opportunities in Japan and beyond, fostering global perspectives and career readiness."
+        },
+        {
+          "title": "Drive Business Efficiency integrating software solutions",
+          "with": "with KATSL",
+          "desc": "Kawaii Technology equips businesses with transformative SaaS solutions, enhancing operational efficiency and driving sustainable growth."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Our Projects",
+      "subtitle": "A glimpse into our upcoming initiatives and innovations",
+      "items": [
+        {
+          "title": "JAPAN SSW TRAINING CENTRE",
+          "subtitle": "Empowering the Bangladeshi Workforce for Success in Japan",
+          "description": "The Kawaii Group is committed to addressing Japan's labor shortage by establishing the JAPAN SSW TRAINING CENTRE in Bangladesh. Despite strong bilateral relations, Bangladesh faces challenges in providing practical training and language development for the Japanese job market. This initiative aims to bridge that gap by preparing approximately 50,000 skilled workers over the next decade, enhancing their competitiveness in the Specific Skilled Workers (SSW) sector."
+        },
+        {
+          "title": "Japan Business Tower",
+          "subtitle": "Premier Destination for Shopping, Dining, and Business Excellence",
+          "description": "The Japan Business Tower at Panchdona is a prime business destination located in the prestigious area of Panchdona More, Narsingdi, covering 42.42 katha (30,542 square feet). This thoughtfully designed complex offers a range of facilities, including a shopping mall with a super shop and food court, modern office spaces, and a cineplex."
+        },
+        {
+          "title": "Japan Green City",
+          "subtitle": "Embrace Japanese Inspired Luxury in Dhaka",
+          "description": "Japan Green City, Dhaka's premier residential complex, located in the prestigious Vatara-Gulshan area. Offering spacious and well-appointed apartments amidst lush greenery, this environmentally friendly development ensures convenience, connectivity, and a peaceful atmosphere. With top-tier amenities including playgrounds, swimming pools, and a vibrant community spirit, Japan Green City is the ideal choice for families and young couples seeking a safe and prestigious place to live."
+        },
+        {
+          "title": "Japan Business Center",
+          "subtitle": "For Premier Experience and Business Excellence",
+          "description": "The Japan Business Center in Vatara, Gulshan, Dhaka, is an iconic development spread across 8 bighas or 3237.49 Tsubo of prime land. This state-of-the-art facility will include a shopping mall, super shop, food court, modern office spaces, a five-star hotel, and essential healthcare amenities like a clinic and gym. It also features a dedicated mosque, ample parking, and a focus on community and green spaces, offering a blend of luxury, convenience, and tranquility in the heart of Dhaka."
+        }
+      ]
+    },
+    "ventures": {
+      "title": "Kawaii Ventures",
+      "intro": "At Kawaii Group, we've built a diverse family of companies, each specialized to meet specific needs in the global market. Our sister concerns work in synergy to provide comprehensive solutions across multiple sectors.",
+      "cta": "Explore Our Ventures",
+      "items": [
+        {
+          "title": "M/S Sanjana International",
+          "bullets": [
+            "Premier overseas employment agency in Bangladesh",
+            "Licensed by the Ministry of Labor and Employment (License No. RL-711)",
+            "Connecting skilled Bangladeshi professionals with global opportunities"
+          ]
+        },
+        {
+          "title": "Achieve Japan",
+          "bullets": [
+            "17+ years of experience in international education",
+            "Specializes in connecting students with universities and workplaces, particularly in Japan",
+            "Extensive network of experts providing personalized guidance"
+          ]
+        },
+        {
+          "title": "Kawaii Advanced Technology and Solution Ltd",
+          "bullets": [
+            "Custom software development for SaaS solutions",
+            "Specializes in e-commerce, project management, and enterprise solutions",
+            "Focus on user-centric design and seamless integration",
+            "Established in 2020, simplifying business complexities through technology"
+          ]
+        }
+      ]
+    },
+    "news": {
+      "title": "Latest News",
+      "intro": "From an early stage-up's growth strategies to helping existing businesses, we have done it all! The results speak for themselves. Our service work.",
+      "readMore": "READ more",
+      "items": [
+        {
+          "title": "Kawaii Group-Bureau of Manpower Employment and Training (BMET) MOU Signing Ceremony",
+          "desc": "BMET partnered with Kawaii Group to enhance workforce readiness for Japan's Specified Skilled Worker (SSW) program. Kawaii Group's extensive experience and strong presence in Japan make it a key player in facilitating smooth migration and employment for Bangladeshi workers.",
+          "date": "05 March 2025"
+        },
+        {
+          "title": "Japanese Food and Traditional Green Tea Ceremony",
+          "desc": "On February 21st, International Mother Language Day, Achieve Japan hosted a Japanese Food and Traditional Green Tea Ceremony attended by Japan Foundation representatives including Ms. Kyoko Takemoto, Mr. Okubo, Mr. Kasai, and officials from JF KC in Osaka. Students demonstrated Japanese culinary traditions and cultural values. Discussions covered Bangladesh's current Japanese language training landscape, the impact of enhanced teacher training methods, IRODORI materials' significance, and strategic approaches to SSW program advancement. The Japan Foundation pledged comprehensive support for Achieve Japan's development initiatives.",
+          "date": "21 February 2025"
+        },
+        {
+          "title": "Kawaii Group-Egrowth Inc. MOU Signing Ceremony",
+          "desc": "On December 17th, during the Japan Day event organized by BASIS: Japan Desk, Kawaii Advanced Technology & Solution Ltd participated as a Gold Sponsor. As part of the event, the company signed a Memorandum of Understanding (MoU) with Egrowth, aiming to create new opportunities in IT engineer training and job placement. This collaboration marks a step forward in strengthening global tech talent exchange and workforce development.",
+          "date": "17 December 2024"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Images Gallery"
+    },
+    "map": {
+      "title": "Where We Operate",
+      "subtitle": "Kawaii Group Around the World",
+      "offices": {
+        "bangladesh": "Bangladesh Office:",
+        "japan": "Japan Office:",
+        "canada": "CANADA Office:",
+        "germany": "Germany Office:",
+        "malaysia": "Malaysia Office:"
+      }
+    },
+    "cta": {
+      "title": "Looking for a Trusted Partner in Global Business?",
+      "text": "From recruitment to technology, we've got you covered."
+    }
+  },
+  "about": {
+    "header": "Who we are",
+    "first": {
+      "title": "Shaping Tomorrow, Today: The Kawaii Group Story",
+      "body": "Kawaii Group was founded with one core idea: to create opportunities. Whether it's helping businesses thrive or guiding individuals to new career paths, we are passionate about making a difference.",
+      "corporateProfile": "Corporate Profile",
+      "download": "Download Profile",
+      "modalTitle": "Choose your Kawaii Group Profile Language Preferences",
+      "english": "English",
+      "japanese": "日本語 (Japanese)"
+    },
+    "vision": {
+      "title": "Our Vision for the Future",
+      "body": "Our vision is to be a leading force in connecting global businesses with Japanese expertise driving innovation and sustainable growth across diverse industries."
+    },
+    "anatomy": {
+      "title": "The Kawaii Anatomy",
+      "items": [
+        {
+          "letter": "K",
+          "title": "Knowledge",
+          "description": "Represents the knowledge sharing between Bangladesh and Japan"
+        },
+        {
+          "letter": "A",
+          "title": "Alliance",
+          "description": "Represents the strong partnership between Bangladesh and Japan"
+        },
+        {
+          "letter": "W",
+          "title": "Welfare",
+          "description": "Represents the knowledge sharing between Bangladesh and Japan"
+        },
+        {
+          "letter": "A",
+          "title": "Adaptability",
+          "description": "Reflects the company's ability to evolve and respond effectively to changing environments and market needs."
+        },
+        {
+          "letter": "I",
+          "title": "Integrity",
+          "description": "Highlights the strong ethical foundation of the company"
+        },
+        {
+          "letter": "I",
+          "title": "Impact",
+          "description": "Emphasizes the significant positive impact of the company's work"
+        }
+      ]
+    },
+    "difference": {
+      "title": "How We're Making a Difference",
+      "cards": [
+        {
+          "title": "For Businesses",
+          "desc": "Delivering world-class solutions across technology, fashion, and engineering sectors."
+        },
+        {
+          "title": "For Students",
+          "desc": "Opening doors to international education, with over 3,000 students sent to Japan."
+        },
+        {
+          "title": "For Communities",
+          "desc": "Building sustainable infrastructure and creating employment opportunities."
+        }
+      ]
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "body": "Our team is the heart of the Kawaii Group. We are a collective of forward-thinking individuals from diverse fields, all united by a common goal: to create value for our clients, our communities, and the world."
+    },
+    "way": {
+      "title": "The Kawaii Way",
+      "subtitle": "Our success is built on core beliefs that guide every decision:",
+      "beliefs": [
+        {
+          "title": "Innovation is Limitless:",
+          "desc": "Every challenge is an opportunity to innovate."
+        },
+        {
+          "title": "Collaboration is Key:",
+          "desc": "The best solutions emerge when diverse minds come together."
+        },
+        {
+          "title": "Quality is Non-Negotiable:",
+          "desc": "We uphold the highest standards in everything we do."
+        },
+        {
+          "title": "People are Our Greatest Asset:",
+          "desc": "We invest in talent and nurture potential."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Join the Kawaii Journey",
+      "text": "Whether you're a business looking for innovative solutions, a student dreaming of global education, or an individual seeking to make a difference – Kawaii Group is your partner in progress.",
+      "text2": "Together, let's build a future where borders are just lines on a map, and opportunities are limitless."
+    }
+  },
+  "contact": {
+    "header": "Get in Touch",
+    "form": {
+      "lead": "Reach out today to start a conversation with our team",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "privacyAgree": "You agree to our friendly",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "side": {
+      "emailTitle": "Send Us an Email",
+      "emailBody": "We'd love to hear from you! feel free to reach out to us via mail.",
+      "callTitle": "Give Us a Call",
+      "callBody": "We're here to help! Don't hesitate to reach out to us by phone."
+    }
+  },
+  "services": {
+    "header": "Specified Skilled Worker (SSW)"
+  },
+  "concerns": {
+    "header": "Sister concerns"
+  },
+  "corporate": {
+    "pageTitle": "Corporate Profile",
+    "companyHeader": "Kawaii Group",
+    "tabs": {
+      "profile": "Corporate Profile",
+      "history": "History",
+      "management": "Senior Management",
+      "governance": "Corporate Governance"
+    },
+    "sectionTitle": "Corporate Profile",
+    "asOf": "As of fiscal year ended July 2024.",
+    "fields": {
+      "companyName": "Company Name",
+      "headOffice": "Head Office Location",
+      "japanOffice": "Japan Office Location",
+      "tel": "TEL",
+      "managingDirector": "Managing Director & Group CEO",
+      "incorporated": "Incorporated",
+      "capital": "Company Capital",
+      "employees": "Number Of Employees",
+      "sisterConcerns": "Sister Concerns"
+    },
+    "values": {
+      "companyName": "Kawaii Group Limited",
+      "headOffice": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219",
+      "japanOffice": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan",
+      "tel": "+88 02-55123797, +81 03-4363-5903",
+      "managingDirector": "Dewan Samir",
+      "incorporated": "2015",
+      "capital": "10 Crore BDT",
+      "employees": "20",
+      "sisterConcerns": "8+"
+    }
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy for Kawaii Group",
+    "effectiveDate": "Effective Date: January 1, 2024",
+    "intro": "Kawaii Group (\"us\", \"we\", or \"our\") operates the website www.kawaiibd.com (the \"Service\"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.",
+    "sections": {
+      "infoCollect": "Information We Collect",
+      "infoCollectIntro": "We collect several different types of information for various purposes to provide and improve our Service to you.",
+      "personalData": "Personal Data",
+      "personalItems": [
+        "Email address",
+        "First name and last name",
+        "Phone number",
+        "Address, State, Province, ZIP/Postal code, City"
+      ],
+      "usageData": "Usage Data",
+      "usageDataText": "We may also collect information on how the Service is accessed and used...",
+      "cookies": "Cookies and Tracking Technologies",
+      "cookiesText": "We use cookies and similar tracking technologies...",
+      "whyCollect": "Why We Collect Information",
+      "whyItems": [
+        "To provide and maintain our Service",
+        "To notify you about changes..."
+      ],
+      "disclosure": "Disclosure of Data",
+      "disclosureText": "Kawaii Group may disclose your Personal Data in good faith...",
+      "security": "Security of Data",
+      "securityText": "The security of your data is important...",
+      "rights": "Your Data Protection Rights",
+      "rightsItems": [
+        "The right to access..."
+      ],
+      "changes": "Changes to This Privacy Policy",
+      "changesText": "We may update our Privacy Policy from time to time...",
+      "contact": "Contact Us",
+      "contactText": "If you have any questions about this Privacy Policy..."
+    }
+  },
+  "nopages": {
+    "title": "No pages"
+  },
+  "masterclass": {
+    "bannerAlt": "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
+    "urgency": {
+      "badge": "Live Zoom Masterclass",
+      "title": "Free Registration Closes Soon!",
+      "dateLabel": "Masterclass Date: Tuesday, Aug 18, 2026"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "mins": "Mins",
+      "secs": "Secs"
+    },
+    "registerNow": "Register Now",
+    "meta": {
+      "date": {
+        "label": "Date",
+        "value": "Tuesday, Aug 18, 2026",
+        "note": "Add to calendar invites will follow"
+      },
+      "time": {
+        "label": "Time",
+        "value": "7:00 PM - 10:00 PM",
+        "note": "Bangladesh Time (BST)"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Online via Zoom",
+        "note": "Link emailed upon registration"
+      },
+      "incentives": {
+        "label": "Incentives",
+        "value": "Participation Certificate",
+        "note": "Awarded to all active attendees"
+      }
+    },
+    "speaker": {
+      "badge": "Speaker",
+      "viewProfile": "View Official Profile",
+      "stats": {
+        "gcRd": "GC R&D",
+        "papers": "Papers",
+        "patents": "Patents",
+        "committees": "Committees"
+      },
+      "name": "Dr. SHUNSUKE SOMEYA",
+      "role": "First-class Architect & Ph.D. in Engineering (Japan)",
+      "company": "Proprietor, Digital Construction Someya R&D",
+      "bio": "Dr. Shunsuke Someya sits at a unique intersection of academic expertise and field operations. With a Ph.D. in Engineering and license as a First-class Architect in Japan, he bridges technology, field practices, and corporate strategy to lead Construction DX and BIM transformations.",
+      "timelineTitle": "Professional Timeline",
+      "timeline": {
+        "t1": "Takenaka Corporation — Technology Research Institute, BIM Promotion Office, HQ Chief Expert (18 years).",
+        "t2": "Ph.D. in Engineering, Shibaura Institute of Technology.",
+        "t3": "ABeam Consulting — Strategy Consultant Manager.",
+        "t4": "Digital Construction Someya R&D — Founder & Proprietor."
+      },
+      "academicRoles": "Academic & Industry Roles:",
+      "academicRolesText": "Committee Member of Architectural Institute of Japan (AIJ) VDC/BIM Subcommittee, and Committee Member of Japan Society for Precision Engineering (JSPE)."
+    },
+    "modules": {
+      "title": "What We Will Cover in this Masterclass",
+      "m1": {
+        "title": "Construction DX (Digital Transformation)",
+        "desc": "Understanding Japan's MLIT standards and the transition from manual, legacy systems to digital-native sites."
+      },
+      "m2": {
+        "title": "3D & Multidimensional BIM Workflows",
+        "desc": "Moving from 2D CAD to 3D, 4D (Time Scheduling), and 5D (Costing) workflows with Revit, Navisworks, and Tekla."
+      },
+      "m3": {
+        "title": "Practical Clash Detection",
+        "desc": "Techniques for identifying structural and MEP interference issues before fabrication, saving millions in rework."
+      },
+      "m4": {
+        "title": "Global BIM Job Opportunities",
+        "desc": "How Bangladeshi engineers and architects can prepare their portfolios for international and Japanese firms."
+      }
+    },
+    "share": {
+      "title": "Scan & Share",
+      "desc": "Scan this QR code with your mobile device to open the registration page instantly",
+      "qrAlt": "Scan to Register QR Code",
+      "copyLink": "Copy Shareable Link",
+      "linkCopied": "Link Copied!",
+      "shareEmail": "Share via Email",
+      "emailSubject": "Invitation: BIM and Construction DX Masterclass",
+      "emailBody": "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 18, 2026. Register here:"
+    },
+    "help": {
+      "title": "Need Help?",
+      "text": "For any technical assistance or bulk registrations, contact Kawaii Group Bangladesh via"
+    },
+    "form": {
+      "title": "Masterclass Registration Form",
+      "subtitle": "Please fill out all required details. Zoom access codes and handouts will be sent to your registered email address.",
+      "stepLabel": "Step",
+      "close": "Close",
+      "steps": {
+        "s1": "Contact & Personal Details",
+        "s2": "Educational & Professional Background",
+        "s3": "Dr. Someya Familiarity & Course Feedback",
+        "s4": "Goals, AutoCAD Level & Source tracking"
+      },
+      "fields": {
+        "fullName": "Full Name *",
+        "email": "Email Address *",
+        "phone": "WhatsApp Number/Phone *",
+        "linkedin": "LinkedIn Profile Link (Optional)",
+        "status": "What best describes your current status? *",
+        "org": "Organization / Firm or University Name *",
+        "designation": "Designation / Highest Level of Education & Subject *",
+        "experience": "Years of Experience / Academic Year *",
+        "familiarity": "Have you visited Dr. SHUNSUKE SOMEYA's professional profile / research background? *",
+        "opinion": "What is your opinion on Kawaii Group launching this international BIM & Construction DX Course? *",
+        "bimLevel": "What is your current experience level with BIM software (e.g. Revit, Navisworks, Tekla)? *",
+        "goals": "What is your primary goal for taking this course? (Select all that apply)",
+        "autocad": "What is your proficiency level in 2D Drafting (AutoCAD)?",
+        "suggestions": "Is there any specific topic you would like Dr. Someya to address during the course? (Optional)",
+        "source": "How did you hear about this BIM & Construction DX Course? *"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+880 1XXXX XXXXX",
+        "linkedin": "https://linkedin.com/in/username",
+        "org": "e.g. BUET / Firm Name",
+        "designation": "e.g. Structural Engineer / B.Sc. Civil Engineering",
+        "opinion": "Share your thoughts on the course launch...",
+        "suggestions": "Topics, questions, or specific BIM questions..."
+      },
+      "selectStatus": "Select Status",
+      "selectExperience": "Select Experience / Year",
+      "autocadBeginner": "Beginner",
+      "autocadAdvanced": "Advanced",
+      "prev": "Previous",
+      "next": "Next Step",
+      "submit": "Submit Registration",
+      "statusLabels": {
+        "professional": "Working Professional (Structural/Architectural/Civil/MEP)",
+        "graduate": "Fresh Graduate (0-1 year experience)",
+        "student": "Undergraduate/Postgraduate Student",
+        "educator": "Academic/Educator",
+        "other": "Other"
+      },
+      "experienceLabels": {
+        "finalYear": "Student Final Year",
+        "studentEarly": "Student (1st year-3rd year)",
+        "exp13": "(1-3) years experience",
+        "exp35": "(3-5) years experience",
+        "exp5plus": "5+ years experience"
+      },
+      "familiarityLabels": {
+        "yes": "Yes, I am familiar with his profile and work",
+        "notYet": "Not yet, but I would like to learn more about his background",
+        "no": "No"
+      },
+      "bimLevelLabels": {
+        "beginner": "Complete Beginner (Never used)",
+        "basic": "Basic (Can Navigate models & basic 3D)",
+        "intermediate": "Intermediate (Can model elements & extract drawings)",
+        "advanced": "Advanced (Clash detection, 4D/5D, BEP)"
+      },
+      "goalsLabels": {
+        "g1": "Master practical 3D/4D/5D BIM workflows & clash detection",
+        "g2": "Learn Japanese Construction DX & MLIT standards",
+        "g3": "Improve portfolio for Japanese / International job opportunities",
+        "g4": "Transition my firm from 2D CAD to 3D BIM workflows"
+      },
+      "sourceLabels": {
+        "social": "Kawaii Group Facebook / LinkedIn Page",
+        "university": "University Club / Notice Board",
+        "messaging": "WhatsApp Group / Telegram",
+        "referral": "Referred by a colleague / friend",
+        "other": "Other"
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email Address is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "WhatsApp/Phone number is required",
+        "statusRequired": "Please select your status",
+        "orgRequired": "Organization or University Name is required",
+        "designationRequired": "Designation/Subject is required",
+        "experienceRequired": "Please select your experience level",
+        "familiarityRequired": "Please answer this question",
+        "opinionRequired": "This field is required",
+        "bimLevelRequired": "Please select your BIM experience level",
+        "sourceRequired": "Please select how you heard about us"
+      }
+    },
+    "success": {
+      "title": "Registration Complete!",
+      "thankYouPrefix": "Thank you,",
+      "thankYouSuffix": "Your registration for the BIM & Construction DX Masterclass has been successfully recorded.",
+      "nextTitle": "What happens next?",
+      "next1": "A confirmation email with Zoom join details will be sent to you.",
+      "next2": "Please check your spam folder if you do not see it within 10 minutes.",
+      "next2Bold": "spam folder",
+      "next3": "Handout materials will be emailed 24 hours before the masterclass.",
+      "done": "Done"
+    }
+  },
+  "concernsPage": {
+    "title": "Kawaii Group Family At a Glance",
+    "intro": "At Kawaii Group, we're more than just a company - we're a family of diverse businesses united by a common goal:",
+    "introBold": "to bridge gaps between cultures and create value across multiple sectors.",
+    "introRest": "Our sister concerns span recruiting, education, technology, fashion, and more, each playing a crucial role in our mission to connect Bangladesh with Japan and the world.",
+    "exploreNow": "Explore Now",
+    "cards": {
+      "sanjanaHr": {
+        "type": "Dedicated recruiting agency.",
+        "desc": "We specialize in connecting skilled Bangladeshi professionals with opportunities in Japan and beyond."
+      },
+      "aj": {
+        "type": "Japanese language learning center.",
+        "desc": "We provide top-notch language and cultural training, preparing individuals for success in Japanese business environments."
+      },
+      "tredmig": {
+        "type": "Professional consultancy firm.",
+        "desc": "Tredmig ensures that all applicants have a smooth transition into the global job market in the most cost-effective manner."
+      },
+      "katsl": {
+        "type": "SaaS (Software as a Service) solution-based software company.",
+        "desc": "We develop advanced software solutions to meet the evolving needs of businesses in both Bangladesh and Japan."
+      },
+      "kgj": {
+        "type": "Our Japanese headquarter.",
+        "desc": "It serves as a vital link between Bangladesh and Japan. It facilitates smooth business operations and cultural exchange."
+      },
+      "bh": {
+        "type": "Premier online travel aggregator (OTA).",
+        "desc": "Get the best prices on Flights, Hotels, Transfers & Activities Worldwide"
+      },
+      "kddl": {
+        "type": "Business Design & Development focused",
+        "desc": "This sister concern combines Japanese design principles with global trends. We offer innovative design solutions for various industries."
+      },
+      "kiec": {
+        "type": "Higher Studies and International Education consultancy agency.",
+        "desc": "We assist students in pursuing international education opportunities, with a focus on countries like Europe, and Australia."
+      },
+      "kgvl": {
+        "type": "Japan–Bangladesh joint venture for business & collaboration.",
+        "desc": "Promoting partnerships, investment, HR development, and digital transformation across Japan and Bangladesh."
+      },
+      "kjchs": {
+        "type": "Career development and HR solutions for Japan.",
+        "desc": "We connect talent with Japanese career opportunities and deliver comprehensive HR solutions that support workforce growth across borders."
+      }
+    },
+    "details": {
+      "sanjanaHr": {
+        "sectionTitle": "Recruitment & Global Employment",
+        "subtitle": "Connecting Talent with Global Opportunities",
+        "body": "We are a leading recruitment agency specializing in placing skilled Bangladeshi professionals in high-demand markets, particularly Japan. With a proven track record, we ensure that every candidate is fully prepared for their international career journey.",
+        "bullets": [
+          "Expertise in Japanese employment markets",
+          "Training and skill development for overseas jobs",
+          "Comprehensive visa and relocation support"
+        ],
+        "cta": "Learn More"
+      },
+      "aj": {
+        "sectionTitle": "Language & Cultural Training",
+        "subtitle": "Prepare for Success in Japan with Expert Language & Cultural Training",
+        "body": "Achieve Japan provides industry-leading Japanese language education, preparing individuals for work, study, or migration. We ensure that you not only learn the language but also gain a deep understanding of Japanese culture, setting you up for success in Japan's professional environments.",
+        "bullets": [
+          "JLPT-certified courses",
+          "Cultural orientation and etiquette training",
+          "Native and local Japanese instructors"
+        ],
+        "cta": "Join Our Classes"
+      },
+      "katsl": {
+        "sectionTitle": "Digital Transformation Solutions",
+        "subtitle": "Innovating Business with Advanced Software Solutions",
+        "body": "Kawaii Advanced Technology & Solution Ltd. offers custom SaaS software that helps businesses across Bangladesh and Japan optimize their operations. Whether it's enterprise resource planning or business automation, our tailored solutions meet the evolving needs of modern businesses.",
+        "bullets": [
+          "Offshore/Augmentation Development Team",
+          "Custom SaaS software for businesses",
+          "IT Engineers Training & Job Placement in Japan"
+        ],
+        "cta": "Discover Our Solutions"
+      },
+      "kgvl": {
+        "sectionTitle": "Business & International Collaboration",
+        "subtitle": "Japan–Bangladesh Joint Venture for Business & HR Development",
+        "body": "Promotes strategic partnerships, investments, human resource development, technology exchange, and trade facilitation between Bangladesh, Japan, and global markets.",
+        "bullets": [
+          "Business & Investment Consultancy",
+          "Workforce Solutions & HR Development",
+          "Technology Transfer & Digital Transformation"
+        ],
+        "cta": "View Full Profile"
+      },
+      "kjchs": {
+        "sectionTitle": "Career & HR Solutions",
+        "subtitle": "Building Careers and Strengthening Workforces for Japan",
+        "body": "Kawaii Japan Career & HR Solutions specializes in career placement and human resource services, helping individuals and organizations succeed in the Japanese employment market through tailored recruitment, training, and workforce support.",
+        "bullets": [
+          "Japan-focused career placement",
+          "End-to-end HR and workforce solutions",
+          "Candidate preparation and employer matching"
+        ],
+        "cta": "View Full Profile"
+      }
+    }
+  },
+  "kgvl": {
+    "headerTitle": "Kawaii Global Ventures",
+    "badge": "Japan–Bangladesh Joint Venture",
+    "overviewTitle": "Bridging Opportunities Across Borders",
+    "overviewDesc": "Kawaii Global Ventures Limited is a premier Japan–Bangladesh joint venture established under the Companies Act, 1994. We act as a strategic catalyst promoting business partnerships, investments, human resource development, education, technology exchange, and international collaboration between Bangladesh, Japan, and global markets.",
+    "stat1Num": "1994",
+    "stat1Label": "Established under Companies Act",
+    "stat2Num": "6+",
+    "stat2Label": "Core Professional Services",
+    "hubTitle": "Global Business Hub",
+    "hubDesc": "Connecting the business landscapes of Dhaka and Tokyo",
+    "hubAlt": "Tokyo Business Center",
+    "visionTitle": "Our Vision",
+    "visionText": "To become a leading Bangladesh–Japan partnership platform for business growth, investment, education, technology transfer, and sustainable economic cooperation.",
+    "missionTitle": "Our Mission",
+    "missionText": "To connect people, organizations, and opportunities through consultancy, workforce development, education support, business facilitation, and international collaboration.",
+    "servicesSubtitle": "What We Offer",
+    "servicesTitle": "Core Services",
+    "services": {
+      "s1": {
+        "title": "Business & Investment Consultancy",
+        "desc": "Providing strategic entry guides, investment match-making, market intelligence, and regulatory facilitation for companies navigating the Japan-Bangladesh corridor."
+      },
+      "s2": {
+        "title": "Human Resource Development & International Workforce Solutions",
+        "desc": "Bridging the skill gap by training and preparing talented professionals from Bangladesh to excel in Japanese and international enterprise environments."
+      },
+      "s3": {
+        "title": "Education, Language Training & Global Learning",
+        "desc": "Delivering certified Japanese language programs, cultural workshops, and academic alignment to prepare students and professionals for international success."
+      },
+      "s4": {
+        "title": "Technology & Digital Transformation",
+        "desc": "Facilitating tech exchange, collaborative software engineering projects, offshore development teams, and integration of cutting-edge Japanese technological standards."
+      },
+      "s5": {
+        "title": "International Trade & Business Facilitation",
+        "desc": "Streamlining export-import structures, trade partnerships, logistics solutions, and administrative clearances between Japan, Bangladesh, and global trade channels."
+      },
+      "s6": {
+        "title": "Strategic Projects & Industry Support",
+        "desc": "Offering end-to-end support for large-scale infrastructure projects, public-private partnerships, and industrial alignments that foster mutual economic growth."
+      }
+    },
+    "leadershipSubtitle": "Executive Board",
+    "leadershipTitle": "Leadership Team",
+    "roles": {
+      "chairman": "Chairman",
+      "viceChairman": "Vice Chairman",
+      "managingDirector": "Managing Director",
+      "ceo": "CEO",
+      "cfo": "CFO"
+    },
+    "regions": {
+      "japan": "Japan",
+      "bangladesh": "Bangladesh"
+    },
+    "leaders": {
+      "junji": "Providing executive oversight and fostering high-level relationships with Japanese corporate leaders and government stakeholders.",
+      "zillur": "Guiding the strategic framework and local collaboration partnerships across industrial and business sectors in Bangladesh.",
+      "samir": "Driving the corporate strategy, execution of joint ventures, and alignment with the broader Kawaii Group vision.",
+      "iqbal": "Managing daily operational activities, client relationships, and business development across all core service divisions.",
+      "shafi": "Directing the financial strategies, compliance, joint venture structuring, and budget management systems."
+    },
+    "commitmentBadge": "Our Commitment",
+    "commitmentTitle": "Professionalism, Transparency, and Innovation",
+    "commitmentDesc": "We are committed to delivering sustainable value for businesses, professionals, students, investors, and institutions across Japan and Bangladesh. By adhering to the highest standards of governance and leveraging cross-border alliances, we turn collaboration into tangible success.",
+    "commitmentValues": {
+      "v1": "Uncompromised Value",
+      "v2": "Full Transparency",
+      "v3": "Continuous Innovation",
+      "v4": "Expert Leadership"
+    },
+    "entityTitle": "Kawaii Global Ventures",
+    "entitySubtitle": "Joint Venture Entity",
+    "entityBadge": "ESTD. COMPANIES ACT 1994",
+    "ctaTitle": "Looking for a Strategic Partner in Japan-Bangladesh Collaboration?",
+    "ctaText": "Whether you are an investor, enterprise, or training institute, let's explore opportunities together."
+  },
+  "kjchs": {
+    "heroCompaniesTitle": "Driving Your Success\nin Bangladesh",
+    "heroCompaniesBtn": "For Companies",
+    "heroSeekersTitle": "Career Support for Job Seekers\nin Bangladesh",
+    "heroSeekersBtn": "For Job Seekers",
+    "badge": "Japan–Bangladesh HR Bridge",
+    "overviewTitle": "Bridging Talent & Strategic Growth",
+    "overviewP1": "In Bangladesh, Kawaii Japan Career & HR Solutions is a renowned career matching and HR solutions company. As a joint venture between Japan and Bangladesh and one of the sister concerns of the Kawaii Group, we specialize in developing and delivering tailored workforce solutions. Acting as a strategic bridge, we connect top talent with growing organizations.",
+    "overviewP2": "We began the journey of our company in 2025 with a clear objective: to connect talent with the right opportunities and support organizations in building strong, capable teams. We have established connections with over 60 companies till now, focusing on quality, transparency, trust, and long-term relationships.",
+    "stat1Num": "60+",
+    "stat1Label": "Partner Companies connected",
+    "stat2Num": "2025",
+    "stat2Label": "Founded Journey",
+    "standardsTitle": "Japanese Work Standards",
+    "standardsIntro": "We are the first HR company in Bangladesh to adopt and implement Japanese technology-driven systems, focusing heavily on:",
+    "standards": [
+      "Ethics & Integrity",
+      "Strict Professional Discipline",
+      "Operational Efficiency",
+      "Mutual Respect & Respect"
+    ],
+    "aboutSubtitle": "About Us",
+    "aboutTitle": "Bridging Talent and Organizations",
+    "aboutP1": "We founded Kawaii Japan Career & HR Solutions BD with the belief that recruitment is not just about filling positions, but rather it is about creating the right match between people and organizations. We provide services with equal attention and priority to both employers and job seekers.",
+    "aboutP2": "We take the time to understand both employers and candidates, because we believe that every organization is unique and every individual has unique potential. We provide the full range of solutions related to recruitment, staffing, HR, IT, legal, and sustainability that a company needs.",
+    "visionTitle": "Our Vision",
+    "visionText": "Our goal is to become a trusted human resources and career solutions partner not only in Bangladesh but globally. We want to be known as the best for creating meaningful and lasting connections between organizations and talent.",
+    "missionTitle": "Our Mission",
+    "missionText": "Our mission is to provide reliable and customized HR solutions that help organizations grow and individuals develop their careers. We strive to maintain transparency, professionalism, and consistency in everything we do.",
+    "employersBadge": "For Employers",
+    "employersTitle": "Driving Your Success in Bangladesh",
+    "employersDesc": "We help organizations in building strong, efficient, and effective teams. Our goal is to reduce hiring time, improve candidate quality, and support business growth through reliable workforce solutions.",
+    "employersImgAlt": "Corporate Success",
+    "ourServices": "Our Services",
+    "ourExpertise": "Our Expertise",
+    "ourPhilosophy": "Our Philosophy",
+    "ourProcess": "Our Working Process",
+    "whyChooseUs": "Why Choose Us",
+    "employerServices": [
+      "End-to-end recruitment and talent acquisition",
+      "Permanent, temporary, and contract staffing solutions",
+      "Executive search and mid-level hiring",
+      "HR consulting and organizational development",
+      "IT-enabled HR systems and workforce solutions",
+      "Legal and compliance support",
+      "Sustainable workforce planning"
+    ],
+    "employerExpertise": "We understand that every organization has unique and different hiring needs and requirements. Our expertise lies in identifying the candidates who not only meet the job requirements but also fit the company's culture and long-term goals. We work across a variety of industries and focus on maintaining a well-organized and efficient recruitment process.",
+    "employerPhilosophy": "We believe that the success of an organization depends on the quality of its employees. That's why we focus on building strong connections between companies by finding the right talent.",
+    "employerProcessIntro": "Our process is designed to make the hiring process simple and effective.",
+    "employerSteps": {
+      "s1": {
+        "title": "Understanding Requirements",
+        "desc": "We study your specific requirements, such as skills, experience, and organizational culture."
+      },
+      "s2": {
+        "title": "Source & Select",
+        "desc": "We carefully source and select candidates, ensuring that only the most suitable profiles are presented."
+      },
+      "s3": {
+        "title": "Interview & Onboarding",
+        "desc": "After coordinating interviews and assisting in selection, we follow up regularly to ensure a smooth onboarding."
+      }
+    },
+    "employerWhy1": "Employers choose Kawaii Japan Career & HR Solutions BD as it is the first HR company to adopt and follow Japanese technology-driven systems.",
+    "employerWhy2": "Our main focus is quality and reliability, not quantity. We do not believe in sending a large number of candidates; rather, we focus on delivering the right candidates who match the requirements. We provide comprehensive manpower solutions across operational, technical, and managerial levels.",
+    "seekersBadge": "For Job Seekers",
+    "seekersTitle": "Career Support for Job Seekers in Bangladesh",
+    "seekersDesc": "We support individuals in building successful and meaningful careers. We ensure that candidates are placed in roles that match their skills, goals, and long-term career aspirations.",
+    "seekersImgAlt": "Candidate Guidance",
+    "seekerServices": [
+      "Career matching with top companies",
+      "Access to verified and quality job opportunities",
+      "Career guidance and professional support",
+      "CV and resume development",
+      "Interview preparation",
+      "Skill-based job placement across industries",
+      "Transparent and structured recruitment process",
+      "Continuous support throughout the hiring journey"
+    ],
+    "seekerExpertise": "We understand that every individual has different skills, interests, career goals, and strengths. Our expertise lies in guiding candidates toward opportunities that match their skills, interests, and long-term aspirations. We focus on helping job seekers, providing step-by-step guidelines.",
+    "seekerPhilosophy": "We believe that every individual has potential and that the right opportunity can shape their future. Our philosophy is to guide and support candidates in such a way that helps them grow with confidence.",
+    "seekerProcessIntro": "The main goal of our process is to help you move forward with confidence.",
+    "seekerSteps": {
+      "s1": {
+        "title": "Understand Background",
+        "desc": "We start by understanding your background, skills, interests, and career goals."
+      },
+      "s2": {
+        "title": "CV Optimization & Mock Interviews",
+        "desc": "We guide you to optimize your CV and prepare you for interviews to present yourself effectively."
+      },
+      "s3": {
+        "title": "Onboarding & Support",
+        "desc": "We stay in touch even after you join the job to ensure you adapt well to your new role."
+      }
+    },
+    "seekerWhy1": "Job seekers choose us because we provide real guidance and support. We take the time to understand your goals and help you get on the right track.",
+    "seekerWhy2": "From freshers to experienced, we guide each candidate with equal importance and care. We focus on realistic steps rather than making unrealistic promises, increasing your chances of success. We remain updated always as per market demand.",
+    "sectorsSubtitle": "Serving Sectors",
+    "sectorsTitle": "Sectors We Serve",
+    "sectorsIntro": "We serve a diverse range of industries at Kawaii Japan Career & HR Solutions BD. Our experience across these sectors enables us to identify the right talent based on industry-specific needs.",
+    "sectors": {
+      "it": {
+        "name": "Information Technology (IT)",
+        "desc": "Software engineering, cloud infrastructure, AI development, and IT support."
+      },
+      "manufacturing": {
+        "name": "Manufacturing",
+        "desc": "Industrial engineering, production management, and precision manufacturing."
+      },
+      "garments": {
+        "name": "Garments & Textiles",
+        "desc": "Textile engineering, sourcing, design, and supply chain management."
+      },
+      "pharma": {
+        "name": "Pharmaceuticals",
+        "desc": "Chemical research, quality control, pharmaceutical marketing, and logistics."
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "desc": "Clinical staff, healthcare administration, medical technology, and support."
+      },
+      "banking": {
+        "name": "Banking & Financial Services",
+        "desc": "Financial analysis, risk assessment, digital banking, and asset management."
+      },
+      "fmcg": {
+        "name": "FMCG",
+        "desc": "Brand management, sales distribution, inventory control, and retail planning."
+      },
+      "bpo": {
+        "name": "Business Process Outsourcing (BPO)",
+        "desc": "Customer service, back-office operations, technical support, and call centers."
+      }
+    },
+    "milestonesSubtitle": "Milestones",
+    "milestonesTitle": "Our Achievements",
+    "achievement1Num": "60+",
+    "achievement1Title": "Corporate Partnerships",
+    "achievement1Desc": "Successfully built partnerships with over 60 local and international companies.",
+    "achievement2Num": "Growing",
+    "achievement2Title": "Talent Network",
+    "achievement2Desc": "Establishing a growing network of employers and job seekers.",
+    "achievement3Num": "Pioneer",
+    "achievement3Title": "Japanese Ethics",
+    "achievement3Desc": "Built on a strong foundation of ethics, discipline, and efficiency.",
+    "ctaTitle": "Ready to Build a Strong Team or Elevate Your Career?",
+    "ctaText": "Whether you are an employer seeking skilled talent or a job seeker pursuing international pathways, let's connect."
   }
 }

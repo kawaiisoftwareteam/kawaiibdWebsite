@@ -1,9 +1,31 @@
 @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Bangla locale uses Anek Bangla across the site */
+html[lang="bn"],
+html[lang="bn"] body {
+  font-family: "Anek Bangla", "Segoe UI", sans-serif;
+}
+
+html[lang="bn"] *:not(script):not(style):not(svg):not(path) {
+  font-family: "Anek Bangla", "Segoe UI", sans-serif !important;
+}
+
+/* Japanese locale uses a consistent Japanese typeface across the site */
+html[lang="ja"],
+html[lang="ja"] body {
+  font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+html[lang="ja"] *:not(script):not(style):not(svg):not(path) {
+  font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif !important;
+}
 
 /* Reset CSS */
 * {

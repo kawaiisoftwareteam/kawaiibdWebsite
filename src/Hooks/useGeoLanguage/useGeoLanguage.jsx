@@ -103,7 +103,7 @@ export const detectCountryFromIpApi = async () => {
 
 export const localeFromCountry = (countryCode) => {
   if (!countryCode) return null;
-  return COUNTRY_TO_LOCALE[countryCode.toUpperCase()] || DEFAULT_LOCALE;
+  return COUNTRY_TO_LOCALE[countryCode.toUpperCase()] || null;
 };
 
 /**
@@ -128,9 +128,12 @@ export const resolveVisitorLocale = async () => {
 
   if (country) {
     const locale = localeFromCountry(country);
-    return { locale, source: 'auto', country };
+    if (locale) {
+      return { locale, source: 'auto', country };
+    }
   }
 
+  // For countries without an explicit mapping, respect the browser language.
   const browserLocale = localeFromBrowser();
   if (browserLocale && browserLocale !== DEFAULT_LOCALE) {
     return { locale: browserLocale, source: 'auto', country: null };

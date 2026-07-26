@@ -1,8 +1,11 @@
 import React from 'react'
 import "./MeetTeam.css"
 import meetPattern from "../../Assets/meet_team_pattern.svg"
+import { useLocale } from '../../i18n/LocaleContext'
 
 const MeetTeam = () => {
+  const { t } = useLocale();
+
   return (
     <div className='meet_team_main'>
       <div className='meet_team_box'>
@@ -14,8 +17,8 @@ const MeetTeam = () => {
           <div className='meet_img_3'></div>
         </div>
         <div className='meet_teem_content'>
-          <div className='meet_team_title'>Meet Our Team</div>
-          <div className='meet_team_description'>Our team is the heart of the Kawaii Group. We are a collective of forward-thinking individuals from diverse fields, all united by a common goal: to create value for our clients, our communities, and the world.</div>
+          <div className='meet_team_title'>{t('about.team.title')}</div>
+          <div className='meet_team_description'>{t('about.team.body')}</div>
         </div>
       </div>
     </div>

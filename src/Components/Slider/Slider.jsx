@@ -7,43 +7,18 @@ import sliderImage2 from '../../Assets/slider_image_2.png';
 import sliderImage3 from '../../Assets/slider_image_3.png';
 import sliderImage4 from '../../Assets/slider_image_4.png';
 import { Link } from 'react-router-dom';
+import { useLocale } from '../../i18n/LocaleContext';
 
 const slideImages = [
-    {
-        url: sliderImage1,
-        copyHead1: 'Your Global',
-        copyHead2: 'Growth Partner',
-        copyDes: 'Empowering businesses with diverse Japanese expertise on a global scale',
-        button: 'Partner with us',
-        link: '/contact'
-    },
-    {
-        url: sliderImage2,
-        copyHead1: 'A 35-Year Legacy of',
-        copyHead2: 'Japan-Bangladesh Business Excellence',
-        copyDes: 'With roots in Japan and Bangladesh, we offer integrated solutions that drive growth worldwide',
-        button: 'Know our story',
-        link: '/about'
-    },
-    {
-        url: sliderImage3,
-        copyHead1: 'Driving Success',
-        copyHead2: 'Across Diverse Industries',
-        copyDes: 'From human resources to Japanese language training, fashion, engineering, and beyond, we deliver tailored solutions for every industry.',
-        button: 'Explore our expertise',
-        link: '/concerns'
-    },
-    {
-        url: sliderImage4,
-        copyHead1: 'Innovation Begins Here,',
-        copyHead2: 'Growth Follows',
-        copyDes: 'Where Bangladesh meets Japan, and innovative ideas meet powerful execution.',
-        button: 'Lets build success together',
-        link: '/contact'
-    }
+    sliderImage1,
+    sliderImage2,
+    sliderImage3,
+    sliderImage4,
 ];
 
 const Slider = () => {
+    const { t, localizedPath } = useLocale();
+    const slides = t('home.slides') || [];
     const fadeRef = useRef(null);
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
@@ -114,17 +89,19 @@ const Slider = () => {
                 transitionDuration={500}
                 onChange={index => setActiveIndex(index)}
             >
-                {slideImages.map((slideImage, index) => (
+                {slideImages.map((imageUrl, index) => {
+                    const slide = slides[index] || {};
+                    return (
                     <div key={index}>
-                        <div className='heroSlide' style={{backgroundImage: `url(${slideImage.url})` }}>
+                        <div className='heroSlide' style={{backgroundImage: `url(${imageUrl})` }}>
                             <div className="heroOverlay"></div>
                             <div className='heroCopyBox'>
-                                <span className='heroSpanStyle heroHeaderText'>{slideImage.copyHead1}</span>
-                                <span className='heroSpanStyle heroHeaderText'>{slideImage.copyHead2}</span>
-                                <span className='heroSpanStyle heroDesText'>{slideImage.copyDes}</span>
-                                <Link to={slideImage.link} className='heroButton'>
+                                <span className='heroSpanStyle heroHeaderText'>{slide.head1}</span>
+                                <span className='heroSpanStyle heroHeaderText'>{slide.head2}</span>
+                                <span className='heroSpanStyle heroDesText'>{slide.des}</span>
+                                <Link to={localizedPath(slide.link || '/')} className='heroButton'>
                                     <div className='heroBtnWrap'>
-                                        <div className='heroBtnText'>{slideImage.button}</div>
+                                        <div className='heroBtnText'>{slide.button}</div>
                                     </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="white"/>
@@ -133,7 +110,7 @@ const Slider = () => {
                             </div>
                         </div>
                     </div>
-                ))}
+                )})}
             </Fade>
             {!isMobile && (
                 <div className='heroPrevNext'>

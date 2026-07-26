@@ -5,22 +5,25 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot'
 import location from '../../Assets/location.png'
+import { useLocale } from '../../i18n/LocaleContext'
 
 const Map = () => {
+  const { t } = useLocale();
+  const offices = t('home.map.offices') || {};
 
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-12 map_main">
       <div className="order-1 md:order-1 flex flex-col justify-end items-center md:items-start gap-6 flex-1">
         <b className='text_title text-center md:text-left'>
-          Where We Operate
+          {t('home.map.title')}
         </b>
         <div className='text_sub_title text-center md:text-left'>
-          Kawaii Group Around the World
+          {t('home.map.subtitle')}
         </div>
       </div>
       <div className=" order-3 md:order-2 address_div">
         <div className='top_address_bar'>
-          Bangladesh Office:
+          {offices.bangladesh}
         </div>
         <div className='bottom_address_bar'>
           <div className='contact_frame'>
@@ -54,7 +57,7 @@ const Map = () => {
       </div>
       <div className="order-4 md:order-3 address_div">
         <div className='top_address_bar'>
-          Japan Office:
+          {offices.japan}
         </div>
         <div className='bottom_address_bar'>
           <div className='contact_frame'>
@@ -82,7 +85,7 @@ const Map = () => {
       </div>
       <div className="order-5 md:order-4 address_div">
         <div className='top_address_bar_gray'>
-          CANADA Office:
+          {offices.canada}
         </div>
         <div className='bottom_address_bar' >
           <div className='contact_frame'>
@@ -91,10 +94,6 @@ const Map = () => {
               <div className='number_style'><a href="tel:+1 514-575-4090">+1 514-575-4090</a>
               </div>
             </div>
-            {/* <div className='mobile_frame'>
-              <FontAwesomeIcon icon={faEnvelope} className='h-6 w-6' style={{ color: '#475569' }} />
-              <div className='number_style'>info@kawaiijapanbd.com</div>
-            </div> */}
           </div>
           <div className='mobile_frame'>
             <FontAwesomeIcon icon={faLocationDot} className='h-6 w-6' style={{ color: '#475569' }} />
@@ -114,7 +113,7 @@ const Map = () => {
         <img src={location} alt="" className='pt-0 md:pt-24' /></div>
       <div className="order-6 md:order-6 address_div">
         <div className='top_address_bar_gray'>
-          Germany Office:
+          {offices.germany}
         </div>
         <div className='bottom_address_bar' >
           <div className='contact_frame'>
@@ -147,7 +146,7 @@ const Map = () => {
       </div>
       <div className="order-7 md:order-7 address_div">
         <div className='top_address_bar_gray'>
-          Malaysia Office:
+          {offices.malaysia}
         </div>
         <div className='bottom_address_bar' >
           <div className='contact_frame'>
@@ -157,10 +156,6 @@ const Map = () => {
                 <a href="tel:+60 3-27796128">+60 3-27796128</a>
               </div>
             </div>
-            {/* <div className='mobile_frame'>
-              <FontAwesomeIcon icon={faEnvelope} className='h-6 w-6' style={{ color: '#475569' }} />
-              <div className='number_style'>info@kawaiijapanbd.com</div>
-            </div> */}
           </div>
           <div className='mobile_frame'>
             <FontAwesomeIcon icon={faLocationDot} className='h-6 w-6' style={{ color: '#475569' }} />

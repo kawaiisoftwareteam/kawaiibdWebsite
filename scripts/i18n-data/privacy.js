@@ -1,0 +1,83 @@
+module.exports = {
+  en: {
+    pageTitle: "Privacy Policy for Kawaii Group",
+    effectiveDate: "Effective Date: January 1, 2024",
+    intro: "Kawaii Group (\"us\", \"we\", or \"our\") operates the website www.kawaiibd.com (the \"Service\"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.",
+    sections: {
+      infoCollect: "Information We Collect",
+      infoCollectIntro: "We collect several different types of information for various purposes to provide and improve our Service to you.",
+      personalData: "Personal Data",
+      personalItems: ["Email address", "First name and last name", "Phone number", "Address, State, Province, ZIP/Postal code, City"],
+      usageData: "Usage Data",
+      usageDataText: "We may also collect information on how the Service is accessed and used...",
+      cookies: "Cookies and Tracking Technologies",
+      cookiesText: "We use cookies and similar tracking technologies...",
+      whyCollect: "Why We Collect Information",
+      whyItems: ["To provide and maintain our Service", "To notify you about changes..."],
+      disclosure: "Disclosure of Data",
+      disclosureText: "Kawaii Group may disclose your Personal Data in good faith...",
+      security: "Security of Data",
+      securityText: "The security of your data is important...",
+      rights: "Your Data Protection Rights",
+      rightsItems: ["The right to access..."],
+      changes: "Changes to This Privacy Policy",
+      changesText: "We may update our Privacy Policy from time to time...",
+      contact: "Contact Us",
+      contactText: "If you have any questions about this Privacy Policy..."
+    }
+  },
+  bn: {
+    pageTitle: "Kawaii Group-এর গোপনীয়তা নীতি",
+    effectiveDate: "কার্যকর তারিখ: ১ জানুয়ারি, ২০২৪",
+    intro: "Kawaii Group (\"আমরা\") www.kawaiibd.com ওয়েবসাইট (\"সেবা\") পরিচালনা করে। আপনি আমাদের সেবা ব্যবহার করলে ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার ও প্রকাশ সম্পর্কে এই পৃষ্ঠায় আমাদের নীতি জানানো হয়েছে এবং সেই তথ্যের সাথে সম্পর্কিত আপনার পছন্দগুলো বর্ণিত হয়েছে।",
+    sections: {
+      infoCollect: "আমরা যে তথ্য সংগ্রহ করি",
+      infoCollectIntro: "আপনাকে সেবা প্রদান ও উন্নত করতে বিভিন্ন উদ্দেশ্যে আমরা বিভিন্ন ধরনের তথ্য সংগ্রহ করি।",
+      personalData: "ব্যক্তিগত তথ্য",
+      personalItems: ["ইমেইল ঠিকানা", "নামের প্রথম ও শেষাংশ", "ফোন নম্বর", "ঠিকানা, রাজ্য, প্রদেশ, ZIP/পোস্টাল কোড, শহর"],
+      usageData: "ব্যবহারের তথ্য",
+      usageDataText: "সেবা কীভাবে accessed ও used হয় সে সম্পর্কে তথ্যও সংগ্রহ করতে পারি...",
+      cookies: "কুকিজ ও ট্র্যাকিং প্রযুক্তি",
+      cookiesText: "আমরা কুকিজ ও অনুরূপ tracking technologies ব্যবহার করি...",
+      whyCollect: "আমরা কেন তথ্য সংগ্রহ করি",
+      whyItems: ["সেবা প্রদান ও রক্ষণাবেক্ষণ", "পরিবর্তন সম্পর্কে আপনাকে জানাতে..."],
+      disclosure: "তথ্য প্রকাশ",
+      disclosureText: "Kawaii Group good faith-এ আপনার Personal Data প্রকাশ করতে পারে...",
+      security: "তথ্যের নিরাপত্তা",
+      securityText: "আপনার তথ্যের নিরাপত্তা গুরুত্বপূর্ণ...",
+      rights: "আপনার ডেটা সুরক্ষা অধিকার",
+      rightsItems: ["access-এর অধিকার..."],
+      changes: "এই গোপনীয়তা নীতিতে পরিবর্তন",
+      changesText: "সময়ে সময়ে আমাদের Privacy Policy আপডেট করতে পারি...",
+      contact: "যোগাযোগ",
+      contactText: "এই Privacy Policy সম্পর্কে প্রশ্ন থাকলে..."
+    }
+  },
+  ja: {
+    pageTitle: "Kawaii Group プライバシーポリシー",
+    effectiveDate: "施行日：2024年1月1日",
+    intro: "Kawaii Group（「当社」）はウェブサイト www.kawaiibd.com（「本サービス」）を運営しています。本ページでは、本サービスのご利用時における個人データの収集、利用、開示に関する方針と、それに関連するお客様の選択肢についてお知らせします。",
+    sections: {
+      infoCollect: "収集する情報",
+      infoCollectIntro: "サービスの提供・改善のため、様々な目的で複数種類の情報を収集します。",
+      personalData: "個人データ",
+      personalItems: ["メールアドレス", "氏名（名・姓）", "電話番号", "住所、都道府県、郵便番号、市区町村"],
+      usageData: "利用データ",
+      usageDataText: "本サービスへのアクセス方法や利用状況に関する情報も収集する場合があります...",
+      cookies: "Cookieとトラッキング技術",
+      cookiesText: "Cookieおよび類似のトラッキング技術を使用しています...",
+      whyCollect: "情報収集の目的",
+      whyItems: ["サービスの提供・維持", "変更の通知..."],
+      disclosure: "データの開示",
+      disclosureText: "Kawaii Groupは、誠実な信念に基づき個人データを開示する場合があります...",
+      security: "データのセキュリティ",
+      securityText: "お客様のデータのセキュリティは重要です...",
+      rights: "データ保護に関するお客様の権利",
+      rightsItems: ["アクセス権..."],
+      changes: "本プライバシーポリシーの変更",
+      changesText: "プライバシーポリシーは随時更新される場合があります...",
+      contact: "お問い合わせ",
+      contactText: "本プライバシーポリシーについてご質問がある場合..."
+    }
+  }
+};

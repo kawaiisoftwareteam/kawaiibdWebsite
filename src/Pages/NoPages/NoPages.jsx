@@ -1,9 +1,12 @@
 import React from 'react'
+import { useLocale } from '../../i18n/LocaleContext'
 
 const NoPages = () => {
+  const { t } = useLocale();
+
   return (
     <div>
-      No pages
+      {t('nopages.title')}
     </div>
   )
 }

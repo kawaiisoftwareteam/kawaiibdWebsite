@@ -1,11 +1,13 @@
 import React from 'react'
 import "./Cta.css"
 import KgLogoBg from "../../Assets/KG_logo_bg.png"
-// import cta from "../../Assets/cta.png"
 import { Link } from 'react-router-dom'
 import ButtonKg from '../ButtonKg/ButtonKg'
+import { useLocale } from '../../i18n/LocaleContext'
 
-const Cta = ({title, text,backgroundImage, marginY}) => {
+const Cta = ({title, text, text2, backgroundImage, marginY}) => {
+  const { t, localizedPath } = useLocale();
+
   return (
     <div className={`cta_main ${marginY}`}>
       <div className='cta_sub'>
@@ -16,7 +18,7 @@ const Cta = ({title, text,backgroundImage, marginY}) => {
             </svg>
             <img src={KgLogoBg} alt="kg_logo" className='kg_logo_bg' />
             <div className='left_title'>
-            Bridging Cultures, Connecting Opportunities
+            {t('cta.leftTitle')}
             </div>
           </div>
           <div className='left_frame'>
@@ -30,9 +32,15 @@ const Cta = ({title, text,backgroundImage, marginY}) => {
             </div>
             <div className='right_description'>
              {text}
+             {text2 && (
+               <>
+                 <br /><br />
+                 {text2}
+               </>
+             )}
             </div>
-            <Link to="/contact">
-              <ButtonKg text="Let's Connect"/>
+            <Link to={localizedPath('/contact')}>
+              <ButtonKg text={t('cta.button')}/>
             </Link>
           </div>
         </div>

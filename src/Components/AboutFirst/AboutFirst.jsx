@@ -7,8 +7,10 @@ import ButtonNormal from '../ButtonNormal/ButtonNormal';
 import download from '../../Assets/kg_download.svg';
 import ButtonTransparent from '../ButtonTransparent/ButtonTransparent';
 import KgModal from '../KgModal/KgModal';
+import { useLocale } from '../../i18n/LocaleContext';
 
 const AboutFirst = () => {
+    const { t, localizedPath } = useLocale();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
@@ -19,7 +21,6 @@ const AboutFirst = () => {
             <div className='flex flex-col items-center gap-6 self-stretch bg-white md:px-60 md:py-40 px-0 py-6'>
                 <div className='flex flex-col md:flex-row justify-center items-center gap-8 self-stretch'>
                     <div className="grid grid-cols-2 gap-8 order-2 md:order-1 p-6 md:p-0">
-                        {/* Images */}
                         <div className="w-58 md:w-64 h-[222.5px] relative overflow-hidden rounded-xl group">
                             <img
                                 alt="gallery"
@@ -40,27 +41,26 @@ const AboutFirst = () => {
                         </div>
                     </div>
                     <div className='flex flex-col justify-center text-justify md:text-left items-center md:items-start px-8 gap-9 flex-1 self-stretch order-1 md:order-2'>
-                        <div className='aboutFirstTitle'>Shaping Tomorrow, Today: The Kawaii Group Story</div>
+                        <div className='aboutFirstTitle'>{t('about.first.title')}</div>
                         <div className='aboutFirstDes'>
-                            Kawaii Group was founded with one core idea: to create opportunities. Whether it's helping businesses thrive or guiding individuals to new career paths, we are passionate about making a difference.
+                            {t('about.first.body')}
                         </div>
                         <div className="flex justify-between items-center gap-6">
-                            <ButtonTransparent text="Corporate Profile" bgclass="#3A3A3A" link="/corporateprofile" />
+                            <ButtonTransparent text={t('about.first.corporateProfile')} bgclass="#3A3A3A" link={localizedPath('/corporateprofile')} />
                             <button onClick={openModal}>
-                                <ButtonNormal arrow={download} text="Download Profile" />
+                                <ButtonNormal arrow={download} text={t('about.first.download')} />
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Modal */}
             <KgModal isOpen={isModalOpen} onClose={closeModal}>
                 <div className="modal-header">
-                    Choose your Kawaii Group Profile Language Preferences
+                    {t('about.first.modalTitle')}
                 </div>
-                <a href="https://docs.google.com/presentation/d/1vESsR45YrEVYTRLRwMRPwhgHUHC_ncq8iEoCuzImmUs/export/pptx" className="modal-button" onClick={closeModal}>English</a>
-                <a href="https://docs.google.com/presentation/d/1-9JvagzMb9jqS4ThcC92mGDEo58KNwShXO8O3C7CRIA/export/pptx" className="modal-button" onClick={closeModal}>日本語 (Japanese)</a>
+                <a href="https://docs.google.com/presentation/d/1vESsR45YrEVYTRLRwMRPwhgHUHC_ncq8iEoCuzImmUs/export/pptx" className="modal-button" onClick={closeModal}>{t('about.first.english')}</a>
+                <a href="https://docs.google.com/presentation/d/1-9JvagzMb9jqS4ThcC92mGDEo58KNwShXO8O3C7CRIA/export/pptx" className="modal-button" onClick={closeModal}>{t('about.first.japanese')}</a>
             </KgModal>
         </div>
     );

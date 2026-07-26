@@ -29,6 +29,14 @@ const LocaleContext = createContext(null);
 const getNested = (obj, path) =>
   path.split('.').reduce((acc, key) => (acc && acc[key] != null ? acc[key] : null), obj);
 
+/** Look up a key without needing the React context (e.g. before the provider mounts) */
+export const translate = (locale, key, fallback = '') => {
+  const value = getNested(messages[locale] || messages.en, key);
+  if (value != null) return value;
+  const enValue = getNested(messages.en, key);
+  return enValue != null ? enValue : fallback || key;
+};
+
 export const stripLocalePrefix = (pathname) => {
   const parts = pathname.split('/').filter(Boolean);
   if (parts.length && isValidLocale(parts[0])) {
@@ -191,5 +199,8 @@ export const useLocale = () => {
   }
   return ctx;
 };
+
+/** Returns null instead of throwing when rendered outside the provider */
+export const useOptionalLocale = () => useContext(LocaleContext);
 
 export default LocaleContext;

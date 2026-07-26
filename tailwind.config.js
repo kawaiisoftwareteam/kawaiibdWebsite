@@ -8,6 +8,8 @@ module.exports = {
       fontFamily: {
         main: ["Segoe UI", "sans-serif"],  // Existing config
         inter: ["Inter", "serif"],          // Custom Inter font configuration
+        bangla: ['"Anek Bangla"', "sans-serif"],
+        japanese: ['"Noto Sans JP"', '"Yu Gothic"', "sans-serif"],
       },
     },
   },

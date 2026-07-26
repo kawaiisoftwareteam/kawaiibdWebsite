@@ -31,6 +31,910 @@
     "japanese": "日本語"
   },
   "common": {
-    "loading": "লোড হচ্ছে…"
+    "readMore": "আরও পড়ুন",
+    "learnMore": "আরও জানুন",
+    "letsConnect": "যোগাযোগ করুন",
+    "exploreNow": "এখনই অন্বেষণ করুন",
+    "loading": "লোড হচ্ছে…",
+    "privacyPolicy": "গোপনীয়তা নীতি"
+  },
+  "masterclass": {
+    "bannerAlt": "ডঃ শুনসুকে সোমেয়ার সাথে BIM ও Construction DX মাস্টারক্লাস",
+    "urgency": {
+      "badge": "লাইভ জুম মাস্টারক্লাস",
+      "title": "বিনামূল্যে নিবন্ধন শীঘ্রই বন্ধ!",
+      "dateLabel": "মাস্টারক্লাসের তারিখ: মঙ্গলবার, ১৮ আগস্ট, ২০২৬"
+    },
+    "countdown": {
+      "days": "দিন",
+      "hours": "ঘণ্টা",
+      "mins": "মিনিট",
+      "secs": "সেকেন্ড"
+    },
+    "registerNow": "এখনই নিবন্ধন করুন",
+    "meta": {
+      "date": {
+        "label": "তারিখ",
+        "value": "মঙ্গলবার, ১৮ আগস্ট, ২০২৬",
+        "note": "ক্যালেন্ডার আমন্ত্রণ পরে পাঠানো হবে"
+      },
+      "time": {
+        "label": "সময়",
+        "value": "সন্ধ্যা ৭:০০ - ১০:০০",
+        "note": "বাংলাদেশ সময় (BST)"
+      },
+      "location": {
+        "label": "অবস্থান",
+        "value": "জুমের মাধ্যমে অনলাইন",
+        "note": "নিবন্ধনের পর লিংক ইমেইলে পাঠানো হবে"
+      },
+      "incentives": {
+        "label": "উপহার",
+        "value": "অংশগ্রহণ সনদ",
+        "note": "সক্রিয় সকল অংশগ্রহণকারীকে প্রদান করা হবে"
+      }
+    },
+    "speaker": {
+      "badge": "বক্তা",
+      "viewProfile": "অফিসিয়াল প্রোফাইল দেখুন",
+      "stats": {
+        "gcRd": "GC R&D",
+        "papers": "পapers",
+        "patents": "পেটেন্ট",
+        "committees": "কমিটি"
+      },
+      "name": "Dr. SHUNSUKE SOMEYA",
+      "role": "ফার্স্ট-ক্লাস আর্কিটেক্ট ও ইঞ্জিনিয়ারিং-এ Ph.D. (জাপান)",
+      "company": "Digital Construction Someya R&D-এর প্রোপ্রাইটর",
+      "bio": "ডঃ শুনসুকে সোমেয়া একademic দক্ষতা ও মাঠ পর্যায়ের কাজের অনন্য সংযোগস্থলে অবস্থান করেন। ইঞ্জিনিয়ারিং-এ Ph.D. এবং জাপানে ফার্স্ট-ক্লাস আর্কিটেক্ট লাইসেন্স নিয়ে তিনি প্রযুক্তি, মাঠের অনুশীলন ও কর্পোরেট কৌশলকে একত্রিত করে Construction DX ও BIM রূপান্তরের নেতৃত্ব দেন।",
+      "timelineTitle": "পেশাগত সময়রেখা",
+      "timeline": {
+        "t1": "Takenaka Corporation — Technology Research Institute, BIM Promotion Office, HQ Chief Expert (১৮ বছর)।",
+        "t2": "Shibaura Institute of Technology-এ ইঞ্জিনিয়ারিং-এ Ph.D.",
+        "t3": "ABeam Consulting — Strategy Consultant Manager।",
+        "t4": "Digital Construction Someya R&D — Founder & Proprietor।"
+      },
+      "academicRoles": "একademic ও শিল্প ভূমিকা:",
+      "academicRolesText": "Architectural Institute of Japan (AIJ) VDC/BIM Subcommittee-র কমিটি সদস্য, এবং Japan Society for Precision Engineering (JSPE)-র কমিটি সদস্য।"
+    },
+    "modules": {
+      "title": "এই মাস্টারক্লাসে আমরা যা কভার করব",
+      "m1": {
+        "title": "Construction DX (ডিজিটাল রূপান্তর)",
+        "desc": "জাপানের MLIT মানদণ্ড এবং ম্যানুয়াল, পুরনো সিস্টেম থেকে ডিজিটাল-নেটিভ সাইটে রূপান্তর বোঝা।"
+      },
+      "m2": {
+        "title": "3D ও বহুমাত্রিক BIM ওয়ার্কফ্লো",
+        "desc": "Revit, Navisworks ও Tekla দিয়ে 2D CAD থেকে 3D, 4D (সময়সূচি) ও 5D (খরচ) ওয়ার্কফ্লোতে যাওয়া।"
+      },
+      "m3": {
+        "title": "ব্যবহারিক Clash Detection",
+        "desc": "ফ্যাব্রিকেশনের আগে কাঠামো ও MEP interference চিহ্নিত করার কৌশল, পুনর্কাজে লক্ষাধিক টাকা সাশ্রয়।"
+      },
+      "m4": {
+        "title": "বৈশ্বিক BIM চাকরির সুযোগ",
+        "desc": "বাংলাদেশি প্রকৌশলী ও স্থপতিরা কীভাবে আন্তর্জাতিক ও জাপানি ফার্ম-এর জন্য পোর্টফোলিও প্রস্তুত করবেন।"
+      }
+    },
+    "share": {
+      "title": "স্ক্যান ও শেয়ার",
+      "desc": "নিবন্ধন পৃষ্ঠা তৎক্ষণাৎ খুলতে মোবাইল দিয়ে QR কোড স্ক্যান করুন",
+      "qrAlt": "নিবন্ধনের জন্য স্ক্যান করুন QR কোড",
+      "copyLink": "শেয়ারযোগ্য লিংক কপি করুন",
+      "linkCopied": "লিংক কপি হয়েছে!",
+      "shareEmail": "ইমেইলে শেয়ার করুন",
+      "emailSubject": "আমন্ত্রণ: BIM ও Construction DX মাস্টারক্লাস",
+      "emailBody": "ডঃ শুনসুকে সোমেয়ার সাথে ১৮ আগস্ট, ২০২৬-এর বিনামূল্যে BIM ও Construction DX মাস্টারক্লাস দেখুন। এখানে নিবন্ধন করুন:"
+    },
+    "help": {
+      "title": "সাহায্য দরকার?",
+      "text": "কোনো প্রযুক্তিগত সহায়তা বা বাল্ক নিবন্ধনের জন্য Kawaii Group Bangladesh-এর সাথে যোগাযোগ করুন"
+    },
+    "form": {
+      "title": "মাস্টারক্লাস নিবন্ধন ফর্ম",
+      "subtitle": "সকল প্রয়োজনীয় তথ্য পূরণ করুন। জুম অ্যাক্সেস কোড ও হ্যান্ডআউট আপনার নিবন্ধিত ইমেইলে পাঠানো হবে।",
+      "stepLabel": "ধাপ",
+      "close": "বন্ধ",
+      "steps": {
+        "s1": "যোগাযোগ ও ব্যক্তিগত তথ্য",
+        "s2": "শিক্ষাগত ও পেশাগত পটভূমি",
+        "s3": "ডঃ সোমেয়ার পরিচিতি ও কোর্স মতামত",
+        "s4": "লক্ষ্য, AutoCAD স্তর ও উৎস"
+      },
+      "fields": {
+        "fullName": "পূর্ণ নাম *",
+        "email": "ইমেইল ঠিকানা *",
+        "phone": "WhatsApp/ফোন নম্বর *",
+        "linkedin": "LinkedIn প্রোফাইল লিংক (ঐচ্ছিক)",
+        "status": "আপনার বর্তমান অবস্থা কী? *",
+        "org": "প্রতিষ্ঠান / ফার্ম বা বিশ্ববিদ্যালয়ের নাম *",
+        "designation": "পদবি / সর্বোচ্চ শিক্ষা ও বিষয় *",
+        "experience": "অভিজ্ঞতার বছর / একademic বছর *",
+        "familiarity": "আপনি কি Dr. SHUNSUKE SOMEYA-র পেশাগত প্রোফাইল / গবেষণা পটভূমি দেখেছেন? *",
+        "opinion": "Kawaii Group-এর এই আন্তর্জাতিক BIM ও Construction DX কোর্স চালু করার বিষয়ে আপনার মতামত কী? *",
+        "bimLevel": "BIM সফটওয়্যারে (যেমন Revit, Navisworks, Tekla) আপনার বর্তমান অভিজ্ঞতার স্তর কী? *",
+        "goals": "এই কোর্সে আপনার প্রধান লক্ষ্য কী? (যা প্রযোজ্য সব নির্বাচন করুন)",
+        "autocad": "2D Drafting (AutoCAD)-এ আপনার দক্ষতার স্তর কী?",
+        "suggestions": "কোর্স চলাকালীন Dr. Someya কোন নির্দিষ্ট বিষয়ে আলোচনা করবেন বলে আপনি চান? (ঐচ্ছিক)",
+        "source": "আপনি কীভাবে এই BIM ও Construction DX কোর্স সম্পর্কে জানলেন? *"
+      },
+      "placeholders": {
+        "name": "আপনার নাম",
+        "email": "your.email@example.com",
+        "phone": "+880 1XXXX XXXXX",
+        "linkedin": "https://linkedin.com/in/username",
+        "org": "যেমন BUET / ফার্মের নাম",
+        "designation": "যেমন Structural Engineer / B.Sc. Civil Engineering",
+        "opinion": "কোর্স চালুর বিষয়ে আপনার মতামত লিখুন...",
+        "suggestions": "বিষয়, প্রশ্ন বা নির্দিষ্ট BIM প্রশ্ন..."
+      },
+      "selectStatus": "অবস্থা নির্বাচন করুন",
+      "selectExperience": "অভিজ্ঞতা / বছর নির্বাচন করুন",
+      "autocadBeginner": "শিক্ষানবিশ",
+      "autocadAdvanced": "উন্নত",
+      "prev": "পূর্ববর্তী",
+      "next": "পরবর্তী ধাপ",
+      "submit": "নিবন্ধন জমা দিন",
+      "statusLabels": {
+        "professional": "কর্মরত পেশাদার (কাঠামো/স্থাপত্য/সivil/MEP)",
+        "graduate": "নতুন স্নাতক (০-১ বছর অভিজ্ঞতা)",
+        "student": "স্নাতক/স্নাতকোত্তর শিক্ষার্থী",
+        "educator": "একademic/শিক্ষক",
+        "other": "অন্যান্য"
+      },
+      "experienceLabels": {
+        "finalYear": "শিক্ষার্থী — শেষ বর্ষ",
+        "studentEarly": "শিক্ষার্থী (১ম-৩য় বর্ষ)",
+        "exp13": "(১-৩) বছর অভিজ্ঞতা",
+        "exp35": "(৩-৫) বছর অভিজ্ঞতা",
+        "exp5plus": "৫+ বছর অভিজ্ঞতা"
+      },
+      "familiarityLabels": {
+        "yes": "হ্যাঁ, আমি তার প্রোফাইল ও কাজের সাথে পরিচিত",
+        "notYet": "এখনো নয়, তবে তার পটভূমি সম্পর্কে আরও জানতে চাই",
+        "no": "না"
+      },
+      "bimLevelLabels": {
+        "beginner": "সম্পূর্ণ নবীন (কখনো ব্যবহার করিনি)",
+        "basic": "মৌলিক (মডেল navigate ও basic 3D)",
+        "intermediate": "মধ্যম (element model ও drawing extract)",
+        "advanced": "উন্নত (Clash detection, 4D/5D, BEP)"
+      },
+      "goalsLabels": {
+        "g1": "ব্যবহারিক 3D/4D/5D BIM workflow ও clash detection আয়ত্ত",
+        "g2": "জাপানি Construction DX ও MLIT মান শেখা",
+        "g3": "জাপানি/আন্তর্জাতিক চাকরির জন্য portfolio উন্নতি",
+        "g4": "ফার্মকে 2D CAD থেকে 3D BIM workflow-তে রূপান্তর"
+      },
+      "sourceLabels": {
+        "social": "Kawaii Group Facebook / LinkedIn পেজ",
+        "university": "বিশ্ববিদ্যালয় ক্লাব / নোটিস বোর্ড",
+        "messaging": "WhatsApp গ্রুপ / Telegram",
+        "referral": "সহকর্মী / বন্ধুর referral",
+        "other": "অন্যান্য"
+      },
+      "errors": {
+        "nameRequired": "নাম আবশ্যক",
+        "emailRequired": "ইমেইল ঠিকানা আবশ্যক",
+        "emailInvalid": "সঠিক ইমেইল ঠিকানা লিখুন",
+        "phoneRequired": "WhatsApp/ফোন নম্বর আবশ্যক",
+        "statusRequired": "অনুগ্রহ করে আপনার অবস্থা নির্বাচন করুন",
+        "orgRequired": "প্রতিষ্ঠান বা বিশ্ববিদ্যালয়ের নাম আবশ্যক",
+        "designationRequired": "পদবি/বিষয় আবশ্যক",
+        "experienceRequired": "অনুগ্রহ করে অভিজ্ঞতার স্তর নির্বাচন করুন",
+        "familiarityRequired": "অনুগ্রহ করে এই প্রশ্নের উত্তর দিন",
+        "opinionRequired": "এই ক্ষেত্রটি আবশ্যক",
+        "bimLevelRequired": "অনুগ্রহ করে BIM অভিজ্ঞতার স্তর নির্বাচন করুন",
+        "sourceRequired": "অনুগ্রহ করে আমাদের সম্পর্কে কীভাবে জানলেন তা নির্বাচন করুন"
+      }
+    },
+    "success": {
+      "title": "নিবন্ধন সম্পন্ন!",
+      "thankYouPrefix": "ধন্যবাদ,",
+      "thankYouSuffix": "BIM ও Construction DX মাস্টারক্লাসে আপনার নিবন্ধন সফলভাবে রেকর্ড করা হয়েছে।",
+      "nextTitle": "এরপর কী হবে?",
+      "next1": "জুম যোগদানের বিবরণসহ নিশ্চিতকরণ ইমেইল পাঠানো হবে।",
+      "next2": "১০ মিনিটের মধ্যে না পেলে স্প্যাম ফোল্ডার দেখুন।",
+      "next2Bold": "স্প্যাম ফোল্ডার",
+      "next3": "মাস্টারক্লাসের ২৪ ঘণ্টা আগে হ্যান্ডআউট ইমেইলে পাঠানো হবে।",
+      "done": "সম্পন্ন"
+    }
+  },
+  "concernsPage": {
+    "title": "এক নজরে কাওয়াই গ্রুপ পরিবার",
+    "intro": "কাওয়াই গ্রুপ শুধু একটি কোম্পানি নয় — আমরা বিভিন্ন ব্যবসায় একত্রিত একটি পরিবার, যাদের এক সাধারণ লক্ষ্য:",
+    "introBold": "সংস্কৃতির ব্যবধান দূর করে বিভিন্ন খাতে মূল্য সৃষ্টি করা।",
+    "introRest": "আমাদের সহযোগী প্রতিষ্ঠানগুলো নিয়োগ, শিক্ষা, প্রযুক্তি, ফ্যাশন ও আরও অনেক ক্ষেত্রে কাজ করে, প্রতিটি বাংলাদেশকে জাপান ও বিশ্বের সাথে সংযুক্ত করার মission-এ গুরুত্বপূর্ণ ভূমিকা রাখে।",
+    "exploreNow": "এখনই দেখুন",
+    "cards": {
+      "sanjanaHr": {
+        "type": "নিবেদিত নিয়োগ সংস্থা।",
+        "desc": "আমরা দক্ষ বাংলাদেশি পেশাজীবীদের জাপান ও তার বাইরের সুযোগের সাথে সংযুক্ত করতে বিশেষজ্ঞ।"
+      },
+      "aj": {
+        "type": "জাপানি ভাষা শেখার কেন্দ্র।",
+        "desc": "আমরা উচ্চমানের ভাষা ও সাংস্কৃতিক প্রশিক্ষণ দিয়ে জাপানি ব্যবসায়িক পরিবেশে সফল হতে প্রস্তুত করি।"
+      },
+      "tredmig": {
+        "type": "পেশাদার পরামর্শক প্রতিষ্ঠান।",
+        "desc": "Tredmig সব আবেদনকারীকে সবচেয়ে সাশ্রয়ী উপায়ে বিশ্ব চাকরি বাজারে মসৃণ переход নিশ্চিত করে।"
+      },
+      "katsl": {
+        "type": "SaaS (Software as a Service) ভITTIক সফটওয়্যার কোম্পানি।",
+        "desc": "বাংলাদেশ ও জাপান উভয় দেশের ব্যবসার ক্রমবর্ধমান চাহিদা মেটাতে আমরা উন্নত সফটওয়্যার সমাধান তৈরি করি।"
+      },
+      "kgj": {
+        "type": "আমাদের জাপানি সদর দপ্তর।",
+        "desc": "এটি বাংলাদেশ ও জাপানের মধ্যে গুরুত্বপূর্ণ সংযোগ। ব্যবসায়িক কার্যক্রম ও সাংস্কৃতিক বিনিময় সহজ করে।"
+      },
+      "bh": {
+        "type": "শীর্ষস্থানীয় অনলাইন ট্রাভেল অ্যাগ্রিগেটর (OTA)।",
+        "desc": "বিশ্বব্যাপী ফ্লাইট, হোটেল, ট্রান্সফার ও কার্যক্রমে সেরা দাম পান"
+      },
+      "kddl": {
+        "type": "ব্যবসায়িক ডিজাইন ও উন্নয়ন কেন্দ্রিক",
+        "desc": "এই সহযোগী প্রতিষ্ঠান জাপানি ডিজাইন নীতি ও বিশ্ব প্রবণতা একত্রিত করে। বিভিন্ন শিল্পে উদ্ভাবনী ডিজাইন সমাধান দেয়।"
+      },
+      "kiec": {
+        "type": "উচ্চশিক্ষা ও আন্তর্জাতিক শিক্ষা পরামর্শ সংস্থা।",
+        "desc": "ইউরোপ, অস্ট্রেলিয়া ইত্যাদি দেশে আন্তর্জাতিক শিক্ষার সুযোগে শিক্ষার্থীদের সহায়তা করি।"
+      },
+      "kgvl": {
+        "type": "ব্যবসা ও সহযোগিতার জন্য জাপান–বাংলাদেশ যৌথ উদ্যোগ।",
+        "desc": "জাপান ও বাংলাদেশ জুড়ে অংশীদারিত্ব, বিনিয়োগ, HR উন্নয়ন ও ডিজিটাল রূপান্তর প্রচার।"
+      },
+      "kjchs": {
+        "type": "জাপানের জন্য ক্যারিয়ার ও HR সমাধান।",
+        "desc": "আমরা প্রতিভাকে জাপানি ক্যারিয়ার সুযোগের সাথে সংযুক্ত করি এবং সীমান্ত পেরিয়ে কর্মী বৃদ্ধিতে ব্যাপক HR সমাধান দিই।"
+      }
+    },
+    "details": {
+      "sanjanaHr": {
+        "sectionTitle": "নিয়োগ ও বৈশ্বিক কর্মসংস্থান",
+        "subtitle": "প্রতিভাকে বৈশ্বিক সুযোগের সাথে সংযুক্ত করা",
+        "body": "আমরা দক্ষ বাংলাদেশি পেশাজীবীদের, বিশেষত জাপানে, চাহিদাসম্পন্ন বাজারে নিয়োগে বিশেষজ্ঞ একটি শীর্ষ নিয়োগ সংস্থা। প্রমাণিত সাফল্যের সাথে প্রতিটি প্রার্থীকে আন্তর্জাতিক ক্যারিয়ার যাত্রার জন্য সম্পূর্ণ প্রস্তুত করি।",
+        "bullets": [
+          "জাপানি কর্মসংস্থান বাজারে দক্ষতা",
+          "বিদেশে চাকরির জন্য প্রশিক্ষণ ও দক্ষতা উন্নয়ন",
+          "ভিসা ও স্থানান্তরের ব্যাপক সহায়তা"
+        ],
+        "cta": "আরও জানুন"
+      },
+      "aj": {
+        "sectionTitle": "ভাষা ও সাংস্কৃতিক প্রশিক্ষণ",
+        "subtitle": "বিশেষজ্ঞ ভাষা ও সাংস্কৃতিক প্রশিক্ষণে জাপানে সফল হোন",
+        "body": "Achieve Japan শিল্প-নেতৃত্বাধীন জাপানি ভাষা শিক্ষা দেয়, কাজ, পড়াশোনা বা অভিবাসনের জন্য প্রস্তুত করে। আপনি শুধু ভাষা নয়, জাপানি সংস্কৃতির গভীর বোঝাপড়াও অর্জন করবেন, যা জাপানি পেশাগত পরিবেশে সফলতার ভিত্তি।",
+        "bullets": [
+          "JLPT-সনদপ্রাপ্ত কোর্স",
+          "সাংস্কৃতিক orientation ও শিষ্টাচার প্রশিক্ষণ",
+          "নেটিভ ও স্থানীয় জাপানি প্রশিক্ষক"
+        ],
+        "cta": "আমাদের ক্লাসে যোগ দিন"
+      },
+      "katsl": {
+        "sectionTitle": "ডিজিটাল রূপান্তর সমাধান",
+        "subtitle": "উন্নত সফটওয়্যার সমাধানে ব্যবসায় উদ্ভাবন",
+        "body": "Kawaii Advanced Technology & Solution Ltd. কাস্টম SaaS সফটওয়্যার দিয়ে বাংলাদেশ ও জাপানের ব্যবসাকে কার্যক্রম optimize করতে সহায়তা করে। ERP বা ব্যবসায় automation — আমাদের কাস্টম সমাধান আধুনিক ব্যবসার চাহিদা মেটায়।",
+        "bullets": [
+          "অফশোর/অগমেন্টেশন ডেভেলপমেন্ট টিম",
+          "ব্যবসার জন্য কাস্টম SaaS সফটওয়্যার",
+          "জাপানে IT প্রকৌশলী প্রশিক্ষণ ও চাকরি placement"
+        ],
+        "cta": "আমাদের সমাধান দেখুন"
+      },
+      "kgvl": {
+        "sectionTitle": "ব্যবসা ও আন্তর্জাতিক সহযোগিতা",
+        "subtitle": "ব্যবসা ও HR উন্নয়নের জন্য জাপান–বাংলাদেশ যৌথ উদ্যোগ",
+        "body": "বাংলাদেশ, জাপান ও বিশ্ব বাজারের মধ্যে কৌশলগত অংশীদারিত্ব, বিনিয়োগ, মানবসম্পদ উন্নয়ন, প্রযুক্তি বিনিময় ও বাণিজ্য সহজীকরণ প্রচার করে।",
+        "bullets": [
+          "ব্যবসা ও বিনিয়োগ পরামর্শ",
+          "কর্মী সমাধান ও HR উন্নয়ন",
+          "প্রযুক্তি হস্তান্তর ও ডিজিটাল রূপান্তর"
+        ],
+        "cta": "সম্পূর্ণ প্রোফাইল দেখুন"
+      },
+      "kjchs": {
+        "sectionTitle": "ক্যারিয়ার ও HR সমাধান",
+        "subtitle": "জাপানের জন্য ক্যারিয়ার গড়া ও কর্মীশক্তি শক্তিশালী করা",
+        "body": "Kawaii Japan Career & HR Solutions ক্যারিয়ার placement ও মানবসম্পদ সেবায় বিশেষজ্ঞ, কাস্টম নিয়োগ, প্রশিক্ষণ ও কর্মী সহায়তার মাধ্যমে ব্যক্তি ও প্রতিষ্ঠানকে জাপানি কর্মবাজারে সফল হতে সাহায্য করে।",
+        "bullets": [
+          "জাপান-কেন্দ্রিক ক্যারিয়ার placement",
+          "শুরু থেকে শেষ HR ও কর্মী সমাধান",
+          "প্রার্থী প্রস্তুতি ও নিয়োগকর্তা মিল"
+        ],
+        "cta": "সম্পূর্ণ প্রোফাইল দেখুন"
+      }
+    }
+  },
+  "kgvl": {
+    "headerTitle": "Kawaii Global Ventures",
+    "badge": "জাপান–বাংলাদেশ যৌথ উদ্যোগ",
+    "overviewTitle": "সীমান্ত পেরিয়ে সুযোগ সংযোগ",
+    "overviewDesc": "Kawaii Global Ventures Limited ১৯৯৪ সালের কোম্পানি আইনের অধীনে প্রতিষ্ঠিত একটি শীর্ষস্থানীয় জাপান–বাংলাদেশ যৌথ উদ্যোগ। আমরা বাংলাদেশ, জাপান ও বিশ্ব বাজারের মধ্যে ব্যবসায়িক অংশীদারিত্ব, বিনিয়োগ, মানবসম্পদ উন্নয়ন, শিক্ষা, প্রযুক্তি বিনিময় ও আন্তর্জাতিক সহযোগিতা প্রচারে কৌশলগত catalyst হিসেবে কাজ করি।",
+    "stat1Num": "১৯৯৪",
+    "stat1Label": "কোম্পানি আইনের অধীনে প্রতিষ্ঠিত",
+    "stat2Num": "৬+",
+    "stat2Label": "মূল পেশাদার সেবা",
+    "hubTitle": "বৈশ্বিক ব্যবসায় কেন্দ্র",
+    "hubDesc": "ঢাকা ও টোকিওর ব্যবসায়িক landscape সংযুক্ত করা",
+    "hubAlt": "টোকিও বিজনেস সেন্টার",
+    "visionTitle": "আমাদের দৃষ্টি",
+    "visionText": "ব্যবসায়িক প্রবৃদ্ধি, বিনিয়োগ, শিক্ষা, প্রযুক্তি হস্তান্তর ও টেকসই অর্থনৈতিক সহযোগিতার জন্য বাংলাদেশ–জাপান partnership-এর শীর্ষ প্ল্যাটফর্ম হওয়া।",
+    "missionTitle": "আমাদের মission",
+    "missionText": "পরামর্শ, কর্মী উন্নয়ন, শিক্ষা সহায়তা, ব্যবসায় সহজীকরণ ও আন্তর্জাতিক সহযোগিতার মাধ্যমে মানুষ, প্রতিষ্ঠান ও সুযোগকে সংযুক্ত করা।",
+    "servicesSubtitle": "আমরা যা দিই",
+    "servicesTitle": "মূল সেবা",
+    "services": {
+      "s1": {
+        "title": "ব্যবসা ও বিনিয়োগ পরামর্শ",
+        "desc": "জাপান-বাংলাদেশ corridor-এ কোম্পানিগulokের জন্য কৌশলগত প্রবেশ গাইড, বিনিয়োগ match-making, বাজার intelligence ও নিয়ন্ত্রক সহজীকরণ।"
+      },
+      "s2": {
+        "title": "মানবসম্পদ উন্নয়ন ও আন্তর্জাতিক কর্মী সমাধান",
+        "desc": "বাংলাদেশি দক্ষ পেশাজীবীদের প্রশিক্ষণ ও প্রস্তুত করে জাপানি ও আন্তর্জাতিক enterprise পরিবেশে উৎকর্ষ সাধনে skill gap দূর করা।"
+      },
+      "s3": {
+        "title": "শিক্ষা, ভাষা প্রশিক্ষণ ও বৈশ্বিক শিক্ষা",
+        "desc": "সনদপ্রাপ্ত জাপানি ভাষা প্রোগ্রাম, সাংস্কৃতিক workshop ও academic alignment দিয়ে শিক্ষার্থী ও পেশাজীবীদের আন্তর্জাতিক সাফল্যের জন্য প্রস্তুত করা।"
+      },
+      "s4": {
+        "title": "প্রযুক্তি ও ডিজিটাল রূপান্তর",
+        "desc": "প্রযুক্তি বিনিময়, স collaborative সফটওয়্যার engineering, offshore development team ও cutting-edge জাপানি প্রযুক্তি মান integration সহজ করা।"
+      },
+      "s5": {
+        "title": "আন্তর্জাতিক বাণিজ্য ও ব্যবসায় সহজীকরণ",
+        "desc": "জাপান, বাংলাদেশ ও বিশ্ব trade channel-এ export-import structure, trade partnership, logistics ও administrative clearance সহজ করা।"
+      },
+      "s6": {
+        "title": "কৌশলগত প্রকল্প ও শিল্প সহায়তা",
+        "desc": "বৃহৎ অবকাঠামো, public-private partnership ও industrial alignment-এ end-to-end সহায়তা যা পারস্পরিক অর্থনৈতিক প্রবৃদ্ধি foster করে।"
+      }
+    },
+    "leadershipSubtitle": "Executive Board",
+    "leadershipTitle": "নেতৃত্ব দল",
+    "roles": {
+      "chairman": "চেয়ারম্যান",
+      "viceChairman": "ভাইস চেয়ারম্যান",
+      "managingDirector": "Managing Director",
+      "ceo": "CEO",
+      "cfo": "CFO"
+    },
+    "regions": {
+      "japan": "জাপান",
+      "bangladesh": "বাংলাদেশ"
+    },
+    "leaders": {
+      "junji": "নির্বাহী তদারকি প্রদান এবং জাপানি করপোরেট নেতৃবৃন্দ ও সরকারি অংশীজনদের সাথে উচ্চপর্যায়ের সম্পর্ক গড়ে তোলা।",
+      "zillur": "বাংলাদেশে শিল্প ও ব্যবসায় খাতে কৌশলগত কাঠামো ও স্থানীয় সহযোগিতামূলক অংশীদারিত্বের দিকনির্দেশনা।",
+      "samir": "করপোরেট কৌশল, যৌথ উদ্যোগ বাস্তবায়ন এবং বৃহত্তর কাওয়াই গ্রুপ ভিশনের সাথে সামঞ্জস্য নিশ্চিত করা।",
+      "iqbal": "দৈনন্দিন পরিচালন কার্যক্রম, গ্রাহক সম্পর্ক এবং সকল মূল সেবা বিভাগ জুড়ে ব্যবসা উন্নয়ন পরিচালনা।",
+      "shafi": "আর্থিক কৌশল, কমপ্লায়েন্স, যৌথ উদ্যোগ কাঠামো ও বাজেট ব্যবস্থাপনা সিস্টেমের দিকনির্দেশনা।"
+    },
+    "commitmentBadge": "আমাদের প্রতিশ্রুতি",
+    "commitmentTitle": "পেশাদারিত্ব, স্বচ্ছতা ও উদ্ভাবন",
+    "commitmentDesc": "জাপান ও বাংলাদেশ জুড়ে ব্যবসা, পেশাজীবী, শিক্ষার্থী, বিনিয়োগকারী ও institution-এর জন্য টেকসই মূল্য প্রদানে আমরা প্রতিশ্রুতিবদ্ধ। সর্বোচ্চ governance standard ও cross-border alliance-এর মাধ্যমে সহযোগিতাকে বাস্তব সাফল্যে রূপান্তর করি।",
+    "commitmentValues": {
+      "v1": "অটুট মূল্য",
+      "v2": "সম্পূর্ণ স্বচ্ছতা",
+      "v3": "অবিরাম উদ্ভাবন",
+      "v4": "বিশেষজ্ঞ নেতৃত্ব"
+    },
+    "entityTitle": "Kawaii Global Ventures",
+    "entitySubtitle": "যৌথ উদ্যোগ সত্তা",
+    "entityBadge": "ESTD. COMPANIES ACT 1994",
+    "ctaTitle": "জাপান-বাংলাদেশ সহযোগিতায় কৌশলগত partner খুঁজছেন?",
+    "ctaText": "আপনি investor, enterprise বা training institute হোন — একসাথে সুযোগ explore করি।"
+  },
+  "kjchs": {
+    "heroCompaniesTitle": "বাংলাদেশে\nআপনার সাফল্য চালিত করা",
+    "heroCompaniesBtn": "কোম্পানির জন্য",
+    "heroSeekersTitle": "বাংলাদেশে\nচাকরি প্রার্থীদের ক্যারিয়ার সহায়তা",
+    "heroSeekersBtn": "চাকরি প্রার্থীদের জন্য",
+    "badge": "জাপান–বাংলাদেশ HR সেতু",
+    "overviewTitle": "প্রতিভা ও কৌশলগত প্রবৃদ্ধি সংযুক্ত করা",
+    "overviewP1": "বাংলাদেশে Kawaii Japan Career & HR Solutions একটি বিখ্যাত ক্যারিয়ার matching ও HR সমাধান কোম্পানি। জাপান ও বাংলাদেশের যৌথ উদ্যোগ এবং Kawaii Group-এর সহযোগী প্রতিষ্ঠান হিসেবে আমরা কাস্টম workforce সমাধান তৈরি ও সরবরাহে বিশেষজ্ঞ। কৌশলগত সেতু হিসেবে শীর্ষ প্রতিভাকে ক্রমবর্ধমান প্রতিষ্ঠানের সাথে সংযুক্ত করি।",
+    "overviewP2": "২০২৫ সালে আমরা স্পষ্ট লক্ষ্য নিয়ে যাত্রা শুরু করেছি: প্রতিভাকে সঠিক সুযোগের সাথে সংযুক্ত করা এবং প্রতিষ্ঠানকে শক্তিশালী, সক্ষম দল গড়তে সহায়তা করা। এখন পর্যন্ত ৬০+ কোম্পানির সাথে সংযোগ স্থাপন করেছি, মান, স্বচ্ছতা, বিশ্বাস ও দীর্ঘমেয়াদি সম্পর্কে ফোcus করি।",
+    "stat1Num": "৬০+",
+    "stat1Label": "সংযুক্ত partner কোম্পানি",
+    "stat2Num": "২০২৫",
+    "stat2Label": "প্রতিষ্ঠার যাত্রা",
+    "standardsTitle": "জাপানি কাজের মান",
+    "standardsIntro": "আমরা বাংলাদেশে প্রথম HR কোম্পানি যারা জাপানি প্রযুক্তি-চালিত সিস্টেম গ্রহণ ও বাস্তবায়ন করেছে, বিশেষ গুরুত্ব দিই:",
+    "standards": [
+      "নীতিশাস্ত্র ও সততা",
+      "কঠোর পেশাগত শৃঙ্খলা",
+      "Operational Efficiency",
+      "পারস্পরিক সম্মান"
+    ],
+    "aboutSubtitle": "আমাদের সম্পর্কে",
+    "aboutTitle": "প্রতিভা ও প্রতিষ্ঠান সংযুক্ত করা",
+    "aboutP1": "আমরা Kawaii Japan Career & HR Solutions BD প্রতিষ্ঠা করেছি এই বিশ্বাসে যে নিয়োগ শুধু পদ পূরণ নয় — মানুষ ও প্রতিষ্ঠানের মধ্যে সঠিক match তৈরি করা। নিয়োগকর্তা ও চাকরি প্রার্থী উভয়কে সমান গুরুত্ব দিয়ে সেবা দিই।",
+    "aboutP2": "নিয়োগকর্তা ও প্রার্থী উভয়কে বোঝার সময় নিই, কারণ প্রতিটি প্রতিষ্ঠান unique এবং প্রতিটি ব্যক্তির unique সম্ভাবনা আছে। recruitment, staffing, HR, IT, legal ও sustainability-সংক্রান্ত সম্পূর্ণ সমাধান দিই।",
+    "visionTitle": "আমাদের দৃষ্টি",
+    "visionText": "শুধু বাংলাদেশ নয়, বিশ্বব্যাপী trusted HR ও ক্যারিয়ার সমাধান partner হওয়া। প্রতিষ্ঠান ও প্রতিভার মধ্যে meaningful ও lasting connection তৈরিতে সেরা হিসেবে পরিচিত হতে চাই।",
+    "missionTitle": "আমাদের মission",
+    "missionText": "নির্ভরযোগ্য ও customized HR সমাধান দিয়ে প্রতিষ্ঠানের প্রবৃদ্ধি ও ব্যক্তির ক্যারিয়ার উন্নয়নে সহায়তা করা। স্বচ্ছতা, পেশাদারিত্ব ও consistency বজায় রাখি।",
+    "employersBadge": "নিয়োগকর্তাদের জন্য",
+    "employersTitle": "বাংলাদেশে আপনার সাফল্য চালিত করা",
+    "employersDesc": "শক্তিশালী, efficient ও effective দল গড়তে সহায়তা করি। hiring time কমানো, candidate quality উন্নত করা ও reliable workforce সমাধানের মাধ্যমে business growth support করা লক্ষ্য।",
+    "employersImgAlt": "Corporate Success",
+    "ourServices": "আমাদের সেবা",
+    "ourExpertise": "আমাদের দক্ষতা",
+    "ourPhilosophy": "আমাদের দর্শন",
+    "ourProcess": "আমাদের কাজের প্রক্রিয়া",
+    "whyChooseUs": "কেন আমাদের বেছে নেবেন",
+    "employerServices": [
+      "End-to-end recruitment ও talent acquisition",
+      "Permanent, temporary ও contract staffing",
+      "Executive search ও mid-level hiring",
+      "HR consulting ও organizational development",
+      "IT-enabled HR systems ও workforce সমাধান",
+      "Legal ও compliance সহায়তা",
+      "Sustainable workforce planning"
+    ],
+    "employerExpertise": "প্রতিটি প্রতিষ্ঠানের unique hiring needs আছে। job requirements পূরণের পাশাপাশি company culture ও long-term goals-এ fit করে এমন candidate চিহ্নিত করতে আমরা দক্ষ। বিভিন্ন industry-তে কাজ করি এবং organized, efficient recruitment process বজায় রাখি।",
+    "employerPhilosophy": "প্রতিষ্ঠানের সাফল্য employee-এর quality-এর উপর নির্ভর করে। সঠিক talent খুঁজে company-র মধ্যে strong connection গড়াই আমাদের focus।",
+    "employerProcessIntro": "hiring process সহজ ও effective করার জন্য প্রক্রিয়া ডিজাইন করা।",
+    "employerSteps": {
+      "s1": {
+        "title": "Requirements বোঝা",
+        "desc": "skills, experience ও organizational culture সহ আপনার specific requirements অধ্যয়ন করি।"
+      },
+      "s2": {
+        "title": "Source & Select",
+        "desc": "carefully source ও select করি, শুধু most suitable profile present করি।"
+      },
+      "s3": {
+        "title": "Interview & Onboarding",
+        "desc": "interview coordinate ও selection assist করার পর smooth onboarding নিশ্চিত করতে follow up করি।"
+      }
+    },
+    "employerWhy1": "Kawaii Japan Career & HR Solutions BD প্রথম HR কোম্পানি যারা জাপানি প্রযুক্তি-চালিত সিস্টেম follow করে — তাই employer-রা বেছে নেন।",
+    "employerWhy2": "quantity নয়, quality ও reliability-তে focus। অনেক candidate পাঠাই না — requirements match করে right candidate deliver করি। operational, technical ও managerial level-এ comprehensive manpower সমাধান।",
+    "seekersBadge": "চাকরি প্রার্থীদের জন্য",
+    "seekersTitle": "বাংলাদেশে চাকরি প্রার্থীদের ক্যারিয়ার সহায়তা",
+    "seekersDesc": "successful ও meaningful career গড়তে সহায়তা করি। skills, goals ও long-term aspirations match করে role-এ placement নিশ্চিত করি।",
+    "seekersImgAlt": "Candidate Guidance",
+    "seekerServices": [
+      "Top company-র সাথে career matching",
+      "Verified ও quality job opportunity access",
+      "Career guidance ও professional support",
+      "CV ও resume development",
+      "Interview preparation",
+      "Industry জুড়ে skill-based job placement",
+      "Transparent ও structured recruitment process",
+      "Hiring journey জুড়ে continuous support"
+    ],
+    "seekerExpertise": "প্রতিটি ব্যক্তির different skills, interests, career goals ও strengths আছে। skills ও aspirations match করে opportunity-তে guide করতে দক্ষ। step-by-step guideline দিই।",
+    "seekerPhilosophy": "প্রতিটি ব্যক্তির potential আছে এবং right opportunity future shape করতে পারে। confidence-এ grow করতে guide ও support করাই আমাদের philosophy।",
+    "seekerProcessIntro": "confidence-এ এগিয়ে যেতে সাহায্য করা আমাদের প্রক্রিয়ার main goal।",
+    "seekerSteps": {
+      "s1": {
+        "title": "Background বোঝা",
+        "desc": "background, skills, interests ও career goals বোঝা দিয়ে শুরু করি।"
+      },
+      "s2": {
+        "title": "CV Optimization & Mock Interviews",
+        "desc": "CV optimize ও interview prepare করতে guide করি।"
+      },
+      "s3": {
+        "title": "Onboarding & Support",
+        "desc": "job join-এর পর adapt ভালো হচ্ছে কিনা ensure করতে touch-এ থাকি।"
+      }
+    },
+    "seekerWhy1": "real guidance ও support দিই বলে job seeker-রা বেছে নেন। goals বোঝার সময় নিই এবং right track-এ help করি।",
+    "seekerWhy2": "fresher থেকে experienced — প্রতিটি candidate-কে equal importance দিই। unrealistic promise নয়, realistic steps focus। market demand অনুযায়ী updated থাকি।",
+    "sectorsSubtitle": "সেবা খাত",
+    "sectorsTitle": "আমরা যে খাতে কাজ করি",
+    "sectorsIntro": "Kawaii Japan Career & HR Solutions BD-তে diverse industry-তে কাজ করি। industry-specific needs অনুযায়ী right talent identify করতে experience আছে।",
+    "sectors": {
+      "it": {
+        "name": "Information Technology (IT)",
+        "desc": "Software engineering, cloud infrastructure, AI development ও IT support."
+      },
+      "manufacturing": {
+        "name": "Manufacturing",
+        "desc": "Industrial engineering, production management ও precision manufacturing."
+      },
+      "garments": {
+        "name": "Garments & Textiles",
+        "desc": "Textile engineering, sourcing, design ও supply chain management."
+      },
+      "pharma": {
+        "name": "Pharmaceuticals",
+        "desc": "Chemical research, quality control, pharmaceutical marketing ও logistics."
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "desc": "Clinical staff, healthcare administration, medical technology ও support."
+      },
+      "banking": {
+        "name": "Banking & Financial Services",
+        "desc": "Financial analysis, risk assessment, digital banking ও asset management."
+      },
+      "fmcg": {
+        "name": "FMCG",
+        "desc": "Brand management, sales distribution, inventory control ও retail planning."
+      },
+      "bpo": {
+        "name": "Business Process Outsourcing (BPO)",
+        "desc": "Customer service, back-office operations, technical support ও call centers."
+      }
+    },
+    "milestonesSubtitle": "Milestones",
+    "milestonesTitle": "আমাদের achievements",
+    "achievement1Num": "৬০+",
+    "achievement1Title": "Corporate Partnerships",
+    "achievement1Desc": "৬০+ local ও international company-র সাথে partnership গড়েছি।",
+    "achievement2Num": "Growing",
+    "achievement2Title": "Talent Network",
+    "achievement2Desc": "Employer ও job seeker-দের growing network গড়ছি।",
+    "achievement3Num": "Pioneer",
+    "achievement3Title": "Japanese Ethics",
+    "achievement3Desc": "Ethics, discipline ও efficiency-র strong foundation-এ built।",
+    "ctaTitle": "Strong team গড়তে বা career elevate করতে প্রস্তুত?",
+    "ctaText": "Employer হোন বা job seeker — আন্তর্জাতিক pathway-তে connect করি।"
+  },
+  "corporate": {
+    "pageTitle": "কর্পোরেট প্রোফাইল",
+    "companyHeader": "Kawaii Group",
+    "tabs": {
+      "profile": "কর্পোরেট প্রোফাইল",
+      "history": "ইতিহাস",
+      "management": "সিনিয়র ম্যানেজমেন্ট",
+      "governance": "কর্পোরেট গভর্নance"
+    },
+    "sectionTitle": "কর্পোরেট প্রোফাইল",
+    "asOf": "২০২৪ সালের জুলাই মাসে শেষ হওয়া অর্থবছর অনুযায়ী।",
+    "fields": {
+      "companyName": "কোম্পানির নাম",
+      "headOffice": "প্রধান কার্যালয়ের ঠিকানা",
+      "japanOffice": "জাপান অফিসের ঠিকানা",
+      "tel": "টেলিফোন",
+      "managingDirector": "Managing Director & Group CEO",
+      "incorporated": "প্রতিষ্ঠিত",
+      "capital": "কোম্পানির মূলধন",
+      "employees": "কর্মচারীর সংখ্যা",
+      "sisterConcerns": "সহযোগী প্রতিষ্ঠান"
+    },
+    "values": {
+      "companyName": "Kawaii Group Limited",
+      "headOffice": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219",
+      "japanOffice": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan",
+      "tel": "+88 02-55123797, +81 03-4363-5903",
+      "managingDirector": "Dewan Samir",
+      "incorporated": "2015",
+      "capital": "১০ কোটি টাকা",
+      "employees": "২০",
+      "sisterConcerns": "৮+"
+    }
+  },
+  "privacy": {
+    "pageTitle": "Kawaii Group-এর গোপনীয়তা নীতি",
+    "effectiveDate": "কার্যকর তারিখ: ১ জানুয়ারি, ২০২৪",
+    "intro": "Kawaii Group (\"আমরা\") www.kawaiibd.com ওয়েবসাইট (\"সেবা\") পরিচালনা করে। আপনি আমাদের সেবা ব্যবহার করলে ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার ও প্রকাশ সম্পর্কে এই পৃষ্ঠায় আমাদের নীতি জানানো হয়েছে এবং সেই তথ্যের সাথে সম্পর্কিত আপনার পছন্দগুলো বর্ণিত হয়েছে।",
+    "sections": {
+      "infoCollect": "আমরা যে তথ্য সংগ্রহ করি",
+      "infoCollectIntro": "আপনাকে সেবা প্রদান ও উন্নত করতে বিভিন্ন উদ্দেশ্যে আমরা বিভিন্ন ধরনের তথ্য সংগ্রহ করি।",
+      "personalData": "ব্যক্তিগত তথ্য",
+      "personalItems": [
+        "ইমেইল ঠিকানা",
+        "নামের প্রথম ও শেষাংশ",
+        "ফোন নম্বর",
+        "ঠিকানা, রাজ্য, প্রদেশ, ZIP/পোস্টাল কোড, শহর"
+      ],
+      "usageData": "ব্যবহারের তথ্য",
+      "usageDataText": "সেবা কীভাবে accessed ও used হয় সে সম্পর্কে তথ্যও সংগ্রহ করতে পারি...",
+      "cookies": "কুকিজ ও ট্র্যাকিং প্রযুক্তি",
+      "cookiesText": "আমরা কুকিজ ও অনুরূপ tracking technologies ব্যবহার করি...",
+      "whyCollect": "আমরা কেন তথ্য সংগ্রহ করি",
+      "whyItems": [
+        "সেবা প্রদান ও রক্ষণাবেক্ষণ",
+        "পরিবর্তন সম্পর্কে আপনাকে জানাতে..."
+      ],
+      "disclosure": "তথ্য প্রকাশ",
+      "disclosureText": "Kawaii Group good faith-এ আপনার Personal Data প্রকাশ করতে পারে...",
+      "security": "তথ্যের নিরাপত্তা",
+      "securityText": "আপনার তথ্যের নিরাপত্তা গুরুত্বপূর্ণ...",
+      "rights": "আপনার ডেটা সুরক্ষা অধিকার",
+      "rightsItems": [
+        "access-এর অধিকার..."
+      ],
+      "changes": "এই গোপনীয়তা নীতিতে পরিবর্তন",
+      "changesText": "সময়ে সময়ে আমাদের Privacy Policy আপডেট করতে পারি...",
+      "contact": "যোগাযোগ",
+      "contactText": "এই Privacy Policy সম্পর্কে প্রশ্ন থাকলে..."
+    }
+  },
+  "cta": {
+    "leftTitle": "সংস্কৃতি সংযুক্ত, সুযোগ সৃষ্টি",
+    "button": "যোগাযোগ করুন"
+  },
+  "home": {
+    "slides": [
+      {
+        "head1": "আপনার বৈশ্বিক",
+        "head2": "প্রবৃদ্ধির অংশীদার",
+        "des": "বৈশ্বিক পর্যায়ে বৈচিত্র্যময় জাপানি দক্ষতা দিয়ে ব্যবসায়কে ক্ষমতায়িত করা",
+        "button": "আমাদের সাথে অংশীদার হন",
+        "link": "/contact"
+      },
+      {
+        "head1": "৩৫ বছরের",
+        "head2": "জাপান-বাংলাদেশ ব্যবসায়িক উৎকর্ষ",
+        "des": "জাপান ও বাংলাদেশে শিকড় নিয়ে, আমরা বিশ্বব্যাপী প্রবৃদ্ধি চালিত একীভূত সমাধান প্রদান করি",
+        "button": "আমাদের গল্প জানুন",
+        "link": "/about"
+      },
+      {
+        "head1": "বিভিন্ন খাতে",
+        "head2": "সাফল্য এগিয়ে নেওয়া",
+        "des": "মানবসম্পদ থেকে জাপানি ভাষা প্রশিক্ষণ, ফ্যাশন, প্রকৌশল ও আরও অনেক ক্ষেত্রে — প্রতিটি শিল্পের জন্য কাস্টম সমাধান",
+        "button": "আমাদের দক্ষতা দেখুন",
+        "link": "/concerns"
+      },
+      {
+        "head1": "উদ্ভাবন শুরু হয় এখানে,",
+        "head2": "প্রবৃদ্ধি অনুসরণ করে",
+        "des": "যেখানে বাংলাদেশ জাপানের সাথে মিলিত হয়, এবং উদ্ভাবনী ধারণা শক্তিশালী বাস্তবায়নের সাথে মিলিত হয়।",
+        "button": "একসাথে সাফল্য গড়ি",
+        "link": "/contact"
+      }
+    ],
+    "ceo": {
+      "intro": "Kawaii Group-এ, আমরা বৈশ্বিক সহযোগিতা এবং বৈচিত্র্যময় দক্ষতার মিলনের শক্তিতে বিশ্বাস করি। আপনার জন্য আমাদের বার্তা সহজ কিন্তু গভীর:",
+      "headline": "সেতু গড়া, হাসি সৃষ্টি",
+      "join": "এমন ভবিষ্যৎ গড়তে আমাদের সাথে যোগ দিন যেখানে সীমানা সাফল্যের বাধা নয়, এবং প্রতিটি চ্যালেঞ্জ প্রবৃদ্ধির সুযোগ।",
+      "cta": "একসাথে বেড়ে উঠি"
+    },
+    "help": {
+      "title": "আমরা কীভাবে আপনার প্রবৃদ্ধিতে সাহায্য করতে পারি",
+      "subtitle": "নিয়োগ থেকে সফটওয়্যার পর্যন্ত — আমরা নিয়োগ, আন্তর্জাতিক শিক্ষা ও সফটওয়্যার সমাধানে দক্ষ।",
+      "cta": "আমাদের সাথে যাত্রা শুরু করুন",
+      "cards": [
+        {
+          "title": "বৈশ্বিক নিয়োগ সহজ করুন",
+          "with": "M/S Sanjana International-এর সাথে",
+          "desc": "M/S Sanjana International বিশ্বব্যাপী দক্ষ পেশাজীবীদের সাথে ব্যবসা সংযুক্ত করে, আপনার প্রতিষ্ঠানের জন্য সঠিক fit নিশ্চিত করে।"
+        },
+        {
+          "title": "জাপানে ক্যারিয়ার গড়ুন",
+          "with": "Achieve Japan-এর সাথে",
+          "desc": "Achieve Japan জাপান ও তার বাইরে শিক্ষাগত সুযোগ দিয়ে ব্যক্তিদের ক্ষমতায়িত করে, বৈশ্বিক দৃষ্টিভঙ্গি ও ক্যারিয়ার প্রস্তুতি গড়ে তোলে।"
+        },
+        {
+          "title": "সফটওয়্যার সমাধান দিয়ে ব্যবসায়িক দক্ষতা বাড়ান",
+          "with": "KATSL-এর সাথে",
+          "desc": "Kawaii Technology transformative SaaS সমাধান দিয়ে ব্যবসাকে সজ্জিত করে, কার্যক্ষম দক্ষতা বাড়ায় ও টেকসই প্রবৃদ্ধি চালিত করে।"
+        }
+      ]
+    },
+    "projects": {
+      "title": "আমাদের প্রকল্প",
+      "subtitle": "আমাদের আসন্ন উদ্যোগ ও উদ্ভাবনের এক ঝলক",
+      "items": [
+        {
+          "title": "JAPAN SSW TRAINING CENTRE",
+          "subtitle": "জাপানে সাফল্যের জন্য বাংলাদেশি কর্মীবাহিনী ক্ষমতায়িত করা",
+          "description": "Kawaii Group জাপানের শ্রম ঘাটতি মোকাবিলায় বাংলাদেশে JAPAN SSW TRAINING CENTRE প্রতিষ্ঠায় প্রতিশ্রুতিবদ্ধ। শক্তিশালী দ্বিপক্ষীয় সম্পর্ক সত্ত্বেও, জাপানি চাকরি বাজারের জন্য ব্যবহারিক প্রশিক্ষণ ও ভাষা উন্নয়নে বাংলাদেশি চ্যালেঞ্জ রয়েছে। এই উদ্যোগ আগামী দশকে প্রায় ৫০,০০০ দক্ষ কর্মী প্রস্তুত করে Specific Skilled Workers (SSW) খাতে প্রতিযোগিতা বাড়াতে চায়।"
+        },
+        {
+          "title": "Japan Business Tower",
+          "subtitle": "কেনাকাটা, ডাইনিং ও ব্যবসায়িক উৎকর্ষের প্রধান গন্তব্য",
+          "description": "পাঁচডোনার Japan Business Tower নরসিংদীর Panchdona More-এর মর্যাদাপূর্ণ এলাকায় অবস্থিত, ৪২.৪২ কাঠা (৩০,৫৪২ বর্গফুট)। এই thoughtfully designed complex-এ shopping mall, super shop, food court, modern office spaces ও cineplex রয়েছে।"
+        },
+        {
+          "title": "Japan Green City",
+          "subtitle": "ঢাকায় জাপানি অনুপ্রাণিত বিলাসিতা",
+          "description": "Japan Green City, ঢাকার premier residential complex, Vatara-Gulshan-এর মর্যাদাপূর্ণ এলাকায়। সবুজে পরিবেষ্টিত spacious apartments, environmentally friendly development, playground, swimming pool ও vibrant community spirit — পরিবার ও young couples-এর জন্য ideal।"
+        },
+        {
+          "title": "Japan Business Center",
+          "subtitle": "প্রিমিয়াম অভিজ্ঞতা ও ব্যবসায়িক উৎকর্ষের জন্য",
+          "description": "Vatara, Gulshan, Dhaka-এর Japan Business Center ৮ bigha বা ৩২৩৭.৪৯ Tsubo prime land-এ iconic development। shopping mall, super shop, food court, modern office, five-star hotel, clinic, gym, dedicated mosque, ample parking ও green spaces — luxury, convenience ও tranquility-র blend।"
+        }
+      ]
+    },
+    "ventures": {
+      "title": "Kawaii Ventures",
+      "intro": "Kawaii Group-এ, আমরা বিভিন্ন কোম্পানির একটি পরিবার গড়েছি, প্রতিটি global market-এর specific needs মেটাতে specialized। আমাদের sister concerns synergy-তে multiple sectors-এ comprehensive solutions দেয়।",
+      "cta": "আমাদের Ventures অন্বেষণ করুন",
+      "items": [
+        {
+          "title": "M/S Sanjana International",
+          "bullets": [
+            "বাংলাদেশে premier overseas employment agency",
+            "Ministry of Labor and Employment-এর লাইসেন্সপ্রাপ্ত (License No. RL-711)",
+            "দক্ষ বাংলাদেশি পেশাজীবীদের global opportunities-এর সাথে সংযুক্ত করা"
+          ]
+        },
+        {
+          "title": "Achieve Japan",
+          "bullets": [
+            "আন্তর্জাতিক শিক্ষায় ১৭+ বছরের অভিজ্ঞতা",
+            "বিশেষত জাপানে students-কে universities ও workplaces-এর সাথে সংযুক্ত করা",
+            "ব্যক্তিগত guidance দেওয়া experts-এর extensive network"
+          ]
+        },
+        {
+          "title": "Kawaii Advanced Technology and Solution Ltd",
+          "bullets": [
+            "SaaS solutions-এর জন্য custom software development",
+            "e-commerce, project management ও enterprise solutions-এ বিশেষজ্ঞ",
+            "user-centric design ও seamless integration-এ focus",
+            "২০২০ সালে প্রতিষ্ঠিত, technology দিয়ে business complexities সহজ করা"
+          ]
+        }
+      ]
+    },
+    "news": {
+      "title": "সর্বশেষ সংবাদ",
+      "intro": "early stage-up-এর growth strategies থেকে existing businesses-কে সাহায্য — আমরা সব করেছি! ফলাফল নিজেই কথা বলে।",
+      "readMore": "আরও পড়ুন",
+      "items": [
+        {
+          "title": "Kawaii Group-BMET MOU Signing Ceremony",
+          "desc": "BMET Kawaii Group-এর সাথে জাপানের Specified Skilled Worker (SSW) program-এর জন্য workforce readiness বাড়াতে partner করেছে। Kawaii Group-এর Japan-এ extensive experience ও strong presence Bangladeshi workers-এর smooth migration ও employment-এ key role রাখে।",
+          "date": "০৫ মার্চ ২০২৫"
+        },
+        {
+          "title": "Japanese Food and Traditional Green Tea Ceremony",
+          "desc": "২১ ফেব্রুয়ারি, International Mother Language Day-এ, Achieve Japan Japanese Food and Traditional Green Tea Ceremony আয়োজন করেছিল Japan Foundation representatives সহ। Bangladesh-এর Japanese language training landscape, teacher training methods, IRODORI materials ও SSW program advancement নিয়ে আলোচনা হয়। Japan Foundation Achieve Japan-এর development initiatives-এ comprehensive support প্রতিশ্রুতি দিয়েছে।",
+          "date": "২১ ফেব্রুয়ারি ২০২৫"
+        },
+        {
+          "title": "Kawaii Group-Egrowth Inc. MOU Signing Ceremony",
+          "desc": "১৭ ডিসেম্বর, BASIS: Japan Desk-এর Japan Day event-এ Kawaii Advanced Technology & Solution Ltd Gold Sponsor হিসেবে অংশ নিয়েছিল। Egrowth-এর সাথে MoU স্বাক্ষরিত হয় IT engineer training ও job placement-এ নতুন সুযোগ সৃষ্টির লক্ষ্যে।",
+          "date": "১৭ ডিসেম্বর ২০২৪"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "ছবির গ্যালারি"
+    },
+    "map": {
+      "title": "আমরা কোথায় কাজ করি",
+      "subtitle": "বিশ্বজুড়ে Kawaii Group",
+      "offices": {
+        "bangladesh": "বাংলাদেশ অফিস:",
+        "japan": "জাপান অফিস:",
+        "canada": "কানাডা অফিস:",
+        "germany": "জার্মানি অফিস:",
+        "malaysia": "মালaysia অফিস:"
+      }
+    },
+    "cta": {
+      "title": "বৈশ্বিক ব্যবসায় বিশ্বস্ত partner খুঁজছেন?",
+      "text": "নিয়োগ থেকে প্রযুক্তি — আমরা আপনার পাশে আছি।"
+    }
+  },
+  "about": {
+    "header": "আমরা কে",
+    "first": {
+      "title": "আগামীকাল গড়ছি, আজ: Kawaii Group-এর গল্প",
+      "body": "Kawaii Group প্রতিষ্ঠিত হয়েছিল একটি মূল ধারণা নিয়ে: সুযোগ তৈরি করা। ব্যবসায়িক সাফল্যে সহায়তা হোক বা নতুন ক্যারিয়ার পথে পরিচালিত করা — আমরা পরিবর্তন আনতে আগ্রহী।",
+      "corporateProfile": "কর্পোরেট প্রোফাইল",
+      "download": "প্রোফাইল ডাউনলোড",
+      "modalTitle": "আপনার Kawaii Group Profile-এর ভাষা পছন্দ নির্বাচন করুন",
+      "english": "English",
+      "japanese": "日本語 (Japanese)"
+    },
+    "vision": {
+      "title": "ভবিষ্যতের জন্য আমাদের দৃষ্টি",
+      "body": "আমাদের দৃষ্টি global businesses-কে Japanese expertise-এর সাথে সংযুক্ত করে diverse industries-এ innovation ও sustainable growth চালানোর leading force হওয়া।"
+    },
+    "anatomy": {
+      "title": "The Kawaii Anatomy",
+      "items": [
+        {
+          "letter": "K",
+          "title": "Knowledge",
+          "description": "বাংলাদেশ ও জাপানের মধ্যে knowledge sharing-কে প্রতিনিধিত্ব করে"
+        },
+        {
+          "letter": "A",
+          "title": "Alliance",
+          "description": "বাংলাদেশ ও জাপানের মধ্যে strong partnership-কে প্রতিনিধিত্ব করে"
+        },
+        {
+          "letter": "W",
+          "title": "Welfare",
+          "description": "বাংলাদেশ ও জাপানের মধ্যে জ্ঞান আদান-প্রদানকে প্রতিনিধিত্ব করে"
+        },
+        {
+          "letter": "A",
+          "title": "Adaptability",
+          "description": "পরিবর্তনশীল environment ও market needs-এ effectively respond করার ক্ষমতা প্রতিফলিত করে"
+        },
+        {
+          "letter": "I",
+          "title": "Integrity",
+          "description": "কোম্পানির strong ethical foundation-কে তুলে ধরে"
+        },
+        {
+          "letter": "I",
+          "title": "Impact",
+          "description": "কোম্পানির কাজের significant positive impact-কে জোর দেয়"
+        }
+      ]
+    },
+    "difference": {
+      "title": "আমরা কীভাবে পার্থক্য তৈরি করছি",
+      "cards": [
+        {
+          "title": "ব্যবসার জন্য",
+          "desc": "technology, fashion ও engineering sectors-এ world-class solutions প্রদান।"
+        },
+        {
+          "title": "শিক্ষার্থীদের জন্য",
+          "desc": "আন্তর্জাতিক শিক্ষার দরজা খুলছি — ৩,০০০+ শিক্ষার্থী জাপানে পাঠানো হয়েছে।"
+        },
+        {
+          "title": "সম্প্রদায়ের জন্য",
+          "desc": "টেকসই অবকাঠামো গড়া ও কর্মসংস্থান সৃষ্টি।"
+        }
+      ]
+    },
+    "team": {
+      "title": "আমাদের দলের সাথে পরিচিত হোন",
+      "body": "আমাদের দল Kawaii Group-এর হৃদয়। বিভিন্ন ক্ষেত্রের forward-thinking individuals — clients, communities ও world-এর জন্য value সৃষ্টির common goal-এ united।"
+    },
+    "way": {
+      "title": "The Kawaii Way",
+      "subtitle": "আমাদের সাফল্য core beliefs-এর উপর নির্মিত যা প্রতিটি সিদ্ধান্ত পরিচালিত করে:",
+      "beliefs": [
+        {
+          "title": "Innovation is Limitless:",
+          "desc": "প্রতিটি চ্যালেঞ্জ innovate করার সুযোগ।"
+        },
+        {
+          "title": "Collaboration is Key:",
+          "desc": "diverse minds একত্রিত হলে best solutions তৈরি হয়।"
+        },
+        {
+          "title": "Quality is Non-Negotiable:",
+          "desc": "আমরা সব কাজে highest standards বজায় রাখি।"
+        },
+        {
+          "title": "People are Our Greatest Asset:",
+          "desc": "আমরা talent-এ invest করি ও potential nurture করি।"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Kawaii Journey-তে যোগ দিন",
+      "text": "আপনি innovative solutions খুঁজছেন এমন business, global education-এর স্বপ্ন দেখা student, বা পার্থক্য আনতে চাওয়া individual — Kawaii Group আপনার progress-এ partner।",
+      "text2": "একসাথে এমন ভবিষ্যৎ গড়ি যেখানে সীমানা map-এর রেখা মাত্র, এবং সুযোগ limitless।"
+    }
+  },
+  "contact": {
+    "header": "যোগাযোগ করুন",
+    "form": {
+      "lead": "আজই আমাদের দলের সাথে কথা শুরু করতে যোগাযোগ করুন",
+      "name": "নাম",
+      "email": "ইমেইল",
+      "subject": "বিষয়",
+      "message": "বার্তা",
+      "privacyAgree": "আপনি আমাদের বন্ধুত্বপূর্ণ",
+      "send": "বার্তা পাঠান",
+      "sending": "পাঠানো হচ্ছে...",
+      "success": "বার্তা সফলভাবে পাঠানো হয়েছে!",
+      "error": "বার্তা পাঠাতে ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন।"
+    },
+    "side": {
+      "emailTitle": "আমাদের ইমেইল করুন",
+      "emailBody": "আপনার কাছ থেকে শুনতে চাই! মেইলের মাধ্যমে যোগাযোগ করতে দ্বিধা করবেন না।",
+      "callTitle": "আমাদের কল করুন",
+      "callBody": "আমরা সাহায্যের জন্য আছি! ফোনে যোগাযোগ করতে দ্বিধা করবেন না।"
+    }
+  },
+  "services": {
+    "header": "Specified Skilled Worker (SSW)"
+  },
+  "concerns": {
+    "header": "সহযোগী প্রতিষ্ঠান"
+  },
+  "nopages": {
+    "title": "কোনো পৃষ্ঠা নেই"
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './KawaiiConcerns.css'
+import { useLocale } from '../../i18n/LocaleContext'
 import KCExplore from "../../Assets/KCExploreDirection.svg"
 import hwch_1 from "../../Assets/ssw2.jpeg"
 import hwch_2 from "../../Assets/foodfest2.jpg"
@@ -32,134 +33,105 @@ import ButtonKg from '../ButtonKg/ButtonKg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 
-const concernCards = [
-    {
-        cardId: 'sanjanaHr',
-        backgroundColor: '#FEDFEA',
-        concernName: 'M/S Sanjana International',
-        concernContent: 'Dedicated recruiting agency.',
-        contentDescription: 'We specialize in connecting skilled Bangladeshi professionals with opportunities in Japan and beyond.',
-        cardImg: hwch_1,
-        cardLogo: sanajanaLogo
-    },
-    {
-        cardId: 'aj',
-        backgroundColor: '#FBEACC',
-        concernName: 'Achieve Japan',
-        concernContent: 'Japanese language learning center.',
-        contentDescription: 'We provide top-notch language and cultural training, preparing individuals for success in Japanese business environments.',
-        cardImg: hwch_2,
-        cardLogo: ajLogo
-    },
-    {
-        cardId: 'tredmig',
-        backgroundColor: '#F7D8BA',
-        concernName: 'Tredmig',
-        concernContent: 'Professional consultancy firm.',
-        contentDescription: 'Tredmig ensures that all applicants have a smooth transition into the global job market in the most cost-effective manner.',
-        cardImg: hwch_2_1,
-        cardLogo: tredmig
-    },
-    {
-        cardId: 'katsl',
-        backgroundColor: '#D8FCDB',
-        concernName: 'Kawaii Advanced Technology & Solution',
-        concernContent: 'SaaS (Software as a Service) solution-based software company.',
-        contentDescription: 'We develop advanced software solutions to meet the evolving needs of businesses in both Bangladesh and Japan.',
-        cardImg: hwch_3,
-        cardLogo: kastlLogo
-    },
-    // {
-    //     cardId: 'kfl',
-    //     backgroundColor: '#E1F8DC',
-    //     concernName: 'Kawaii Fashion',
-    //     concernContent: 'Fashion sourcing company. ',
-    //     contentDescription: 'We provide comprehensive services including fashion brand establishment in Japan, OEM, ODM, wholesale, and e-commerce solutions, all tailored to meet the exact requirements of the Japanese market.',
-    //     cardImg: hwch_4,
-    //     cardLogo: kflLogo
-    // },
-    // {
-    //     cardId: 'kecl',
-    //     backgroundColor: '#ACCAFF',
-    //     concernName: 'Kawaii Engineering & Construction',
-    //     concernContent: 'Construction focused company',
-    //     contentDescription: 'This division brings Japanese construction standards to Bangladesh. We undertake projects with a focus on quality, efficiency, and innovation.',
-    //     cardImg: hwch_5,
-    //     cardLogo: keclLogo
-    // },
-    {
-        cardId: 'kgj',
-        backgroundColor: '#DCC1F8',
-        concernName: 'Kawaii Group Japan',
-        concernContent: 'Our Japanese headquarter.',
-        contentDescription: 'It serves as a vital link between Bangladesh and Japan. It facilitates smooth business operations and cultural exchange.',
-        cardImg: hwch_6,
-        cardLogo: kgjLogo
-    },
-    {
-        cardId: 'bh',
-        backgroundColor: '#ACDDDE',
-        concernName: 'Biman Holidays',
-        concernContent: 'Premier online travel aggregator (OTA).',
-        contentDescription: 'Get the best prices on Flights, Hotels, Transfers & Activities Worldwide',
-        cardImg: hwch_6_1,
-        cardLogo: bhLogo
-    },
-    {
-        cardId: 'kddl',
-        backgroundColor: '#FEDFEA',
-        concernName: 'Japan Kawaii Design & Development',
-        concernContent: 'Business Design & Development focused',
-        contentDescription: 'This sister concern combines Japanese design principles with global trends. We offer innovative design solutions for various industries.',
-        cardImg: hwch_7,
-        cardLogo: kddlLogo
-    },
-    {
-        cardId: 'kiec',
-        backgroundColor: '#D8FCDB',
-        concernName: 'Kawaii International Education Center',
-        concernContent: 'Higher Studies and International Education consultancy agency.',
-        contentDescription: 'We assist students in pursuing international education opportunities, with a focus on countries like Europe, and Australia.',
-        cardImg: hwch_8,
-        cardLogo: kiecLogo
-    },
-    // {
-    //     cardId: 'kgc',
-    //     backgroundColor: '#FBEACC',
-    //     concernName: 'Kawaii Group Canada',
-    //     concernContent: 'Our Canada focused company',
-    //     contentDescription: 'This branch explores business opportunities and partnerships in the Canadian market.',
-    //     cardImg: hwch_9,
-    //     cardLogo: kgcLogo
-    // },
-    {
-        cardId: 'kgvl',
-        backgroundColor: '#FFE9E9',
-        concernName: 'Kawaii Global Ventures Limited',
-        concernContent: 'Japan–Bangladesh joint venture for business & collaboration.',
-        contentDescription: 'Promoting partnerships, investment, HR development, and digital transformation across Japan and Bangladesh.',
-        cardImg: jpBusinessCenter,
-        cardLogo: kgvlLogo
-    },
-    {
-        cardId: 'kjchs',
-        backgroundColor: '#FFE0E0',
-        concernName: 'Kawaii Japan Career & HR Solutions',
-        concernContent: 'Career development and HR solutions for Japan.',
-        contentDescription: 'We connect talent with Japanese career opportunities and deliver comprehensive HR solutions that support workforce growth across borders.',
-        cardImg: hwch_1,
-        cardLogo: kjchsLogo
-    }
-];
-
 const KawaiiConcerns = () => {
+    const { t, localizedPath } = useLocale();
+
+    const concernCards = [
+        {
+            cardId: 'sanjanaHr',
+            backgroundColor: '#FEDFEA',
+            concernName: 'M/S Sanjana International',
+            cardImg: hwch_1,
+            cardLogo: sanajanaLogo
+        },
+        {
+            cardId: 'aj',
+            backgroundColor: '#FBEACC',
+            concernName: 'Achieve Japan',
+            cardImg: hwch_2,
+            cardLogo: ajLogo
+        },
+        {
+            cardId: 'tredmig',
+            backgroundColor: '#F7D8BA',
+            concernName: 'Tredmig',
+            cardImg: hwch_2_1,
+            cardLogo: tredmig
+        },
+        {
+            cardId: 'katsl',
+            backgroundColor: '#D8FCDB',
+            concernName: 'Kawaii Advanced Technology & Solution',
+            cardImg: hwch_3,
+            cardLogo: kastlLogo
+        },
+        {
+            cardId: 'kgj',
+            backgroundColor: '#DCC1F8',
+            concernName: 'Kawaii Group Japan',
+            cardImg: hwch_6,
+            cardLogo: kgjLogo
+        },
+        {
+            cardId: 'bh',
+            backgroundColor: '#ACDDDE',
+            concernName: 'Biman Holidays',
+            cardImg: hwch_6_1,
+            cardLogo: bhLogo
+        },
+        {
+            cardId: 'kddl',
+            backgroundColor: '#FEDFEA',
+            concernName: 'Japan Kawaii Design & Development',
+            cardImg: hwch_7,
+            cardLogo: kddlLogo
+        },
+        {
+            cardId: 'kiec',
+            backgroundColor: '#D8FCDB',
+            concernName: 'Kawaii International Education Center',
+            cardImg: hwch_8,
+            cardLogo: kiecLogo
+        },
+        {
+            cardId: 'kgvl',
+            backgroundColor: '#FFE9E9',
+            concernName: 'Kawaii Global Ventures Limited',
+            cardImg: jpBusinessCenter,
+            cardLogo: kgvlLogo
+        },
+        {
+            cardId: 'kjchs',
+            backgroundColor: '#FFE0E0',
+            concernName: 'Kawaii Japan Career & HR Solutions',
+            cardImg: hwch_1,
+            cardLogo: kjchsLogo
+        }
+    ];
+
+    const detailSections = [
+        { id: 'sanjanaHr', bg: hwch_1, overlay: 'rgba(254, 223, 234, 0.8)', alignRight: true, externalLink: 'https://sanjanahr.com/' },
+        { id: 'aj', bg: hwch_2, overlay: 'rgba(251, 234, 204, 0.8)', alignRight: false, externalLink: 'https://achievejapanssw.com/' },
+        { id: 'katsl', bg: hwch_3, overlay: 'rgba(216, 252, 219, 0.9)', alignRight: true, externalLink: 'https://katsl.vercel.app/' },
+        { id: 'kgvl', bg: jpBusinessCenter, overlay: 'rgba(255, 233, 233, 0.85)', alignRight: true, internalPath: '/kawaii-global-ventures' },
+        { id: 'kjchs', bg: hwch_1, overlay: 'rgba(255, 224, 224, 0.85)', alignRight: false, internalPath: '/kawaii-japan-career-hr' },
+    ];
+
+    const concernNames = {
+        sanjanaHr: 'M/S Sanjana International',
+        aj: 'Achieve Japan',
+        katsl: 'Kawaii Advanced Technology & Solution Ltd.',
+        kgvl: 'Kawaii Global Ventures Limited',
+        kjchs: 'Kawaii Japan Career & HR Solutions',
+    };
+
     return (
         <div>
             <div className='KawaiiConcernsMain'>
                 <div className='KCHeadBox'>
-                    <div className='KCHeadTitle'>Kawaii Group Family At a Glance</div>
+                    <div className='KCHeadTitle'>{t('concernsPage.title')}</div>
                     <div className='KDHeadContent'>
-                        At Kawaii Group, we're more than just a company - we're a family of diverse businesses united by a common goal: <span style={{ fontWeight: '700' }}>to bridge gaps between cultures and create value across multiple sectors.</span> Our sister concerns span recruiting, education, technology, fashion, and more, each playing a crucial role in our mission to connect Bangladesh with Japan and the world.
+                        {t('concernsPage.intro')} <span style={{ fontWeight: '700' }}>{t('concernsPage.introBold')}</span> {t('concernsPage.introRest')}
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -173,16 +145,16 @@ const KawaiiConcerns = () => {
                             <div className='KCRect' style={{ background: card.backgroundColor }}></div>
                             <div className='KCCardContentBox'>
                                 <div className='KCCardContentHeader'>{card.concernName}</div>
-                                <div className='KCCardContentType'>{card.concernContent}</div>
+                                <div className='KCCardContentType'>{t(`concernsPage.cards.${card.cardId}.type`)}</div>
                             </div>
                             <div className='KCCardDescriptionBox'>
                                 <div className='KCCardDescription'>
-                                    {card.contentDescription}
+                                    {t(`concernsPage.cards.${card.cardId}.desc`)}
                                 </div>
                             </div>
                             <div className='KCExploreDiv'>
                                 <div className='KCExploreBtn'>
-                                    <div className='KCExploreContent'>Explore Now</div>
+                                    <div className='KCExploreContent'>{t('concernsPage.exploreNow')}</div>
                                     <img src={KCExplore} alt="KCExplore" />
                                 </div>
                             </div>
@@ -198,233 +170,57 @@ const KawaiiConcerns = () => {
                 </div>
             </div>
             <div className='flex flex-col'>
-                <div id="sanjanaHr" className='concern_detail_main_top' style={{ backgroundImage: `url(${hwch_1})` }}>
+                {detailSections.map((section) => (
                     <div
-                        className="absolute inset-0 z-[1] pointer-events-none"
-                        style={{
-                            backgroundColor: 'rgba(254, 223, 234, 0.8)',
-                        }}
-                    ></div>
-                    <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
-                    <div className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
-                        style={{ height: '100%' }}>
-                        <div className='concertTitleText'>
-                            Recruitment & Global Employment
+                        key={section.id}
+                        id={section.id}
+                        className='concern_detail_main_top'
+                        style={{ backgroundImage: `url(${section.bg})` }}
+                    >
+                        <div
+                            className="absolute inset-0 z-[1] pointer-events-none"
+                            style={{ backgroundColor: section.overlay }}
+                        ></div>
+                        <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
+                        <div
+                            className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
+                            style={{ height: '100%' }}
+                        >
+                            <div className='concertTitleText'>
+                                {t(`concernsPage.details.${section.id}.sectionTitle`)}
+                            </div>
+                            <div className={`flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white${section.alignRight ? ' ml-auto md:ml-auto' : ''}`}>
+                                <div>
+                                    <div className='concernBoxTitle'>{concernNames[section.id]}</div>
+                                    <div className='concernBoxDes'>{t(`concernsPage.details.${section.id}.subtitle`)}</div>
+                                </div>
+                                <div className='concernBoxDetailText'>
+                                    {t(`concernsPage.details.${section.id}.body`)}
+                                </div>
+                                <div className='flex flex-col gap-[10px]'>
+                                    {(t(`concernsPage.details.${section.id}.bullets`) || []).map((bullet, i) => (
+                                        <div key={i} className='flex gap-[10px] items-center'>
+                                            <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d" }} />
+                                            <div>{bullet}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className='flex justify-end ml-auto'>
+                                    {section.externalLink ? (
+                                        <a href={section.externalLink} className='inline-flex' target='_blank' rel="noreferrer">
+                                            <ButtonKg text={t(`concernsPage.details.${section.id}.cta`)} />
+                                        </a>
+                                    ) : (
+                                        <a href={localizedPath(section.internalPath)} className='inline-flex'>
+                                            <ButtonKg text={t(`concernsPage.details.${section.id}.cta`)} />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white ml-auto md:ml-auto">
-                            <div>
-                                <div className='concernBoxTitle'>M/S Sanjana International</div>
-                                <div className='concernBoxDes'>Connecting Talent with Global Opportunities</div>
-                            </div>
-                            <div className='concernBoxDetailText'>
-                                We are a leading recruitment agency specializing in placing skilled Bangladeshi professionals in high-demand markets, particularly Japan. With a proven track record, we ensure that every candidate is fully prepared for their international career journey.
-                            </div>
-                            <div className='flex flex-col gap-[10px]'>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Expertise in Japanese employment markets</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Training and skill development for overseas jobs</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Comprehensive visa and relocation support</div>
-                                </div>
-                            </div>
-                            <div className='flex justify-end ml-auto'>
-                                <a href="https://sanjanahr.com/" className='inline-flex' target='_blank' rel="noreferrer">
-                                    <ButtonKg text="Learn More" />
-                                </a>
-                            </div>
-                        </div>
+                        <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
                     </div>
-                    <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
-                </div>
-                {/* achieve japan  */}
-                <div id="aj" className='concern_detail_main_top' style={{ backgroundImage: `url(${hwch_2})` }}>
-                    <div
-                        className="absolute inset-0 z-[1] pointer-events-none"
-                        style={{
-                            backgroundColor: 'rgba(251, 234, 204, 0.8)',
-                        }}
-                    ></div>
-                    <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
-                    <div className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
-                        style={{ height: '100%' }}>
-                        <div className='concertTitleText'>
-                            Language & Cultural Training
-                        </div>
-                        <div className="flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white">
-                            <div>
-                                <div className='concernBoxTitle'>Achieve Japan</div>
-                                <div className='concernBoxDes'>Prepare for Success in Japan with Expert Language & Cultural Training</div>
-                            </div>
-                            <div className='concernBoxDetailText'>
-                                Achieve Japan provides industry-leading Japanese language education, preparing individuals for work, study, or migration. We ensure that you not only learn the language but also gain a deep understanding of Japanese culture, setting you up for success in Japan’s professional environments.
-                            </div>
-                            <div className='flex flex-col gap-[10px]'>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>JLPT-certified courses</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Cultural orientation and etiquette training</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Native and local Japanese instructors</div>
-                                </div>
-                            </div>
-                            <div className='flex justify-end ml-auto'>
-                                <a href="https://achievejapanssw.com/" className='inline-flex' target='_blank' rel="noreferrer">
-                                    <ButtonKg text="Join Our Classes" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
-                </div>
-
-                {/* Katsl  */}
-                <div id="katsl" className='concern_detail_main_top' style={{ backgroundImage: `url(${hwch_3})` }}>
-                    <div
-                        className="absolute inset-0 z-[1] pointer-events-none"
-                        style={{
-                            backgroundColor: 'rgba(216, 252, 219, 0.9)',
-                        }}
-                    ></div>
-                    <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
-                    <div className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
-                        style={{ height: '100%' }}>
-                        <div className='concertTitleText'>
-                            Digital Transformation Solutions
-                        </div>
-                        <div className="flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white ml-auto md:ml-auto">
-                            <div>
-                                <div className='concernBoxTitle'>Kawaii Advanced Technology & Solution Ltd.</div>
-                                <div className='concernBoxDes'>Innovating Business with Advanced Software Solutions</div>
-                            </div>
-                            <div className='concernBoxDetailText'>
-                                Kawaii Advanced Technology & Solution Ltd. offers custom SaaS software that helps businesses across Bangladesh and Japan optimize their operations. Whether it's enterprise resource planning or business automation, our tailored solutions meet the evolving needs of modern businesses.
-                            </div>
-                            <div className='flex flex-col gap-[10px]'>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Offshore/Augmentation Development Team</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Custom SaaS software for businesses</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>IT Engineers Training & Job Placement in Japan</div>
-                                </div>
-                            </div>
-                            <div className='flex justify-end ml-auto'>
-                                <a href="https://katsl.vercel.app/" className='inline-flex' target='_blank' rel="noreferrer">
-                                    <ButtonKg text="Discover Our Solutions" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
-                </div>
-
-                {/* Kawaii Global Ventures Limited detail section */}
-                <div id="kgvl" className='concern_detail_main_top' style={{ backgroundImage: `url(${jpBusinessCenter})` }}>
-                    <div
-                        className="absolute inset-0 z-[1] pointer-events-none"
-                        style={{
-                            backgroundColor: 'rgba(255, 233, 233, 0.85)',
-                        }}
-                    ></div>
-                    <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
-                    <div className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
-                        style={{ height: '100%' }}>
-                        <div className='concertTitleText'>
-                            Business & International Collaboration
-                        </div>
-                        <div className="flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white ml-auto md:ml-auto">
-                            <div>
-                                <div className='concernBoxTitle'>Kawaii Global Ventures Limited</div>
-                                <div className='concernBoxDes'>Japan–Bangladesh Joint Venture for Business & HR Development</div>
-                            </div>
-                            <div className='concernBoxDetailText'>
-                                Promotes strategic partnerships, investments, human resource development, technology exchange, and trade facilitation between Bangladesh, Japan, and global markets.
-                            </div>
-                            <div className='flex flex-col gap-[10px]'>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Business & Investment Consultancy</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Workforce Solutions & HR Development</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Technology Transfer & Digital Transformation</div>
-                                </div>
-                            </div>
-                            <div className='flex justify-end ml-auto'>
-                                <a href="/kawaii-global-ventures" className='inline-flex'>
-                                    <ButtonKg text="View Full Profile" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
-                </div>
-
-                {/* Kawaii Japan Career & HR Solutions detail section */}
-                <div id="kjchs" className='concern_detail_main_top' style={{ backgroundImage: `url(${hwch_1})` }}>
-                    <div
-                        className="absolute inset-0 z-[1] pointer-events-none"
-                        style={{
-                            backgroundColor: 'rgba(255, 224, 224, 0.85)',
-                        }}
-                    ></div>
-                    <img src={leftWhite} alt="concernLeftWhite" className='concernLeftWhite' />
-                    <div className="absolute z-[3] px-[16px] md:px-[240px] gap-[24px] md:gap-6 flex flex-col justify-between"
-                        style={{ height: '100%' }}>
-                        <div className='concertTitleText'>
-                            Career & HR Solutions
-                        </div>
-                        <div className="flex flex-col items-start w-full md:w-1/2 gap-[24px] md:gap-6 rounded-t-[30px] p-9 bg-white">
-                            <div>
-                                <div className='concernBoxTitle'>Kawaii Japan Career & HR Solutions</div>
-                                <div className='concernBoxDes'>Building Careers and Strengthening Workforces for Japan</div>
-                            </div>
-                            <div className='concernBoxDetailText'>
-                                Kawaii Japan Career & HR Solutions specializes in career placement and human resource services, helping individuals and organizations succeed in the Japanese employment market through tailored recruitment, training, and workforce support.
-                            </div>
-                            <div className='flex flex-col gap-[10px]'>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Japan-focused career placement</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>End-to-end HR and workforce solutions</div>
-                                </div>
-                                <div className='flex gap-[10px] items-center'>
-                                    <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#be1e2d", }} />
-                                    <div>Candidate preparation and employer matching</div>
-                                </div>
-                            </div>
-                            <div className='flex justify-end ml-auto'>
-                                <a href="/kawaii-japan-career-hr" className='inline-flex'>
-                                    <ButtonKg text="View Full Profile" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <img src={rightWhite} alt="concernRightWhite" className='concernRightWhite' />
-                </div>
+                ))}
                 {/* <div id="kfl">
                     Kawaii Fashion
                 </div>

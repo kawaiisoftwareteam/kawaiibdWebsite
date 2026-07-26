@@ -8,8 +8,11 @@ import HowCanWeHelp from '../../Components/HowCanWeHelp/HowCanWeHelp'
 import OurProjects from '../../Components/OurProjects/OurProjects'
 import KawaiiVenture from '../../Components/KawaiiVenture/KawaiiVenture'
 import HomePhotoGallery from '../../Components/HomePhotoGallery/HomePhotoGallery'
+import { useLocale } from '../../i18n/LocaleContext'
 
 const Home = () => {
+  const { t } = useLocale();
+
   return (
     <div>
       <Hero />
@@ -20,9 +23,11 @@ const Home = () => {
       <LatestNews />
       <HomePhotoGallery/>
       <Map />
-      <Cta title="Looking for a Trusted Partner
-              in Global Business?" text="From recruitment to technology, we've got you covered."
-        backgroundImage={require('../../Assets/cta.png')} />
+      <Cta
+        title={t('home.cta.title')}
+        text={t('home.cta.text')}
+        backgroundImage={require('../../Assets/cta.png')}
+      />
     </div>
   )
 }

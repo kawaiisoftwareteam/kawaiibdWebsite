@@ -3,56 +3,40 @@ import "./MakeDifference.css"
 import topCorner from "../../Assets/diffCardTopCorner.svg"
 import bottomCorner from "../../Assets/diffCardBottomCorner.svg"
 import mainbottomCorner from "../../Assets/diffcardmainbottomcorner.svg"
+import { useLocale } from '../../i18n/LocaleContext'
+
+const diffImages = [
+    require('../../Assets/diffcard1.png'),
+    require('../../Assets/diffcard2.png'),
+    require('../../Assets/diffcard3.png'),
+];
 
 const MakeDifference = () => {
+    const { t } = useLocale();
+    const cards = t('about.difference.cards') || [];
+
     return (
         <div className='makeDiff'>
             <div className='textBoxDiff'>
-                <div className='titleDiff'>How We're Making a Difference</div>
+                <div className='titleDiff'>{t('about.difference.title')}</div>
             </div>
             <div className="flex flex-col md:flex-row py-12 items-start gap-6">
-                <div className='diffCard'>
-                    <div className='diffCardImg' style={{ backgroundImage: `url(${require('../../Assets/diffcard1.png')})` }}>
-                        <div className='DiffCardTitle'>For Businesses</div>
+                {cards.map((card, index) => (
+                <div className='diffCard' key={index}>
+                    <div className='diffCardImg' style={{ backgroundImage: `url(${diffImages[index]})` }}>
+                        <div className='DiffCardTitle'>{card.title}</div>
                         <div className='diffCardCornerBg'>
                             <img src={topCorner} alt="" />
                         </div>
                     </div>
                     <div className='diffCardContentBox'>
-                        <div className='diffCardContentDescription'>Delivering world-class solutions across technology, fashion, and engineering sectors.</div>
+                        <div className='diffCardContentDescription'>{card.desc}</div>
                     </div>
                     <div className='diffCardCornerDownBg'>
                         <img src={bottomCorner} alt="" />
                     </div>
                 </div>
-                <div className='diffCard'>
-                    <div className='diffCardImg' style={{ backgroundImage: `url(${require('../../Assets/diffcard2.png')})` }}>
-                        <div className='DiffCardTitle'>For Students</div>
-                        <div className='diffCardCornerBg'>
-                            <img src={topCorner} alt="" />
-                        </div>
-                    </div>
-                    <div className='diffCardContentBox'>
-                        <div className='diffCardContentDescription'>Opening doors to international education, with over 3,000 students sent to Japan.</div>
-                    </div>
-                    <div className='diffCardCornerDownBg'>
-                        <img src={bottomCorner} alt="" />
-                    </div>
-                </div>
-                <div className='diffCard'>
-                    <div className='diffCardImg' style={{ backgroundImage: `url(${require('../../Assets/diffcard3.png')})` }}>
-                        <div className='DiffCardTitle'>For Communities</div>
-                        <div className='diffCardCornerBg'>
-                            <img src={topCorner} alt="" />
-                        </div>
-                    </div>
-                    <div className='diffCardContentBox'>
-                        <div className='diffCardContentDescription'>Building sustainable infrastructure and creating employment opportunities.</div>
-                    </div>
-                    <div className='diffCardCornerDownBg'>
-                        <img src={bottomCorner} alt="" />
-                    </div>
-                </div>
+                ))}
             </div>
             <div className='diffCardMainBottomCorner'>
                 <img src={mainbottomCorner} alt="" />
