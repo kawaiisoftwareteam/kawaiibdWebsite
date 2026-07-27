@@ -56,7 +56,7 @@ const concernLinks = [
   // 4
   {
     id: 4,
-    path: "https://kawaiijapanbd.com/",
+    path: "https://kawaiigroupjapan.jp/",
     name: "Kawaii Group Japan Limited",
     logo: kgjLogo,
     alt: "kgjLogo",

@@ -98,8 +98,9 @@ const Masterclass = () => {
 
   // Countdown timer logic
   useEffect(() => {
-    // Last Date of Registration: Sunday, August 16, 2026 23:59:59 (BST)
-    const targetDate = new Date('2026-08-16T23:59:59+06:00');
+    // Registration closes at end of "Masterclass Date" (BST / Bangladesh Time, UTC+06:00)
+    // UI copy uses: "Masterclass Date: Monday, Aug 17, 2026"
+    const targetDate = new Date('2026-08-17T23:59:59+06:00');
 
     const updateTimer = () => {
       const now = new Date();

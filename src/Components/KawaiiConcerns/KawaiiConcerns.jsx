@@ -70,7 +70,8 @@ const KawaiiConcerns = () => {
             backgroundColor: '#DCC1F8',
             concernName: 'Kawaii Group Japan',
             cardImg: hwch_6,
-            cardLogo: kgjLogo
+            cardLogo: kgjLogo,
+            externalLink: 'https://kawaiigroupjapan.jp/'
         },
         {
             cardId: 'bh',
@@ -139,7 +140,13 @@ const KawaiiConcerns = () => {
                         <div
                             key={card.cardId}
                             className="KCCardBox"
-                            onClick={() => document.getElementById(card.cardId).scrollIntoView({ behavior: 'smooth' })}
+                            onClick={() => {
+                                if (card.externalLink) {
+                                    window.open(card.externalLink, '_blank', 'noopener,noreferrer');
+                                    return;
+                                }
+                                document.getElementById(card.cardId)?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             style={{ cursor: 'pointer' }}
                         >
                             <div className='KCRect' style={{ background: card.backgroundColor }}></div>
