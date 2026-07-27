@@ -21,6 +21,7 @@ import { LocaleProvider } from './i18n/LocaleContext';
 import { isValidLocale } from './i18n/config';
 import GeoLanguageBanner from './Components/GeoLanguageBanner/GeoLanguageBanner';
 import LocaleRedirect from './Components/LocaleRedirect/LocaleRedirect';
+import GeoAutoSync from './Components/GeoAutoSync/GeoAutoSync';
 
 const AppRoutes = () => (
   <Routes>
@@ -49,6 +50,7 @@ const LocalizedShell = () => {
 
   return (
     <LocaleProvider>
+      <GeoAutoSync />
       <GeoLanguageBanner />
       <Navbar />
       <ScrollOnLoad />

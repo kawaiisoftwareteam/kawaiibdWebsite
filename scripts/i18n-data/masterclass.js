@@ -4,13 +4,13 @@ module.exports = {
     urgency: {
       badge: "Live Zoom Masterclass",
       title: "Free Registration Closes Soon!",
-      dateLabel: "Masterclass Date: Tuesday, Aug 18, 2026"
+      dateLabel: "Masterclass Date: Monday, Aug 17, 2026"
     },
     countdown: { days: "Days", hours: "Hours", mins: "Mins", secs: "Secs" },
     registerNow: "Register Now",
     meta: {
-      date: { label: "Date", value: "Tuesday, Aug 18, 2026", note: "Add to calendar invites will follow" },
-      time: { label: "Time", value: "7:00 PM - 10:00 PM", note: "Bangladesh Time (BST)" },
+      date: { label: "Date", value: "Monday, Aug 17, 2026", note: "Add to calendar invites will follow" },
+      time: { label: "Time", value: "5:00 PM - 8:00 PM", note: "Bangladesh Time (BST)" },
       location: { label: "Location", value: "Online via Zoom", note: "Link emailed upon registration" },
       incentives: { label: "Incentives", value: "Participation Certificate", note: "Awarded to all active attendees" }
     },
@@ -47,7 +47,7 @@ module.exports = {
       linkCopied: "Link Copied!",
       shareEmail: "Share via Email",
       emailSubject: "Invitation: BIM and Construction DX Masterclass",
-      emailBody: "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 18, 2026. Register here:"
+      emailBody: "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 17, 2026. Register here:"
     },
     help: {
       title: "Need Help?",
@@ -168,13 +168,13 @@ module.exports = {
     urgency: {
       badge: "লাইভ জুম মাস্টারক্লাস",
       title: "বিনামূল্যে নিবন্ধন শীঘ্রই বন্ধ!",
-      dateLabel: "মাস্টারক্লাসের তারিখ: মঙ্গলবার, ১৮ আগস্ট, ২০২৬"
+      dateLabel: "মাস্টারক্লাসের তারিখ: সোমবার, ১৭ আগস্ট, ২০২৬"
     },
     countdown: { days: "দিন", hours: "ঘণ্টা", mins: "মিনিট", secs: "সেকেন্ড" },
     registerNow: "এখনই নিবন্ধন করুন",
     meta: {
-      date: { label: "তারিখ", value: "মঙ্গলবার, ১৮ আগস্ট, ২০২৬", note: "ক্যালেন্ডার আমন্ত্রণ পরে পাঠানো হবে" },
-      time: { label: "সময়", value: "সন্ধ্যা ৭:০০ - ১০:০০", note: "বাংলাদেশ সময় (BST)" },
+      date: { label: "তারিখ", value: "সোমবার, ১৭ আগস্ট, ২০২৬", note: "ক্যালেন্ডার আমন্ত্রণ পরে পাঠানো হবে" },
+      time: { label: "সময়", value: "বিকেল ৫:০০ - ৮:০০", note: "বাংলাদেশ সময় (BST)" },
       location: { label: "অবস্থান", value: "জুমের মাধ্যমে অনলাইন", note: "নিবন্ধনের পর লিংক ইমেইলে পাঠানো হবে" },
       incentives: { label: "উপহার", value: "অংশগ্রহণ সনদ", note: "সক্রিয় সকল অংশগ্রহণকারীকে প্রদান করা হবে" }
     },
@@ -211,7 +211,7 @@ module.exports = {
       linkCopied: "লিংক কপি হয়েছে!",
       shareEmail: "ইমেইলে শেয়ার করুন",
       emailSubject: "আমন্ত্রণ: BIM ও Construction DX মাস্টারক্লাস",
-      emailBody: "ডঃ শুনসুকে সোমেয়ার সাথে ১৮ আগস্ট, ২০২৬-এর বিনামূল্যে BIM ও Construction DX মাস্টারক্লাস দেখুন। এখানে নিবন্ধন করুন:"
+      emailBody: "ডঃ শুনসুকে সোমেয়ার সাথে ১৭ আগস্ট, ২০২৬-এর বিনামূল্যে BIM ও Construction DX মাস্টারক্লাস দেখুন। এখানে নিবন্ধন করুন:"
     },
     help: {
       title: "সাহায্য দরকার?",
@@ -332,13 +332,13 @@ module.exports = {
     urgency: {
       badge: "ライブZoomマスタークラス",
       title: "無料登録はまもなく終了！",
-      dateLabel: "開催日：2026年8月18日（火）"
+      dateLabel: "開催日：2026年8月17日（月）"
     },
     countdown: { days: "日", hours: "時間", mins: "分", secs: "秒" },
     registerNow: "今すぐ登録",
     meta: {
-      date: { label: "日付", value: "2026年8月18日（火）", note: "カレンダー招待は後日お送りします" },
-      time: { label: "時間", value: "19:00 - 22:00", note: "バングラデシュ時間（BST）" },
+      date: { label: "日付", value: "2026年8月17日（月）", note: "カレンダー招待は後日お送りします" },
+      time: { label: "時間", value: "17:00 - 20:00", note: "バングラデシュ時間（BST）" },
       location: { label: "場所", value: "Zoomオンライン", note: "登録後にリンクをメールでお送りします" },
       incentives: { label: "特典", value: "参加証明書", note: "積極的に参加された方全員に授与" }
     },
@@ -375,7 +375,7 @@ module.exports = {
       linkCopied: "リンクをコピーしました！",
       shareEmail: "メールで共有",
       emailSubject: "ご招待：BIM・建設DXマスタークラス",
-      emailBody: "2026年8月18日開催、染谷俊介博士による無料BIM・建設DXマスタークラスをご覧ください。登録はこちら："
+      emailBody: "2026年8月17日開催、染谷俊介博士による無料BIM・建設DXマスタークラスをご覧ください。登録はこちら："
     },
     help: {
       title: "お困りですか？",

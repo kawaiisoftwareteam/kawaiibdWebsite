@@ -405,7 +405,7 @@
     "urgency": {
       "badge": "Live Zoom Masterclass",
       "title": "Free Registration Closes Soon!",
-      "dateLabel": "Masterclass Date: Tuesday, Aug 18, 2026"
+      "dateLabel": "Masterclass Date: Monday, Aug 17, 2026"
     },
     "countdown": {
       "days": "Days",
@@ -417,12 +417,12 @@
     "meta": {
       "date": {
         "label": "Date",
-        "value": "Tuesday, Aug 18, 2026",
+        "value": "Monday, Aug 17, 2026",
         "note": "Add to calendar invites will follow"
       },
       "time": {
         "label": "Time",
-        "value": "7:00 PM - 10:00 PM",
+        "value": "5:00 PM - 8:00 PM",
         "note": "Bangladesh Time (BST)"
       },
       "location": {
@@ -486,7 +486,7 @@
       "linkCopied": "Link Copied!",
       "shareEmail": "Share via Email",
       "emailSubject": "Invitation: BIM and Construction DX Masterclass",
-      "emailBody": "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 18, 2026. Register here:"
+      "emailBody": "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 17, 2026. Register here:"
     },
     "help": {
       "title": "Need Help?",
