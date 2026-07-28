@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════════════
+   BlockGridSlider — 10x10 Staggered Image Slider
+   ═══════════════════════════════════════════ */
+
+.blockGridSlider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Base static background (previous slide) */
+.blockGridSlider__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Grid container for 10x10 blocks */
+.blockGridSlider__grid-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  perspective: 1200px;
+}
+
+.blockGridSlider__grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual 10x10 Block Cell */
+.blockGridSlider__cell {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
+
+.blockGridSlider__cell-img {
+  position: absolute;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  display: block;
+}
+
+/* Overlay content container */
+.blockGridSlider__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.blockGridSlider__overlay > * {
+  pointer-events: auto;
+}
+
+/* Navigation Dots */
+.blockGridSlider__dots {
+  position: absolute;
+  bottom: 40px;
+  right: clamp(40px, 6vw, 120px);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.blockGridSlider__dot {
+  width: 32px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s ease);
+  padding: 0;
+}
+
+.blockGridSlider__dot--active {
+  background: var(--color-primary, #C81E32);
+  width: 48px;
+}
+
+.blockGridSlider__dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .blockGridSlider__dots {
+    bottom: 60px;
+    right: 24px;
+  }
+}

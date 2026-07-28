@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
-import kgLogobh from '../../../Assets/kawaiiGroupLogobw.svg';
+import kgLogobh from '../../../Assets/kawaiigroup.png';
 import { useLocale } from '../../../i18n/LocaleContext';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);

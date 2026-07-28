@@ -4,8 +4,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import "./MainNav.css";
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import kawaiiLogo from '../../Assets/kawaiiLogoMain.svg';
-import kawaiiLogobh from '../../Assets/kawaiiGroupLogobw.svg';
+import kawaiiLogo from '../../Assets/kawaiigroup.png';
+import kawaiiLogobh from '../../Assets/kawaiigroup.png';
 import mobileCross from '../../Assets/mobileCross.svg';
 import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png';
 import kgjLogo from '../../Assets/Sister_Concerns/3_logo.png';
@@ -270,7 +270,10 @@ const MainNav = () => {
           <div className="mainNav__actions">
             <LanguageSwitcher isNavbar={true} />
             <Link href={localizedPath('/contact')} className="mainNav__cta">
-              {t('nav.getInTouch')}
+              <span>{t('nav.getInTouch')}</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="mainNav__cta-icon">
+                <path d="M3.33334 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
           </div>
 

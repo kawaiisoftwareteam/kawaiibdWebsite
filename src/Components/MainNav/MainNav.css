@@ -10,18 +10,23 @@
   width: 100%;
   z-index: 1000;
   padding: 0 clamp(24px, 4vw, 80px);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   transition:
     background var(--transition-medium),
     box-shadow var(--transition-medium),
-    backdrop-filter var(--transition-medium);
+    backdrop-filter var(--transition-medium),
+    border-color var(--transition-medium);
 }
 
 .mainNav--scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
 .mainNav__inner {
@@ -139,7 +144,10 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 24px;
-  background: var(--color-white);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
   min-width: 520px;
@@ -197,37 +205,47 @@
 .mainNav__cta {
   display: inline-flex;
   align-items: center;
-  padding: 10px 24px;
+  gap: 8px;
+  padding: 10px 22px;
   font-family: var(--font-display);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--color-white);
-  background: var(--color-primary);
+  background: #C81E32;
   border: none;
   border-radius: 50px;
   text-decoration: none;
   cursor: pointer;
+  transform: translateX(clamp(15px, 2.5vw, 40px));
   transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
-.mainNav__cta:hover {
-  background: var(--color-primary-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(190, 30, 45, 0.3);
+.mainNav__cta-icon {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
 }
 
-/* When transparent, CTA is outlined */
+.mainNav__cta:hover {
+  background: #A61828;
+  transform: translateX(clamp(15px, 2.5vw, 40px)) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 30, 50, 0.45);
+}
+
+.mainNav__cta:hover .mainNav__cta-icon {
+  transform: translateX(3px);
+}
+
 .mainNav:not(.mainNav--scrolled) .mainNav__cta {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
+  background: #C81E32;
+  border: none;
+  color: var(--color-white);
 }
 
 .mainNav:not(.mainNav--scrolled) .mainNav__cta:hover {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+  background: #A61828;
+  box-shadow: 0 4px 16px rgba(200, 30, 50, 0.4);
 }
 
 /* ── Hamburger (mobile) ── */
