@@ -10,10 +10,11 @@
   width: 100%;
   z-index: 1000;
   padding: 0 clamp(24px, 4vw, 80px);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition:
     background var(--transition-medium),
     box-shadow var(--transition-medium),
@@ -22,11 +23,11 @@
 }
 
 .mainNav--scrolled {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
 }
 
 .mainNav__inner {
@@ -71,9 +72,9 @@
   padding: 8px 18px;
   font-family: var(--font-display);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.01em;
-  color: var(--color-text);
+  color: #111827 !important;
   text-decoration: none;
   border-radius: 8px;
   transition:
@@ -81,49 +82,32 @@
     background var(--transition-fast);
 }
 
-/* Text color when navbar is transparent (on hero) */
-.mainNav:not(.mainNav--scrolled) .mainNav__link {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.mainNav:not(.mainNav--scrolled) .mainNav__link:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Text color when navbar is scrolled */
-.mainNav--scrolled .mainNav__link {
-  color: var(--color-text);
-}
-
-.mainNav--scrolled .mainNav__link:hover {
-  color: var(--color-primary);
-  background: rgba(190, 30, 45, 0.05);
+/* Hover & Active states */
+.mainNav__link:hover {
+  color: #BE1E2D !important;
+  background: rgba(190, 30, 45, 0.06);
 }
 
 /* Active link underline */
+.mainNav__link--active {
+  color: #BE1E2D !important;
+}
+
 .mainNav__link--active::after {
   content: '';
   position: absolute;
   bottom: 2px;
   left: 18px;
   right: 18px;
-  height: 2px;
-  background: var(--color-primary);
-  border-radius: 1px;
+  height: 2.5px;
+  background: #BE1E2D;
+  border-radius: 2px;
 }
 
 /* Hot / featured link */
 .mainNav__link--hot {
   font-weight: 700;
-}
-
-.mainNav:not(.mainNav--scrolled) .mainNav__link--hot {
-  color: #FFD2D6;
-}
-
-.mainNav--scrolled .mainNav__link--hot {
-  color: var(--color-primary);
+  color: #BE1E2D !important;
 }
 
 /* Chevron icon */

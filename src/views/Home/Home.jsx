@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Hero from '../../Components/Hero/Hero';
+import SpiderSisterConcerns from '../../Components/SpiderSisterConcerns/SpiderSisterConcerns';
 import Cta from '../../Components/CTA/Cta';
 import Map from '../../Components/Map/Map';
 import LatestNews from '../../Components/LatestNews/LatestNews';
@@ -21,6 +22,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <SpiderSisterConcerns />
       <CeoMessage />
       <HowCanWeHelp />
       <OurProjects />

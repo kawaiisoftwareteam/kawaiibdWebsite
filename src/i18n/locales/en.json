@@ -73,6 +73,11 @@
         "link": "/contact"
       }
     ],
+    "spiderConcerns": {
+      "title": "Our Sister Concerns",
+      "subtitle": "Discover the diverse network of companies driving excellence across global industries under Kawaii Group.",
+      "explore": "Explore All Concerns"
+    },
     "ceo": {
       "intro": "At Kawaii Group, we believe in the power of global collaboration and the fusion of diverse expertise. Our message to you is simple yet profound:",
       "headline": "Building Bridges, Creating Smiles",

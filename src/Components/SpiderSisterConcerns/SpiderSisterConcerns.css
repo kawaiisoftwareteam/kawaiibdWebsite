@@ -1,0 +1,505 @@
+/* Spider Sister Concerns Styles - Auto Column-Wise Sequencing Design */
+
+.spiderSectionMain {
+  position: relative;
+  width: 100%;
+  padding: 88px 32px;
+  background: #FAFAFB;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.spiderHeader {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 64px auto;
+}
+
+.spiderBadge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(190, 30, 45, 0.08);
+  color: #BE1E2D;
+  border: 1px solid rgba(190, 30, 45, 0.2);
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.spiderTitle {
+  font-size: 44px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.spiderSubtitle {
+  font-size: 18px;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════
+   2-COLUMN SPIDER WEB DIAGRAM (Desktop / Tablet)
+   Single-column card list on mobile (≤768px)
+   ═══════════════════════════════════════════ */
+
+.spiderContainer {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 560px;
+  padding: 8px 0 0;
+}
+
+.spiderSvgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  display: block;
+}
+
+/* Continuous leg stroke dash animation */
+.spiderLegLine.pulsing {
+  stroke-dasharray: 6 6;
+  animation: spiderDash 4.2s linear infinite;
+}
+
+@keyframes spiderDash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.spiderLegLine {
+  transition: stroke-width 0.35s ease, stroke-opacity 0.35s ease, stroke 0.35s ease;
+}
+
+.spiderCircleDot,
+.spiderMidDot {
+  transition: r 0.35s ease, fill 0.35s ease;
+}
+
+.spiderPulseDot {
+  filter: drop-shadow(0 0 5px rgba(190, 30, 45, 0.45));
+}
+
+.spiderPulseDot.isActivePulse {
+  filter: drop-shadow(0 0 7px rgba(190, 30, 45, 0.9));
+}
+
+/* Center Hub Node */
+.spiderCenterHub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Red Radial Glow Shadow behind Circle */
+.spiderRedGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(190, 30, 45, 0.45);
+  filter: blur(32px);
+  z-index: 1;
+  pointer-events: none;
+  animation: auraPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes auraPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.7;
+    filter: blur(28px);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.22);
+    opacity: 0.95;
+    filter: blur(40px);
+  }
+}
+
+.centerHubBox {
+  position: relative;
+  z-index: 3;
+  width: 140px;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 36px rgba(190, 30, 45, 0.24), 0 0 0 1px rgba(190, 30, 45, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spiderCenterHub:hover .centerHubBox {
+  transform: scale(1.06);
+  box-shadow: 0 18px 48px rgba(190, 30, 45, 0.38);
+}
+
+.centerHexIcon {
+  width: 78px;
+  height: 78px;
+}
+
+/* Left & Right Columns */
+.spiderColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 370px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Sister Concern Card */
+.spiderNodeCard {
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.spiderNodeCardInner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1.5px solid rgba(229, 231, 235, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+/* AUTO-SEQUENCE ACTIVE CARD STYLING (Column wise 1 by 1) */
+.spiderNodeCard.nodeActiveSeq .spiderNodeCardInner,
+.spiderNodeCard:hover .spiderNodeCardInner {
+  transform: translateY(-4px) scale(1.02);
+  border-color: #BE1E2D !important;
+  box-shadow: 0 12px 32px rgba(190, 30, 45, 0.22) !important;
+}
+
+.spiderNodeCard.nodeActiveSeq .nodeLogoWrapper,
+.spiderNodeCard:hover .nodeLogoWrapper {
+  border-color: #BE1E2D;
+}
+
+.spiderNodeCard.nodeActiveSeq .nodeArrow,
+.spiderNodeCard:hover .nodeArrow {
+  background: #BE1E2D;
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.nodeLogoWrapper {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  background: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  overflow: hidden;
+  transition: border-color 0.35s ease;
+}
+
+.nodeLogo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.nodeInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nodeCategory {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nodeTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.nodeArrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #4B5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+/* Footer CTA */
+.spiderFooterCta {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.spiderCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 38px;
+  background: #BE1E2D;
+  color: #ffffff;
+  border-radius: 32px;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(190, 30, 45, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.spiderCtaBtn:hover {
+  background: #9E1825;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(190, 30, 45, 0.35);
+}
+
+.ctaArrow {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.spiderCtaBtn:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS (Desktop, Tablet, Mobile)
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+  .spiderContainer {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .spiderColumn {
+    width: 330px;
+  }
+}
+
+/* Tablet Layout (769px - 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+  .spiderSectionMain {
+    padding: 52px 16px 44px;
+  }
+
+  .spiderHeader {
+    margin-bottom: 28px;
+  }
+
+  .spiderTitle {
+    font-size: 34px;
+  }
+
+  .spiderSubtitle {
+    font-size: 16px;
+  }
+
+  .spiderContainer {
+    min-height: 500px;
+    padding: 8px 0 0;
+  }
+
+  .spiderColumn {
+    width: calc(50% - 68px);
+    gap: 18px;
+  }
+
+  .spiderCenterHub {
+    width: 110px;
+    height: 110px;
+  }
+
+  .spiderRedGlow {
+    width: 100px;
+    height: 100px;
+    filter: blur(20px);
+  }
+
+  .centerHubBox {
+    width: 90px;
+    height: 90px;
+  }
+
+  .centerHexIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .spiderNodeCardInner {
+    padding: 12px 14px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .nodeLogoWrapper {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 4px;
+  }
+
+  .nodeTitle {
+    font-size: 13px;
+  }
+
+  .nodeCategory {
+    font-size: 10px;
+  }
+
+  .nodeArrow {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Mobile & Small Tablet: single-column list (spider diagram hidden) */
+@media (max-width: 768px) {
+  .spiderSectionMain {
+    padding: 40px 16px 32px;
+  }
+
+  .spiderHeader {
+    margin-bottom: 32px;
+  }
+
+  .spiderTitle {
+    font-size: 26px;
+  }
+
+  .spiderSubtitle {
+    font-size: 14px;
+  }
+
+  .spiderContainer {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .spiderSvgCanvas {
+    display: none;
+  }
+
+  .spiderCenterHub {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 8px;
+    order: -1;
+  }
+
+  .spiderRedGlow {
+    width: 80px;
+    height: 80px;
+    filter: blur(16px);
+  }
+
+  .centerHubBox {
+    width: 76px;
+    height: 76px;
+  }
+
+  .centerHexIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .spiderColumn {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .spiderNodeCardInner {
+    padding: 14px 16px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .nodeLogoWrapper {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .nodeTitle {
+    font-size: 14px;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .nodeCategory {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+
+  .nodeArrow {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .spiderFooterCta {
+    margin-top: 32px;
+  }
+
+  .spiderCtaBtn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}

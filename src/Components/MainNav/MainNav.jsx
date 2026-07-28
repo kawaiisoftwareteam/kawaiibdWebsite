@@ -219,45 +219,6 @@ const MainNav = () => {
               {t('nav.whatWeDo')}
             </Link>
 
-            {/* Sister Concerns with dropdown */}
-            <div className="mainNav__dropdown-wrapper">
-              <Link
-                href={localizedPath('/concerns')}
-                className={`mainNav__link ${isLinkActive('/concerns') ? 'mainNav__link--active' : ''}`}
-              >
-                {t('nav.sisterConcerns')}
-                <svg className="mainNav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-
-              <div className="mainNav__dropdown">
-                <div className="mainNav__dropdown-grid">
-                  {concernLinks.map((item) => (
-                    item.isExternal ? (
-                      <a
-                        key={item.id}
-                        href={item.path}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mainNav__dropdown-item"
-                      >
-                        <img src={item.logo} alt={item.alt} className="mainNav__dropdown-logo" />
-                      </a>
-                    ) : (
-                      <Link
-                        key={item.id}
-                        href={resolveConcernPath(item.path, item.isExternal)}
-                        className="mainNav__dropdown-item"
-                      >
-                        <img src={item.logo} alt={item.alt} className="mainNav__dropdown-logo" />
-                      </Link>
-                    )
-                  ))}
-                </div>
-              </div>
-            </div>
-
             <Link
               href={localizedPath('/masterclass')}
               className={`mainNav__link mainNav__link--hot ${isLinkActive('/masterclass') ? 'mainNav__link--active' : ''}`}
@@ -324,58 +285,6 @@ const MainNav = () => {
           >
             {t('nav.whatWeDo')}
           </Link>
-
-          {/* Sister Concerns with mobile dropdown */}
-          <div
-            className={`mobileSidebar__link mobileSidebar__link--expandable ${dropdownVisible ? 'mobileSidebar__link--active' : ''}`}
-            onClick={handleSisterConcernsClick}
-          >
-            <span>{t('nav.sisterConcerns')}</span>
-            <svg
-              className={`mobileSidebar__arrow ${dropdownVisible ? 'mobileSidebar__arrow--open' : ''}`}
-              width="16" height="16" viewBox="0 0 16 16" fill="none"
-              onClick={(e) => {
-                e.stopPropagation();
-                setDropdownVisible(!dropdownVisible);
-              }}
-            >
-              <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-
-          {dropdownVisible && (
-            <div className="mobileSidebar__sub-nav">
-              {concernLinks.map((item) =>
-                item.isExternal ? (
-                  <a
-                    key={item.id}
-                    href={item.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mobileSidebar__sub-link"
-                    onClick={() => {
-                      setDropdownVisible(false);
-                      closeSidebar();
-                    }}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.id}
-                    href={resolveConcernPath(item.path, item.isExternal)}
-                    className={`mobileSidebar__sub-link ${isLinkActive(item.path) ? 'mobileSidebar__sub-link--active' : ''}`}
-                    onClick={() => {
-                      setDropdownVisible(false);
-                      closeSidebar();
-                    }}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              )}
-            </div>
-          )}
 
           <Link
             href={localizedPath('/masterclass')}
