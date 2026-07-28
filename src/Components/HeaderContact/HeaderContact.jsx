@@ -1,12 +1,16 @@
+'use client';
+
 import React from 'react';
-import './HeaderContact.css'
-import leftWhite from '../../Assets/top-left-corner-kg.svg'
-import rightWhite from '../../Assets/KG_symbol_right_white.png'
+import './HeaderContact.css';
+import leftWhite from '../../Assets/top-left-corner-kg.svg';
+import rightWhite from '../../Assets/KG_symbol_right_white.png';
+
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const HeaderContact = ({ text, backgroundImage }) => {
   return (
-    <div className='header_main_top' style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <img src={leftWhite} alt="leftwhite" className='leftWhite' />
+    <div className='header_main_top' style={{ backgroundImage: `url(${getSrc(backgroundImage)})` }}>
+      <img src={getSrc(leftWhite)} alt="leftwhite" className='leftWhite' />
       <div className='text_box_header'>
         <div className='text_shape_header'>
           <div className='text_header_'>
@@ -14,7 +18,7 @@ const HeaderContact = ({ text, backgroundImage }) => {
           </div>
         </div>
       </div>
-      <img src={rightWhite} alt="rightwhite" className='rightWhite' />
+      <img src={getSrc(rightWhite)} alt="rightwhite" className='rightWhite' />
     </div>
   );
 };

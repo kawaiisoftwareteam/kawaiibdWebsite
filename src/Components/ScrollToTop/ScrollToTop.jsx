@@ -1,40 +1,30 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Get the scaled container
     const scaledContent = document.querySelector('.scaled-content');
     
     const handleScroll = () => {
-      // Get both window and scaled container scroll positions
       const windowScroll = window.scrollY || document.documentElement.scrollTop;
       const scaledScroll = scaledContent ? scaledContent.scrollTop : 0;
       
-      // Calculate actual scroll position considering the scale factor
-      const scaleFactor = 0.8; // matches your CSS scale(0.8)
+      const scaleFactor = 0.8;
       const actualScroll = Math.max(windowScroll, scaledScroll) / scaleFactor;
-      
-      // console.log({
-      //   windowScroll,
-      //   scaledScroll,
-      //   actualScroll,
-      // });
 
       setIsVisible(actualScroll > 600);
     };
 
-    // Add scroll listeners to both window and scaled container
     window.addEventListener('scroll', handleScroll, { passive: true });
     if (scaledContent) {
       scaledContent.addEventListener('scroll', handleScroll, { passive: true });
     }
 
-    // Check initial position
     handleScroll();
 
-    // Cleanup
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (scaledContent) {
@@ -44,7 +34,6 @@ const ScrollToTop = () => {
   }, []);
 
   const scrollToTop = () => {
-    // Handle both window and scaled container
     const scaledContent = document.querySelector('.scaled-content');
     
     if (scaledContent) {

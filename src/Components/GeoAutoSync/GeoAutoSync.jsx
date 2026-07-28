@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import {
   clearStoredLocale,
   getStoredSource,
@@ -8,27 +10,18 @@ import {
 } from '../../Hooks/useGeoLanguage/useGeoLanguage';
 import { stripLocalePrefix, useLocale } from '../../i18n/LocaleContext';
 
-// One geo check per browser tab session (unless testing query params are used).
 let sessionGeoChecked = false;
 
-/**
- * Re-runs geo detection when:
- * - ?forceCountry=JP|BD is present, or
- * - ?redetect=1 is present, or
- * - once per session when preference is NOT manual (so a Japan VPN can win)
- *
- * Manual language choices are never overridden.
- */
 const GeoAutoSync = () => {
   const { locale } = useLocale();
-  const location = useLocation();
-  const navigate = useNavigate();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const inFlight = useRef(false);
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const forceCountry = params.get('forceCountry');
-    const forceRedetect = params.get('redetect') === '1';
+    const forceCountry = searchParams?.get('forceCountry');
+    const forceRedetect = searchParams?.get('redetect') === '1';
     const source = getStoredSource();
     const forced = Boolean(forceCountry || forceRedetect);
 
@@ -64,18 +57,16 @@ const GeoAutoSync = () => {
           sessionGeoChecked = true;
         }
 
+        const params = new URLSearchParams(searchParams?.toString() || '');
         params.delete('forceCountry');
         params.delete('redetect');
         const cleanSearch = params.toString() ? `?${params.toString()}` : '';
-        const rest = stripLocalePrefix(location.pathname);
+        const rest = stripLocalePrefix(pathname);
         const nextPath =
           rest === '/' ? `/${resolved.locale}` : `/${resolved.locale}${rest}`;
 
-        if (resolved.locale !== locale || location.search !== cleanSearch) {
-          navigate(
-            { pathname: nextPath, search: cleanSearch, hash: location.hash },
-            { replace: true }
-          );
+        if (resolved.locale !== locale || (searchParams?.toString() ? `?${searchParams.toString()}` : '') !== cleanSearch) {
+          router.replace(nextPath + cleanSearch);
         }
       } finally {
         inFlight.current = false;
@@ -88,10 +79,9 @@ const GeoAutoSync = () => {
     };
   }, [
     locale,
-    location.hash,
-    location.pathname,
-    location.search,
-    navigate,
+    pathname,
+    searchParams,
+    router,
   ]);
 
   return null;

@@ -6,9 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ["Segoe UI", "sans-serif"],  // Existing config
-        inter: ["Inter", "serif"],          // Custom Inter font configuration
-        bangla: ['"Anek Bangla"', "sans-serif"],
+        main: ["Jost", "Inter", "sans-serif"],
+        display: ["Jost", "sans-serif"],
+        inter: ["Inter", "serif"],
+        bangla: ['"Anek Bangla"', "Jost", "sans-serif"],
         japanese: ['"Noto Sans JP"', '"Yu Gothic"', "sans-serif"],
       },
     },

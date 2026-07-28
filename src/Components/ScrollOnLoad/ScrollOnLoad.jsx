@@ -1,29 +1,27 @@
+'use client';
+
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 const ScrollOnLoad = () => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
-    // console.log("Navigated to:", location.pathname);
-    
-    // Get the scaled content container
     const scaledContent = document.querySelector('.scaled-content');
-    
-    // Reset both window and scaled container scroll positions
+
     if (scaledContent) {
       scaledContent.scrollTo({
         top: 0,
-        behavior: 'instant'  // Use 'instant' instead of 'smooth' for immediate effect
+        behavior: 'instant'
       });
     }
-    
+
     window.scrollTo({
       top: 0,
       behavior: 'instant'
     });
-    
-  }, [location.pathname]);
+
+  }, [pathname]);
 
   return null;
 };

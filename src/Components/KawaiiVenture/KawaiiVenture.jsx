@@ -1,11 +1,13 @@
+'use client';
+
 import React, { useCallback, useEffect, useMemo } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './KawaiiVenture.css';
 import EmblaCarouselArrow from '../EmblaCarouselArrow/EmblaCarouselArrow';
 import KawaiiVentureCard from '../KawaiiVentureCard/KawaiiVentureCard';
 import ButtonNormal from '../ButtonNormal/ButtonNormal';
-import arrow from '../../Assets/kg_button_indicator.svg'
-import { NavLink } from 'react-router-dom';
+import arrow from '../../Assets/kg_button_indicator.svg';
+import Link from 'next/link';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const OPTIONS = {
@@ -67,9 +69,9 @@ const KawaiiVenture = () => {
                     <div className="flex flex-col items-start gap-[24px] flex-1">
                         <div className='ourventureTitle'>{t('home.ventures.title')}</div>
                         <div className='ourventureDescription'>{t('home.ventures.intro')}</div>
-                        <NavLink to={localizedPath('/concerns')}>
+                        <Link href={localizedPath('/concerns')}>
                             <ButtonNormal arrow={arrow} text={t('home.ventures.cta')}/>
-                        </NavLink>
+                        </Link>
                     </div>
                     <EmblaCarouselArrow
                         onPrevClick={scrollPrev}
@@ -83,7 +85,7 @@ const KawaiiVenture = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default KawaiiVenture
+export default KawaiiVenture;

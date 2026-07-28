@@ -1,18 +1,22 @@
-import React from 'react'
-import "./CeoMessage.css"
-import commaMsg from '../../Assets/commaSvgmsg.svg'
-import Buttonkg from '../ButtonKg/ButtonKg'
-import { Link } from 'react-router-dom'
-import blob from '../../Assets/blobmsg.svg'
-import msgKgSvg from '../../Assets/msgKgSvg.svg'
-import { useLocale } from '../../i18n/LocaleContext'
+'use client';
+
+import React from 'react';
+import "./CeoMessage.css";
+import commaMsg from '../../Assets/commaSvgmsg.svg';
+import Buttonkg from '../ButtonKg/ButtonKg';
+import Link from 'next/link';
+import blob from '../../Assets/blobmsg.svg';
+import msgKgSvg from '../../Assets/msgKgSvg.svg';
+import { useLocale } from '../../i18n/LocaleContext';
+
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const CeoMessage = () => {
     const { t, localizedPath } = useLocale();
 
     return (
         <div className='ceoMessage'>
-            <img src={commaMsg} alt="Comma_Msg" className='commaCeoMsg' />
+            <img src={getSrc(commaMsg)} alt="Comma_Msg" className='commaCeoMsg' />
             <div className='contentBoxMsg'>
                 <div className='contentLeftMsg'>
                     <div className='contentLeftMsgtext1'>{t('home.ceo.intro')}</div>
@@ -22,16 +26,16 @@ const CeoMessage = () => {
                             <span className='contentLeftMsgJoinText'>{t('home.ceo.join')}</span>
                         </div>
                     </div>
-                    <Link to={localizedPath('/about')}>
+                    <Link href={localizedPath('/about')}>
                         <Buttonkg text={t('home.ceo.cta')} />
                     </Link>
                 </div>
                 <div className='contentRightMsg'>
                     <div className='contentRightMsgBox'>
                         <div className='contentRightPattern'>
-                            <img src={blob} alt="" className='blobMsg' />
+                            <img src={getSrc(blob)} alt="" className='blobMsg' />
                             <div className='msgKgPattern'>
-                                <img src={msgKgSvg} alt="msgKgSvg" />
+                                <img src={getSrc(msgKgSvg)} alt="msgKgSvg" />
                             </div>
                         </div>
                         <div className='contentRightImage'>
@@ -42,7 +46,7 @@ const CeoMessage = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default CeoMessage
+export default CeoMessage;

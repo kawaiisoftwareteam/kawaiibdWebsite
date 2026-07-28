@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin'
-import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
-import { useLocale } from '../../i18n/LocaleContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { useLocale } from '../../i18n/LocaleContext';
 
 const NavHead = () => {
   const { t } = useLocale();
@@ -28,7 +30,7 @@ const NavHead = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NavHead
+export default NavHead;

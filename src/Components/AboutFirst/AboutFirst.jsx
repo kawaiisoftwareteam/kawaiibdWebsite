@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import './AboutFirst.css';
 import aboutSection1 from "../../Assets/aboutFirst1.jpeg";
@@ -8,6 +10,8 @@ import download from '../../Assets/kg_download.svg';
 import ButtonTransparent from '../ButtonTransparent/ButtonTransparent';
 import KgModal from '../KgModal/KgModal';
 import { useLocale } from '../../i18n/LocaleContext';
+
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const AboutFirst = () => {
     const { t, localizedPath } = useLocale();
@@ -25,19 +29,19 @@ const AboutFirst = () => {
                             <img
                                 alt="gallery"
                                 className="block h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
-                                src={aboutSection1} />
+                                src={getSrc(aboutSection1)} />
                         </div>
                         <div className="row-span-2 w-58 md:w-64 h-[477px] relative overflow-hidden rounded-xl group">
                             <img
                                 alt="gallery"
                                 className="block h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
-                                src={aboutSection3} />
+                                src={getSrc(aboutSection3)} />
                         </div>
                         <div className="w-58 md:w-64 h-[222.5px] relative overflow-hidden rounded-xl group">
                             <img
                                 alt="gallery"
                                 className="block h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
-                                src={aboutSection2} />
+                                src={getSrc(aboutSection2)} />
                         </div>
                     </div>
                     <div className='flex flex-col justify-center text-justify md:text-left items-center md:items-start px-8 gap-9 flex-1 self-stretch order-1 md:order-2'>

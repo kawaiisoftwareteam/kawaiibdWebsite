@@ -1,18 +1,19 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import './LanguageSwitcher.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons/faAngleDown';
-import globeLang from '../../Assets/globe.svg';
 import { LANGUAGES } from '../../i18n/config';
 import { useLocale } from '../../i18n/LocaleContext';
 import usFlag from './flags/us.svg';
 import bdFlag from './flags/bd.svg';
 import jpFlag from './flags/jp.svg';
 
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
+
 const flagImages = {
-  en: usFlag,
-  bn: bdFlag,
-  ja: jpFlag,
+  en: getSrc(usFlag),
+  bn: getSrc(bdFlag),
+  ja: getSrc(jpFlag),
 };
 
 const LanguageSwitcher = ({ isNavbar = false }) => {
@@ -39,50 +40,33 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [dropdownVisible]);
 
-  const dropdownPositionClasses = isNavbar
-    ? 'absolute z-50 top-12 right-0'
-    : 'absolute z-50 bottom-12 right-0';
-
   return (
     <div className="relative language-switcher">
-      <div
-        className="h-10 px-4 py-2 bg-white/0 rounded justify-center items-center gap-0.5 flex cursor-pointer"
+      <button
+        className="lang-trigger"
         onClick={toggleDropdown}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') toggleDropdown();
-        }}
+        type="button"
         aria-haspopup="listbox"
         aria-expanded={dropdownVisible}
       >
-        <div className="text-white">
-          <img src={globeLang} alt="" />
-        </div>
-        <div className="flex px-1 pb-0.5 items-center gap-1">
-          <img
-            className="language-switcher__flag"
-            src={flagImages[current.code]}
-            alt=""
-            aria-hidden="true"
-          />
-          <div className="text-white text-sm font-normal font-main leading-none">
-            {current.nativeName}
-          </div>
-        </div>
-        <div className="text-white">
-          <FontAwesomeIcon
-            icon={faAngleDown}
-            className={`ml-1 transform transition-transform duration-300 ${
-              dropdownVisible ? 'rotate-180' : ''
-            }`}
-          />
-        </div>
-      </div>
+        <img
+          className="language-switcher__flag"
+          src={flagImages[current.code]}
+          alt=""
+          aria-hidden="true"
+        />
+        <span className="lang-trigger__label">{current.nativeName}</span>
+        <svg
+          className={`lang-trigger__chevron ${dropdownVisible ? 'lang-trigger__chevron--open' : ''}`}
+          width="12" height="12" viewBox="0 0 12 12" fill="none"
+        >
+          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
 
       {dropdownVisible && (
         <div
-          className={`${dropdownPositionClasses} bg-white shadow-md rounded-md overflow-hidden min-w-[150px]`}
+          className={`lang-dropdown ${isNavbar ? 'lang-dropdown--navbar' : 'lang-dropdown--footer'}`}
           role="listbox"
         >
           {LANGUAGES.map((lang) => (
@@ -92,9 +76,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
               role="option"
               aria-selected={lang.code === locale}
               onClick={() => changeLanguage(lang.code)}
-              className={`block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm ${
-                lang.code === locale ? 'bg-gray-50 font-semibold' : ''
-              }`}
+              className={`lang-dropdown__option ${lang.code === locale ? 'lang-dropdown__option--active' : ''}`}
             >
               <img
                 className="language-switcher__flag language-switcher__flag--option"

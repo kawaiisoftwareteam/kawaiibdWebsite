@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useLocale } from '../../i18n/LocaleContext';
 import './GeoLanguageBanner.css';

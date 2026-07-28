@@ -1,12 +1,16 @@
-import React from 'react'
-import "./TopFooter.css"
-import { Link, NavLink } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot'
-import kgLogobh from '../../../Assets/kawaiiGroupLogobw.svg'
-import { useLocale } from '../../../i18n/LocaleContext'
+'use client';
+
+import React from 'react';
+import "./TopFooter.css";
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
+import kgLogobh from '../../../Assets/kawaiiGroupLogobw.svg';
+import { useLocale } from '../../../i18n/LocaleContext';
+
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const TopFooter = () => {
     const { t, localizedPath } = useLocale();
@@ -14,12 +18,12 @@ const TopFooter = () => {
     return (
         <div className="mainTop">
             <div className='colLeft'>
-                <NavLink to={localizedPath('/home')}>
-                    <img src={kgLogobh} alt="kawaiiGroupgreyscale" />
-                </NavLink>
+                <Link href={localizedPath('/home')}>
+                    <img src={getSrc(kgLogobh)} alt="kawaiiGroupgreyscale" />
+                </Link>
                 <div className="text-white text-base font-normal font-main leading-snug pr-5">
                     {t('footer.aboutBlurb')}{' '}
-                    <Link to={localizedPath('/about')} className="underline">
+                    <Link href={localizedPath('/about')} className="underline">
                         {t('footer.readMore')}
                     </Link>
                 </div>
@@ -27,19 +31,19 @@ const TopFooter = () => {
                     <b> {t('footer.quickLinks')}</b>
                     <br />
                     <span style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                        <Link to={localizedPath('/home')}>
+                        <Link href={localizedPath('/home')}>
                             {t('nav.home')}
                         </Link>
-                        <Link to={localizedPath('/about')}>
+                        <Link href={localizedPath('/about')}>
                             {t('nav.whoWeAre')}
                         </Link>
-                        <Link to={localizedPath('/services')}>
+                        <Link href={localizedPath('/services')}>
                             {t('nav.whatWeDo')}
                         </Link>
-                        <Link to={localizedPath('/concerns')}>
+                        <Link href={localizedPath('/concerns')}>
                             {t('nav.sisterConcerns')}
                         </Link>
-                        <Link to={localizedPath('/contact')}>
+                        <Link href={localizedPath('/contact')}>
                             {t('nav.getInTouch')}
                         </Link>
                     </span>
@@ -112,7 +116,7 @@ const TopFooter = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default TopFooter
+export default TopFooter;

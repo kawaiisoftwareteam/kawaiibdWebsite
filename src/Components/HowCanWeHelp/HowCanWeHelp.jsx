@@ -1,20 +1,28 @@
-import React from 'react'
-import './HowCanWeHelp.css'
-import sanjanaLogo from '../../Assets/Sister_Concerns/sanjana_logo.png'
-import ajLogo from '../../Assets/Sister_Concerns/aj_logo.png'
-import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png'
-import ButtonNormal from '../ButtonNormal/ButtonNormal'
-import ButtonTransparent from '../ButtonTransparent/ButtonTransparent'
-import arrow from '../../Assets/kg_button_indicator.svg'
-import { useLocale } from '../../i18n/LocaleContext'
+'use client';
+
+import React from 'react';
+import './HowCanWeHelp.css';
+import sanjanaLogo from '../../Assets/Sister_Concerns/sanjana_logo.png';
+import ajLogo from '../../Assets/Sister_Concerns/aj_logo.png';
+import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png';
+import ButtonNormal from '../ButtonNormal/ButtonNormal';
+import ButtonTransparent from '../ButtonTransparent/ButtonTransparent';
+import arrow from '../../Assets/kg_button_indicator.svg';
+import { useLocale } from '../../i18n/LocaleContext';
+
+import hwch1 from '../../Assets/hwch_1.png';
+import hwch2 from '../../Assets/hwch_2.jpeg';
+import hwch3 from '../../Assets/hwch_3.jpeg';
+
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const cardImages = [
-    require('../../Assets/hwch_1.png'),
-    require('../../Assets/hwch_2.jpeg'),
-    require('../../Assets/hwch_3.jpeg'),
+    getSrc(hwch1),
+    getSrc(hwch2),
+    getSrc(hwch3),
 ];
 
-const cardLogos = [sanjanaLogo, ajLogo, katslLogo];
+const cardLogos = [getSrc(sanjanaLogo), getSrc(ajLogo), getSrc(katslLogo)];
 
 const cardLinks = [
     'https://sanjanahr.com/',
@@ -62,7 +70,7 @@ const HowCanWeHelp = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default HowCanWeHelp
+export default HowCanWeHelp;

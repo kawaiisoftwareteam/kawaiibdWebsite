@@ -1,11 +1,15 @@
-import React from 'react'
-import "./Map.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot'
-import location from '../../Assets/location.png'
-import { useLocale } from '../../i18n/LocaleContext'
+'use client';
+
+import React from 'react';
+import "./Map.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
+import location from '../../Assets/location.png';
+import { useLocale } from '../../i18n/LocaleContext';
+
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const Map = () => {
   const { t } = useLocale();
@@ -110,7 +114,7 @@ const Map = () => {
         </div>
       </div>
       <div className="md:col-span-2 md:row-span-3 col-span-1 row-span-1 order-2 md:order-5">
-        <img src={location} alt="" className='pt-0 md:pt-24' /></div>
+        <img src={getSrc(location)} alt="" className='pt-0 md:pt-24' /></div>
       <div className="order-6 md:order-6 address_div">
         <div className='top_address_bar_gray'>
           {offices.germany}
@@ -172,7 +176,7 @@ const Map = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Map
+export default Map;

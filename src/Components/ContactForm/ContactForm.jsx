@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import './ContactForm.css'
+import './ContactForm.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const ContactForm = () => {
@@ -95,7 +97,7 @@ const ContactForm = () => {
                         <div className="flex items-center col-span-full">
                             <input id="checkbox1" type="checkbox"
                                 className="w-4 h-4 mr-3" />
-                            <label htmlFor="checkbox1" className="text-sm text-gray-400">{t('contact.form.privacyAgree')} <NavLink to={localizedPath('/privacypolicy')} className="underline">{t('common.privacyPolicy')}</NavLink></label>
+                            <label htmlFor="checkbox1" className="text-sm text-gray-400">{t('contact.form.privacyAgree')} <Link href={localizedPath('/privacypolicy')} className="underline">{t('common.privacyPolicy')}</Link></label>
                         </div>
                         <div className="button_cta">
                             <button
@@ -164,7 +166,7 @@ const ContactForm = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ContactForm
+export default ContactForm;

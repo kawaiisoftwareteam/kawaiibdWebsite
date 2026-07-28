@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
@@ -7,17 +8,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Bangla locale uses Anek Bangla across the site */
+/* ── Design Tokens ── */
+:root {
+  --color-primary: #BE1E2D;
+  --color-primary-dark: #9A1824;
+  --color-dark: #0F1117;
+  --color-dark-soft: #1A1D27;
+  --color-light: #F8F9FA;
+  --color-white: #FFFFFF;
+  --color-text: #202124;
+  --color-text-muted: #6B7280;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-solid: rgba(255, 255, 255, 0.95);
+
+  --font-display: 'Jost', sans-serif;
+  --font-body: 'Jost', 'Inter', sans-serif;
+
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --navbar-height: 80px;
+}
+
+/* ── Bangla locale ── */
 html[lang="bn"],
 html[lang="bn"] body {
-  font-family: "Anek Bangla", "Segoe UI", sans-serif;
+  font-family: "Anek Bangla", "Jost", sans-serif;
 }
 
 html[lang="bn"] *:not(script):not(style):not(svg):not(path) {
-  font-family: "Anek Bangla", "Segoe UI", sans-serif !important;
+  font-family: "Anek Bangla", "Jost", sans-serif !important;
 }
 
-/* Japanese locale uses a consistent Japanese typeface across the site */
+/* ── Japanese locale ── */
 html[lang="ja"],
 html[lang="ja"] body {
   font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
@@ -27,25 +51,31 @@ html[lang="ja"] *:not(script):not(style):not(svg):not(path) {
   font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif !important;
 }
 
-/* Reset CSS */
+/* ── Reset ── */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
   min-height: 100vh;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  color: var(--color-text);
 }
 
 body {
   position: relative;
 }
 
-/* #root Specific Styles */
+/* ── Root Layout ── */
 #root {
   display: flex;
   flex-direction: column;
@@ -54,52 +84,12 @@ body {
   min-height: 100vh;
 }
 
-.scaled-content {
-  transform: scale(0.8);
-  transform-origin: top left;
-  width: 125%;
-  min-height: 125vh;
-  overflow-y: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.main-wrapper {
-  padding-top: 105px; /* Adjust this value based on your navbar height */
-}
-
-/* Add these new styles */
+/* ── Sidebar open lock ── */
 body.sidebar-open {
   overflow: hidden;
 }
 
-.mobileNavSideBar {
-  transform: scale(1.25); /* Counter the root scale */
-  transform-origin: top left;
-  width: 80vw; /* Compensate for the scale (100/1.25) */
-  height: 80vh; /* Compensate for the scale */
-}
-
-
-@media (max-width: 768px) {
-  .mobileNavSideBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-  }
-  
-  /* Counter the root scale for sidebar content */
-  .mobileSidebarTop,
-  .mobileNavItemBox,
-  .mobileNavBottom {
-    transform-origin: top left;
-  }
-}
-
-/* Keep existing styles */
+/* ── Main content ── */
 main {
   flex: 1 0 auto;
 }
@@ -107,4 +97,20 @@ main {
 footer {
   flex-shrink: 0;
   width: 100%;
+}
+
+/* ── Smooth entrance animation utility ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-slow) both;
 }

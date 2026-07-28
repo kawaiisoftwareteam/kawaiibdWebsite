@@ -1,164 +1,123 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState, useEffect, useCallback } from 'react';
 import "./MainNav.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import kawaiiLogo from '../../Assets/kawaiiLogoMain.svg';
 import kawaiiLogobh from '../../Assets/kawaiiGroupLogobw.svg';
 import mobileCross from '../../Assets/mobileCross.svg';
-// import kfLogo from '../../Assets/Sister_Concerns/KF_Logo_Final_1_trans.png'
-import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png'
-// import keclLogo from '../../Assets/Sister_Concerns/2_logo.png'
-import kgjLogo from '../../Assets/Sister_Concerns/3_logo.png'
-import kddLogo from '../../Assets/Sister_Concerns/4_logo.png'
-import khcLogo from '../../Assets/Sister_Concerns/1_logo.png'
-import kiecLogo from '../../Assets/Sister_Concerns/5_logo.png'
-import kjdlLogo from '../../Assets/Sister_Concerns/6_logo.png'
-// import kgclLogo from '../../Assets/Sister_Concerns/7_logo.png'
-import aj_logo from '../../Assets/Sister_Concerns/aj_logo.png'
-import sanjana_logo from '../../Assets/Sister_Concerns/sanjana_logo.png'
-import tredmig_logo from '../../Assets/Sister_Concerns/tredmig.svg'
-import letsfly_logo from '../../Assets/Sister_Concerns/bimanholidays.webp'
-import kgvlLogo from '../../Assets/Sister_Concerns/kgvl_logo.svg'
-import kjchsLogo from '../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.png'
-import dropdownArrow from '../../Assets/Sister_Concerns/dropdownArrowConcerns.svg'
-import mobiledropdownArrow from '../../Assets/Sister_Concerns/mobile_arrow_drop_down.svg'
+import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png';
+import kgjLogo from '../../Assets/Sister_Concerns/3_logo.png';
+import kddLogo from '../../Assets/Sister_Concerns/4_logo.png';
+import khcLogo from '../../Assets/Sister_Concerns/1_logo.png';
+import kiecLogo from '../../Assets/Sister_Concerns/5_logo.png';
+import kjdlLogo from '../../Assets/Sister_Concerns/6_logo.png';
+import aj_logo from '../../Assets/Sister_Concerns/aj_logo.png';
+import sanjana_logo from '../../Assets/Sister_Concerns/sanjana_logo.png';
+import tredmig_logo from '../../Assets/Sister_Concerns/tredmig.svg';
+import letsfly_logo from '../../Assets/Sister_Concerns/bimanholidays.webp';
+import kgvlLogo from '../../Assets/Sister_Concerns/kgvl_logo.svg';
+import kjchsLogo from '../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.png';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { useLocale } from '../../i18n/LocaleContext';
 
+const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
+
 const concernLinks = [
-  // 1 — commented out
-  // {
-  //   id: 1,
-  //   path: "/kf",
-  //   name: "Kawaii Fashion Limited",
-  //   logo: kfLogo,
-  //   alt: "kfLogo",
-  //   isExternal: false
-  // },
-  // 2
   {
     id: 2,
     path: "https://katsl.vercel.app/",
     name: "Kawaii Advanced Technology & Solution Ltd.",
-    logo: katslLogo,
+    logo: getSrc(katslLogo),
     alt: "KAtslLogo",
     isExternal: true
   },
-  // 3 — commented out
-  // {
-  //   id: 3,
-  //   path: "/kecl",
-  //   name: "Kawaii Engineer & Constructions Limited",
-  //   logo: keclLogo,
-  //   alt: "keclLogo",
-  //   isExternal: false
-  // },
-  // 4
   {
     id: 4,
     path: "https://kawaiigroupjapan.jp/",
     name: "Kawaii Group Japan Limited",
-    logo: kgjLogo,
+    logo: getSrc(kgjLogo),
     alt: "kgjLogo",
     isExternal: true
   },
-  // 5 — commented out
-  // {
-  //   id: 5,
-  //   path: "/kgcl",
-  //   name: "Kawaii Group Canada Limited",
-  //   logo: kgclLogo,
-  //   alt: "kgclLogo",
-  //   isExternal: false
-  // },
-  // 6
   {
     id: 6,
     path: "/kdd",
     name: "Japan Kawaii Design & Development Limited",
-    logo: kddLogo,
+    logo: getSrc(kddLogo),
     alt: "kddLogo",
     isExternal: false
   },
-  // 7
   {
     id: 7,
     path: "/khc",
     name: "Kawaii Human Consultant Limited",
-    logo: khcLogo,
+    logo: getSrc(khcLogo),
     alt: "khcLogo",
     isExternal: false
   },
-  // note: internal concern paths are localized at render time
-  // 8
   {
     id: 8,
     path: "https://kawaiieducationbd.com/",
     name: "Kawaii International Education Centre",
-    logo: kiecLogo,
+    logo: getSrc(kiecLogo),
     alt: "kiecLogo",
     isExternal: true
   },
-  // 9
   {
     id: 9,
     path: "/kjdl",
     name: "Japan Kawaii Development Limited",
-    logo: kjdlLogo,
+    logo: getSrc(kjdlLogo),
     alt: "kjdlLogo",
     isExternal: false
   },
-  // 10
   {
     id: 10,
     path: "https://achievejapanssw.com/",
     name: "Achieve Japan",
-    logo: aj_logo,
+    logo: getSrc(aj_logo),
     alt: "aj_logo",
     isExternal: true
   },
-  // 11
   {
     id: 11,
     path: "https://sanjanahr.com/",
     name: "M/S Sanjana International (RL-711)",
-    logo: sanjana_logo,
+    logo: getSrc(sanjana_logo),
     alt: "sanjana_logo",
     isExternal: true
   },
-   // 12
-   {
+  {
     id: 12,
     path: "https://tredmig.com/",
     name: "Tredmig",
-    logo: tredmig_logo,
+    logo: getSrc(tredmig_logo),
     alt: "tredmig_logo",
     isExternal: true
   },
-   // 13
-   {
+  {
     id: 13,
     path: "https://bimanholidays.com/",
     name: "Biman Holidays",
-    logo: letsfly_logo,
+    logo: getSrc(letsfly_logo),
     alt: "letsfly_logo",
     isExternal: true
   },
-  // 14
   {
     id: 14,
     path: "/kawaii-global-ventures",
     name: "Kawaii Global Ventures Limited",
-    logo: kgvlLogo,
+    logo: getSrc(kgvlLogo),
     alt: "kgvlLogo",
     isExternal: false
   },
-  // 15
   {
     id: 15,
     path: "/kawaii-japan-career-hr",
     name: "Kawaii Japan Career & HR Solutions",
-    logo: kjchsLogo,
+    logo: getSrc(kjchsLogo),
     alt: "kjchsLogo",
     isExternal: false
   }
@@ -166,12 +125,25 @@ const concernLinks = [
 
 const MainNav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { t, localizedPath } = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // Add useEffect to handle viewport changes
+  // Scroll detection for transparent → solid navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768 && isSidebarOpen) {
+      if (window.innerWidth > 1024 && isSidebarOpen) {
         setIsSidebarOpen(false);
         document.body.style.overflow = 'auto';
       }
@@ -192,207 +164,248 @@ const MainNav = () => {
     }
   };
 
-  const closeSidebar = () => {
+  const closeSidebar = useCallback(() => {
     setIsSidebarOpen(false);
     document.body.classList.remove('sidebar-open');
     document.body.style.touchAction = '';
-  };
-
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-  const navigate = useNavigate();
+  }, []);
 
   const resolveConcernPath = (path, isExternal) =>
     isExternal ? path : localizedPath(path);
 
   const handleSisterConcernsClick = () => {
     if (dropdownVisible) {
-      // Redirect to /concern if dropdown is already open and close dropdown
       setDropdownVisible(false);
-      navigate(localizedPath('/concerns'));
+      router.push(localizedPath('/concerns'));
       closeSidebar();
     } else {
-      // Show dropdown if it's not already open
       setDropdownVisible(true);
     }
   };
 
+  const isLinkActive = (path) => {
+    if (!pathname) return false;
+    const target = localizedPath(path);
+    return pathname === target;
+  };
+
   return (
-    <div className='bottomHeader'>
-      <NavLink to={localizedPath('/home')} className='logoFrame'>
-        <img src={kawaiiLogo} alt="kawaiiGroupLogo" />
-      </NavLink>
-      <div className='navFrame'>
-        <NavLink to={localizedPath('/home')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>{t('nav.home')}</div>
-        </NavLink>
-        <NavLink to={localizedPath('/about')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>{t('nav.whoWeAre')}</div>
-        </NavLink>
-        <NavLink to={localizedPath('/services')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>{t('nav.whatWeDo')}</div>
-        </NavLink>
-        <div className="navMenu-wrapper">
-          <NavLink
-            to={localizedPath('/concerns')}
-            className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}
-          >
-            <div className='menuText'>{t('nav.sisterConcerns')}</div>
-            <img src={dropdownArrow} alt="dropdown" className='dropdownArrow' />
-          </NavLink>
+    <>
+      <nav className={`mainNav ${scrolled ? 'mainNav--scrolled' : ''}`}>
+        <div className="mainNav__inner">
+          {/* Logo */}
+          <Link href={localizedPath('/home')} className="mainNav__logo">
+            <img src={getSrc(kawaiiLogo)} alt="Kawaii Group Logo" />
+          </Link>
 
-          <div className='dropdownMenu'>
-            <div className='dropdownMainBox'>
-              {concernLinks.map((item) => (
-                item.isExternal ? (
-                  <a
-                    key={item.id}
-                    href={item.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className='dropdownIconBox'
-                  >
-                    <img src={item.logo} alt={item.alt} className='dropdownLogo' />
-                  </a>
-                ) : (
-                  <NavLink
-                    key={item.id}
-                    to={resolveConcernPath(item.path, item.isExternal)}
-                    className='dropdownIconBox'
-                  >
-                    <img src={item.logo} alt={item.alt} className='dropdownLogo' />
-                  </NavLink>
-                )
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <NavLink to={localizedPath('/masterclass')} className={({ isActive }) => `navMenu navMenuHot ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>{t('nav.bimMasterclass')}</div>
-        </NavLink>
-
-        <NavLink to={localizedPath('/contact')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>{t('nav.getInTouch')}</div>
-        </NavLink>
-      </div>
-
-      {/* Mobile menu icon */}
-      <div className='menuLayer' onClick={toggleSidebar}>
-        <FontAwesomeIcon icon={faBars} style={{ fontSize: '24px' }} />
-      </div>
-
-      {/* Mobile sidebar nav */}
-      {isSidebarOpen && (
-        <div className='mobileNavSideBar'>
-          <div className='mobileSidebarTop'>
-            <NavLink to={localizedPath('/home')} onClick={closeSidebar}>
-              <img src={kawaiiLogobh} alt="" />
-            </NavLink>
-            <img src={mobileCross} alt="mobileSideBarCross" onClick={toggleSidebar} />
-          </div>
-          <div className='mobileNavItemBox'>
-            <NavLink
-              to={localizedPath('/home')}
-              className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
-              onClick={closeSidebar}
+          {/* Desktop navigation links */}
+          <div className="mainNav__links">
+            <Link
+              href={localizedPath('/home')}
+              className={`mainNav__link ${isLinkActive('/home') ? 'mainNav__link--active' : ''}`}
             >
-              <div className='mobileNavItemText'>{t('nav.home')}</div>
-            </NavLink>
-            <NavLink
-              to={localizedPath('/about')}
-              className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
-              onClick={closeSidebar}
+              {t('nav.home')}
+            </Link>
+            <Link
+              href={localizedPath('/about')}
+              className={`mainNav__link ${isLinkActive('/about') ? 'mainNav__link--active' : ''}`}
             >
-              <div className='mobileNavItemText'>{t('nav.whoWeAre')}</div>
-            </NavLink>
-            <NavLink
-              to={localizedPath('/services')}
-              className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
-              onClick={closeSidebar}
+              {t('nav.whoWeAre')}
+            </Link>
+            <Link
+              href={localizedPath('/services')}
+              className={`mainNav__link ${isLinkActive('/services') ? 'mainNav__link--active' : ''}`}
             >
-              <div className='mobileNavItemText'>{t('nav.whatWeDo')}</div>
-            </NavLink>
-           {/* Sister Concerns clickable item */}
-           <div
-                className={`mobileNavItem ${dropdownVisible ? 'active-mobile-nav-item' : ''}`}
-                onClick={handleSisterConcernsClick}
+              {t('nav.whatWeDo')}
+            </Link>
+
+            {/* Sister Concerns with dropdown */}
+            <div className="mainNav__dropdown-wrapper">
+              <Link
+                href={localizedPath('/concerns')}
+                className={`mainNav__link ${isLinkActive('/concerns') ? 'mainNav__link--active' : ''}`}
               >
-                <div className='mobileNavItemText'>{t('nav.sisterConcerns')}</div>
-                <img
-                  src={mobiledropdownArrow}
-                  alt="mobiledropdownArrow"
-                  className={`sidemobileDropdownArrow ${dropdownVisible ? 'rotate-arrow' : ''}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setDropdownVisible(!dropdownVisible);
-                  }}
-                />
-              </div>
+                {t('nav.sisterConcerns')}
+                <svg className="mainNav__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
 
-              {dropdownVisible && (
-                <div className="dropdownMobileBox">
-                  {concernLinks.map((item) =>
+              <div className="mainNav__dropdown">
+                <div className="mainNav__dropdown-grid">
+                  {concernLinks.map((item) => (
                     item.isExternal ? (
                       <a
                         key={item.id}
                         href={item.path}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mobileNavItemDropdown"
-                        onClick={() => {
-                          setDropdownVisible(false);
-                          closeSidebar();
-                        }}
+                        className="mainNav__dropdown-item"
                       >
-                        <div className="mobileNavItemText">{item.name}</div>
+                        <img src={item.logo} alt={item.alt} className="mainNav__dropdown-logo" />
                       </a>
                     ) : (
-                      <NavLink
+                      <Link
                         key={item.id}
-                        to={resolveConcernPath(item.path, item.isExternal)}
-                        className={({ isActive }) =>
-                          `mobileNavItemDropdown ${isActive ? 'active-mobile-nav-item' : ''}`
-                        }
-                        onClick={() => {
-                          setDropdownVisible(false);
-                          closeSidebar();
-                        }}
+                        href={resolveConcernPath(item.path, item.isExternal)}
+                        className="mainNav__dropdown-item"
                       >
-                        <div className="mobileNavItemText">{item.name}</div>
-                      </NavLink>
+                        <img src={item.logo} alt={item.alt} className="mainNav__dropdown-logo" />
+                      </Link>
                     )
-                  )}
+                  ))}
                 </div>
-              )}
-
-            <NavLink
-              to={localizedPath('/masterclass')}
-              className={({ isActive }) => `mobileNavItem mobileNavItemHot ${isActive ? 'active-mobile-nav-item' : ''}`}
-              onClick={closeSidebar}
-            >
-              <div className='mobileNavItemText'>{t('nav.bimMasterclass')}</div>
-            </NavLink>
-
-            <NavLink
-              to={localizedPath('/contact')}
-              className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
-              onClick={closeSidebar}
-            >
-              <div className='mobileNavItemText'>{t('nav.getInTouch')}</div>
-            </NavLink>
-          </div>
-          <div className='mobileNavBottom'>
-            <div className='mobileNavBottomIconBox'>
-              <div className='mobileNavBottomJoin'>{t('nav.joinUsOn')}</div>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" /></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="21" viewBox="0 0 448 512"><path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg>
+              </div>
             </div>
-            <div className='mobileNavBottomText'>{t('nav.copyright')}</div>
+
+            <Link
+              href={localizedPath('/masterclass')}
+              className={`mainNav__link mainNav__link--hot ${isLinkActive('/masterclass') ? 'mainNav__link--active' : ''}`}
+            >
+              {t('nav.bimMasterclass')}
+            </Link>
           </div>
+
+          {/* Right actions */}
+          <div className="mainNav__actions">
+            <LanguageSwitcher isNavbar={true} />
+            <Link href={localizedPath('/contact')} className="mainNav__cta">
+              {t('nav.getInTouch')}
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button className="mainNav__hamburger" onClick={toggleSidebar} aria-label="Open menu">
+            <span className="mainNav__hamburger-line"></span>
+            <span className="mainNav__hamburger-line"></span>
+            <span className="mainNav__hamburger-line"></span>
+          </button>
         </div>
+      </nav>
+
+      {/* Mobile overlay */}
+      {isSidebarOpen && (
+        <div className="mobileOverlay" onClick={closeSidebar} />
       )}
-    </div>
+
+      {/* Mobile sidebar */}
+      <div className={`mobileSidebar ${isSidebarOpen ? 'mobileSidebar--open' : ''}`}>
+        <div className="mobileSidebar__top">
+          <Link href={localizedPath('/home')} onClick={closeSidebar}>
+            <img src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
+          </Link>
+          <button className="mobileSidebar__close" onClick={toggleSidebar} aria-label="Close menu">
+            <img src={getSrc(mobileCross)} alt="" />
+          </button>
+        </div>
+
+        <div className="mobileSidebar__nav">
+          <Link
+            href={localizedPath('/home')}
+            className={`mobileSidebar__link ${isLinkActive('/home') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.home')}
+          </Link>
+          <Link
+            href={localizedPath('/about')}
+            className={`mobileSidebar__link ${isLinkActive('/about') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.whoWeAre')}
+          </Link>
+          <Link
+            href={localizedPath('/services')}
+            className={`mobileSidebar__link ${isLinkActive('/services') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.whatWeDo')}
+          </Link>
+
+          {/* Sister Concerns with mobile dropdown */}
+          <div
+            className={`mobileSidebar__link mobileSidebar__link--expandable ${dropdownVisible ? 'mobileSidebar__link--active' : ''}`}
+            onClick={handleSisterConcernsClick}
+          >
+            <span>{t('nav.sisterConcerns')}</span>
+            <svg
+              className={`mobileSidebar__arrow ${dropdownVisible ? 'mobileSidebar__arrow--open' : ''}`}
+              width="16" height="16" viewBox="0 0 16 16" fill="none"
+              onClick={(e) => {
+                e.stopPropagation();
+                setDropdownVisible(!dropdownVisible);
+              }}
+            >
+              <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          {dropdownVisible && (
+            <div className="mobileSidebar__sub-nav">
+              {concernLinks.map((item) =>
+                item.isExternal ? (
+                  <a
+                    key={item.id}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mobileSidebar__sub-link"
+                    onClick={() => {
+                      setDropdownVisible(false);
+                      closeSidebar();
+                    }}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.id}
+                    href={resolveConcernPath(item.path, item.isExternal)}
+                    className={`mobileSidebar__sub-link ${isLinkActive(item.path) ? 'mobileSidebar__sub-link--active' : ''}`}
+                    onClick={() => {
+                      setDropdownVisible(false);
+                      closeSidebar();
+                    }}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
+            </div>
+          )}
+
+          <Link
+            href={localizedPath('/masterclass')}
+            className={`mobileSidebar__link mobileSidebar__link--hot ${isLinkActive('/masterclass') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.bimMasterclass')}
+          </Link>
+
+          <Link
+            href={localizedPath('/contact')}
+            className={`mobileSidebar__link ${isLinkActive('/contact') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.getInTouch')}
+          </Link>
+        </div>
+
+        <div className="mobileSidebar__bottom">
+          <div className="mobileSidebar__social">
+            <span className="mobileSidebar__social-label">{t('nav.joinUsOn')}</span>
+            <a href="https://www.facebook.com/profile.php?id=61563359894758" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" /></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/kawaii-group-bd" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="18" viewBox="0 0 448 512"><path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg>
+            </a>
+          </div>
+          <div className="mobileSidebar__copyright">{t('nav.copyright')}</div>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default MainNav;

@@ -1,3 +1,5 @@
+'use client';
+
 import React, {
   createContext,
   useCallback,
@@ -6,7 +8,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { usePathname, useRouter, useParams } from 'next/navigation';
 import {
   BANNER_DISMISSED_KEY,
   DEFAULT_LOCALE,
@@ -38,6 +40,7 @@ export const translate = (locale, key, fallback = '') => {
 };
 
 export const stripLocalePrefix = (pathname) => {
+  if (!pathname) return '/';
   const parts = pathname.split('/').filter(Boolean);
   if (parts.length && isValidLocale(parts[0])) {
     const rest = parts.slice(1).join('/');
@@ -47,16 +50,17 @@ export const stripLocalePrefix = (pathname) => {
 };
 
 export const LocaleProvider = ({ children }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { locale: urlLocale } = useParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+  const urlLocale = params?.locale;
 
   const initialLocale = isValidLocale(urlLocale) ? urlLocale : DEFAULT_LOCALE;
   const [locale, setLocaleState] = useState(initialLocale);
   const [source, setSource] = useState(() => getStoredSource() || 'url');
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     try {
-      return localStorage.getItem(BANNER_DISMISSED_KEY) === '1';
+      return typeof window !== 'undefined' && localStorage.getItem(BANNER_DISMISSED_KEY) === '1';
     } catch (_) {
       return false;
     }
@@ -64,6 +68,7 @@ export const LocaleProvider = ({ children }) => {
 
   const applyDocumentMeta = useCallback(
     (nextLocale) => {
+      if (typeof document === 'undefined') return;
       document.documentElement.lang = nextLocale;
       const meta = META[nextLocale] || META.en;
       document.title = meta.title;
@@ -80,8 +85,8 @@ export const LocaleProvider = ({ children }) => {
         .querySelectorAll('link[data-kg-hreflang]')
         .forEach((node) => node.remove());
 
-      const pathWithoutLocale = stripLocalePrefix(location.pathname);
-      const origin = window.location.origin;
+      const pathWithoutLocale = stripLocalePrefix(pathname);
+      const origin = typeof window !== 'undefined' ? window.location.origin : '';
       const suffix = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
 
       [...LOCALES, 'x-default'].forEach((hreflang) => {
@@ -94,19 +99,20 @@ export const LocaleProvider = ({ children }) => {
         document.head.appendChild(link);
       });
     },
-    [location.pathname]
+    [pathname]
   );
 
   const navigateToLocale = useCallback(
     (nextLocale, { replace = false } = {}) => {
-      const rest = stripLocalePrefix(location.pathname);
+      const rest = stripLocalePrefix(pathname);
       const nextPath = rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`;
-      navigate(
-        { pathname: nextPath, search: location.search, hash: location.hash },
-        { replace }
-      );
+      if (replace) {
+        router.replace(nextPath);
+      } else {
+        router.push(nextPath);
+      }
     },
-    [location.hash, location.pathname, location.search, navigate]
+    [pathname, router]
   );
 
   const setLocale = useCallback(
@@ -118,7 +124,9 @@ export const LocaleProvider = ({ children }) => {
 
       if (nextSource === 'manual') {
         try {
-          localStorage.removeItem(BANNER_DISMISSED_KEY);
+          if (typeof window !== 'undefined') {
+            localStorage.removeItem(BANNER_DISMISSED_KEY);
+          }
         } catch (_) {
           /* ignore */
         }
@@ -134,7 +142,9 @@ export const LocaleProvider = ({ children }) => {
   const dismissBanner = useCallback(() => {
     setBannerDismissed(true);
     try {
-      localStorage.setItem(BANNER_DISMISSED_KEY, '1');
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(BANNER_DISMISSED_KEY, '1');
+      }
     } catch (_) {
       /* ignore */
     }

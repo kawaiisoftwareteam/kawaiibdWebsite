@@ -1,19 +1,132 @@
-/* Language switcher — Google Translate chrome removed */
+/* ═══════════════════════════════════════════
+   Language Switcher — Modern Redesign
+   ═══════════════════════════════════════════ */
+
 .language-switcher {
   user-select: none;
 }
 
+/* ── Trigger button ── */
+.lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-display);
+}
+
+.lang-trigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Adapt to scrolled navbar */
+.mainNav--scrolled .lang-trigger:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* ── Label text ── */
+.lang-trigger__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color var(--transition-fast);
+}
+
+.mainNav--scrolled .lang-trigger__label {
+  color: var(--color-text);
+}
+
+/* ── Chevron ── */
+.lang-trigger__chevron {
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.lang-trigger__chevron--open {
+  transform: rotate(180deg);
+}
+
+.mainNav--scrolled .lang-trigger__chevron {
+  color: var(--color-text-muted);
+}
+
+/* ── Flag ── */
 .language-switcher__flag {
   display: inline-block;
-  width: 22px;
-  height: 16px;
+  width: 20px;
+  height: 14px;
   flex: 0 0 auto;
   object-fit: cover;
   border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .language-switcher__flag--option {
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* ── Dropdown ── */
+.lang-dropdown {
+  position: absolute;
+  z-index: 50;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-width: 160px;
+  animation: dropdownFadeIn 0.15s ease;
+}
+
+.lang-dropdown--navbar {
+  top: calc(100% + 8px);
+  right: 0;
+}
+
+.lang-dropdown--footer {
+  bottom: calc(100% + 8px);
+  right: 0;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Dropdown options ── */
+.lang-dropdown__option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text);
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.lang-dropdown__option:hover {
+  background: var(--color-light);
+}
+
+.lang-dropdown__option--active {
+  font-weight: 600;
+  background: rgba(190, 30, 45, 0.04);
 }

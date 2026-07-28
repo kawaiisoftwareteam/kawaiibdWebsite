@@ -1,9 +1,11 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 export const useRouteLoading = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsLoading(true);
@@ -12,7 +14,7 @@ export const useRouteLoading = () => {
     }, 800);
 
     return () => clearTimeout(timer);
-  }, [location.pathname]);
+  }, [pathname]);
 
   return isLoading;
 };
