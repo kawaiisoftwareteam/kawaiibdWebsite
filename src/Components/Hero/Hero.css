@@ -1,86 +1,37 @@
 /* ═══════════════════════════════════════════
-   Hero Section — Bold Mixed Typography
-   Reference: filled + outlined text, fullscreen
+   Hero Section — Frosted Glass Redesign
+   Reference: Glassmorphic panel, Jost typography
    ═══════════════════════════════════════════ */
 
 .hero-container {
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-color: #0F1117;
 }
 
 .hero {
   position: relative;
-  width: calc(100% - clamp(30px, 5vw, 80px));
+  width: 100%;
   height: 100vh;
   height: 100dvh;
   min-height: 600px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-bottom-right-radius: clamp(160px, 24vw, 320px);
-}
-
-/* ── GSAP Right Side Vertical Scroll Indicator ── */
-.hero__side-scroll {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: clamp(30px, 5vw, 80px);
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.hero__side-scroll-text {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  color: var(--color-dark, #0F1117);
-  writing-mode: vertical-rl;
-  text-transform: uppercase;
-  user-select: none;
-}
-
-.hero__side-scroll-line {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 95px;
-  width: 2px;
-  background: linear-gradient(to bottom, rgba(200, 30, 50, 0.2), rgba(200, 30, 50, 0.85));
-  position: relative;
-  border-radius: 1px;
-}
-
-.hero__side-scroll-arrow {
-  color: #C81E32;
-  margin-top: auto;
 }
 
 /* ── Background Slideshow ── */
-.hero__slide {
+.hero__slide-bg {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity;
   z-index: 0;
 }
 
-/* First slide shows instantly on load (no transition) */
-.hero__slide--initial {
-  opacity: 1;
-  transition: none;
-}
-
-.hero__slide--active {
+.hero__slide-bg--active {
   opacity: 1;
 }
 
@@ -92,206 +43,161 @@
   object-position: center;
 }
 
-/* ── Gradient Overlay ── */
+/* ── Sunset & Soft Contrast Overlay ── */
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(
-      135deg,
-      rgba(10, 10, 15, 0.78) 0%,
-      rgba(10, 10, 15, 0.55) 40%,
-      rgba(10, 10, 15, 0.35) 70%,
-      rgba(10, 10, 15, 0.25) 100%
+      90deg,
+      rgba(245, 170, 40, 0.22) 0%,
+      rgba(200, 30, 50, 0.08) 35%,
+      rgba(15, 17, 23, 0.25) 100%
+    ),
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 180, 50, 0.15) 0%,
+      transparent 60%
     );
   z-index: 1;
+  pointer-events: none;
 }
 
-/* ── Red Accent Line (left side) ── */
-.hero__accent-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  background: var(--color-primary);
-  z-index: 3;
-}
-
-/* ── Content ── */
+/* ── Content Container ── */
 .hero__content {
   position: relative;
   z-index: 2;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 clamp(40px, 6vw, 120px);
-  padding-top: var(--navbar-height);
+  padding: 0 clamp(24px, 6vw, 120px);
+  padding-top: calc(var(--navbar-height, 80px) / 2);
 }
 
-/* ── Title — Giant Bold Typography ── */
-.hero__title {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  line-height: 0.92;
+/* ── Frosted Glass Card ── */
+.hero__glass-card {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: none;
+  border-radius: 4px;
+  padding: clamp(24px, 3.5vw, 44px) clamp(28px, 4.5vw, 56px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  max-width: max-content;
+  width: auto;
+}
+
+/* ── Main Brand Title ("KAWAII") ── */
+.hero__brand-name {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5.8vw, 84px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin: 0 0 8px 0;
+  padding: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Subtitle ("Boundless, Together") ── */
+.hero__subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.2vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
   margin: 0;
   padding: 0;
-}
-
-.hero__title-line {
-  display: block;
-  animation: fadeInUp 0.8s both;
-}
-
-.hero__title-line:nth-child(1) { animation-delay: 0.2s; }
-.hero__title-line:nth-child(2) { animation-delay: 0.4s; }
-.hero__title-line:nth-child(3) { animation-delay: 0.6s; }
-
-/* Filled white text */
-.hero__text--filled {
-  font-family: var(--font-display);
-  font-size: clamp(60px, 12vw, 160px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #ffffff;
-}
-
-/* Outlined/stroke text */
-.hero__text--outlined {
-  font-family: var(--font-display);
-  font-size: clamp(60px, 12vw, 160px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.85);
-  font-style: italic;
-}
-
-/* ── Slide Indicators ── */
-.hero__indicators {
-  position: absolute;
-  bottom: 40px;
-  right: clamp(40px, 6vw, 120px);
-  z-index: 3;
   display: flex;
-  gap: 8px;
-  animation: fadeInUp 0.8s 1s both;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.01em;
 }
 
-.hero__dot {
-  width: 32px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  padding: 0;
+.hero__subtitle-red {
+  color: #C81E32;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(200, 30, 50, 0.2);
 }
 
-.hero__dot--active {
-  background: var(--color-primary);
-  width: 48px;
+.hero__subtitle-white {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.hero__dot:hover {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-/* ── Scroll Indicator ── */
-.hero__scroll {
+/* ── Bottom Carousel Pagination Dots ── */
+.hero__dots {
   position: absolute;
-  bottom: 40px;
+  bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  animation: fadeInUp 0.8s 1.2s both;
+  justify-content: center;
+  gap: 12px;
 }
 
-.hero__scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.5),
-    transparent
-  );
-  animation: scrollPulse 2s ease-in-out infinite;
+.hero__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes scrollPulse {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scaleY(0.6);
-    transform-origin: top;
-  }
-  50% {
-    opacity: 1;
-    transform: scaleY(1);
-    transform-origin: top;
-  }
+.hero__dot--active {
+  background-color: #C81E32;
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(200, 30, 50, 0.7);
 }
 
-/* ── Animations ── */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero__dot:hover:not(.hero__dot--active) {
+  background-color: #FFFFFF;
+  transform: scale(1.1);
 }
 
 /* ═══════════════════════════════════════════
-   Responsive
+   Responsive Breakpoints
    ═══════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  .hero {
-    align-items: flex-end;
-    padding-bottom: 100px;
+  .hero__glass-card {
+    padding: 20px 24px;
+    border-radius: 4px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: none;
+    max-width: calc(100vw - 32px);
   }
 
-  .hero__content {
-    padding: 0 24px;
-    padding-top: 0;
+  .hero__brand-name {
+    font-size: clamp(32px, 8vw, 52px);
+    margin-bottom: 4px;
   }
 
-  .hero__text--filled,
-  .hero__text--outlined {
-    font-size: clamp(48px, 15vw, 80px);
+  .hero__subtitle {
+    font-size: clamp(22px, 5.5vw, 36px);
+    white-space: nowrap;
+    gap: 6px;
   }
 
-  .hero__text--outlined {
-    -webkit-text-stroke-width: 1.5px;
+  .hero__dots {
+    bottom: 24px;
+    gap: 10px;
   }
 
-  .hero__overlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(10, 10, 15, 0.3) 0%,
-        rgba(10, 10, 15, 0.5) 40%,
-        rgba(10, 10, 15, 0.85) 100%
-      );
-  }
-
-  .hero__indicators {
-    bottom: 60px;
-    right: 24px;
-  }
-
-  .hero__scroll {
-    display: none;
-  }
-
-  .hero__accent-line {
-    width: 4px;
+  .hero__dot {
+    width: 12px;
+    height: 12px;
   }
 }

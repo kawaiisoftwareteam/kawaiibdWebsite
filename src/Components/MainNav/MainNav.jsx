@@ -193,49 +193,70 @@ const MainNav = () => {
     <>
       <nav className={`mainNav ${scrolled ? 'mainNav--scrolled' : ''}`}>
         <div className="mainNav__inner">
-          {/* Logo */}
+          {/* Left Logo */}
           <Link href={localizedPath('/home')} className="mainNav__logo">
             <img src={getSrc(kawaiiLogo)} alt="Kawaii Group Logo" />
           </Link>
 
-          {/* Desktop navigation links */}
-          <div className="mainNav__links">
-            <Link
-              href={localizedPath('/home')}
-              className={`mainNav__link ${isLinkActive('/home') ? 'mainNav__link--active' : ''}`}
-            >
-              {t('nav.home')}
-            </Link>
-            <Link
-              href={localizedPath('/about')}
-              className={`mainNav__link ${isLinkActive('/about') ? 'mainNav__link--active' : ''}`}
-            >
-              {t('nav.whoWeAre')}
-            </Link>
-            <Link
-              href={localizedPath('/services')}
-              className={`mainNav__link ${isLinkActive('/services') ? 'mainNav__link--active' : ''}`}
-            >
-              {t('nav.whatWeDo')}
-            </Link>
+          {/* Right Navigation Section */}
+          <div className="mainNav__right-area">
+            {/* Top Utility Bar */}
+            <div className="mainNav__top-bar">
+              <Link href={localizedPath('/home#news')} className="mainNav__top-link">
+                News & Media
+              </Link>
+              <Link href={localizedPath('/contact')} className="mainNav__top-link">
+                Contact Us
+              </Link>
+              <div className="mainNav__top-social">
+                <span>Join us on:</span>
+                <LanguageSwitcher isNavbar={true} />
+              </div>
+            </div>
 
-            <Link
-              href={localizedPath('/masterclass')}
-              className={`mainNav__link mainNav__link--hot ${isLinkActive('/masterclass') ? 'mainNav__link--active' : ''}`}
-            >
-              {t('nav.bimMasterclass')}
-            </Link>
-          </div>
+            {/* Thin Horizontal Divider Line */}
+            <div className="mainNav__divider" />
 
-          {/* Right actions */}
-          <div className="mainNav__actions">
-            <LanguageSwitcher isNavbar={true} />
-            <Link href={localizedPath('/contact')} className="mainNav__cta">
-              <span>{t('nav.getInTouch')}</span>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="mainNav__cta-icon">
-                <path d="M3.33334 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
+            {/* Bottom Navigation Links & Red Button */}
+            <div className="mainNav__bottom-bar">
+              <div className="mainNav__links">
+                <Link
+                  href={localizedPath('/home')}
+                  className={`mainNav__link ${isLinkActive('/home') ? 'mainNav__link--active' : ''}`}
+                >
+                  {t('nav.home')}
+                </Link>
+                <Link
+                  href={localizedPath('/about')}
+                  className={`mainNav__link ${isLinkActive('/about') ? 'mainNav__link--active' : ''}`}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href={localizedPath('/concerns')}
+                  className={`mainNav__link ${isLinkActive('/concerns') ? 'mainNav__link--active' : ''}`}
+                >
+                  Companies
+                </Link>
+                <Link
+                  href={localizedPath('/about')}
+                  className={`mainNav__link ${isLinkActive('/about') ? 'mainNav__link--active' : ''}`}
+                >
+                  Our Vision
+                </Link>
+                <Link
+                  href={localizedPath('/services')}
+                  className={`mainNav__link ${isLinkActive('/services') ? 'mainNav__link--active' : ''}`}
+                >
+                  Business Areas
+                </Link>
+              </div>
+
+              {/* Red Rectangular CTA Button */}
+              <Link href={localizedPath('/contact')} className="mainNav__cta">
+                Get in Touch
+              </Link>
+            </div>
           </div>
 
           {/* Mobile hamburger */}
