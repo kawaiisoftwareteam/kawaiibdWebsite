@@ -162,6 +162,9 @@ const SpiderSisterConcerns = () => {
     { item: farRight, posClass: 'posFarRight' },
   ];
 
+  const activeConcern = sisterConcernsData[activeIndex];
+  const targetLink = activeConcern.externalLink || localizedPath(activeConcern.link || '/concerns');
+
   return (
     <section className="scSectionMain">
       <div className="scContainer">
@@ -197,16 +200,16 @@ const SpiderSisterConcerns = () => {
           </div>
         </div>
 
-        {/* Gallery Showcase Layout */}
+        {/* Desktop Showcase Layout (>992px) */}
         <div
-          className="scGalleryShowcase"
+          className="scGalleryShowcase scDesktopGallery"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           <div className="scGalleryFlex">
             {visibleItems.map(({ item, posClass }) => {
               const isCenter = posClass === 'posCenter';
-              const targetLink = item.externalLink || localizedPath(item.link || '/concerns');
+              const itemLink = item.externalLink || localizedPath(item.link || '/concerns');
 
               if (isCenter) {
                 return (
@@ -220,7 +223,7 @@ const SpiderSisterConcerns = () => {
 
                     {/* Floating Bottom-Right Glassmorphism Badge */}
                     <a
-                      href={targetLink}
+                      href={itemLink}
                       target={item.externalLink ? '_blank' : '_self'}
                       rel={item.externalLink ? 'noopener noreferrer' : ''}
                       className="scGlassBadge"
@@ -261,33 +264,89 @@ const SpiderSisterConcerns = () => {
               );
             })}
           </div>
+        </div>
 
-          {/* Carousel Navigation Bar */}
-          <div className="scNavControls">
-            <button className="scNavArrow scNavPrev" onClick={handlePrev} aria-label="Previous Concern">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-              </svg>
-            </button>
+        {/* Mobile & Tablet Showcase Layout (<=992px) */}
+        <div
+          className="scMobileShowcase"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Main Featured Card on Mobile */}
+          <div className="scMainFeaturedCard scMobileFeaturedCard">
+            <img
+              src={getSrc(activeConcern.cover)}
+              alt={activeConcern.name}
+              className="scMainFeaturedImg"
+            />
+            <div className="scMainGradientOverlay"></div>
 
-            <div className="scDotsWrapper">
-              {sisterConcernsData.map((concern, idx) => (
-                <button
-                  key={concern.id}
-                  className={`scDot ${idx === activeIndex ? 'activeDot' : ''}`}
-                  onClick={() => setActiveIndex(idx)}
-                  title={concern.name}
-                  aria-label={concern.name}
-                />
-              ))}
-            </div>
-
-            <button className="scNavArrow scNavNext" onClick={handleNext} aria-label="Next Concern">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <a
+              href={targetLink}
+              target={activeConcern.externalLink ? '_blank' : '_self'}
+              rel={activeConcern.externalLink ? 'noopener noreferrer' : ''}
+              className="scGlassBadge"
+            >
+              <span className="scGlassBadgeName">{activeConcern.name}</span>
+              <svg
+                className="scGlassBadgeIcon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </button>
+            </a>
           </div>
+
+          {/* Horizontal Scrollable Pill Strip */}
+          <div className="scMobilePillsScroll">
+            {sisterConcernsData.map((item, idx) => {
+              const isActive = idx === activeIndex;
+              return (
+                <div
+                  key={item.id}
+                  className={`scMobilePillItem ${isActive ? 'scMobilePillActive' : ''}`}
+                  onClick={() => setActiveIndex(idx)}
+                >
+                  <img src={getSrc(item.cover)} alt={item.name} className="scMobilePillImg" />
+                  <div className="scMobilePillOverlay">
+                    <span className="scMobilePillTitle">{item.name}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Shared Controls (Dots + Arrows) */}
+        <div className="scNavControls">
+          <button className="scNavArrow scNavPrev" onClick={handlePrev} aria-label="Previous Concern">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="scDotsWrapper">
+            {sisterConcernsData.map((concern, idx) => (
+              <button
+                key={concern.id}
+                className={`scDot ${idx === activeIndex ? 'activeDot' : ''}`}
+                onClick={() => setActiveIndex(idx)}
+                title={concern.name}
+                aria-label={concern.name}
+              />
+            ))}
+          </div>
+
+          <button className="scNavArrow scNavNext" onClick={handleNext} aria-label="Next Concern">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

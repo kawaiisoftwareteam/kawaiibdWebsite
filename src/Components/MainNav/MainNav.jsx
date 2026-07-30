@@ -297,14 +297,21 @@ const MainNav = () => {
             className={`mobileSidebar__link ${isLinkActive('/about') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
-            {t('nav.whoWeAre')}
+            About Us
+          </Link>
+          <Link
+            href={localizedPath('/concerns')}
+            className={`mobileSidebar__link ${isLinkActive('/concerns') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            Companies
           </Link>
           <Link
             href={localizedPath('/services')}
             className={`mobileSidebar__link ${isLinkActive('/services') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
-            {t('nav.whatWeDo')}
+            Business Areas
           </Link>
 
           <Link
@@ -313,6 +320,14 @@ const MainNav = () => {
             onClick={closeSidebar}
           >
             {t('nav.bimMasterclass')}
+          </Link>
+
+          <Link
+            href={localizedPath('/home#news')}
+            className="mobileSidebar__link"
+            onClick={closeSidebar}
+          >
+            News & Media
           </Link>
 
           <Link
@@ -325,6 +340,9 @@ const MainNav = () => {
         </div>
 
         <div className="mobileSidebar__bottom">
+          <div className="mobileSidebar__lang">
+            <LanguageSwitcher isNavbar={true} />
+          </div>
           <div className="mobileSidebar__social">
             <span className="mobileSidebar__social-label">{t('nav.joinUsOn')}</span>
             <a href="https://www.facebook.com/profile.php?id=61563359894758" target="_blank" rel="noreferrer">

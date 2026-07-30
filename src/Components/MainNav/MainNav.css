@@ -196,7 +196,8 @@
   width: min(85vw, 380px);
   height: 100vh;
   height: 100dvh;
-  background: linear-gradient(180deg, #B01B28 0%, #8A1520 100%);
+  background: #0F1117;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1200;
   display: flex;
   flex-direction: column;
@@ -217,11 +218,13 @@
   justify-content: space-between;
   padding: 20px;
   flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .mobileSidebar__logo {
-  height: 36px;
+  height: 40px;
   width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .mobileSidebar__close {
@@ -356,23 +359,26 @@
    ═══════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .mainNav__links,
-  .mainNav__actions {
-    display: none;
+  .mainNav {
+    padding: 16px 24px;
+  }
+
+  .mainNav__right-area {
+    display: none !important;
   }
 
   .mainNav__hamburger {
-    display: flex;
+    display: flex !important;
   }
 }
 
 @media (max-width: 768px) {
   .mainNav {
-    padding: 0 16px;
+    padding: 14px 16px;
   }
 
   .mainNav__logo img {
-    height: 36px;
+    height: 38px;
   }
 }
 
