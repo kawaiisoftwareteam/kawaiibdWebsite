@@ -101,7 +101,7 @@
 
 .mainNav__link {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 16.5px;
   font-weight: 600;
   color: #ffffff !important;
   text-decoration: none;
@@ -126,7 +126,7 @@
   justify-content: center;
   padding: 10px 24px;
   font-family: var(--font-display);
-  font-size: 14.5px;
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff !important;
   background: #C81E32;

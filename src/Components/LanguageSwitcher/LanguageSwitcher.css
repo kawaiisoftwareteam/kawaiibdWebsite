@@ -33,12 +33,12 @@
 .lang-trigger__label {
   font-size: 13px;
   font-weight: 600;
-  color: #111827 !important;
+  color: #ffffff !important;
   transition: color var(--transition-fast);
 }
 
 .lang-trigger__chevron {
-  color: #111827 !important;
+  color: #ffffff !important;
   transition: transform var(--transition-fast), color var(--transition-fast);
   flex-shrink: 0;
 }

@@ -3,30 +3,30 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Hero.css';
 import gsap from 'gsap';
-import heroSunset from '../../Assets/hero_sunset_skyline.png';
-import bigBuildings from '../../Assets/big-buildings.jpg';
-import illuminatedCity from '../../Assets/slider_image_1.jpg';
+import asianSkyReflection from '../../Assets/view-landmark-asian-sky-reflection.jpg';
+import himejiCastle from '../../Assets/cherry-blossoms-castle-himeji-japan.jpg';
+import pattayaCityscape from '../../Assets/pattaya-chonburi-thailand-28-may-2019-beautiful-landscape-cityscape-pattaya-city-is-popular-destination-thailand-with-white-cloud-blue-sky.jpg';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const slides = [
   {
-    src: getSrc(heroSunset),
-    alt: 'Kawaii Group Sunset City Skyline',
+    src: getSrc(asianSkyReflection),
+    alt: 'Asian city skyline reflected in water',
     title: 'KAWAII',
     redWord: 'Boundless,',
     whiteWord: 'Together',
   },
   {
-    src: getSrc(bigBuildings),
-    alt: 'Kawaii Group City Buildings',
+    src: getSrc(himejiCastle),
+    alt: 'Himeji Castle with cherry blossoms in Japan',
     title: 'KAWAII',
     redWord: 'Boundless,',
     whiteWord: 'Together',
   },
   {
-    src: getSrc(illuminatedCity),
-    alt: 'Kawaii Group Illuminated City',
+    src: getSrc(pattayaCityscape),
+    alt: 'Pattaya cityscape in Chonburi, Thailand',
     title: 'KAWAII',
     redWord: 'Boundless,',
     whiteWord: 'Together',
