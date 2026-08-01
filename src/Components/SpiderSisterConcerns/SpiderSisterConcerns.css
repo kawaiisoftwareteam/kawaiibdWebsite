@@ -1,485 +1,322 @@
-/* Redesigned Sister Concerns Styles - Modern Capsule Showcase Layout */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&display=swap');
+/* Sister Concerns — Light Logo Card Grid */
 
-.scSectionMain {
+.scSection {
   position: relative;
   width: 100%;
-  padding: 88px 32px;
-  background: #ffffff;
+  padding: clamp(72px, 9vw, 120px) clamp(24px, 4vw, 80px);
+  background:
+    radial-gradient(ellipse 70% 45% at 100% 0%, rgba(200, 30, 50, 0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #F7F8FA 0%, #FFFFFF 100%);
   overflow: hidden;
-  font-family: inherit;
+  font-family: var(--font-display);
+  color: #0F1117;
 }
 
-.scContainer {
-  max-width: 1320px;
+.scSection__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* ═══════════════════════════════════════════
-   HEADER GRID LAYOUT (Left Title, Right Action)
-   ═══════════════════════════════════════════ */
-
-.scHeaderGrid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 32px;
-  margin-bottom: 56px;
+/* ── Intro ── */
+.scIntro {
+  margin-bottom: clamp(40px, 5vw, 64px);
 }
 
-.scHeaderLeft {
-  max-width: 620px;
-}
-
-.scGroupBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 800;
-  color: #BE1E2D;
-  letter-spacing: 1.5px;
+.scIntro__eyebrow {
+  margin: 0 0 16px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  color: #C81E32;
 }
 
-.scBadgeDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #BE1E2D;
-  display: inline-block;
-  box-shadow: 0 0 8px rgba(190, 30, 45, 0.6);
+.scIntro__row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: end;
 }
 
-.scHeaderTitle {
-  font-size: 48px;
-  font-weight: 800;
-  color: #111827;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+.scIntro__title {
   margin: 0;
+  font-size: clamp(44px, 7vw, 88px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: #0F1117;
 }
 
-/* Elegant Serif Italic for "Together" */
-.scSerifItalic {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  font-style: italic;
-  font-weight: 400;
-  color: #111827;
-  padding-left: 2px;
+.scIntro__title span {
+  color: #C81E32;
 }
 
-.scHeaderRight {
-  max-width: 420px;
+.scIntro__aside {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  padding-bottom: 6px;
 }
 
-.scHeaderSubtitle {
-  font-size: 16px;
-  color: #4B5563;
-  line-height: 1.6;
+.scIntro__subtitle {
   margin: 0;
+  font-size: clamp(17px, 1.45vw, 20px);
+  line-height: 1.55;
+  color: #5A6170;
 }
 
-.scAllCompaniesBtn {
+.scIntro__cta {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 14px 32px;
-  background: #BE1E2D;
-  color: #ffffff;
-  border-radius: 0px;
-  font-size: 15px;
+  padding: 14px 28px;
+  background: #C81E32;
+  color: #fff;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 6px 20px rgba(190, 30, 45, 0.25);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.scAllCompaniesBtn:hover {
-  background: #9E1825;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(190, 30, 45, 0.35);
+.scIntro__cta:hover {
+  background: #A61828;
+  transform: translateY(-1px);
 }
 
-/* ═══════════════════════════════════════════
-   MAIN SHOWCASE GALLERY (Desktop >992px)
-   ═══════════════════════════════════════════ */
-
-.scGalleryShowcase {
-  position: relative;
-  width: 100%;
+/* ── Card grid ── */
+.scGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-.scGalleryFlex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  min-height: 480px;
-}
-
-/* Capsule Pill Cards (Side Cards) */
-.scPillCard {
-  width: 120px;
-  height: 460px;
-  border-radius: 999px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  flex-shrink: 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s ease, opacity 0.35s ease;
-}
-
-.scPillImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.scPillHoverOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
-  opacity: 0;
+.scCard {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px 14px;
-  color: #ffffff;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
+  align-items: center;
   text-align: center;
+  padding: 36px 28px 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(15, 17, 23, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.scPillCategory {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 4px;
+.scCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(15, 17, 23, 0.12);
 }
 
-.scPillTitle {
-  font-size: 13px;
-  font-weight: 700;
+.scCard__logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 140px;
+  margin-bottom: 28px;
+  background: #F8F9FA;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.scCard__logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  will-change: transform;
+}
+
+/* ── Continuous logo animations (each unique) ── */
+.scCard__logo--float {
+  animation: scLogoFloat 2.8s ease-in-out infinite;
+}
+
+.scCard__logo--pulse {
+  animation: scLogoPulse 2.2s ease-in-out infinite;
+}
+
+.scCard__logo--sway {
+  animation: scLogoSway 3s ease-in-out infinite;
+}
+
+.scCard__logo--bounce {
+  animation: scLogoBounce 1.8s ease-in-out infinite;
+}
+
+.scCard__logo--breathe {
+  animation: scLogoBreathe 2.6s ease-in-out infinite;
+}
+
+.scCard__logo--tilt {
+  animation: scLogoTilt 3.4s ease-in-out infinite;
+}
+
+.scCard__logo--wiggle {
+  animation: scLogoWiggle 2.4s ease-in-out infinite;
+}
+
+.scCard__logo--heartbeat {
+  animation: scLogoHeartbeat 1.6s ease-in-out infinite;
+}
+
+.scCard__logo--pan {
+  animation: scLogoPan 3.2s ease-in-out infinite;
+}
+
+@keyframes scLogoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scLogoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes scLogoSway {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+@keyframes scLogoBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-12px) scale(1.04); }
+  60% { transform: translateY(-4px) scale(1.01); }
+}
+
+@keyframes scLogoBreathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.85; }
+}
+
+@keyframes scLogoTilt {
+  0%, 100% { transform: perspective(400px) rotateY(-10deg) rotateX(2deg); }
+  50% { transform: perspective(400px) rotateY(10deg) rotateX(-2deg); }
+}
+
+@keyframes scLogoWiggle {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-6px) rotate(-4deg); }
+  75% { transform: translateX(6px) rotate(4deg); }
+}
+
+@keyframes scLogoHeartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.12); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.08); }
+  70% { transform: scale(1); }
+}
+
+@keyframes scLogoPan {
+  0%, 100% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(8px) scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scCard__logo--float,
+  .scCard__logo--pulse,
+  .scCard__logo--sway,
+  .scCard__logo--bounce,
+  .scCard__logo--breathe,
+  .scCard__logo--tilt,
+  .scCard__logo--wiggle,
+  .scCard__logo--heartbeat,
+  .scCard__logo--pan {
+    animation: none;
+  }
+}
+
+.scCard__name {
+  margin: 0 0 20px;
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 800;
   line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1A1D27;
+  min-height: 2.5em;
 }
 
-.scPillCard:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-}
-
-.scPillCard:hover .scPillHoverOverlay {
-  opacity: 1;
-}
-
-.scPillCard:hover .scPillImg {
-  transform: scale(1.08);
-}
-
-/* Center Featured Main Image Card */
-.scMainFeaturedCard {
-  flex: 1;
-  max-width: 680px;
-  height: 460px;
-  border-radius: 28px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-}
-
-.scMainFeaturedImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.scMainFeaturedCard:hover .scMainFeaturedImg {
-  transform: scale(1.03);
-}
-
-.scMainGradientOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-/* Floating Bottom-Right Glassmorphism Badge */
-.scGlassBadge {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
+.scCard__link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0px;
-  color: #ffffff;
-  text-decoration: none;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
-  transition: all 0.35s ease;
-  z-index: 5;
-}
-
-.scGlassBadgeName {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.scGlassBadgeIcon {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.3s ease;
-}
-
-.scGlassBadge:hover {
-  background: rgba(255, 255, 255, 0.75);
-  color: #111827;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.24);
-}
-
-.scGlassBadge:hover .scGlassBadgeName {
-  text-shadow: none;
-}
-
-.scGlassBadge:hover .scGlassBadgeIcon {
-  transform: translateX(4px);
-}
-
-/* ═══════════════════════════════════════════
-   CAROUSEL NAVIGATION CONTROLS (Dots & Arrows)
-   ═══════════════════════════════════════════ */
-
-.scNavControls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 36px;
-}
-
-.scNavArrow {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1.5px solid #E5E7EB;
-  color: #111827;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.scNavArrow:hover {
-  background: #BE1E2D;
-  border-color: #BE1E2D;
-  color: #ffffff;
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(190, 30, 45, 0.3);
-}
-
-.scDotsWrapper {
-  display: flex;
-  align-items: center;
   gap: 8px;
+  margin-top: auto;
+  font-size: clamp(15px, 1.2vw, 17px);
+  font-weight: 700;
+  color: #C81E32;
+  transition: gap 0.25s ease, color 0.25s ease;
 }
 
-.scDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #D1D5DB;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.35s ease;
+.scCard__linkIcon {
+  flex-shrink: 0;
 }
 
-.scDot.activeDot {
-  width: 28px;
-  border-radius: 12px;
-  background: #BE1E2D;
-  box-shadow: 0 2px 8px rgba(190, 30, 45, 0.4);
+.scCard:hover .scCard__link {
+  gap: 12px;
+  color: #A61828;
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE BREAKPOINTS (Desktop, Tablet, Mobile)
-   ═══════════════════════════════════════════ */
-
-.scMobileShowcase {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .scPillCard {
-    width: 100px;
-    height: 400px;
-  }
-
-  .scMainFeaturedCard {
-    height: 400px;
-  }
-
-  .scHeaderTitle {
-    font-size: 40px;
-  }
-}
-
-/* Tablet & Mobile Layout (<=992px) */
-@media (max-width: 992px) {
-  .scDesktopGallery {
-    display: none;
-  }
-
-  .scMobileShowcase {
-    display: flex;
-    flex-direction: column;
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .scGrid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 100%;
-  }
-
-  .scHeaderGrid {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 36px;
-  }
-
-  .scHeaderRight {
-    max-width: 100%;
-  }
-
-  .scMobileFeaturedCard {
-    width: 100%;
-    max-width: 100%;
-    height: 340px;
-    border-radius: 20px;
-  }
-
-  .scMobilePillsScroll {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 8px 4px 16px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .scMobilePillsScroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .scMobilePillItem {
-    width: 110px;
-    height: 150px;
-    border-radius: 999px;
-    overflow: hidden;
-    position: relative;
-    flex-shrink: 0;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-
-  .scMobilePillImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .scMobilePillOverlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
-    display: flex;
-    align-items: flex-end;
-    padding: 10px 8px;
-    text-align: center;
-  }
-
-  .scMobilePillTitle {
-    font-size: 11px;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 1.25;
-    width: 100%;
-  }
-
-  .scMobilePillActive {
-    border-color: #BE1E2D;
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(190, 30, 45, 0.35);
   }
 }
 
-@media (max-width: 640px) {
-  .scSectionMain {
-    padding: 44px 16px;
+@media (max-width: 800px) {
+  .scIntro__row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
   }
 
-  .scHeaderTitle {
-    font-size: clamp(26px, 7vw, 34px);
+  .scGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
-  .scHeaderSubtitle {
-    font-size: 14px;
+  .scCard {
+    padding: 28px 20px 24px;
   }
 
-  .scAllCompaniesBtn {
+  .scCard__logoWrap {
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .scCard__name {
+    font-size: clamp(18px, 4vw, 22px);
+    min-height: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .scSection {
+    padding: 56px 16px;
+  }
+
+  .scIntro__title {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .scIntro__cta {
     width: 100%;
-    padding: 12px 24px;
-    font-size: 14px;
+    justify-content: center;
   }
 
-  .scMobileFeaturedCard {
-    height: 280px;
-    border-radius: 16px;
+  .scGrid {
+    grid-template-columns: 1fr;
   }
 
-  .scGlassBadge {
-    bottom: 14px;
-    right: 14px;
-    padding: 8px 16px;
-  }
-
-  .scGlassBadgeName {
-    font-size: 13px;
-  }
-
-  .scMobilePillItem {
-    width: 95px;
-    height: 130px;
+  .scCard__name {
+    font-size: 22px;
   }
 }
