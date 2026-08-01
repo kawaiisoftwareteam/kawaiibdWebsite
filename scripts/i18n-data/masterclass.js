@@ -2,7 +2,7 @@ module.exports = {
   en: {
     bannerAlt: "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
     urgency: {
-      badge: "Live Zoom Masterclass",
+      badge: "In-Person Masterclass",
       title: "Free Registration Closes Soon!",
       dateLabel: "Masterclass Date: Monday, Aug 17, 2026"
     },
@@ -11,8 +11,9 @@ module.exports = {
     meta: {
       date: { label: "Date", value: "Monday, Aug 17, 2026", note: "Add to calendar invites will follow" },
       time: { label: "Time", value: "5:00 PM - 8:00 PM", note: "Bangladesh Time (BST)" },
-      location: { label: "Location", value: "Online via Zoom", note: "Link emailed upon registration" },
-      incentives: { label: "Incentives", value: "Participation Certificate", note: "Awarded to all active attendees" }
+      location: { label: "Location", value: "Council Hall, BUET, Dhaka", note: "In-person · Pre-registration required" },
+      incentives: { label: "Incentives", value: "Participation Certificate", note: "Awarded to all active attendees" },
+      chair: { label: "Chair", value: "Prof. Dr. Ishtiaque Ahmed", note: "Head, Dept. of Civil Engg., BUET" }
     },
     speaker: {
       badge: "Speaker",
@@ -55,7 +56,7 @@ module.exports = {
     },
     form: {
       title: "Masterclass Registration Form",
-      subtitle: "Please fill out all required details. Zoom access codes and handouts will be sent to your registered email address.",
+      subtitle: "Please fill out all required details. Venue confirmation and handouts will be sent to your registered email address.",
       stepLabel: "Step",
       close: "Close",
       steps: {
@@ -156,7 +157,7 @@ module.exports = {
       thankYouPrefix: "Thank you,",
       thankYouSuffix: "Your registration for the BIM & Construction DX Masterclass has been successfully recorded.",
       nextTitle: "What happens next?",
-      next1: "A confirmation email with Zoom join details will be sent to you.",
+      next1: "A confirmation email with venue details will be sent to you.",
       next2: "Please check your spam folder if you do not see it within 10 minutes.",
       next2Bold: "spam folder",
       next3: "Handout materials will be emailed 24 hours before the masterclass.",
@@ -166,7 +167,7 @@ module.exports = {
   bn: {
     bannerAlt: "ডঃ শুনসুকে সোমেয়ার সাথে BIM ও Construction DX মাস্টারক্লাস",
     urgency: {
-      badge: "লাইভ জুম মাস্টারক্লাস",
+      badge: "সশরীরে মাস্টারক্লাস",
       title: "বিনামূল্যে নিবন্ধন শীঘ্রই বন্ধ!",
       dateLabel: "মাস্টারক্লাসের তারিখ: সোমবার, ১৭ আগস্ট, ২০২৬"
     },
@@ -175,8 +176,9 @@ module.exports = {
     meta: {
       date: { label: "তারিখ", value: "সোমবার, ১৭ আগস্ট, ২০২৬", note: "ক্যালেন্ডার আমন্ত্রণ পরে পাঠানো হবে" },
       time: { label: "সময়", value: "বিকেল ৫:০০ - ৮:০০", note: "বাংলাদেশ সময় (BST)" },
-      location: { label: "অবস্থান", value: "জুমের মাধ্যমে অনলাইন", note: "নিবন্ধনের পর লিংক ইমেইলে পাঠানো হবে" },
-      incentives: { label: "উপহার", value: "অংশগ্রহণ সনদ", note: "সক্রিয় সকল অংশগ্রহণকারীকে প্রদান করা হবে" }
+      location: { label: "অবস্থান", value: "কাউন্সিল হল, বুয়েট, ঢাকা", note: "সশরীরে · পূর্ব-নিবন্ধন প্রয়োজন" },
+      incentives: { label: "উপহার", value: "অংশগ্রহণ সনদ", note: "সক্রিয় সকল অংশগ্রহণকারীকে প্রদান করা হবে" },
+      chair: { label: "সভাপতি", value: "প্রফেসর ড. ইশতিয়াক আহমেদ", note: "প্রধান, সিভিল ইঞ্জিনিয়ারিং বিভাগ, বুয়েট" }
     },
     speaker: {
       badge: "বক্তা",
@@ -219,7 +221,7 @@ module.exports = {
     },
     form: {
       title: "মাস্টারক্লাস নিবন্ধন ফর্ম",
-      subtitle: "সকল প্রয়োজনীয় তথ্য পূরণ করুন। জুম অ্যাক্সেস কোড ও হ্যান্ডআউট আপনার নিবন্ধিত ইমেইলে পাঠানো হবে।",
+      subtitle: "সকল প্রয়োজনীয় তথ্য পূরণ করুন। ভেন্যুর নিশ্চিতকরণ ও হ্যান্ডআউট আপনার নিবন্ধিত ইমেইলে পাঠানো হবে।",
       stepLabel: "ধাপ",
       close: "বন্ধ",
       steps: {
@@ -320,7 +322,7 @@ module.exports = {
       thankYouPrefix: "ধন্যবাদ,",
       thankYouSuffix: "BIM ও Construction DX মাস্টারক্লাসে আপনার নিবন্ধন সফলভাবে রেকর্ড করা হয়েছে।",
       nextTitle: "এরপর কী হবে?",
-      next1: "জুম যোগদানের বিবরণসহ নিশ্চিতকরণ ইমেইল পাঠানো হবে।",
+      next1: "ভেন্যুর বিবরণসহ নিশ্চিতকরণ ইমেইল পাঠানো হবে।",
       next2: "১০ মিনিটের মধ্যে না পেলে স্প্যাম ফোল্ডার দেখুন।",
       next2Bold: "স্প্যাম ফোল্ডার",
       next3: "মাস্টারক্লাসের ২৪ ঘণ্টা আগে হ্যান্ডআউট ইমেইলে পাঠানো হবে।",
@@ -330,7 +332,7 @@ module.exports = {
   ja: {
     bannerAlt: "染谷俊介博士によるBIM・建設DXマスタークラス",
     urgency: {
-      badge: "ライブZoomマスタークラス",
+      badge: "対面マスタークラス",
       title: "無料登録はまもなく終了！",
       dateLabel: "開催日：2026年8月17日（月）"
     },
@@ -339,8 +341,9 @@ module.exports = {
     meta: {
       date: { label: "日付", value: "2026年8月17日（月）", note: "カレンダー招待は後日お送りします" },
       time: { label: "時間", value: "17:00 - 20:00", note: "バングラデシュ時間（BST）" },
-      location: { label: "場所", value: "Zoomオンライン", note: "登録後にリンクをメールでお送りします" },
-      incentives: { label: "特典", value: "参加証明書", note: "積極的に参加された方全員に授与" }
+      location: { label: "場所", value: "Council Hall, BUET, ダッカ", note: "対面開催 · 事前登録必須" },
+      incentives: { label: "特典", value: "参加証明書", note: "積極的に参加された方全員に授与" },
+      chair: { label: "座長", value: "Prof. Dr. Ishtiaque Ahmed", note: "Head, Dept. of Civil Engg., BUET" }
     },
     speaker: {
       badge: "講師",
@@ -383,7 +386,7 @@ module.exports = {
     },
     form: {
       title: "マスタークラス登録フォーム",
-      subtitle: "必須項目をすべてご記入ください。Zoomアクセスコードと資料は登録メールアドレスにお送りします。",
+      subtitle: "必須項目をすべてご記入ください。会場のご案内と資料は登録メールアドレスにお送りします。",
       stepLabel: "ステップ",
       close: "閉じる",
       steps: {
@@ -484,7 +487,7 @@ module.exports = {
       thankYouPrefix: "ありがとうございます、",
       thankYouSuffix: "BIM・建設DXマスタークラスへの登録が正常に記録されました。",
       nextTitle: "次のステップ",
-      next1: "Zoom参加詳細を記載した確認メールをお送りします。",
+      next1: "会場詳細を記載した確認メールをお送りします。",
       next2: "10分以内に届かない場合は迷惑メールフォルダをご確認ください。",
       next2Bold: "迷惑メールフォルダ",
       next3: "マスタークラス24時間前に資料をメールでお送りします。",

@@ -428,6 +428,21 @@ const Masterclass = () => {
                 <p className="text-sm sm:text-base text-gray-550 mt-1">{t('masterclass.meta.incentives.note')}</p>
               </div>
             </div>
+
+            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover-card-effect sm:col-span-2">
+              <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden flex-shrink-0 shadow-md border-2 border-gray-100">
+                <img
+                  src={require('../../Assets/ishtiaque_ahmed.jpg')}
+                  alt={t('masterclass.meta.chair.value')}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-base font-semibold text-gray-400 uppercase tracking-widest">{t('masterclass.meta.chair.label')}</h4>
+                <p className="text-xl sm:text-3xl font-bold text-gray-850 mt-1">{t('masterclass.meta.chair.value')}</p>
+                <p className="text-base sm:text-lg text-gray-550 mt-1">{t('masterclass.meta.chair.note')}</p>
+              </div>
+            </div>
           </div>
 
           {/* Dr Shunsuke Someya profile card */}

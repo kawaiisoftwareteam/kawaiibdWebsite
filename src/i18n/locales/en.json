@@ -403,7 +403,7 @@
   "masterclass": {
     "bannerAlt": "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
     "urgency": {
-      "badge": "Live Zoom Masterclass",
+      "badge": "In-Person Masterclass",
       "title": "Free Registration Closes Soon!",
       "dateLabel": "Masterclass Date: Monday, Aug 17, 2026"
     },
@@ -427,13 +427,18 @@
       },
       "location": {
         "label": "Location",
-        "value": "Online via Zoom",
-        "note": "Link emailed upon registration"
+        "value": "Council Hall, BUET, Dhaka",
+        "note": "In-person · Pre-registration required"
       },
       "incentives": {
         "label": "Incentives",
         "value": "Participation Certificate",
         "note": "Awarded to all active attendees"
+      },
+      "chair": {
+        "label": "Chair",
+        "value": "Prof. Dr. Ishtiaque Ahmed",
+        "note": "Head, Dept. of Civil Engg., BUET"
       }
     },
     "speaker": {
@@ -494,7 +499,7 @@
     },
     "form": {
       "title": "Masterclass Registration Form",
-      "subtitle": "Please fill out all required details. Zoom access codes and handouts will be sent to your registered email address.",
+      "subtitle": "Please fill out all required details. Venue confirmation and handouts will be sent to your registered email address.",
       "stepLabel": "Step",
       "close": "Close",
       "steps": {
@@ -595,7 +600,7 @@
       "thankYouPrefix": "Thank you,",
       "thankYouSuffix": "Your registration for the BIM & Construction DX Masterclass has been successfully recorded.",
       "nextTitle": "What happens next?",
-      "next1": "A confirmation email with Zoom join details will be sent to you.",
+      "next1": "A confirmation email with venue details will be sent to you.",
       "next2": "Please check your spam folder if you do not see it within 10 minutes.",
       "next2Bold": "spam folder",
       "next3": "Handout materials will be emailed 24 hours before the masterclass.",
