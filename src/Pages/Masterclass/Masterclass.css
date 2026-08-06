@@ -151,6 +151,23 @@
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes buetNoticePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+    text-shadow: 0 0 12px rgba(190, 30, 45, 0.45);
+  }
+}
+
+.buet-only-notice {
+  animation: buetNoticePulse 1.8s ease-in-out infinite;
+}
+
 /* Form success popup — fixed to viewport so it never appears below the fold */
 .success-modal-backdrop {
   position: fixed;

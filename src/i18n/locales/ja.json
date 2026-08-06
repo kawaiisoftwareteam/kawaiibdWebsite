@@ -5,7 +5,7 @@
     "whatWeDo": "事業内容",
     "sisterConcerns": "グループ企業",
     "career": "キャリア",
-    "bimMasterclass": "BIMマスタークラス",
+    "bimMasterclass": "BUETマスタークラス",
     "getInTouch": "お問い合わせ",
     "joinUsOn": "フォローする:",
     "tagline": "日本・バングラデシュ合弁企業",
@@ -41,9 +41,9 @@
     "privacyPolicy": "プライバシーポリシー"
   },
   "masterclass": {
-    "bannerAlt": "染谷俊介博士によるBIM・建設DXマスタークラス",
+    "bannerAlt": "BUET限定 — 染谷俊介博士によるBIM・建設DXマスタークラス",
     "urgency": {
-      "badge": "対面マスタークラス",
+      "badge": "BUET限定 · 対面マスタークラス",
       "title": "無料登録はまもなく終了！",
       "dateLabel": "開催日：2026年8月17日（月）"
     },
@@ -68,7 +68,7 @@
       "location": {
         "label": "場所",
         "value": "Council Hall, BUET, ダッカ",
-        "note": "対面開催 · 事前登録必須"
+        "note": "BUET限定 · 対面開催 · 事前登録必須"
       },
       "incentives": {
         "label": "特典",
@@ -130,16 +130,16 @@
       "copyLink": "共有リンクをコピー",
       "linkCopied": "リンクをコピーしました！",
       "shareEmail": "メールで共有",
-      "emailSubject": "ご招待：BIM・建設DXマスタークラス",
-      "emailBody": "2026年8月17日開催、染谷俊介博士による無料BIM・建設DXマスタークラスをご覧ください。登録はこちら："
+      "emailSubject": "ご招待：BUET BIM・建設DXマスタークラス",
+      "emailBody": "2026年8月17日、BUET Council Hallにて染谷俊介博士によるBUET限定無料BIM・建設DXマスタークラスを開催します。登録はこちら:"
     },
     "help": {
       "title": "お困りですか？",
       "text": "技術的なサポートや一括登録については、Kawaii Group Bangladeshまでご連絡ください"
     },
     "form": {
-      "title": "マスタークラス登録フォーム",
-      "subtitle": "必須項目をすべてご記入ください。会場のご案内と資料は登録メールアドレスにお送りします。",
+      "title": "BUETマスタークラス登録フォーム",
+      "subtitle": "本マスタークラスはBUETの学生・教員および関係者限定です。会場確認とハンドアウトは登録メールアドレスにお送りします。",
       "stepLabel": "ステップ",
       "close": "閉じる",
       "steps": {
@@ -238,14 +238,15 @@
     "success": {
       "title": "登録完了！",
       "thankYouPrefix": "ありがとうございます、",
-      "thankYouSuffix": "BIM・建設DXマスタークラスへの登録が正常に記録されました。",
+      "thankYouSuffix": "BUET BIM・建設DXマスタークラスへのご登録が正常に完了しました。",
       "nextTitle": "次のステップ",
       "next1": "会場詳細を記載した確認メールをお送りします。",
       "next2": "10分以内に届かない場合は迷惑メールフォルダをご確認ください。",
       "next2Bold": "迷惑メールフォルダ",
       "next3": "マスタークラス24時間前に資料をメールでお送りします。",
       "done": "完了"
-    }
+    },
+    "buetOnlyNotice": "このマスタークラスはBUET限定です。"
   },
   "concernsPage": {
     "title": "カワイグループファミリー概要",

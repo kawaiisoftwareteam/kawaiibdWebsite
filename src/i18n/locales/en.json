@@ -5,7 +5,7 @@
     "whatWeDo": "What We Do",
     "sisterConcerns": "Sister Concerns",
     "career": "Career",
-    "bimMasterclass": "BIM Masterclass",
+    "bimMasterclass": "BUET Masterclass",
     "getInTouch": "Get in Touch",
     "joinUsOn": "Join us on:",
     "tagline": "A Japan-Bangladesh Joint Venture Company",
@@ -659,9 +659,9 @@
     "title": "No pages"
   },
   "masterclass": {
-    "bannerAlt": "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
+    "bannerAlt": "BUET Only — BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
     "urgency": {
-      "badge": "In-Person Masterclass",
+      "badge": "BUET Only · In-Person Masterclass",
       "title": "Free Registration Closes Soon!",
       "dateLabel": "Masterclass Date: Monday, Aug 17, 2026"
     },
@@ -686,7 +686,7 @@
       "location": {
         "label": "Location",
         "value": "Council Hall, BUET, Dhaka",
-        "note": "In-person · Pre-registration required"
+        "note": "BUET only · In-person · Pre-registration required"
       },
       "incentives": {
         "label": "Incentives",
@@ -748,16 +748,16 @@
       "copyLink": "Copy Shareable Link",
       "linkCopied": "Link Copied!",
       "shareEmail": "Share via Email",
-      "emailSubject": "Invitation: BIM and Construction DX Masterclass",
-      "emailBody": "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 17, 2026. Register here:"
+      "emailSubject": "Invitation: BUET BIM and Construction DX Masterclass",
+      "emailBody": "Check out this free BUET-only BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 17, 2026 at Council Hall, BUET. Register here:"
     },
     "help": {
       "title": "Need Help?",
       "text": "For any technical assistance or bulk registrations, contact Kawaii Group Bangladesh via"
     },
     "form": {
-      "title": "Masterclass Registration Form",
-      "subtitle": "Please fill out all required details. Venue confirmation and handouts will be sent to your registered email address.",
+      "title": "BUET Masterclass Registration Form",
+      "subtitle": "This masterclass is exclusively for BUET students, faculty, and affiliated participants. Venue confirmation and handouts will be sent to your registered email.",
       "stepLabel": "Step",
       "close": "Close",
       "steps": {
@@ -856,14 +856,15 @@
     "success": {
       "title": "Registration Complete!",
       "thankYouPrefix": "Thank you,",
-      "thankYouSuffix": "Your registration for the BIM & Construction DX Masterclass has been successfully recorded.",
+      "thankYouSuffix": "Your registration for the BUET BIM & Construction DX Masterclass has been successfully recorded.",
       "nextTitle": "What happens next?",
       "next1": "A confirmation email with venue details will be sent to you.",
       "next2": "Please check your spam folder if you do not see it within 10 minutes.",
       "next2Bold": "spam folder",
       "next3": "Handout materials will be emailed 24 hours before the masterclass.",
       "done": "Done"
-    }
+    },
+    "buetOnlyNotice": "This masterclass is only for BUET."
   },
   "concernsPage": {
     "title": "Kawaii Group Family At a Glance",

@@ -339,6 +339,10 @@ const Masterclass = () => {
         />
       </div>
 
+      <p className="buet-only-notice max-w-6xl mx-auto mb-4 sm:mb-6 text-center text-lg sm:text-2xl font-extrabold text-[#be1e2d] tracking-wide">
+        {t('masterclass.buetOnlyNotice')}
+      </p>
+
       {/* Countdown Timer & Urgency Bar */}
       <div className="max-w-6xl mx-auto mb-8 sm:mb-12 bg-gray-900 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 border border-gray-800">
         <div className="space-y-2 text-center md:text-left w-full md:w-auto">
