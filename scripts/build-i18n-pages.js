@@ -9,6 +9,7 @@ const localesDir = path.join(__dirname, '../src/i18n/locales');
 
 const pageKeys = {
   masterclass: require('./i18n-data/masterclass'),
+  seminar: require('./i18n-data/seminar'),
   concernsPage: require('./i18n-data/concernsPage'),
   kgvl: require('./i18n-data/kgvl'),
   kjchs: require('./i18n-data/kjchs'),

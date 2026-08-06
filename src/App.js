@@ -18,6 +18,7 @@ import KawaiiGlobalVentures from './Pages/KawaiiGlobalVentures/KawaiiGlobalVentu
 import KawaiiJapanCareerHr from './Pages/KawaiiJapanCareerHr/KawaiiJapanCareerHr';
 import Career from './Pages/Career/Career';
 import Masterclass from './Pages/Masterclass/Masterclass';
+import Seminar from './Pages/Seminar/Seminar';
 import { LocaleProvider } from './i18n/LocaleContext';
 import { isValidLocale } from './i18n/config';
 import GeoLanguageBanner from './Components/GeoLanguageBanner/GeoLanguageBanner';
@@ -38,6 +39,7 @@ const AppRoutes = () => (
     <Route path="kawaii-japan-career-hr" element={<KawaiiJapanCareerHr />} />
     <Route path="career" element={<Career />} />
     <Route path="masterclass" element={<Masterclass />} />
+    <Route path="seminar" element={<Seminar />} />
     <Route path="*" element={<NoPages />} />
   </Routes>
 );

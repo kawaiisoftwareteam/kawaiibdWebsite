@@ -1,0 +1,603 @@
+/* Seminar page specific styling */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+
+.seminar-container {
+  font-family: "Jost", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+.seminar-container input,
+.seminar-container select,
+.seminar-container textarea,
+.seminar-container button,
+.seminar-container label {
+  font-family: inherit;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #be1e2d 0%, #7c111c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark gradient hero background */
+.hero-gradient {
+  background: radial-gradient(circle at 80% 20%, rgba(190, 30, 45, 0.15) 0%, transparent 50%),
+              linear-gradient(180deg, #111827 0%, #1f2937 100%);
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Floating sharing bar / section */
+.sharing-card {
+  border-left: 4px solid #be1e2d;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Progress indicator styles */
+.progress-step {
+  transition: all 0.4s ease;
+}
+
+.progress-step.active {
+  border-color: #be1e2d;
+  color: #be1e2d;
+  font-weight: 600;
+  box-shadow: 0 0 0 4px rgba(190, 30, 45, 0.15);
+}
+
+.progress-step.completed {
+  background-color: #be1e2d;
+  border-color: #be1e2d;
+  color: white;
+}
+
+/* Custom Linear Rating Scale */
+.scale-number {
+  transition: all 0.2s ease-in-out;
+}
+
+.scale-number:hover {
+  transform: translateY(-2px);
+}
+
+.scale-input:checked + .scale-label {
+  background-color: #be1e2d;
+  color: white;
+  border-color: #be1e2d;
+  box-shadow: 0 4px 10px rgba(190, 30, 45, 0.25);
+  transform: scale(1.08);
+}
+
+/* Focus and input styling overrides */
+.form-input {
+  transition: all 0.2s ease;
+  border: 1px solid #d1d5db;
+}
+
+.form-input:focus {
+  border-color: #be1e2d;
+  box-shadow: 0 0 0 3px rgba(190, 30, 45, 0.15);
+  outline: none;
+}
+
+/* Speaker Badge */
+.speaker-badge {
+  background: linear-gradient(90deg, #be1e2d 0%, #e11d48 100%);
+  box-shadow: 0 4px 12px rgba(190, 30, 45, 0.2);
+}
+
+/* Registration deadline warning badge */
+.deadline-badge {
+  background-color: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  color: #dc2626;
+}
+
+/* Custom card animations on hover */
+.hover-card-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom styles for checkboxes and radio choices */
+.choice-box {
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.choice-box:hover {
+  border-color: rgba(190, 30, 45, 0.4);
+  background-color: rgba(190, 30, 45, 0.01);
+}
+
+.choice-input:checked + .choice-box-inner {
+  border-color: #be1e2d;
+  background-color: rgba(190, 30, 45, 0.05);
+}
+
+/* Pulse Animation for deadline and live indicators */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .7;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Form success popup — fixed to viewport so it never appears below the fold */
+.success-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.success-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+  max-height: min(90vh, 40rem);
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.25rem 1.25rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  font-family: "Jost", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1f2937;
+}
+
+@media (min-width: 640px) {
+  .success-modal-card {
+    padding: 2rem 1.75rem 1.75rem;
+    border-radius: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.success-modal-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.85rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  font-weight: 400;
+  padding: 0;
+}
+
+.success-modal-close:hover {
+  color: #111827;
+}
+
+.success-overlay {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   RESPONSIVE TYPOGRAPHY & SPACING
+   Mobile-first, scales up on larger screens
+   ========================================== */
+
+.seminar-container {
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+.seminar-container h2 {
+  font-size: 1.5rem !important;
+  line-height: 1.3 !important;
+  font-weight: 900 !important;
+}
+
+.seminar-container h3 {
+  font-size: 1.25rem !important;
+  line-height: 1.35 !important;
+  font-weight: 900 !important;
+}
+
+.seminar-container h4 {
+  font-size: 1.05rem !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+}
+
+.seminar-container p,
+.seminar-container .text-gray-650,
+.seminar-container .text-gray-600 {
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+}
+
+.seminar-container .text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.45 !important;
+}
+
+.seminar-container .text-xs {
+  font-size: 0.75rem !important;
+}
+
+/* Form labels */
+.seminar-container label.block {
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+  color: #111827 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Choice option text */
+.seminar-container label.cursor-pointer span {
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  line-height: 1.4 !important;
+}
+
+/* Inputs — 16px min on mobile avoids iOS zoom */
+.seminar-container input[type="text"],
+.seminar-container input[type="email"],
+.seminar-container input[type="tel"],
+.seminar-container input[type="url"],
+.seminar-container select,
+.seminar-container textarea {
+  font-size: 1rem !important;
+  padding: 0.85rem 1rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  border-radius: 0.75rem !important;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.seminar-container .scale-number {
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  padding: 0.65rem 0.35rem !important;
+}
+
+.seminar-container button,
+.seminar-container a[href="#register-section"] {
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.seminar-container .timeline-item,
+.seminar-container .list-disc li {
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+.seminar-container .sharing-card h3 {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+}
+
+.seminar-container .sharing-card p {
+  font-size: 0.9rem !important;
+}
+
+/* Progress steps — compact on mobile */
+.seminar-container .progress-step {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  font-size: 0.9rem !important;
+}
+
+.seminar-container .form-nav-actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.seminar-container .form-nav-actions > button,
+.seminar-container .form-nav-actions > div {
+  width: 100%;
+}
+
+.seminar-container .form-nav-actions > button {
+  justify-content: center;
+  margin-left: 0 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.seminar-container .countdown-unit {
+  min-width: 3.75rem !important;
+  padding: 0.65rem 0.4rem !important;
+}
+
+.seminar-container .countdown-unit .countdown-value {
+  font-size: 1.35rem !important;
+  line-height: 1.2 !important;
+}
+
+.seminar-container label.cursor-pointer {
+  padding: 0.85rem 1rem !important;
+  gap: 0.75rem !important;
+}
+
+/* Tablet+ */
+@media (min-width: 640px) {
+  .seminar-container {
+    font-size: 1.05rem;
+  }
+
+  .seminar-container h2 {
+    font-size: 2rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .seminar-container h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .seminar-container h4 {
+    font-size: 1.25rem !important;
+  }
+
+  .seminar-container p,
+  .seminar-container .text-gray-650,
+  .seminar-container .text-gray-600 {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .seminar-container label.block {
+    font-size: 1.1rem !important;
+  }
+
+  .seminar-container label.cursor-pointer span {
+    font-size: 1rem !important;
+  }
+
+  .seminar-container input[type="text"],
+  .seminar-container input[type="email"],
+  .seminar-container input[type="tel"],
+  .seminar-container input[type="url"],
+  .seminar-container select,
+  .seminar-container textarea {
+    font-size: 1.1rem !important;
+    padding: 1rem 1.15rem !important;
+  }
+
+  .seminar-container .scale-number {
+    font-size: 1.35rem !important;
+    padding: 0.8rem !important;
+  }
+
+  .seminar-container button,
+  .seminar-container a[href="#register-section"] {
+    font-size: 1.1rem !important;
+  }
+
+  .seminar-container .progress-step {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .seminar-container .form-nav-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .seminar-container .form-nav-actions > button,
+  .seminar-container .form-nav-actions > div {
+    width: auto;
+  }
+
+  .seminar-container .form-nav-actions > button:last-child {
+    margin-left: auto !important;
+  }
+
+  .seminar-container .countdown-unit {
+    min-width: 5rem !important;
+    padding: 1rem 1.15rem !important;
+  }
+
+  .seminar-container .countdown-unit .countdown-value {
+    font-size: 2rem !important;
+  }
+
+  .seminar-container label.cursor-pointer {
+    padding: 1.15rem 1.25rem !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .seminar-container {
+    font-size: 1.15rem;
+  }
+
+  .seminar-container h2 {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+  }
+
+  .seminar-container h3 {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+
+  .seminar-container h4 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .seminar-container p,
+  .seminar-container .text-gray-650,
+  .seminar-container .text-gray-600 {
+    font-size: 1.15rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .seminar-container label.block {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .seminar-container label.cursor-pointer span {
+    font-size: 1.15rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .seminar-container input[type="text"],
+  .seminar-container input[type="email"],
+  .seminar-container input[type="tel"],
+  .seminar-container input[type="url"],
+  .seminar-container select,
+  .seminar-container textarea {
+    font-size: 1.2rem !important;
+    padding: 1.1rem 1.25rem !important;
+  }
+
+  .seminar-container .scale-number {
+    font-size: 1.5rem !important;
+    padding: 0.9rem !important;
+  }
+
+  .seminar-container button,
+  .seminar-container a[href="#register-section"] {
+    font-size: 1.2rem !important;
+  }
+
+  .seminar-container .progress-step {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+  }
+}
+
+/* Custom styled inputs for checkboxes and radios */
+.seminar-container input[type="checkbox"],
+.seminar-container input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #be1e2d;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.375rem;
+  display: inline-grid;
+  place-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .seminar-container input[type="checkbox"],
+  .seminar-container input[type="radio"] {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.seminar-container input[type="radio"] {
+  border-radius: 50%;
+}
+
+.seminar-container input[type="checkbox"]::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  background-color: currentColor;
+}
+
+.seminar-container input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.seminar-container input[type="radio"]::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: currentColor;
+}
+
+.seminar-container input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.seminar-container input[type="checkbox"]:checked,
+.seminar-container input[type="radio"]:checked {
+  border-color: #be1e2d;
+  background-color: #be1e2d;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(190, 30, 45, 0.1);
+}
+
+.seminar-container input[type="checkbox"]:focus,
+.seminar-container input[type="radio"]:focus {
+  outline: 3px solid rgba(190, 30, 45, 0.15);
+  outline-offset: 2px;
+}

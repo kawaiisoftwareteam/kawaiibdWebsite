@@ -275,8 +275,8 @@ const MainNav = () => {
           <div className='menuText'>{t('nav.bimMasterclass')}</div>
         </NavLink>
 
-        <NavLink to={localizedPath('/contact')} className={({ isActive }) => `navMenu ${isActive ? 'active' : ''}`}>
-          <div className='menuText'>{t('nav.getInTouch')}</div>
+        <NavLink to={localizedPath('/seminar')} className={({ isActive }) => `navMenu navMenuHot ${isActive ? 'active' : ''}`}>
+          <div className='menuText'>{t('nav.bimSeminar')}</div>
         </NavLink>
       </div>
 
@@ -386,11 +386,11 @@ const MainNav = () => {
             </NavLink>
 
             <NavLink
-              to={localizedPath('/contact')}
-              className={({ isActive }) => `mobileNavItem ${isActive ? 'active-mobile-nav-item' : ''}`}
+              to={localizedPath('/seminar')}
+              className={({ isActive }) => `mobileNavItem mobileNavItemHot ${isActive ? 'active-mobile-nav-item' : ''}`}
               onClick={closeSidebar}
             >
-              <div className='mobileNavItemText'>{t('nav.getInTouch')}</div>
+              <div className='mobileNavItemText'>{t('nav.bimSeminar')}</div>
             </NavLink>
           </div>
           <div className='mobileNavBottom'>
