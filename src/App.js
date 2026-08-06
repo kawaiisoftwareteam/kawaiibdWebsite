@@ -16,6 +16,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
 import CorporateProfile from './Pages/CorporateProfile/CorporateProfile';
 import KawaiiGlobalVentures from './Pages/KawaiiGlobalVentures/KawaiiGlobalVentures';
 import KawaiiJapanCareerHr from './Pages/KawaiiJapanCareerHr/KawaiiJapanCareerHr';
+import Career from './Pages/Career/Career';
 import Masterclass from './Pages/Masterclass/Masterclass';
 import { LocaleProvider } from './i18n/LocaleContext';
 import { isValidLocale } from './i18n/config';
@@ -35,6 +36,7 @@ const AppRoutes = () => (
     <Route path="privacypolicy" element={<PrivacyPolicy />} />
     <Route path="kawaii-global-ventures" element={<KawaiiGlobalVentures />} />
     <Route path="kawaii-japan-career-hr" element={<KawaiiJapanCareerHr />} />
+    <Route path="career" element={<Career />} />
     <Route path="masterclass" element={<Masterclass />} />
     <Route path="*" element={<NoPages />} />
   </Routes>
