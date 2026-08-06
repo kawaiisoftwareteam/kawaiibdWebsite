@@ -539,6 +539,31 @@ const Masterclass = () => {
             </div>
           </div>
 
+          {/* Special Guest — Toshiro Kan */}
+          <div id="special-guest-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 relative overflow-hidden">
+            <div className="absolute top-0 right-0 h-40 w-40 bg-rose-50 rounded-bl-full -z-1 opacity-50"></div>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100 relative flex-shrink-0">
+                <img
+                  src={require('../../Assets/Special Guest.jpeg')}
+                  alt={t('masterclass.specialGuest.name')}
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-[#be1e2d] bg-opacity-95 py-1 text-center text-[10px] uppercase font-bold tracking-widest text-white">
+                  {t('masterclass.specialGuest.badge')}
+                </div>
+              </div>
+              <div className="space-y-2 text-center sm:text-left flex-1">
+                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">{t('masterclass.specialGuest.name')}</h3>
+                <p className="text-lg font-semibold text-[#be1e2d]">{t('masterclass.specialGuest.role')}</p>
+                <p className="text-sm sm:text-base text-gray-500">{t('masterclass.specialGuest.company')}</p>
+                <p className="text-base sm:text-lg text-gray-650 leading-relaxed pt-2">
+                  {t('masterclass.specialGuest.bio')}
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Event description & modules */}
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-150 space-y-6">
             <h3 className="text-2xl font-bold text-gray-900">{t('masterclass.modules.title')}</h3>

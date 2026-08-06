@@ -204,6 +204,13 @@ module.exports = {
       "next2Bold": "spam folder",
       "next3": "Handout materials will be emailed 24 hours before the seminar.",
       "done": "Done"
+    },
+    "specialGuest": {
+      "badge": "Special Guest",
+      "name": "Toshiro Kan",
+      "role": "Senior Architect and Advisor",
+      "company": "So Kikaku Sekkei",
+      "bio": "Special Guest for both the BUET Masterclass and the BIM & Construction DX Seminar."
     }
   },
   "bn": {
@@ -411,6 +418,13 @@ module.exports = {
       "next2Bold": "স্প্যাম ফোল্ডার",
       "next3": "সেমিনারের ২৪ ঘণ্টা আগে হ্যান্ডআউট ইমেইলে পাঠানো হবে।",
       "done": "সম্পন্ন"
+    },
+    "specialGuest": {
+      "badge": "বিশেষ অতিথি",
+      "name": "তোশিরো কান",
+      "role": "সিনিয়র আর্কিটেক্ট ও উপদেষ্টা",
+      "company": "সো কিকাকু সেক্কেই",
+      "bio": "বুয়েট মাস্টারক্লাস এবং BIM ও Construction DX সেমিনার — উভয় অনুষ্ঠানের বিশেষ অতিথি।"
     }
   },
   "ja": {
@@ -618,6 +632,13 @@ module.exports = {
       "next2Bold": "迷惑メールフォルダ",
       "next3": "セミナーの24時間前にハンドアウト資料をメールでお送りします。",
       "done": "完了"
+    },
+    "specialGuest": {
+      "badge": "特別ゲスト",
+      "name": "菅 俊郎",
+      "role": "シニアアーキテクト・アドバイザー",
+      "company": "創企画設計",
+      "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
     }
   }
 };

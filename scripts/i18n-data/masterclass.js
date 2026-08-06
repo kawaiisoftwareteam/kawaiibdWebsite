@@ -205,7 +205,14 @@ module.exports = {
       "next3": "Handout materials will be emailed 24 hours before the masterclass.",
       "done": "Done"
     },
-    "buetOnlyNotice": "This masterclass is only for BUET."
+    "buetOnlyNotice": "This masterclass is only for BUET.",
+    "specialGuest": {
+      "badge": "Special Guest",
+      "name": "Toshiro Kan",
+      "role": "Senior Architect and Advisor",
+      "company": "So Kikaku Sekkei",
+      "bio": "Special Guest for both the BUET Masterclass and the BIM & Construction DX Seminar."
+    }
   },
   "bn": {
     "bannerAlt": "শুধুমাত্র বুয়েট — ডঃ শুনসুকে সোমেয়ার সাথে BIM ও Construction DX মাস্টারক্লাস",
@@ -413,7 +420,14 @@ module.exports = {
       "next3": "মাস্টারক্লাসের ২৪ ঘণ্টা আগে হ্যান্ডআউট ইমেইলে পাঠানো হবে।",
       "done": "সম্পন্ন"
     },
-    "buetOnlyNotice": "এই মাস্টারক্লাস শুধুমাত্র বুয়েটের জন্য।"
+    "buetOnlyNotice": "এই মাস্টারক্লাস শুধুমাত্র বুয়েটের জন্য।",
+    "specialGuest": {
+      "badge": "বিশেষ অতিথি",
+      "name": "তোশিরো কান",
+      "role": "সিনিয়র আর্কিটেক্ট ও উপদেষ্টা",
+      "company": "সো কিকাকু সেক্কেই",
+      "bio": "বুয়েট মাস্টারক্লাস এবং BIM ও Construction DX সেমিনার — উভয় অনুষ্ঠানের বিশেষ অতিথি।"
+    }
   },
   "ja": {
     "bannerAlt": "BUET限定 — 染谷俊介博士によるBIM・建設DXマスタークラス",
@@ -621,6 +635,13 @@ module.exports = {
       "next3": "マスタークラス24時間前に資料をメールでお送りします。",
       "done": "完了"
     },
-    "buetOnlyNotice": "このマスタークラスはBUET限定です。"
+    "buetOnlyNotice": "このマスタークラスはBUET限定です。",
+    "specialGuest": {
+      "badge": "特別ゲスト",
+      "name": "菅 俊郎",
+      "role": "シニアアーキテクト・アドバイザー",
+      "company": "創企画設計",
+      "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
+    }
   }
 };
