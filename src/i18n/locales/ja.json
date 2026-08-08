@@ -1420,6 +1420,13 @@
       "role": "シニアアーキテクト・アドバイザー",
       "company": "創企画設計",
       "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
+    },
+    "chiefGuest": {
+      "badge": "主賓",
+      "name": "Biswas Jahangir Alam",
+      "role": "国会議員",
+      "company": "バングラデシュ人民共和国",
+      "bio": ""
     }
   }
 }

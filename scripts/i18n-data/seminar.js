@@ -209,8 +209,14 @@ module.exports = {
       "badge": "Special Guest",
       "name": "Toshiro Kan",
       "role": "Senior Architect and Advisor",
-      "company": "So Kikaku Sekkei",
-      "bio": "Special Guest for both the BUET Masterclass and the BIM & Construction DX Seminar."
+      "company": "So Kikaku Sekkei"
+    },
+    "chiefGuest": {
+      "badge": "Chief Guest",
+      "name": "Biswas Jahangir Alam",
+      "role": "Member of Parliament",
+      "company": "People's Republic of Bangladesh",
+      "bio": ""
     }
   },
   "bn": {
@@ -425,6 +431,13 @@ module.exports = {
       "role": "সিনিয়র আর্কিটেক্ট ও উপদেষ্টা",
       "company": "সো কিকাকু সেক্কেই",
       "bio": "বুয়েট মাস্টারক্লাস এবং BIM ও Construction DX সেমিনার — উভয় অনুষ্ঠানের বিশেষ অতিথি।"
+    },
+    "chiefGuest": {
+      "badge": "প্রধান অতিথি",
+      "name": "বিশ্বাস জাহাঙ্গীর আলম",
+      "role": "সংসদ সদস্য",
+      "company": "গণপ্রজাতন্ত্রী বাংলাদেশ",
+      "bio": ""
     }
   },
   "ja": {
@@ -639,6 +652,13 @@ module.exports = {
       "role": "シニアアーキテクト・アドバイザー",
       "company": "創企画設計",
       "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
+    },
+    "chiefGuest": {
+      "badge": "主賓",
+      "name": "Biswas Jahangir Alam",
+      "role": "国会議員",
+      "company": "バングラデシュ人民共和国",
+      "bio": ""
     }
   }
 };

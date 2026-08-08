@@ -211,7 +211,7 @@ module.exports = {
       "name": "Toshiro Kan",
       "role": "Senior Architect and Advisor",
       "company": "So Kikaku Sekkei",
-      "bio": "Special Guest for both the BUET Masterclass and the BIM & Construction DX Seminar."
+     
     }
   },
   "bn": {

@@ -331,6 +331,15 @@ const Seminar = () => {
     <div className="seminar-container min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8">
       {successModal}
 
+      {/* Visual Hero Banner */}
+      <div className="max-w-6xl mx-auto mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
+        <img
+          src={require('../../Assets/banar18.jpeg')}
+          alt={t('seminar.bannerAlt')}
+          className="w-full h-auto block"
+        />
+      </div>
+
       {/* Countdown Timer & Urgency Bar */}
       <div className="max-w-6xl mx-auto mb-8 sm:mb-12 bg-gray-900 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 border border-gray-800">
         <div className="space-y-2 text-center md:text-left w-full md:w-auto">
@@ -523,17 +532,43 @@ const Seminar = () => {
             </div>
           </div>
 
+          {/* Chief Guest — Biswas Jahangir Alam */}
+          <div id="chief-guest-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 relative overflow-hidden">
+            <div className="absolute top-0 right-0 h-40 w-40 bg-rose-50 rounded-bl-full -z-1 opacity-50"></div>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+              <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100">
+                  <img
+                    src={require('../../Assets/biswas_jahangir_alam.jpeg')}
+                    alt={t('seminar.chiefGuest.name')}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="w-full bg-[#be1e2d] rounded-lg py-1.5 text-center text-[10px] uppercase font-bold tracking-widest text-white">
+                  {t('seminar.chiefGuest.badge')}
+                </div>
+              </div>
+              <div className="space-y-2 text-center sm:text-left flex-1">
+                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">{t('seminar.chiefGuest.name')}</h3>
+                <p className="text-lg font-semibold text-[#be1e2d]">{t('seminar.chiefGuest.role')}</p>
+                <p className="text-sm sm:text-base text-gray-500">{t('seminar.chiefGuest.company')}</p>
+              </div>
+            </div>
+          </div>
+
           {/* Special Guest — Toshiro Kan */}
           <div id="special-guest-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 relative overflow-hidden">
             <div className="absolute top-0 right-0 h-40 w-40 bg-rose-50 rounded-bl-full -z-1 opacity-50"></div>
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
-              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100 relative flex-shrink-0">
-                <img
-                  src={require('../../Assets/Special Guest.jpeg')}
-                  alt={t('seminar.specialGuest.name')}
-                  className="w-full h-full object-cover object-top"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-[#be1e2d] bg-opacity-95 py-1 text-center text-[10px] uppercase font-bold tracking-widest text-white">
+              <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100">
+                  <img
+                    src={require('../../Assets/special_guest.jpeg')}
+                    alt={t('seminar.specialGuest.name')}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="w-full bg-[#be1e2d] rounded-lg py-1.5 text-center text-[10px] uppercase font-bold tracking-widest text-white">
                   {t('seminar.specialGuest.badge')}
                 </div>
               </div>
@@ -542,7 +577,7 @@ const Seminar = () => {
                 <p className="text-lg font-semibold text-[#be1e2d]">{t('seminar.specialGuest.role')}</p>
                 <p className="text-sm sm:text-base text-gray-500">{t('seminar.specialGuest.company')}</p>
                 <p className="text-base sm:text-lg text-gray-650 leading-relaxed pt-2">
-                  {t('seminar.specialGuest.bio')}
+                  {/* {t('seminar.specialGuest.bio')} */}
                 </p>
               </div>
             </div>
