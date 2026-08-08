@@ -217,6 +217,10 @@ module.exports = {
       "role": "Member of Parliament",
       "company": "People's Republic of Bangladesh",
       "bio": ""
+    },
+    "video": {
+      "title": "Message from Dr. Shunsuke Someya",
+      "unsupported": "Your browser does not support video playback."
     }
   },
   "bn": {
@@ -438,6 +442,10 @@ module.exports = {
       "role": "সংসদ সদস্য",
       "company": "গণপ্রজাতন্ত্রী বাংলাদেশ",
       "bio": ""
+    },
+    "video": {
+      "title": "ডঃ শুনসুকে সোমেয়ার বার্তা",
+      "unsupported": "আপনার ব্রাউজার ভিডিও চালাতে সক্ষম নয়।"
     }
   },
   "ja": {
@@ -659,6 +667,10 @@ module.exports = {
       "role": "国会議員",
       "company": "バングラデシュ人民共和国",
       "bio": ""
+    },
+    "video": {
+      "title": "染谷俊介博士からのメッセージ",
+      "unsupported": "お使いのブラウザは動画再生に対応していません。"
     }
   }
 };

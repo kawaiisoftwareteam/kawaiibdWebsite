@@ -1429,6 +1429,10 @@
       "role": "Member of Parliament",
       "company": "People's Republic of Bangladesh",
       "bio": ""
+    },
+    "video": {
+      "title": "Message from Dr. Shunsuke Someya",
+      "unsupported": "Your browser does not support video playback."
     }
   }
 }
