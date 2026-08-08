@@ -210,8 +210,11 @@ module.exports = {
       "badge": "Special Guest",
       "name": "Toshiro Kan",
       "role": "Senior Architect and Advisor",
-      "company": "So Kikaku Sekkei",
-     
+      "company": "So Kikaku Sekkei"
+    },
+    "video": {
+      "title": "Message from Dr. Shunsuke Someya",
+      "unsupported": "Your browser does not support video playback."
     }
   },
   "bn": {
@@ -427,6 +430,10 @@ module.exports = {
       "role": "সিনিয়র আর্কিটেক্ট ও উপদেষ্টা",
       "company": "সো কিকাকু সেক্কেই",
       "bio": "বুয়েট মাস্টারক্লাস এবং BIM ও Construction DX সেমিনার — উভয় অনুষ্ঠানের বিশেষ অতিথি।"
+    },
+    "video": {
+      "title": "ডঃ শুনসুকে সোমেয়ার বার্তা",
+      "unsupported": "আপনার ব্রাউজার ভিডিও চালাতে সক্ষম নয়।"
     }
   },
   "ja": {
@@ -642,6 +649,10 @@ module.exports = {
       "role": "シニアアーキテクト・アドバイザー",
       "company": "創企画設計",
       "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
+    },
+    "video": {
+      "title": "染谷俊介博士からのメッセージ",
+      "unsupported": "お使いのブラウザは動画再生に対応していません。"
     }
   }
 };

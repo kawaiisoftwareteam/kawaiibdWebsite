@@ -95,6 +95,27 @@ const Masterclass = () => {
   const [errors, setErrors] = useState({});
 
   const formRef = useRef(null);
+  const videoRef = useRef(null);
+
+  // Pause & reset video when it scrolls out of view
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          video.pause();
+          video.currentTime = 0;
+          video.load(); // restore poster frame
+        }
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   // Countdown timer logic
   useEffect(() => {
@@ -536,6 +557,26 @@ const Masterclass = () => {
                   <b>{t('masterclass.speaker.academicRoles')}</b> {t('masterclass.speaker.academicRolesText')}
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Speaker video */}
+          <div id="speaker-video-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 overflow-hidden">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+              {t('masterclass.video.title')}
+            </h3>
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-gray-100 bg-black shadow-md aspect-video">
+              <video
+                ref={videoRef}
+                className="w-full h-full object-contain"
+                controls
+                preload="metadata"
+                playsInline
+                poster={require('../../Assets/someya_poster.jpg')}
+              >
+                <source src={require('../../Assets/someya.mp4')} type="video/mp4" />
+                {t('masterclass.video.unsupported')}
+              </video>
             </div>
           </div>
 
