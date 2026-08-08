@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
-   Hero Section — Frosted Glass Redesign
-   Reference: Glassmorphic panel, Jost typography
+   Hero Section — Place Name Slideshow
+   Bangladesh → Japan → Dhaka
    ═══════════════════════════════════════════ */
 
 .hero-container {
@@ -18,21 +18,23 @@
   min-height: 600px;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-/* ── Background Slideshow ── */
+/* ── Background Slideshow (smooth crossfade) ── */
 .hero__slide-bg {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1.2s ease-in-out;
   will-change: opacity;
   z-index: 0;
 }
 
 .hero__slide-bg--active {
   opacity: 1;
+  z-index: 1;
 }
 
 .hero__slide-img {
@@ -43,163 +45,117 @@
   object-position: center;
 }
 
-/* ── Sunset & Soft Contrast Overlay ── */
+/* ── Soft contrast overlay for title legibility ── */
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(
-      90deg,
-      rgba(245, 170, 40, 0.22) 0%,
-      rgba(200, 30, 50, 0.08) 35%,
-      rgba(15, 17, 23, 0.25) 100%
-    ),
-    radial-gradient(
-      circle at 20% 50%,
-      rgba(255, 180, 50, 0.15) 0%,
-      transparent 60%
-    );
-  z-index: 1;
+    linear-gradient(180deg,
+      rgba(15, 17, 23, 0.2) 0%,
+      rgba(15, 17, 23, 0.06) 45%,
+      rgba(15, 17, 23, 0.28) 100%);
+  z-index: 2;
   pointer-events: none;
 }
 
-/* ── Content Container ── */
+/* ── Place name (center, bold) ── */
 .hero__content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  /* Match MainNav horizontal padding so text aligns with logo */
-  padding: 0 clamp(24px, 4vw, 80px);
-  padding-top: calc(var(--navbar-height, 80px) / 2);
-  box-sizing: border-box;
-}
-
-/* ── Frosted Glass Card ── */
-.hero__glass-card {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  border: none;
-  border-radius: 4px;
-  padding: clamp(24px, 3.5vw, 44px) clamp(28px, 4.5vw, 56px) clamp(24px, 3.5vw, 44px) 0;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
-  max-width: max-content;
-  width: auto;
-}
-
-/* ── Main Brand Title ("KAWAII") ── */
-.hero__brand-name {
-  font-family: var(--font-display);
-  font-size: clamp(42px, 5.8vw, 84px);
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  line-height: 0.95;
-  margin: 0 0 8px 0;
-  padding: 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* ── Subtitle ("Boundless, Together") ── */
-.hero__subtitle {
-  font-family: var(--font-display);
-  font-size: clamp(30px, 4.2vw, 60px);
-  font-weight: 800;
-  line-height: 1.05;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  align-items: center;
-  gap: 10px;
-  letter-spacing: -0.01em;
-}
-
-.hero__subtitle-red {
-  color: #C81E32;
-  font-weight: 800;
-  text-shadow: 0 2px 10px rgba(200, 30, 50, 0.2);
-}
-
-.hero__subtitle-white {
-  color: #FFFFFF;
-  font-weight: 700;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* ── Bottom Carousel Pagination Dots ── */
-.hero__dots {
   position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0;
   z-index: 3;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  padding: 0 clamp(12px, 3vw, 40px);
+  box-sizing: border-box;
+  pointer-events: none;
 }
 
-.hero__dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: all var(--transition-fast);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+.hero__title-mask {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Tall enough for bold glyphs + slide animation */
+  height: clamp(64px, 16vw, 220px);
+  container-type: inline-size;
+  container-name: hero-title;
 }
 
-.hero__dot--active {
-  background-color: #C81E32;
-  transform: scale(1.15);
-  box-shadow: 0 0 12px rgba(200, 30, 50, 0.7);
+.hero__place-name {
+  font-family: var(--font-display), 'Jost', sans-serif !important;
+  /*
+    Fit longest label ("BANGLADESH" ≈ 11 chars) to container width.
+    Uses cqi so it scales with the title area, not only the viewport.
+  */
+  font-size: clamp(1.5rem, 8.2cqi, 10rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-align: center;
+  color: #C81E32;
+  margin: 0;
+  padding: 0.1em 0.04em;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  text-shadow: none;
+  user-select: none;
+  will-change: transform, opacity;
 }
 
-.hero__dot:hover:not(.hero__dot--active) {
-  background-color: #FFFFFF;
-  transform: scale(1.1);
+/* Fallback when container queries aren't available */
+@supports not (font-size: 1cqi) {
+  .hero__place-name {
+    font-size: clamp(1.85rem, calc((100vw - 1.5rem) / 10), 10rem);
+  }
 }
 
-/* ═══════════════════════════════════════════
-   Responsive Breakpoints
-   ═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero__title-mask {
+    height: clamp(72px, 14vw, 160px);
+  }
+
+  .hero__place-name {
+    font-size: clamp(2rem, 9.5cqi, 7.5rem);
+    letter-spacing: 0.025em;
+  }
+}
 
 @media (max-width: 768px) {
-  .hero__glass-card {
-    padding: 20px 24px 20px 0;
-    border-radius: 4px;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    border: none;
-    max-width: calc(100vw - 32px);
+  .hero {
+    min-height: 520px;
   }
 
-  .hero__brand-name {
-    font-size: clamp(32px, 8vw, 52px);
-    margin-bottom: 4px;
+  .hero__content {
+    padding: 0 clamp(8px, 2.5vw, 16px);
   }
 
-  .hero__subtitle {
-    font-size: clamp(22px, 5.5vw, 36px);
-    white-space: nowrap;
-    gap: 6px;
+  .hero__title-mask {
+    height: clamp(72px, 22vw, 140px);
   }
 
-  .hero__dots {
-    bottom: 24px;
-    gap: 10px;
+  .hero__place-name {
+    font-size: clamp(2rem, 11cqi, 5.5rem);
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title-mask {
+    height: clamp(64px, 24vw, 110px);
   }
 
-  .hero__dot {
-    width: 12px;
-    height: 12px;
+  .hero__place-name {
+    font-size: clamp(1.85rem, 12cqi, 4rem);
+    letter-spacing: 0.015em;
   }
 }
