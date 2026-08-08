@@ -214,7 +214,7 @@ module.exports = {
     "chiefGuest": {
       "badge": "Chief Guest",
       "name": "Biswas Jahangir Alam",
-      "role": "Member of Parliament",
+      "role": "Member of Parliament, Narail-1",
       "company": "People's Republic of Bangladesh",
       "bio": ""
     },
@@ -439,7 +439,7 @@ module.exports = {
     "chiefGuest": {
       "badge": "প্রধান অতিথি",
       "name": "বিশ্বাস জাহাঙ্গীর আলম",
-      "role": "সংসদ সদস্য",
+      "role": "সংসদ সদস্য, নড়াইল-১",
       "company": "গণপ্রজাতন্ত্রী বাংলাদেশ",
       "bio": ""
     },
@@ -664,7 +664,7 @@ module.exports = {
     "chiefGuest": {
       "badge": "主賓",
       "name": "Biswas Jahangir Alam",
-      "role": "国会議員",
+      "role": "国会議員、ナライル-1",
       "company": "バングラデシュ人民共和国",
       "bio": ""
     },
