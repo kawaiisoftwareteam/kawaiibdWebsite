@@ -1,4 +1,4 @@
-/* Sister Concerns — Light Logo Card Grid */
+/* Sister Concerns — Red Overlay Text Cards */
 
 .scSection {
   position: relative;
@@ -89,185 +89,81 @@
 .scGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 16px;
 }
 
 .scCard {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 36px 28px 32px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 28px rgba(15, 17, 23, 0.06);
+  justify-content: center;
+  min-height: 0;
+  padding: 28px 20px;
+  background: #CD2F3E;
   text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .scCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(15, 17, 23, 0.12);
+  transform: translateY(-4px);
+  background: #B82836;
+  box-shadow: 0 12px 28px rgba(15, 17, 23, 0.16);
 }
 
-.scCard__logoWrap {
+.scCard__content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 140px;
-  margin-bottom: 28px;
-  background: #F8F9FA;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.scCard__logo {
+  text-align: center;
+  gap: 12px;
   max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  will-change: transform;
-}
-
-/* ── Continuous logo animations (each unique) ── */
-.scCard__logo--float {
-  animation: scLogoFloat 2.8s ease-in-out infinite;
-}
-
-.scCard__logo--pulse {
-  animation: scLogoPulse 2.2s ease-in-out infinite;
-}
-
-.scCard__logo--sway {
-  animation: scLogoSway 3s ease-in-out infinite;
-}
-
-.scCard__logo--bounce {
-  animation: scLogoBounce 1.8s ease-in-out infinite;
-}
-
-.scCard__logo--breathe {
-  animation: scLogoBreathe 2.6s ease-in-out infinite;
-}
-
-.scCard__logo--tilt {
-  animation: scLogoTilt 3.4s ease-in-out infinite;
-}
-
-.scCard__logo--wiggle {
-  animation: scLogoWiggle 2.4s ease-in-out infinite;
-}
-
-.scCard__logo--heartbeat {
-  animation: scLogoHeartbeat 1.6s ease-in-out infinite;
-}
-
-.scCard__logo--pan {
-  animation: scLogoPan 3.2s ease-in-out infinite;
-}
-
-@keyframes scLogoFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes scLogoPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-}
-
-@keyframes scLogoSway {
-  0%, 100% { transform: rotate(-6deg); }
-  50% { transform: rotate(6deg); }
-}
-
-@keyframes scLogoBounce {
-  0%, 100% { transform: translateY(0) scale(1); }
-  40% { transform: translateY(-12px) scale(1.04); }
-  60% { transform: translateY(-4px) scale(1.01); }
-}
-
-@keyframes scLogoBreathe {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.85; }
-}
-
-@keyframes scLogoTilt {
-  0%, 100% { transform: perspective(400px) rotateY(-10deg) rotateX(2deg); }
-  50% { transform: perspective(400px) rotateY(10deg) rotateX(-2deg); }
-}
-
-@keyframes scLogoWiggle {
-  0%, 100% { transform: translateX(0) rotate(0deg); }
-  25% { transform: translateX(-6px) rotate(-4deg); }
-  75% { transform: translateX(6px) rotate(4deg); }
-}
-
-@keyframes scLogoHeartbeat {
-  0%, 100% { transform: scale(1); }
-  14% { transform: scale(1.12); }
-  28% { transform: scale(1); }
-  42% { transform: scale(1.08); }
-  70% { transform: scale(1); }
-}
-
-@keyframes scLogoPan {
-  0%, 100% { transform: translateX(0) scale(1); }
-  50% { transform: translateX(8px) scale(1.05); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scCard__logo--float,
-  .scCard__logo--pulse,
-  .scCard__logo--sway,
-  .scCard__logo--bounce,
-  .scCard__logo--breathe,
-  .scCard__logo--tilt,
-  .scCard__logo--wiggle,
-  .scCard__logo--heartbeat,
-  .scCard__logo--pan {
-    animation: none;
-  }
 }
 
 .scCard__name {
-  margin: 0 0 20px;
-  font-size: clamp(20px, 1.8vw, 26px);
+  margin: 0;
+  font-size: clamp(20px, 1.7vw, 26px);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  color: #1A1D27;
-  min-height: 2.5em;
+  color: #fff;
+}
+
+.scCard__business {
+  margin: 0;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .scCard__link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: auto;
-  font-size: clamp(15px, 1.2vw, 17px);
-  font-weight: 700;
-  color: #C81E32;
-  transition: gap 0.25s ease, color 0.25s ease;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 600;
+  color: #fff;
+  transition: gap 0.25s ease;
 }
 
-.scCard__linkIcon {
+.scCard__linkArrow {
   flex-shrink: 0;
 }
 
 .scCard:hover .scCard__link {
-  gap: 12px;
-  color: #A61828;
+  gap: 10px;
 }
 
 /* ── Responsive ── */
 @media (max-width: 1100px) {
   .scGrid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 14px;
   }
 }
 
@@ -280,21 +176,19 @@
 
   .scGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 12px;
   }
 
   .scCard {
-    padding: 28px 20px 24px;
-  }
-
-  .scCard__logoWrap {
-    height: 110px;
-    margin-bottom: 20px;
+    padding: 22px 16px;
   }
 
   .scCard__name {
-    font-size: clamp(18px, 4vw, 22px);
-    min-height: 0;
+    font-size: clamp(18px, 3.5vw, 22px);
+  }
+
+  .scCard__business {
+    font-size: 13px;
   }
 }
 
@@ -316,7 +210,19 @@
     grid-template-columns: 1fr;
   }
 
+  .scCard {
+    padding: 24px 18px;
+  }
+
   .scCard__name {
     font-size: 22px;
+  }
+
+  .scCard__business {
+    font-size: 14px;
+  }
+
+  .scCard__link {
+    font-size: 14px;
   }
 }
