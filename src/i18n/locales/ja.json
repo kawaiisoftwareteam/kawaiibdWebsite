@@ -1436,5 +1436,119 @@
       "title": "染谷俊介博士からのメッセージ",
       "unsupported": "お使いのブラウザは動画再生に対応していません。"
     }
+  },
+  "careerPage": {
+    "badge": "全国募集",
+    "title": "認定ビジネスパートナーになりませんか",
+    "subtitle": "Kawaii Group Japanとともに、成功するキャリアとビジネスを築きましょう。バングラデシュ全土でAuthorized Business Partnerを募集しています。",
+    "ctaApply": "今すぐ応募",
+    "openForm": "新しいタブでフォームを開く",
+    "introTitle": "日本との新しいビジネスチャンス — 今日から始めよう",
+    "introBody": "日本へ向かう学生・求職者と関わりたい方、地域で持続可能で収益性のあるビジネスを築きたい方へ。フォームにご記入ください。チームが情報を確認し、次のステップについてご連絡します。",
+    "servicesTitle": "主なサービス",
+    "services": [
+      "日本語教育（JLPT / JFT）",
+      "SSW（特定技能）スキルテスト対策",
+      "SSWビザ手続き",
+      "日本就労（専門職）ビザ",
+      "日本留学ビザ",
+      "日本での就職・キャリアガイダンス"
+    ],
+    "provideTitle": "私たちが提供するもの",
+    "provide": [
+      "公式認可",
+      "充実したトレーニングとマーケティング支援",
+      "デジタルプロモーション支援",
+      "定期的なアップデートとカウンセリング",
+      "魅力的なコミッションと長期的なビジネス機会"
+    ],
+    "priorityTitle": "優先対象",
+    "priority": [
+      "旅行代理店",
+      "留学コンサルタンシー",
+      "トレーニングセンター",
+      "語学教育機関",
+      "経験豊富なマーケティング／ビジネスプロフェッショナル"
+    ],
+    "formTitle": "エージェント情報フォーム",
+    "formHint": "下記のステップフォームにご記入ください。送信後、応募内容の要約が画面に表示されます。",
+    "qrTitle": "スマホで応募",
+    "qrText": "QRコードをスキャンしてキャリアページを開き、フォームに記入してください。",
+    "officialForm": "公式フォーム",
+    "form": {
+      "cardTitle": "エージェント応募",
+      "cardSubtitle": "正確にご記入ください。* は必須項目です。",
+      "stepLabel": "ステップ",
+      "steps": {
+        "s1": "個人情報",
+        "s2": "住所・職業",
+        "s3": "ビジネス詳細"
+      },
+      "fields": {
+        "email": "メール",
+        "fullName": "氏名（NID/パスポート表記）",
+        "fatherName": "父の氏名",
+        "dob": "生年月日",
+        "gender": "性別",
+        "mobile": "携帯番号",
+        "currentAddress": "現住所",
+        "permanentAddress": "本籍・永久住所",
+        "occupation": "現在の職業",
+        "experience": "関連経験",
+        "area": "活動地域（地区／地域）",
+        "capacity": "月間候補者／クライアント対応数",
+        "workforce": "人材募集分野",
+        "reason": "当社のエージェントとして働きたい理由"
+      },
+      "placeholders": {
+        "email": "your@email.com",
+        "fullName": "氏名を入力",
+        "fatherName": "父の氏名を入力",
+        "mobile": "01XXXXXXXXX",
+        "currentAddress": "住所を入力",
+        "permanentAddress": "永久住所を入力",
+        "occupation": "現在の職業",
+        "area": "例：ダッカ、チッタゴン",
+        "capacity": "例：20–30",
+        "workforceOther": "その他を入力",
+        "reason": "簡潔にご記入ください"
+      },
+      "genderLabels": {
+        "male": "男性",
+        "female": "女性"
+      },
+      "experienceLabels": {
+        "yes": "はい",
+        "no": "いいえ"
+      },
+      "workforceOptions": ["SSW", "TITP/ESDP", "Student"],
+      "other": "その他",
+      "next": "次へ",
+      "prev": "戻る",
+      "submit": "応募を送信",
+      "close": "閉じる",
+      "errors": {
+        "emailRequired": "メールは必須です",
+        "emailInvalid": "有効なメールを入力してください",
+        "fullNameRequired": "氏名は必須です",
+        "dobRequired": "生年月日は必須です",
+        "genderRequired": "性別を選択してください",
+        "mobileRequired": "携帯番号は必須です",
+        "capacityRequired": "月間対応数は必須です",
+        "workforceRequired": "人材募集分野を選択してください",
+        "workforceOtherRequired": "その他の内容を入力してください",
+        "reasonRequired": "応募理由を入力してください"
+      }
+    },
+    "success": {
+      "title": "応募を受け付けました",
+      "thankYouPrefix": "ありがとうございます、",
+      "thankYouSuffix": "エージェント応募は正常に記録されました。",
+      "summaryTitle": "応募内容の要約",
+      "next1": "チームが情報を確認します。",
+      "next2": "次のステップについてご連絡します。",
+      "next3": "電話とメールを受信できる状態にしておいてください。",
+      "done": "完了"
+    }
   }
 }

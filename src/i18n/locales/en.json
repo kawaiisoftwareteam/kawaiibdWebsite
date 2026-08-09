@@ -1434,5 +1434,119 @@
       "title": "Message from Dr. Shunsuke Someya",
       "unsupported": "Your browser does not support video playback."
     }
+  },
+  "careerPage": {
+    "badge": "Nationwide Opportunity",
+    "title": "Become an Authorized Business Partner",
+    "subtitle": "Build a successful career and business with Kawaii Group Japan. We are recruiting Authorized Business Partners across Bangladesh.",
+    "ctaApply": "Apply Now",
+    "openForm": "Open Form in New Tab",
+    "introTitle": "A new business opportunity with Japan — start today",
+    "introBody": "If you are interested in working with Japan-bound students and job seekers, and want to build a lasting, profitable business in your area, this opportunity is for you. Fill out the form and our team will verify your details and contact you for the next steps.",
+    "servicesTitle": "Our Core Services",
+    "services": [
+      "Japanese language education (JLPT / JFT)",
+      "SSW (Specified Skilled Worker) skill test preparation",
+      "SSW visa processing",
+      "Japan Work (Specialist) visa",
+      "Japan student visa",
+      "Employment & career guidance in Japan"
+    ],
+    "provideTitle": "What We Provide",
+    "provide": [
+      "Official authorization",
+      "Complete training & marketing support",
+      "Digital promotion assistance",
+      "Regular updates & counseling",
+      "Attractive commission & long-term business opportunity"
+    ],
+    "priorityTitle": "Priority Given To",
+    "priority": [
+      "Travel agencies",
+      "Student consultancies",
+      "Training centers",
+      "Language education institutes",
+      "Experienced marketing / business professionals"
+    ],
+    "formTitle": "Agent Information Form",
+    "formHint": "Complete the multi-step form below. After submit, your application summary will appear on screen.",
+    "qrTitle": "Apply via Smartphone",
+    "qrText": "Scan this QR code to open the Career page on your phone and fill the form.",
+    "officialForm": "Official Form",
+    "form": {
+      "cardTitle": "Agent Application",
+      "cardSubtitle": "Fill in your details carefully. Required fields are marked with *.",
+      "stepLabel": "Step",
+      "steps": {
+        "s1": "Personal Information",
+        "s2": "Address & Occupation",
+        "s3": "Business Details"
+      },
+      "fields": {
+        "email": "Email",
+        "fullName": "Full Name (as per NID/Passport)",
+        "fatherName": "Father’s Name",
+        "dob": "Date of Birth",
+        "gender": "Gender",
+        "mobile": "Mobile Number",
+        "currentAddress": "Current Address",
+        "permanentAddress": "Permanent Address",
+        "occupation": "Current Occupation",
+        "experience": "Relevant Experience",
+        "area": "Area of Operation (District/Region)",
+        "capacity": "Monthly Candidate/Client Capacity",
+        "workforce": "Workforce Recruitment",
+        "reason": "Why do you want to work as an agent with us?"
+      },
+      "placeholders": {
+        "email": "your@email.com",
+        "fullName": "Enter your full name",
+        "fatherName": "Enter father’s name",
+        "mobile": "01XXXXXXXXX",
+        "currentAddress": "House, road, area, district",
+        "permanentAddress": "Permanent address",
+        "occupation": "Your current occupation",
+        "area": "e.g. Dhaka, Chattogram",
+        "capacity": "e.g. 20–30",
+        "workforceOther": "Please specify",
+        "reason": "Write a short answer"
+      },
+      "genderLabels": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "experienceLabels": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "workforceOptions": ["SSW", "TITP/ESDP", "Student"],
+      "other": "Other",
+      "next": "Next",
+      "prev": "Previous",
+      "submit": "Submit Application",
+      "close": "Close",
+      "errors": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Enter a valid email",
+        "fullNameRequired": "Full name is required",
+        "dobRequired": "Date of birth is required",
+        "genderRequired": "Please select gender",
+        "mobileRequired": "Mobile number is required",
+        "capacityRequired": "Monthly capacity is required",
+        "workforceRequired": "Please select workforce type",
+        "workforceOtherRequired": "Please specify other workforce type",
+        "reasonRequired": "Please tell us why you want to join"
+      }
+    },
+    "success": {
+      "title": "Application Submitted",
+      "thankYouPrefix": "Thank you,",
+      "thankYouSuffix": "Your agent application has been recorded successfully.",
+      "summaryTitle": "Your Application Summary",
+      "next1": "Our team will verify your information.",
+      "next2": "You will be contacted for the next steps.",
+      "next3": "Keep your phone and email available.",
+      "done": "Done"
+    }
   }
 }
