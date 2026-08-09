@@ -79,6 +79,13 @@
       "explore": "Explore All Concerns",
       "allCompanies": "All Companies"
     },
+    "aboutUs": {
+      "watermark": "ABOUT US",
+      "title": "We solve your issues",
+      "subtitle": "Answers to the future.",
+      "description": "We are a partner that connects the potential of individuals and businesses. We work closely with each client to address their specific challenges, providing reliable support and sincere assistance to help them grow together and find solutions for the future. We believe that the power of people is the most reliable path to resolution.",
+      "cta": "About Kawaii Group"
+    },
     "ceo": {
       "intro": "At Kawaii Group, we believe in the power of global collaboration and the fusion of diverse expertise. Our message to you is simple yet profound:",
       "headline": "Building Bridges, Creating Smiles",

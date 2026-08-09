@@ -687,6 +687,13 @@
       "explore": "すべての企業を見る",
       "allCompanies": "すべての企業"
     },
+    "aboutUs": {
+      "watermark": "ABOUT US",
+      "title": "We solve your issues",
+      "subtitle": "Answers to the future.",
+      "description": "We are a partner that connects the potential of individuals and businesses. We work closely with each client to address their specific challenges, providing reliable support and sincere assistance to help them grow together and find solutions for the future. We believe that the power of people is the most reliable path to resolution.",
+      "cta": "About Kawaii Group"
+    },
     "ceo": {
       "intro": "カワイグループは、グローバルな協力と多様な専門知識の融合の力を信じています。皆様へのメッセージはシンプルですが、深いものです：",
       "headline": "架け橋を築き、笑顔を創る",

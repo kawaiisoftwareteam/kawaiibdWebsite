@@ -3,6 +3,7 @@
 import React from 'react';
 import Hero from '../../Components/Hero/Hero';
 import SpiderSisterConcerns from '../../Components/SpiderSisterConcerns/SpiderSisterConcerns';
+import HomeAboutUs from '../../Components/HomeAboutUs/HomeAboutUs';
 import Cta from '../../Components/CTA/Cta';
 import Map from '../../Components/Map/Map';
 import LatestNews from '../../Components/LatestNews/LatestNews';
@@ -23,6 +24,7 @@ const Home = () => {
     <div>
       <Hero />
       <SpiderSisterConcerns />
+      <HomeAboutUs />
       <CeoMessage />
       <HowCanWeHelp />
       <OurProjects />
