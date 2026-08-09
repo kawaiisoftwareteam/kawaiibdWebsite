@@ -1042,10 +1042,12 @@
       ]
     },
     "services": {
-      "sectionLabel": "What We Offer",
+      "sectionLabel": "Business Introduction",
       "title1": "Our",
       "title2": "Services",
       "subtitle": "Kawaii Group delivers business solutions through a diverse portfolio of specialized companies, serving clients across manufacturing, trade, recruitment, education, technology, and tourism.",
+      "introText": "Kawaii Group delivers business solutions through a diverse portfolio of specialized companies. We serve clients across manufacturing, international trade, recruitment, education, technology, and tourism. Our integrated approach helps businesses and individuals achieve their goals with confidence.",
+      "outroText": "Every service reflects our commitment to quality, professionalism, and customer satisfaction. Our experienced team works closely with every client to deliver reliable solutions that support long-term success. We focus on building trusted relationships through excellence, innovation, and dependable service.",
       "items": [
         {
           "icon": "👗",

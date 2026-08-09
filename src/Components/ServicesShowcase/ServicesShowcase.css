@@ -1,0 +1,325 @@
+.bizIntro {
+  --biz-red: #cd2f3e;
+  --biz-red-dark: #b12230;
+  position: relative;
+  width: 100%;
+  padding: 56px 0 80px;
+  overflow: hidden;
+  background: #ffffff;
+  font-family: 'Jost', var(--font-body, sans-serif);
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+/* ── Curved main background photo ── */
+.bizIntro__curve {
+  position: absolute;
+  top: 24px;
+  left: 4%;
+  right: 4%;
+  height: 58%;
+  min-height: 320px;
+  border-radius: 0 140px 0 0;
+  overflow: hidden;
+  z-index: 0;
+  background: #ddd;
+}
+
+.bizIntro__curveImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  animation: bizCurveIn 0.55s ease;
+}
+
+@keyframes bizCurveIn {
+  from {
+    opacity: 0.35;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bizIntro__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+/* ── Header ── */
+.bizIntro__header {
+  position: relative;
+  margin-bottom: 28px;
+  padding-top: 12px;
+}
+
+.bizIntro__title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--biz-red);
+}
+
+/* ── White panel over the curve ── */
+.bizIntro__panel {
+  position: relative;
+  margin-top: 120px;
+  padding: 36px 48px 28px;
+  background: #ffffff;
+  border: 3px solid #cf2d3b;
+  border-radius: 48px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.bizIntro__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bizIntro__track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.bizIntro__card {
+  box-sizing: border-box;
+  padding: 0 14px;
+  min-width: 0;
+}
+
+.bizIntro__cardBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 14px 14px 22px;
+  border-radius: 36px;
+  background: var(--biz-red);
+  box-shadow: 0 14px 32px rgba(205, 47, 62, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bizIntro__cardBody:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(205, 47, 62, 0.32);
+}
+
+.bizIntro__media {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 280px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.bizIntro__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bizIntro__cardBody:hover .bizIntro__media img {
+  transform: scale(1.04);
+}
+
+.bizIntro__meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 18px;
+  padding: 0 4px;
+}
+
+.bizIntro__category {
+  margin: 0 0 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.bizIntro__titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.bizIntro__cardTitle {
+  margin: 0;
+  flex: 0 1 auto;
+  font-family: 'Jost', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.bizIntro__action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 48px;
+}
+
+.bizIntro__line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: #ffffff;
+}
+
+.bizIntro__arrow {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--biz-red);
+  transition: transform 0.2s ease;
+}
+
+.bizIntro__arrow:hover {
+  transform: translateX(2px);
+}
+
+.bizIntro__desc {
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* Nav arrows */
+.bizIntro__nav {
+  position: absolute;
+  top: 160px;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: var(--biz-red);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(205, 47, 62, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bizIntro__nav:hover {
+  background: var(--biz-red-dark);
+  transform: scale(1.06);
+}
+
+.bizIntro__nav--prev {
+  left: 8px;
+}
+
+.bizIntro__nav--next {
+  right: 8px;
+}
+
+@media (max-width: 1100px) {
+  .bizIntro__inner {
+    padding: 0 28px;
+  }
+
+  .bizIntro__curve {
+    border-radius: 0 90px 0 0;
+    height: 48%;
+  }
+
+  .bizIntro__panel {
+    margin-top: 90px;
+    padding: 28px 32px 20px;
+    border-radius: 36px;
+  }
+
+  .bizIntro__cardTitle {
+    font-size: 18px;
+  }
+
+  .bizIntro__nav {
+    top: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bizIntro {
+    padding: 36px 0 48px;
+  }
+
+  .bizIntro__inner {
+    padding: 0 16px;
+  }
+
+  .bizIntro__curve {
+    left: 3%;
+    right: 3%;
+    top: 12px;
+    height: 260px;
+    min-height: 220px;
+    border-radius: 0 56px 0 0;
+  }
+
+  .bizIntro__curveSide {
+    display: none;
+  }
+
+  .bizIntro__header {
+    margin-bottom: 20px;
+  }
+
+  .bizIntro__panel {
+    margin-top: 60px;
+    padding: 20px 12px 12px;
+    border-radius: 28px;
+    border-width: 2px;
+  }
+
+  .bizIntro__media {
+    aspect-ratio: 5 / 4;
+    max-height: 220px;
+    border-radius: 20px;
+  }
+
+  .bizIntro__nav {
+    top: 110px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .bizIntro__nav--prev {
+    left: 0;
+  }
+
+  .bizIntro__nav--next {
+    right: 0;
+  }
+}

@@ -5,6 +5,7 @@ import './KgAboutUs.css';
 import kawaiiJpeg from '../../Assets/kawaii.jpeg';
 import heroBg from '../../Assets/kawaii_hero_bg.png';
 import { useLocale } from '../../i18n/LocaleContext';
+import ServicesShowcase from '../ServicesShowcase/ServicesShowcase';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
@@ -310,6 +311,7 @@ const KgAboutUs = () => {
     <div style={{ fontFamily: "'Jost', sans-serif" }}>
       <HeroSection t={t} />
       <IntroSection t={t} />
+      <ServicesShowcase />
       <MissionVisionSection t={t} />
       <CoreValuesSection t={t} />
     </div>
