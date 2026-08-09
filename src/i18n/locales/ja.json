@@ -12,12 +12,23 @@
   },
   "footer": {
     "aboutBlurb": "カワイグループは「機会を創る」という一つの理念のもと設立されました。企業が成長できるよう支援すること、個人が新しいキャリアへ進む道を示すこと——私たちは社会に変化をもたらすことに情熱を注いでいます。日本とバングラデシュ双方に深いルーツを持ち、過去37年間、国・企業・人々のあいだに絆を育んできました。イノベーション、教育、戦略的パートナーシップを通じて、コミュニティを支え、未来に力を与えることを目指しています。",
+    "tagline": "優れたパートナーシップは、人・文化・機会を深く理解することから始まります。",
     "readMore": "続きを読む",
     "quickLinks": "クイックリンク",
+    "contactInfo": "お問い合わせ",
+    "servicesTitle": "サービス",
     "bangladeshOffice": "バングラデシュ事務所",
     "japanOffice": "日本事務所",
     "joinUsOn": "フォローする:",
-    "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
+    "address": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219",
+    "copyright": "© 2026 Kawaii Group. All rights reserved.",
+    "statement": "Boundless, Together",
+    "services": {
+      "s1": "ビジネス・投資コンサルティング",
+      "s2": "人材開発",
+      "s3": "教育・語学研修",
+      "s4": "テクノロジー・デジタル変革"
+    }
   },
   "banner": {
     "bn": "বাংলায় দেখানো হচ্ছে। ইংরেজিতে দেখতে চান?",
