@@ -24,9 +24,17 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Adapt to scrolled navbar */
-.mainNav--scrolled .lang-trigger:hover {
+/* Adapt to scrolled / light navbar */
+.mainNav--scrolled .lang-trigger:hover,
+.mainNav--light .lang-trigger:hover {
   background: rgba(0, 0, 0, 0.04);
+}
+
+.mainNav--scrolled .lang-trigger__label,
+.mainNav--scrolled .lang-trigger__chevron,
+.mainNav--light .lang-trigger__label,
+.mainNav--light .lang-trigger__chevron {
+  color: #1A1A2E !important;
 }
 
 /* ── Label text ── */

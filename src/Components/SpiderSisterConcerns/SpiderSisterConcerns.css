@@ -1,12 +1,10 @@
-/* Sister Concerns — Red Overlay Text Cards */
+/* Sister Concerns — 2 + center + 2 gallery */
 
 .scSection {
   position: relative;
   width: 100%;
-  padding: clamp(72px, 9vw, 120px) clamp(24px, 4vw, 80px) clamp(40px, 5vw, 64px);
-  background:
-    radial-gradient(ellipse 70% 45% at 100% 0%, rgba(200, 30, 50, 0.05) 0%, transparent 55%),
-    linear-gradient(180deg, #F7F8FA 0%, #FFFFFF 100%);
+  padding: clamp(72px, 9vw, 120px) clamp(16px, 3vw, 48px) clamp(40px, 5vw, 64px);
+  background: #ffffff;
   overflow: hidden;
   font-family: var(--font-display);
   color: #0F1117;
@@ -15,13 +13,14 @@
 .scSection__inner {
   position: relative;
   z-index: 1;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 /* ── Intro ── */
 .scIntro {
-  margin-bottom: clamp(40px, 5vw, 64px);
+  margin-bottom: clamp(32px, 4vw, 48px);
+  padding: 0 clamp(8px, 2vw, 32px);
 }
 
 .scIntro__eyebrow {
@@ -42,7 +41,7 @@
 
 .scIntro__title {
   margin: 0;
-  font-size: clamp(44px, 7vw, 88px);
+  font-size: clamp(40px, 6.5vw, 80px);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.035em;
@@ -63,7 +62,7 @@
 
 .scIntro__subtitle {
   margin: 0;
-  font-size: clamp(17px, 1.45vw, 20px);
+  font-size: clamp(16px, 1.35vw, 19px);
   line-height: 1.55;
   color: #5A6170;
 }
@@ -77,93 +76,171 @@
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
+  border-radius: 9999px;
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .scIntro__cta:hover {
   background: #A61828;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-/* ── Card grid ── */
-.scGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.scCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  padding: 28px 20px;
-  background: #CD2F3E;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-}
-
-.scCard:hover {
-  transform: translateY(-4px);
-  background: #B82836;
-  box-shadow: 0 12px 28px rgba(15, 17, 23, 0.16);
-}
-
-.scCard__content {
+/* ── Gallery ── */
+.scGallery {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 12px;
-  max-width: 100%;
+  gap: 32px;
+  margin-top: 10px;
 }
 
-.scCard__name {
-  margin: 0;
-  font-size: clamp(20px, 1.7vw, 26px);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #fff;
+.scGallery__track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 1.8vw, 24px);
+  width: 100%;
+  min-height: clamp(420px, 52vw, 560px);
+  animation: scGalleryIn 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.scCard__business {
-  margin: 0;
-  font-size: clamp(13px, 1.1vw, 15px);
-  font-weight: 400;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.92);
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+@keyframes scGalleryIn {
+  from {
+    opacity: 0.55;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scGallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Side pills — large capsules */
+.scGallery__pill {
+  position: relative;
+  flex: 0 0 clamp(96px, 9.5vw, 140px);
+  height: clamp(360px, 44vw, 480px);
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
   overflow: hidden;
+  cursor: pointer;
+  background: #e8eaed;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
-.scCard__link {
+.scGallery__pill:hover {
+  transform: translateY(-4px) scale(1.03);
+  filter: brightness(1.05);
+}
+
+.scGallery__pill--left,
+.scGallery__pill--right {
+  align-self: center;
+}
+
+/* Center card — large rounded rectangle */
+.scGallery__center {
+  position: relative;
+  flex: 0 1 clamp(520px, 58vw, 860px);
+  height: clamp(400px, 48vw, 520px);
+  border-radius: 28px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #e8eaed;
+  transition: transform 0.4s ease;
+}
+
+.scGallery__center:hover {
+  transform: scale(1.01);
+}
+
+.scGallery__center .scGallery__img {
+  transition: transform 0.7s ease;
+}
+
+.scGallery__center:hover .scGallery__img {
+  transform: scale(1.04);
+}
+
+/* Glass name badge — bottom right */
+.scGallery__badge {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 4px;
-  font-size: clamp(13px, 1.1vw, 15px);
+  max-width: calc(100% - 44px);
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  font-size: clamp(14px, 1.3vw, 18px);
   font-weight: 600;
-  color: #fff;
-  transition: gap 0.25s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  transition: background 0.25s ease;
 }
 
-.scCard__linkArrow {
-  flex-shrink: 0;
+.scGallery__center:hover .scGallery__badge {
+  background: rgba(255, 255, 255, 0.4);
 }
 
-.scCard:hover .scCard__link {
-  gap: 10px;
+/* Dots only */
+.scDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.scDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(15, 17, 23, 0.18);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.scDot:hover {
+  background: rgba(200, 30, 50, 0.45);
+}
+
+.scDot--active {
+  width: 28px;
+  background: #C81E32;
 }
 
 /* ── Responsive ── */
 @media (max-width: 1100px) {
-  .scGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+  .scGallery__pill {
+    flex-basis: 90px;
+    height: 400px;
+  }
+
+  .scGallery__center {
+    flex-basis: 560px;
+    height: 440px;
   }
 }
 
@@ -174,27 +251,51 @@
     align-items: start;
   }
 
-  .scGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .scGallery__track {
+    min-height: 340px;
     gap: 12px;
   }
 
-  .scCard {
-    padding: 22px 16px;
+  .scGallery__pill {
+    flex-basis: 64px;
+    height: 280px;
   }
 
-  .scCard__name {
-    font-size: clamp(18px, 3.5vw, 22px);
+  .scGallery__center {
+    flex: 1 1 320px;
+    height: 300px;
+    border-radius: 18px;
   }
 
-  .scCard__business {
+  .scGallery__badge {
+    right: 14px;
+    bottom: 14px;
+    padding: 10px 16px;
     font-size: 13px;
   }
 }
 
-@media (max-width: 520px) {
-  .scSection {
-    padding: 56px 16px 32px;
+@media (max-width: 580px) {
+  .scGallery__track {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .scGallery__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scGallery__pill {
+    flex: 0 0 52px;
+    height: 220px;
+  }
+
+  .scGallery__center {
+    flex: 0 0 280px;
+    height: 240px;
   }
 
   .scIntro__title {
@@ -204,25 +305,5 @@
   .scIntro__cta {
     width: 100%;
     justify-content: center;
-  }
-
-  .scGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .scCard {
-    padding: 24px 18px;
-  }
-
-  .scCard__name {
-    font-size: 22px;
-  }
-
-  .scCard__business {
-    font-size: 14px;
-  }
-
-  .scCard__link {
-    font-size: 14px;
   }
 }

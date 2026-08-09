@@ -11,7 +11,7 @@
   z-index: 1000;
   box-sizing: border-box;
   padding: 24px clamp(24px, 4vw, 80px) 14px;
-  background: linear-gradient(180deg, rgba(15, 17, 23, 0.75) 0%, rgba(15, 17, 23, 0) 100%);
+  background: transparent;
   border-bottom: none;
 }
 
@@ -119,6 +119,71 @@
   font-weight: 700;
 }
 
+/* ── Light pages (e.g. About Us) — dark text on pale heroes ── */
+.mainNav--light .mainNav__top-link,
+.mainNav--light .mainNav__top-social {
+  color: rgba(26, 26, 46, 0.85);
+}
+
+.mainNav--light .mainNav__top-link:hover {
+  color: #C81E32;
+}
+
+.mainNav--light .mainNav__divider {
+  background: rgba(26, 26, 46, 0.18);
+}
+
+.mainNav--light .mainNav__link,
+.mainNav--light .mainNav__link--active {
+  color: #1A1A2E !important;
+}
+
+.mainNav--light .mainNav__link:hover {
+  color: #C81E32 !important;
+}
+
+.mainNav--light .mainNav__hamburger-line {
+  background: #1A1A2E;
+}
+
+/* ── Scrolled: solid bar + dark text (any page) ── */
+.mainNav--scrolled {
+  position: fixed;
+  background: rgba(255, 251, 247, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(26, 26, 46, 0.08);
+  padding-top: 14px;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
+}
+
+.mainNav--scrolled .mainNav__top-link,
+.mainNav--scrolled .mainNav__top-social {
+  color: rgba(26, 26, 46, 0.85);
+}
+
+.mainNav--scrolled .mainNav__top-link:hover {
+  color: #C81E32;
+}
+
+.mainNav--scrolled .mainNav__divider {
+  background: rgba(26, 26, 46, 0.15);
+}
+
+.mainNav--scrolled .mainNav__link,
+.mainNav--scrolled .mainNav__link--active {
+  color: #1A1A2E !important;
+}
+
+.mainNav--scrolled .mainNav__link:hover {
+  color: #C81E32 !important;
+}
+
+.mainNav--scrolled .mainNav__hamburger-line {
+  background: #1A1A2E;
+}
+
 /* ── Solid Red Get in Touch Button ── */
 .mainNav__cta {
   display: inline-flex;
@@ -167,7 +232,7 @@
   transition: background var(--transition-fast);
 }
 
-.mainNav:not(.mainNav--scrolled) .mainNav__hamburger-line {
+.mainNav:not(.mainNav--scrolled):not(.mainNav--light) .mainNav__hamburger-line {
   background: #fff;
 }
 

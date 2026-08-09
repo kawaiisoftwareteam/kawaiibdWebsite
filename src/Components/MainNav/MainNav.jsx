@@ -20,7 +20,10 @@ import letsfly_logo from '../../Assets/Sister_Concerns/bimanholidays.webp';
 import kgvlLogo from '../../Assets/Sister_Concerns/kgvl_logo.svg';
 import kjchsLogo from '../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.png';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
-import { useLocale } from '../../i18n/LocaleContext';
+import { useLocale, stripLocalePrefix } from '../../i18n/LocaleContext';
+
+/** Pages with light heroes — use dark nav text for contrast */
+const LIGHT_NAV_PATHS = ['/about'];
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
@@ -189,9 +192,22 @@ const MainNav = () => {
     return pathname === target;
   };
 
+  const barePath = stripLocalePrefix(pathname);
+  const isLightNav = LIGHT_NAV_PATHS.some(
+    (p) => barePath === p || barePath.startsWith(`${p}/`)
+  );
+
   return (
     <>
-      <nav className={`mainNav ${scrolled ? 'mainNav--scrolled' : ''}`}>
+      <nav
+        className={[
+          'mainNav',
+          scrolled ? 'mainNav--scrolled' : '',
+          isLightNav ? 'mainNav--light' : '',
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      >
         <div className="mainNav__inner">
           {/* Left Logo */}
           <Link href={localizedPath('/home')} className="mainNav__logo">

@@ -949,5 +949,261 @@
     "achievement3Desc": "Built on a strong foundation of ethics, discipline, and efficiency.",
     "ctaTitle": "Ready to Build a Strong Team or Elevate Your Career?",
     "ctaText": "Whether you are an employer seeking skilled talent or a job seeker pursuing international pathways, let's connect."
+  },
+  "aboutUs": {
+    "hero": {
+      "eyebrow": "🌸 Japan · Bangladesh · Global",
+      "title1": "Welcome to",
+      "title2": "Kawaii Group",
+      "subtitle": "A diversified business group with strong expertise in manufacturing, apparel, textiles, trading, technology, education, and international workforce solutions. Building lasting value since 1987.",
+      "badge1": "🏭 Manufacturing",
+      "badge2": "🌏 Global Trade",
+      "badge3": "🎓 Education",
+      "badge4": "💼 HR Solutions"
+    },
+    "intro": {
+      "sectionLabel": "Our Story",
+      "title1": "Building Businesses That Create",
+      "title2": "Lasting Value",
+      "p1": "Our journey began with a clear purpose — to build businesses that create lasting value. Today, our companies serve clients across multiple industries. Every business follows the same commitment to quality, integrity, and customer satisfaction.",
+      "p2": "We believe every partnership deserves trust and transparency. Our experienced team works with precision and care. We focus on quality, timely service, and long-term business success.",
+      "p3": "In addition, we are committed to providing reliable after-service support to ensure continued satisfaction and smooth operations for our partners and clients.",
+      "p4": "Whether you need manufacturing solutions, recruitment support, business partnerships, or educational services, Kawaii Group provides reliable solutions under one trusted brand.",
+      "p5": "From our roots as a Japan-Bangladesh joint venture to our expansion into global markets, we have consistently delivered excellence. Our integrated approach helps businesses and individuals achieve their goals with confidence.",
+      "stats": {
+        "companies": "Sister Companies",
+        "countries": "Countries Served",
+        "years": "Years of Excellence",
+        "partners": "Global Partners"
+      }
+    },
+    "mv": {
+      "sectionLabel": "Our Direction",
+      "title1": "Driven by",
+      "title2": "Purpose",
+      "title3": "Vision",
+      "missionTitle": "Our Mission",
+      "missionBody": "Our mission is to deliver world-class products and professional services that exceed customer expectations. We build lasting partnerships through quality, innovation, ethical business practices, and consistent performance.",
+      "visionTitle": "Our Vision",
+      "visionBody": "Our vision is to become a globally recognized business group across manufacturing and diversified industries. We strive to create sustainable growth through innovation, excellence, and responsible business leadership."
+    },
+    "values": {
+      "sectionLabel": "What We Stand For",
+      "title1": "Our",
+      "title2": "Core Values",
+      "subtitle": "Our values guide every business decision we make — from choosing partners to delivering products.",
+      "items": [
+        {
+          "icon": "⭐",
+          "name": "Quality",
+          "desc": "Quality in every product and service we deliver to our clients."
+        },
+        {
+          "icon": "🤝",
+          "name": "Integrity",
+          "desc": "Integrity in every business relationship and decision."
+        },
+        {
+          "icon": "💡",
+          "name": "Innovation",
+          "desc": "Innovation that creates real and lasting value for stakeholders."
+        },
+        {
+          "icon": "👥",
+          "name": "Customer-First",
+          "desc": "A customer-first approach guiding every interaction."
+        },
+        {
+          "icon": "📊",
+          "name": "Accountability",
+          "desc": "Full accountability and transparency in all operations."
+        },
+        {
+          "icon": "🔄",
+          "name": "Improvement",
+          "desc": "Continuous improvement across all business processes."
+        },
+        {
+          "icon": "🌱",
+          "name": "Partnerships",
+          "desc": "Long-term partnerships built on trust and mutual success."
+        }
+      ]
+    },
+    "services": {
+      "sectionLabel": "What We Offer",
+      "title1": "Our",
+      "title2": "Services",
+      "subtitle": "Kawaii Group delivers business solutions through a diverse portfolio of specialized companies, serving clients across manufacturing, trade, recruitment, education, technology, and tourism.",
+      "items": [
+        {
+          "icon": "👗",
+          "name": "Apparel Manufacturing"
+        },
+        {
+          "icon": "🧵",
+          "name": "Textile Manufacturing"
+        },
+        {
+          "icon": "📦",
+          "name": "International Trading"
+        },
+        {
+          "icon": "💻",
+          "name": "Technology Solutions"
+        },
+        {
+          "icon": "🌏",
+          "name": "International Recruitment"
+        },
+        {
+          "icon": "👔",
+          "name": "Human Resource Solutions"
+        },
+        {
+          "icon": "✈️",
+          "name": "Overseas Employment Support"
+        },
+        {
+          "icon": "🇯🇵",
+          "name": "Japanese Language Education"
+        },
+        {
+          "icon": "🎓",
+          "name": "International Education Services"
+        },
+        {
+          "icon": "🧭",
+          "name": "Career Counseling"
+        },
+        {
+          "icon": "🛠️",
+          "name": "Skill Development Programs"
+        },
+        {
+          "icon": "🌴",
+          "name": "Travel & Tourism Services"
+        },
+        {
+          "icon": "📋",
+          "name": "Visa Assistance"
+        },
+        {
+          "icon": "📈",
+          "name": "Global Business Development"
+        },
+        {
+          "icon": "🤝",
+          "name": "Strategic Business Partnerships"
+        }
+      ]
+    },
+    "concerns": {
+      "sectionLabel": "Our Family of Companies",
+      "title1": "Our",
+      "title2": "Sister Concerns",
+      "subtitle": "Kawaii Group operates through specialized companies that deliver industry-focused solutions. Together, these companies strengthen our ability to serve customers across local and international markets.",
+      "items": [
+        {
+          "name": "Kawaii Advance Technology & Solutions BD.",
+          "type": "Technology",
+          "desc": "Provides modern technology solutions for businesses, helping organizations improve efficiency through innovative digital services."
+        },
+        {
+          "name": "Achieve Japan",
+          "type": "Education & Training",
+          "desc": "A Japanese language institute and SSW training center, preparing skilled professionals for global careers in Japan."
+        },
+        {
+          "name": "M/S Sanjana International (RL-711)",
+          "type": "International Recruitment",
+          "desc": "Licensed international recruitment agency (No. 711) connecting qualified professionals with overseas employers through ethical practices."
+        },
+        {
+          "name": "Kawaii Trading",
+          "type": "Trade & Commerce",
+          "desc": "Manages domestic and international trade, supplying quality products and developing reliable business partnerships across global markets."
+        },
+        {
+          "name": "The Biman Holidays",
+          "type": "Travel & Tourism",
+          "desc": "Offers professional travel and tourism solutions including travel planning, visa assistance, and holiday packages."
+        },
+        {
+          "name": "Tredmig",
+          "type": "Business Solutions",
+          "desc": "Delivers business solutions supporting innovation and market growth, helping organizations achieve sustainable success."
+        },
+        {
+          "name": "Kawaii Group Japan LTD.",
+          "type": "International Business",
+          "desc": "Strengthens business relationships between Bangladesh, Japan, and international markets, supporting strategic global expansion."
+        },
+        {
+          "name": "Kawaii Japan Career & HR Solutions",
+          "type": "HR & Recruitment",
+          "desc": "Provides national and international recruitment and workforce solutions, connecting skilled professionals with trusted employers."
+        },
+        {
+          "name": "Kawaii Global Ventures LTD.",
+          "type": "Investment & Ventures",
+          "desc": "Explores investment opportunities and international business development, creating strategic partnerships across diverse industries."
+        },
+        {
+          "name": "Kawaii International Education Center LTD.",
+          "type": "Education Services",
+          "desc": "Prepares students and professionals for international opportunities through language education, academic guidance, and career development."
+        }
+      ]
+    },
+    "why": {
+      "sectionLabel": "Why Kawaii Group",
+      "title1": "What Makes Us",
+      "title2": "Different?",
+      "subtitle": "Businesses need reliable partners to achieve sustainable growth. Kawaii Group combines industry expertise with professional service to deliver consistent value.",
+      "yearsLabel": "Years of\nExcellence",
+      "globalLabel": "🌏 Japan · Bangladesh",
+      "points": [
+        "Diversified business portfolio across 10+ sectors",
+        "Strong manufacturing expertise in apparel & textiles",
+        "Trusted international recruitment with License RL-711",
+        "Professional technology solutions for modern businesses",
+        "Reliable global trading network across continents",
+        "Customer-focused approach and ethical business practices",
+        "Experienced management team with 37+ years of heritage",
+        "Long-term partnership commitment with ongoing support",
+        "Japan-Bangladesh joint venture with global reach",
+        "Certified and licensed in multiple regulated industries"
+      ],
+      "commitSectionLabel": "Excellence",
+      "commitTitle1": "Our Commitment to",
+      "commitTitle2": "Excellence",
+      "commitSubtitle": "Excellence drives every part of our business. We maintain high standards across every company, focusing on quality, efficiency, and customer satisfaction.",
+      "commitCards": [
+        {
+          "icon": "🏆",
+          "title": "Quality First",
+          "text": "High standards across every company and service."
+        },
+        {
+          "icon": "⚡",
+          "title": "Efficient Delivery",
+          "text": "On-time, every time. We focus on timely execution."
+        },
+        {
+          "icon": "💎",
+          "title": "Premium Service",
+          "text": "Every client receives dedicated professional support."
+        }
+      ]
+    },
+    "cta": {
+      "sectionLabel": "Together We Grow",
+      "title1": "Kawaii Group Welcomes",
+      "title2": "New Opportunities",
+      "body": "Kawaii Group continues to grow with a clear vision and a strong commitment to excellence. We combine manufacturing expertise with diversified business solutions to create lasting value. Our success comes from strong relationships with customers, partners, and communities. We believe trust creates sustainable growth — and together, we can build a stronger future through quality, innovation, and shared growth.",
+      "btnPrimary": "🤝 Let's Build Together",
+      "btnSecondary": "🏢 Explore Our Companies →"
+    }
   }
 }
