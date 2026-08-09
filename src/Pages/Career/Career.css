@@ -46,7 +46,7 @@
   color: #ffffff;
   padding: 0.55rem 1.35rem;
   border-radius: 9999px;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -54,11 +54,11 @@
 }
 
 .career-badge-icon {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 .career-main-title {
-  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-size: clamp(2.6rem, 5.5vw, 4.25rem);
   font-weight: 900;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -67,7 +67,7 @@
 }
 
 .career-sub-title {
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
   font-weight: 500;
   color: #f1f5f9;
   max-width: 720px;
@@ -89,9 +89,9 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.95rem 1.75rem;
+  padding: 1.05rem 1.9rem;
   border-radius: 0.85rem;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 800;
   text-decoration: none;
   cursor: pointer;
@@ -123,7 +123,7 @@
 }
 
 .career-btn-icon {
-  font-size: 0.85rem;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .career-section-title {
-  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.2rem);
   font-weight: 900;
   color: #0c0c0c;
   margin: 0 0 0.85rem;
@@ -155,7 +155,7 @@
 
 .career-intro-body {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: #475569;
   font-weight: 500;
@@ -208,7 +208,7 @@
 }
 
 .career-highlight-title {
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   font-weight: 900;
   color: #0c0c0c;
   margin: 0 0 1.15rem;
@@ -233,7 +233,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.7rem;
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: #334155;
   line-height: 1.45;
@@ -243,7 +243,7 @@
   color: #be1e2d;
   margin-top: 0.2rem;
   flex-shrink: 0;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .career-list-icon.check {
@@ -267,7 +267,7 @@
 .career-form-hint {
   margin: 0.65rem auto 0;
   max-width: 640px;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #64748b;
   line-height: 1.55;
@@ -311,12 +311,12 @@
 }
 
 .qr-header-icon {
-  font-size: 1.65rem;
+  font-size: 1.85rem;
   color: #be1e2d;
 }
 
 .qr-card-title {
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   font-weight: 900;
   color: #0c0c0c;
   margin: 0;
@@ -338,7 +338,7 @@
 }
 
 .qr-scan-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #475569;
   line-height: 1.5;
@@ -354,7 +354,7 @@
   padding: 1rem 1.5rem;
   background-color: #be1e2d;
   color: #ffffff;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 800;
   border-radius: 0.9rem;
   text-decoration: none;
@@ -385,14 +385,14 @@
 
 .career-form-card-head h3 {
   margin: 0;
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 900;
 }
 
 .career-form-card-head p {
   margin: 0.5rem 0 0;
   color: #d1d5db;
-  font-size: 0.98rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -414,7 +414,7 @@
 }
 
 .form-section-heading {
-  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
   font-weight: 900;
   color: #0c0c0c;
   margin: 0.65rem 0 0;
@@ -427,9 +427,9 @@
   gap: 0.35rem;
   background-color: #fee2e2;
   color: #be1e2d;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  padding: 0.45rem 1rem;
+  padding: 0.5rem 1.1rem;
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -455,8 +455,9 @@
 }
 
 .career-progress-step {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.85rem;
+  height: 2.85rem;
+  font-size: 1.15rem;
   border-radius: 9999px;
   border: 2px solid #e5e7eb;
   background: #ffffff;
@@ -500,7 +501,7 @@
   margin: 0 0 1.25rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #f1f5f9;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   font-weight: 900;
   color: #0f172a;
 }
@@ -535,15 +536,15 @@
 .career-field label {
   font-weight: 800;
   color: #0f172a;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .career-form-input {
   width: 100%;
   border: 1px solid #d1d5db;
   border-radius: 1rem;
-  padding: 0.85rem 1rem;
-  font-size: 1rem;
+  padding: 1rem 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #0f172a;
   background: #ffffff;
@@ -566,7 +567,7 @@
 .career-field-error {
   margin: 0;
   color: #ef4444;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
@@ -587,9 +588,10 @@
   gap: 0.5rem;
   border: 1px solid #e5e7eb;
   border-radius: 0.9rem;
-  padding: 0.7rem 1rem;
+  padding: 0.85rem 1.15rem;
   cursor: pointer;
   font-weight: 700;
+  font-size: 1.15rem;
   color: #334155;
   background: #ffffff;
   transition: all 0.2s ease;
@@ -625,8 +627,8 @@
   gap: 0.5rem;
   border: none;
   border-radius: 0.9rem;
-  padding: 0.9rem 1.35rem;
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
@@ -695,7 +697,7 @@
   border: none;
   background: transparent;
   color: #6b7280;
-  font-size: 1.75rem;
+  font-size: 2rem;
   line-height: 1;
   cursor: pointer;
 }
@@ -710,7 +712,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.35rem;
 }
 
 .career-success-header {
@@ -719,7 +721,7 @@
 
 .career-success-header h3 {
   margin: 0 0 0.45rem;
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   font-weight: 900;
   color: #0f172a;
 }
@@ -727,7 +729,7 @@
 .career-success-header p {
   margin: 0;
   color: #64748b;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.55;
 }
 
@@ -745,6 +747,7 @@
   padding: 0.85rem 1rem;
   border-bottom: 1px solid #e2e8f0;
   font-weight: 800;
+  font-size: 1.2rem;
   color: #0f172a;
   background: #ffffff;
 }
@@ -775,7 +778,7 @@
 
 .career-success-doc-row dt {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #64748b;
   text-transform: uppercase;
@@ -784,7 +787,7 @@
 
 .career-success-doc-row dd {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: #0f172a;
   word-break: break-word;
@@ -794,7 +797,7 @@
   margin: 0;
   padding-left: 1.2rem;
   color: #475569;
-  font-size: 0.92rem;
+  font-size: 1.1rem;
   line-height: 1.55;
 }
 
@@ -806,7 +809,7 @@
   background: #be1e2d;
   color: #ffffff;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(190, 30, 45, 0.3);
 }
