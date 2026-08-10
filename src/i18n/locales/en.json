@@ -961,7 +961,29 @@
     "ctaTitle": "Ready to Build a Strong Team or Elevate Your Career?",
     "ctaText": "Whether you are an employer seeking skilled talent or a job seeker pursuing international pathways, let's connect."
   },
+  "whyChooseSection": {
+    "titleLine1": "WHY CHOOSE",
+    "titleLine2": "KAWAII GROUP?",
+    "subtitle": "Businesses need reliable partners to achieve sustainable growth. Kawaii Group combines industry expertise with professional service to deliver consistent value.",
+    "differentTitle": "What Makes Us Different?",
+    "differentItems": [
+      "Diversified business portfolio",
+      "Strong manufacturing expertise",
+      "Premium apparel and textile solutions",
+      "Trusted international recruitment services",
+      "Professional technology solutions",
+      "Reliable global trading network",
+      "Customer-focused business approach",
+      "Ethical business practices",
+      "Experienced management team",
+      "Long-term partnership commitment"
+    ],
+    "excellenceTitle": "Our Commitment to Excellence",
+    "excellenceBody": "Excellence drives every part of our business. We maintain high standards across every company. We focus on quality, efficiency, and customer satisfaction. Every client receives professional support. Every project receives dedicated attention. Every partnership reflects our commitment to trust and long-term success.",
+    "seeMoreBtn": "See More"
+  },
   "aboutUs": {
+
     "hero": {
       "eyebrow": "🌸 Japan · Bangladesh · Global",
       "title1": "Welcome to",
@@ -1218,5 +1240,27 @@
       "btnPrimary": "🤝 Let's Build Together",
       "btnSecondary": "🏢 Explore Our Companies →"
     }
+  },
+  "whyChooseSection": {
+    "titleLine1": "WHY CHOOSE",
+    "titleLine2": "KAWAII GROUP?",
+    "subtitle": "Businesses need reliable partners to achieve sustainable growth. Kawaii Group combines industry expertise with professional service to deliver consistent value.",
+    "differentTitle": "What Makes Us Different?",
+    "differentItems": [
+      "Diversified business portfolio",
+      "Strong manufacturing expertise",
+      "Premium apparel and textile solutions",
+      "Trusted international recruitment services",
+      "Professional technology solutions",
+      "Reliable global trading network",
+      "Customer-focused business approach",
+      "Ethical business practices",
+      "Experienced management team",
+      "Long-term partnership commitment"
+    ],
+    "excellenceTitle": "Our Commitment to Excellence",
+    "excellenceBody": "Excellence drives every part of our business. We maintain high standards across every company. We focus on quality, efficiency, and customer satisfaction. Every client receives professional support. Every project receives dedicated attention. Every partnership reflects our commitment to trust and long-term success.",
+    "seeMoreBtn": "See More"
   }
 }
+
