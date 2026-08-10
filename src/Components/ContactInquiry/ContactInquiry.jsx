@@ -101,8 +101,7 @@ const ContactInquiry = () => {
       key: 'bd',
       title: bdTitle,
       phones: [
-        { display: '+88 02-55123797', href: 'tel:+880255123797' },
-        { display: '+88 01318304512', href: 'tel:+8801318304512' },
+        { display: '+88 01901850570', href: 'tel:+8801901850570' },
       ],
       email: { display: 'info@kawaiibd.com', href: 'mailto:info@kawaiibd.com' },
       address: bdAddress,

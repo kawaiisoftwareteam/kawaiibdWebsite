@@ -68,7 +68,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
               <a
-                href="https://wa.me/8801318304512"
+                href="https://wa.me/8801901850570"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
@@ -97,8 +97,7 @@ const Footer = () => {
                 <li>
                   <FontAwesomeIcon icon={faPhone} className="siteFooter__icon" />
                   <div>
-                    <a href="tel:+880255123797">+88 02-55123797</a>
-                    <a href="tel:+8801318304512">+88 01318304512</a>
+                    <a href="tel:+8801901850570">+88 01901850570</a>
                   </div>
                 </li>
                 <li>

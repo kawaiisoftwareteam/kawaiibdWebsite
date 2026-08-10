@@ -218,8 +218,8 @@ const ContactForm = () => {
                     <div className="contact_card_content">
                         <h3 className="contact_card_title">{t('contact.side.callTitle')}</h3>
                         <p className="contact_card_body">{t('contact.side.callBody')}</p>
-                        <a href="tel:+880255123797" className="contact_card_link">
-                            +88 02-55123797
+                        <a href="tel:+8801901850570" className="contact_card_link">
+                            +88 01901850570
                         </a>
                     </div>
                 </div>
