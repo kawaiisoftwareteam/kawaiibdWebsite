@@ -348,11 +348,17 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
+      "privacyReview": "Please review the Privacy Policy and check the \"I agree\" box.",
       "privacyAgree": "You agree to our friendly",
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Message sent successfully!",
-      "error": "Failed to send message. Please try again."
+      "error": "Failed to send message. Please try again.",
+      "required": "Required",
+      "namePlaceholder": "Example: John Doe",
+      "emailPlaceholder": "Example: your@example.com",
+      "subjectPlaceholder": "Example: Business Inquiry",
+      "messagePlaceholder": "Please enter your message freely."
     },
     "side": {
       "emailTitle": "Send Us an Email",

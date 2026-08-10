@@ -956,11 +956,17 @@
       "email": "メールアドレス",
       "subject": "件名",
       "message": "メッセージ",
+      "privacyReview": "プライバシーポリシーをご確認の上、「同意する」にチェックを入れてください。",
       "privacyAgree": "当社の",
       "send": "メッセージを送信",
       "sending": "送信中...",
       "success": "メッセージが正常に送信されました！",
-      "error": "送信に失敗しました。もう一度お試しください。"
+      "error": "送信に失敗しました。もう一度お試しください。",
+      "required": "必須",
+      "namePlaceholder": "例：山田 太郎",
+      "emailPlaceholder": "例：your@example.co.jp",
+      "subjectPlaceholder": "例：お問合せの件",
+      "messagePlaceholder": "お問合せ内容をご自由にご入力ください。"
     },
     "side": {
       "emailTitle": "メールでご連絡",
