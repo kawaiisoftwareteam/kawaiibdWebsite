@@ -92,6 +92,8 @@ body.sidebar-open {
 /* ── Main content ── */
 main {
   flex: 1 0 auto;
+  /* Clearance so the footer contact box (half-overlap) doesn't cover page content */
+  padding-bottom: clamp(180px, 22vw, 260px);
 }
 
 footer {

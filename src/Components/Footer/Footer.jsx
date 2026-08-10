@@ -11,6 +11,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
 import kgLogo from '../../Assets/kawaiigroup.png';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import ContactInquiry from '../ContactInquiry/ContactInquiry';
 import { useLocale } from '../../i18n/LocaleContext';
 import './Footer.css';
 
@@ -36,6 +37,10 @@ const Footer = () => {
 
   return (
     <footer className="siteFooter">
+      <div className="siteFooter__inquiry">
+        <ContactInquiry />
+      </div>
+
       <div className="siteFooter__inner">
         <div className="siteFooter__top">
           <div className="siteFooter__brand">

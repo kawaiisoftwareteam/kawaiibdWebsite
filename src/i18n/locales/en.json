@@ -325,6 +325,23 @@
   },
   "contact": {
     "header": "Get in Touch",
+    "inquiry": {
+      "title": "CONTACT",
+      "label": "inquiry",
+      "phoneHint": "For inquiries by phone, please click here.",
+      "emailHint": "For inquiries via email, please click here.",
+      "phoneDisplay": "03-4363-5903",
+      "phoneHref": "tel:+81343635903",
+      "formBtn": "Contact Form",
+      "bd": {
+        "title": "Bangladesh Office:",
+        "address": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219"
+      },
+      "jp": {
+        "title": "Japan Office:",
+        "address": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan"
+      }
+    },
     "form": {
       "lead": "Reach out today to start a conversation with our team",
       "name": "Name",
