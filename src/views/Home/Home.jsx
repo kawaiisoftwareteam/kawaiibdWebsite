@@ -13,7 +13,7 @@ const Home = () => {
       <Hero />
       <SpiderSisterConcerns />
       <HomeAboutUs />
-      <ServicesShowcase />
+      <ServicesShowcase showSeeMore />
       <WhyChooseUs showDifferent={false} />
     </div>
 

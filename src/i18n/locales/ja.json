@@ -978,6 +978,14 @@
   "services": {
     "header": "特定技能（SSW）"
   },
+  "ourBusiness": {
+    "seeMore": "もっと見る",
+    "eyebrow": "KAWAII GROUP PORTFOLIO",
+    "titleLine1": "OUR",
+    "titleLine2": "BUSINESS",
+    "subtitle": "製造、貿易、テクノロジー、教育、人材ソリューションなど、日本・バングラデシュ・世界市場でカワイグループが展開する事業領域の全体像です。",
+    "contactCta": "お問い合わせ"
+  },
   "concerns": {
     "header": "グループ企業"
   },

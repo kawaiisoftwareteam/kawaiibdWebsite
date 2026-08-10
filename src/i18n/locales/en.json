@@ -370,6 +370,14 @@
   "services": {
     "header": "Specified Skilled Worker (SSW)"
   },
+  "ourBusiness": {
+    "seeMore": "See More",
+    "eyebrow": "KAWAII GROUP PORTFOLIO",
+    "titleLine1": "OUR",
+    "titleLine2": "BUSINESS",
+    "subtitle": "A complete view of the sectors where Kawaii Group delivers manufacturing, trade, technology, education, and workforce solutions across Japan, Bangladesh, and global markets.",
+    "contactCta": "Get in Touch"
+  },
   "concerns": {
     "header": "Sister concerns"
   },

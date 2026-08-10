@@ -978,6 +978,14 @@
   "services": {
     "header": "Specified Skilled Worker (SSW)"
   },
+  "ourBusiness": {
+    "seeMore": "আরও দেখুন",
+    "eyebrow": "KAWAII GROUP PORTFOLIO",
+    "titleLine1": "OUR",
+    "titleLine2": "BUSINESS",
+    "subtitle": "জাপান, বাংলাদেশ ও বৈশ্বিক বাজারে উৎপাদন, বাণিজ্য, প্রযুক্তি, শিক্ষা ও কর্মসংস্থান সমাধানে কাওয়াই গ্রুপ যে সব খাতে কাজ করে—তার সম্পূর্ণ চিত্র।",
+    "contactCta": "যোগাযোগ করুন"
+  },
   "concerns": {
     "header": "সহযোগী প্রতিষ্ঠান"
   },

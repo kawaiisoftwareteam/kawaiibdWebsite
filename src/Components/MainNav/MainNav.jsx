@@ -23,7 +23,7 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { useLocale, stripLocalePrefix } from '../../i18n/LocaleContext';
 
 /** Pages with light heroes — use dark nav text for contrast */
-const LIGHT_NAV_PATHS = ['/about', '/contact', '/concerns'];
+const LIGHT_NAV_PATHS = ['/about', '/contact', '/concerns', '/our-business'];
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
