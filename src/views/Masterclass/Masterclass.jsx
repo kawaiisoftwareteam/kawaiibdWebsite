@@ -6,6 +6,10 @@ import './Masterclass.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import banarImg from '../../Assets/banar.jpeg';
 import shunsukeImg from '../../Assets/shunsuke_someya.jpg';
+import specialGuestImg from '../../Assets/special_guest.jpeg';
+
+const masterclassVideo = '/videos/someya.mp4';
+const masterclassVideoPoster = '/videos/someya_poster.jpg';
 
 import { 
   FaCalendarAlt, 
@@ -103,9 +107,30 @@ const Masterclass = () => {
   const [mounted, setMounted] = useState(false);
 
   const formRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  // Pause & reset video when it scrolls out of view
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          video.pause();
+          video.currentTime = 0;
+          video.load(); // restore poster frame
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
   }, []);
 
   // Countdown timer logic
@@ -338,10 +363,10 @@ const Masterclass = () => {
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(registrationLink)}`;
 
   return (
-    <div className="masterclass-container min-h-screen py-4 sm:py-8 px-3 sm:px-6 lg:px-8">
+    <div className="masterclass-container min-h-screen pb-4 sm:pb-8">
       {successModal}
       {/* Visual Hero Banner */}
-      <div className="max-w-6xl mx-auto mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
+      <div className="masterclass-page-shell mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
         <img 
           src={getSrc(banarImg)} 
           alt={t('masterclass.bannerAlt')} 
@@ -350,7 +375,7 @@ const Masterclass = () => {
       </div>
 
       {/* Countdown Timer & Urgency Bar */}
-      <div className="max-w-6xl mx-auto mb-8 sm:mb-12 bg-gray-900 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 border border-gray-800">
+      <div className="masterclass-page-shell mb-8 sm:mb-12 bg-gray-900 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 border border-gray-800">
         <div className="space-y-2 text-center md:text-left w-full md:w-auto">
           <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-xs font-semibold bg-rose-500/25 text-rose-300 border border-rose-500/30 uppercase tracking-widest pulse-animation">
             {t('masterclass.urgency.badge')}
@@ -388,10 +413,10 @@ const Masterclass = () => {
       </div>
 
       {/* Main Info Blocks & Speaker Cards */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-16">
+      <div className="masterclass-page-shell grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] xl:grid-cols-[minmax(0,1fr)_minmax(300px,360px)] gap-8 items-start mb-16">
         
         {/* Left column: Event Grid Cards */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="space-y-8 min-w-0">
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-3 sm:gap-4 hover-card-effect">
@@ -526,6 +551,50 @@ const Masterclass = () => {
             </div>
           </div>
 
+          {/* Speaker video */}
+          <div id="speaker-video-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 overflow-hidden">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+              {t('masterclass.video.title')}
+            </h3>
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-gray-100 bg-black shadow-md aspect-video">
+              <video
+                ref={videoRef}
+                className="w-full h-full object-contain"
+                controls
+                preload="metadata"
+                playsInline
+                poster={masterclassVideoPoster}
+              >
+                <source src={masterclassVideo} type="video/mp4" />
+                {t('masterclass.video.unsupported')}
+              </video>
+            </div>
+          </div>
+
+          {/* Special Guest — Toshiro Kan */}
+          <div id="special-guest-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 relative overflow-hidden">
+            <div className="absolute top-0 right-0 h-40 w-40 bg-rose-50 rounded-bl-full -z-1 opacity-50"></div>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+              <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100">
+                  <img
+                    src={getSrc(specialGuestImg)}
+                    alt={t('masterclass.specialGuest.name')}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="w-full bg-[#be1e2d] rounded-lg py-1.5 text-center text-[10px] uppercase font-bold tracking-widest text-white">
+                  {t('masterclass.specialGuest.badge')}
+                </div>
+              </div>
+              <div className="space-y-2 text-center sm:text-left flex-1">
+                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">{t('masterclass.specialGuest.name')}</h3>
+                <p className="text-lg font-semibold text-[#be1e2d]">{t('masterclass.specialGuest.role')}</p>
+                <p className="text-sm sm:text-base text-gray-500">{t('masterclass.specialGuest.company')}</p>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-150 space-y-6">
             <h3 className="text-2xl font-bold text-gray-900">{t('masterclass.modules.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -587,7 +656,7 @@ const Masterclass = () => {
       </div>
 
       {/* Form Submission Section */}
-      <div id="register-section" className="max-w-4xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-150 overflow-hidden mb-10 sm:mb-16">
+      <div id="register-section" className="masterclass-form-shell bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-150 overflow-hidden mb-10 sm:mb-16">
         
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-5 sm:p-10 relative">
           <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-5 pointer-events-none">
@@ -601,7 +670,7 @@ const Masterclass = () => {
 
         <div className="p-4 sm:p-10">
           
-          <div className="flex justify-between items-center mb-8 sm:mb-12 max-w-xl mx-auto px-1">
+          <div className="flex justify-between items-center mb-8 sm:mb-12 max-w-2xl mx-auto px-1">
             {[1, 2, 3, 4].map((stepNum) => (
               <div key={stepNum} className="flex items-center flex-1 last:flex-initial">
                 <button

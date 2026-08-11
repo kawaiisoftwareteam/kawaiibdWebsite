@@ -4,7 +4,9 @@
     "whoWeAre": "Who We Are",
     "whatWeDo": "What We Do",
     "sisterConcerns": "Sister Concerns",
-    "bimMasterclass": "BIM Masterclass",
+    "bimMasterclass": "BUET Masterclass",
+    "career": "Career",
+    "bimSeminar": "BIM Seminar",
     "getInTouch": "Inquiry",
     "joinUsOn": "Join us on:",
     "tagline": "A Japan-Bangladesh Joint Venture Company",
@@ -564,6 +566,11 @@
         "label": "Incentives",
         "value": "Participation Certificate",
         "note": "Awarded to all active attendees"
+      },
+      "chair": {
+        "label": "Chair",
+        "value": "Prof. Dr. Ishtiaque Ahmed",
+        "note": "Head, Dept. of Civil Engg., BUET"
       }
     },
     "speaker": {
@@ -730,6 +737,16 @@
       "next2Bold": "spam folder",
       "next3": "Handout materials will be emailed 24 hours before the masterclass.",
       "done": "Done"
+    },
+    "video": {
+      "title": "Message from Dr. Shunsuke Someya",
+      "unsupported": "Your browser does not support video playback."
+    },
+    "specialGuest": {
+      "badge": "Special Guest",
+      "name": "Toshiro Kan",
+      "role": "Senior Architect and Advisor",
+      "company": "So Kikaku Sekkei"
     }
   },
   "concernsPage": {
@@ -1346,6 +1363,348 @@
       "body": "Kawaii Group continues to grow with a clear vision and a strong commitment to excellence. We combine manufacturing expertise with diversified business solutions to create lasting value. Our success comes from strong relationships with customers, partners, and communities. We believe trust creates sustainable growth — and together, we can build a stronger future through quality, innovation, and shared growth.",
       "btnPrimary": "🤝 Let's Build Together",
       "btnSecondary": "🏢 Explore Our Companies →"
+    }
+  },
+  "careerPage": {
+    "badge": "Nationwide Opportunity",
+    "title": "Become an Authorized Business Partner",
+    "subtitle": "Build a successful career and business with Kawaii Group Japan. We are recruiting Authorized Business Partners across Bangladesh.",
+    "ctaApply": "Apply Now",
+    "openForm": "Open Form in New Tab",
+    "introTitle": "A new business opportunity with Japan — start today",
+    "introBody": "If you are interested in working with Japan-bound students and job seekers, and want to build a lasting, profitable business in your area, this opportunity is for you. Fill out the form and our team will verify your details and contact you for the next steps.",
+    "servicesTitle": "Our Core Services",
+    "services": [
+      "Japanese language education (JLPT / JFT)",
+      "SSW (Specified Skilled Worker) skill test preparation",
+      "SSW visa processing",
+      "Japan Work (Specialist) visa",
+      "Japan student visa",
+      "Employment & career guidance in Japan"
+    ],
+    "provideTitle": "What We Provide",
+    "provide": [
+      "Official authorization",
+      "Complete training & marketing support",
+      "Digital promotion assistance",
+      "Regular updates & counseling",
+      "Attractive commission & long-term business opportunity"
+    ],
+    "priorityTitle": "Priority Given To",
+    "priority": [
+      "Travel agencies",
+      "Student consultancies",
+      "Training centers",
+      "Language education institutes",
+      "Experienced marketing / business professionals"
+    ],
+    "formTitle": "Agent Information Form",
+    "formHint": "Complete the multi-step form below. After submit, your application summary will appear on screen.",
+    "qrTitle": "Apply via Smartphone",
+    "qrText": "Scan this QR code to open the Career page on your phone and fill the form.",
+    "officialForm": "Official Form",
+    "form": {
+      "cardTitle": "Agent Application",
+      "cardSubtitle": "Fill in your details carefully. Required fields are marked with *.",
+      "stepLabel": "Step",
+      "steps": {
+        "s1": "Personal Information",
+        "s2": "Address & Occupation",
+        "s3": "Business Details"
+      },
+      "fields": {
+        "email": "Email",
+        "fullName": "Full Name (as per NID/Passport)",
+        "fatherName": "Father’s Name",
+        "dob": "Date of Birth",
+        "gender": "Gender",
+        "mobile": "Mobile Number",
+        "currentAddress": "Current Address",
+        "permanentAddress": "Permanent Address",
+        "occupation": "Current Occupation",
+        "experience": "Relevant Experience",
+        "area": "Area of Operation (District/Region)",
+        "capacity": "Monthly Candidate/Client Capacity",
+        "workforce": "Workforce Recruitment",
+        "reason": "Why do you want to work as an agent with us?"
+      },
+      "placeholders": {
+        "email": "your@email.com",
+        "fullName": "Enter your full name",
+        "fatherName": "Enter father’s name",
+        "mobile": "01XXXXXXXXX",
+        "currentAddress": "House, road, area, district",
+        "permanentAddress": "Permanent address",
+        "occupation": "Your current occupation",
+        "area": "e.g. Dhaka, Chattogram",
+        "capacity": "e.g. 20–30",
+        "workforceOther": "Please specify",
+        "reason": "Write a short answer"
+      },
+      "genderLabels": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "experienceLabels": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "workforceOptions": [
+        "SSW",
+        "TITP/ESDP",
+        "Student"
+      ],
+      "other": "Other",
+      "next": "Next",
+      "prev": "Previous",
+      "submit": "Submit Application",
+      "close": "Close",
+      "errors": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Enter a valid email",
+        "fullNameRequired": "Full name is required",
+        "dobRequired": "Date of birth is required",
+        "genderRequired": "Please select gender",
+        "mobileRequired": "Mobile number is required",
+        "capacityRequired": "Monthly capacity is required",
+        "workforceRequired": "Please select workforce type",
+        "workforceOtherRequired": "Please specify other workforce type",
+        "reasonRequired": "Please tell us why you want to join"
+      }
+    },
+    "success": {
+      "title": "Application Submitted",
+      "thankYouPrefix": "Thank you,",
+      "thankYouSuffix": "Your agent application has been recorded successfully.",
+      "summaryTitle": "Your Application Summary",
+      "next1": "Our team will verify your information.",
+      "next2": "You will be contacted for the next steps.",
+      "next3": "Keep your phone and email available.",
+      "done": "Done"
+    }
+  },
+  "seminar": {
+    "bannerAlt": "BIM & Construction DX Seminar with Dr. Shunsuke Someya",
+    "urgency": {
+      "badge": "In-Person Seminar",
+      "title": "Free Registration Closes Soon!",
+      "dateLabel": "Seminar Date: Tuesday, Aug 18, 2026"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "mins": "Mins",
+      "secs": "Secs"
+    },
+    "registerNow": "Register Now",
+    "meta": {
+      "date": {
+        "label": "Date",
+        "value": "Tuesday, Aug 18, 2026",
+        "note": "Add to calendar invites will follow"
+      },
+      "time": {
+        "label": "Time",
+        "value": "4:00 PM onwards",
+        "note": "Bangladesh Time (BST)"
+      },
+      "location": {
+        "label": "Location",
+        "value": "IRIS Banquet Hall, Lakeshore Heights",
+        "note": "Level B-1 · Gulshan 1, Dhaka"
+      },
+      "incentives": {
+        "label": "Incentives",
+        "value": "Participation Certificate",
+        "note": "Awarded to all active attendees"
+      },
+      "deadline": {
+        "label": "Registration Deadline",
+        "value": "Sunday, Aug 16, 2026",
+        "note": "Last date to register"
+      }
+    },
+    "speaker": {
+      "badge": "Speaker",
+      "viewProfile": "View Official Profile",
+      "stats": {
+        "gcRd": "GC R&D",
+        "papers": "Papers",
+        "patents": "Patents",
+        "committees": "Committees"
+      },
+      "name": "Dr. SHUNSUKE SOMEYA",
+      "role": "First-class Architect & Ph.D. in Engineering (Japan)",
+      "company": "Proprietor, Digital Construction Someya R&D",
+      "bio": "Dr. Shunsuke Someya sits at a unique intersection of academic expertise and field operations. With a Ph.D. in Engineering and license as a First-class Architect in Japan, he bridges technology, field practices, and corporate strategy to lead Construction DX and BIM transformations.",
+      "timelineTitle": "Professional Timeline",
+      "timeline": {
+        "t1": "Takenaka Corporation — Technology Research Institute, BIM Promotion Office, HQ Chief Expert (18 years).",
+        "t2": "Ph.D. in Engineering, Shibaura Institute of Technology.",
+        "t3": "ABeam Consulting — Strategy Consultant Manager.",
+        "t4": "Digital Construction Someya R&D — Founder & Proprietor."
+      },
+      "academicRoles": "Academic & Industry Roles:",
+      "academicRolesText": "Committee Member of Architectural Institute of Japan (AIJ) VDC/BIM Subcommittee, and Committee Member of Japan Society for Precision Engineering (JSPE)."
+    },
+    "modules": {
+      "title": "What We Will Cover in this Seminar",
+      "m1": {
+        "title": "Construction DX (Digital Transformation)",
+        "desc": "Understanding Japan's MLIT standards and the transition from manual, legacy systems to digital-native sites."
+      },
+      "m2": {
+        "title": "3D & Multidimensional BIM Workflows",
+        "desc": "Moving from 2D CAD to 3D, 4D (Time Scheduling), and 5D (Costing) workflows with Revit, Navisworks, and Tekla."
+      },
+      "m3": {
+        "title": "Practical Clash Detection",
+        "desc": "Techniques for identifying structural and MEP interference issues before fabrication, saving millions in rework."
+      },
+      "m4": {
+        "title": "Global BIM Job Opportunities",
+        "desc": "How Bangladeshi engineers and architects can prepare their portfolios for international and Japanese firms."
+      }
+    },
+    "share": {
+      "title": "Scan & Share",
+      "desc": "Scan this QR code with your mobile device to open the registration page instantly",
+      "qrAlt": "Scan to Register QR Code",
+      "copyLink": "Copy Shareable Link",
+      "linkCopied": "Link Copied!",
+      "shareEmail": "Share via Email",
+      "emailSubject": "Invitation: BIM and Construction DX Seminar",
+      "emailBody": "Check out this free BIM and Construction DX seminar featuring Dr. Shunsuke Someya on August 18, 2026 at Lakeshore Heights, Gulshan 1. Register here:"
+    },
+    "help": {
+      "title": "Need Help?",
+      "text": "For any technical assistance or bulk registrations, contact Kawaii Group Bangladesh via"
+    },
+    "form": {
+      "title": "Seminar Registration Form",
+      "subtitle": "Please fill out all required details. Venue confirmation and handouts will be sent to your registered email address.",
+      "stepLabel": "Step",
+      "close": "Close",
+      "steps": {
+        "s1": "Contact & Personal Details",
+        "s2": "Educational & Professional Background",
+        "s3": "Dr. Someya Familiarity & Course Feedback",
+        "s4": "Goals, AutoCAD Level & Source tracking"
+      },
+      "fields": {
+        "fullName": "Full Name *",
+        "email": "Email Address *",
+        "phone": "WhatsApp Number/Phone *",
+        "linkedin": "LinkedIn Profile Link (Optional)",
+        "status": "What best describes your current status? *",
+        "org": "Organization / Firm or University Name *",
+        "designation": "Designation / Highest Level of Education & Subject *",
+        "experience": "Years of Experience / Academic Year *",
+        "familiarity": "Have you visited Dr. SHUNSUKE SOMEYA's professional profile / research background? *",
+        "opinion": "What is your opinion on Kawaii Group launching this international BIM & Construction DX Course? *",
+        "bimLevel": "What is your current experience level with BIM software (e.g. Revit, Navisworks, Tekla)? *",
+        "goals": "What is your primary goal for taking this course? (Select all that apply)",
+        "autocad": "What is your proficiency level in 2D Drafting (AutoCAD)?",
+        "suggestions": "Is there any specific topic you would like Dr. Someya to address during the course? (Optional)",
+        "source": "How did you hear about this BIM & Construction DX Course? *"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+880 1XXXX XXXXX",
+        "linkedin": "https://linkedin.com/in/username",
+        "org": "e.g. BUET / Firm Name",
+        "designation": "e.g. Structural Engineer / B.Sc. Civil Engineering",
+        "opinion": "Share your thoughts on the course launch...",
+        "suggestions": "Topics, questions, or specific BIM questions..."
+      },
+      "selectStatus": "Select Status",
+      "selectExperience": "Select Experience / Year",
+      "autocadBeginner": "Beginner",
+      "autocadAdvanced": "Advanced",
+      "prev": "Previous",
+      "next": "Next Step",
+      "submit": "Submit Registration",
+      "statusLabels": {
+        "professional": "Working Professional (Structural/Architectural/Civil/MEP)",
+        "graduate": "Fresh Graduate (0-1 year experience)",
+        "student": "Undergraduate/Postgraduate Student",
+        "educator": "Academic/Educator",
+        "other": "Other"
+      },
+      "experienceLabels": {
+        "finalYear": "Student Final Year",
+        "studentEarly": "Student (1st year-3rd year)",
+        "exp13": "(1-3) years experience",
+        "exp35": "(3-5) years experience",
+        "exp5plus": "5+ years experience"
+      },
+      "familiarityLabels": {
+        "yes": "Yes, I am familiar with his profile and work",
+        "notYet": "Not yet, but I would like to learn more about his background",
+        "no": "No"
+      },
+      "bimLevelLabels": {
+        "beginner": "Complete Beginner (Never used)",
+        "basic": "Basic (Can Navigate models & basic 3D)",
+        "intermediate": "Intermediate (Can model elements & extract drawings)",
+        "advanced": "Advanced (Clash detection, 4D/5D, BEP)"
+      },
+      "goalsLabels": {
+        "g1": "Master practical 3D/4D/5D BIM workflows & clash detection",
+        "g2": "Learn Japanese Construction DX & MLIT standards",
+        "g3": "Improve portfolio for Japanese / International job opportunities",
+        "g4": "Transition my firm from 2D CAD to 3D BIM workflows"
+      },
+      "sourceLabels": {
+        "social": "Kawaii Group Facebook / LinkedIn Page",
+        "university": "University Club / Notice Board",
+        "messaging": "WhatsApp Group / Telegram",
+        "referral": "Referred by a colleague / friend",
+        "other": "Other"
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email Address is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "WhatsApp/Phone number is required",
+        "statusRequired": "Please select your status",
+        "orgRequired": "Organization or University Name is required",
+        "designationRequired": "Designation/Subject is required",
+        "experienceRequired": "Please select your experience level",
+        "familiarityRequired": "Please answer this question",
+        "opinionRequired": "This field is required",
+        "bimLevelRequired": "Please select your BIM experience level",
+        "sourceRequired": "Please select how you heard about us"
+      }
+    },
+    "success": {
+      "title": "Registration Complete!",
+      "thankYouPrefix": "Thank you,",
+      "thankYouSuffix": "Your registration for the BIM & Construction DX Seminar has been successfully recorded.",
+      "nextTitle": "What happens next?",
+      "next1": "A confirmation email with venue details will be sent to you.",
+      "next2": "Please check your spam folder if you do not see it within 10 minutes.",
+      "next2Bold": "spam folder",
+      "next3": "Handout materials will be emailed 24 hours before the seminar.",
+      "done": "Done"
+    },
+    "specialGuest": {
+      "badge": "Special Guest",
+      "name": "Toshiro Kan",
+      "role": "Senior Architect and Advisor",
+      "company": "So Kikaku Sekkei"
+    },
+    "chiefGuest": {
+      "badge": "Chief Guest",
+      "name": "Biswas Jahangir Alam",
+      "role": "Member of Parliament, Narail-1",
+      "company": "People's Republic of Bangladesh",
+      "bio": ""
+    },
+    "video": {
+      "title": "Message from Dr. Shunsuke Someya",
+      "unsupported": "Your browser does not support video playback."
     }
   }
 }

@@ -4,9 +4,11 @@
     "whoWeAre": "私たちについて",
     "whatWeDo": "事業内容",
     "sisterConcerns": "グループ企業",
-    "bimMasterclass": "BIMマスタークラス",
+    "career": "キャリア",
+    "bimMasterclass": "BUETマスタークラス",
     "getInTouch": "Inquiry",
     "joinUsOn": "フォローする:",
+    "bimSeminar": "BIMセミナー",
     "tagline": "日本・バングラデシュ合弁企業",
     "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
   },
@@ -83,6 +85,11 @@
         "label": "特典",
         "value": "参加証明書",
         "note": "積極的に参加された方全員に授与"
+      },
+      "chair": {
+        "label": "座長",
+        "value": "Prof. Dr. Ishtiaque Ahmed",
+        "note": "Head, Dept. of Civil Engg., BUET"
       }
     },
     "speaker": {
@@ -249,6 +256,17 @@
       "next2Bold": "迷惑メールフォルダ",
       "next3": "マスタークラス24時間前に資料をメールでお送りします。",
       "done": "完了"
+    },
+    "video": {
+      "title": "染谷俊介博士からのメッセージ",
+      "unsupported": "お使いのブラウザは動画再生に対応していません。"
+    },
+    "specialGuest": {
+      "badge": "特別ゲスト",
+      "name": "菅 俊郎",
+      "role": "シニアアーキテクト・アドバイザー",
+      "company": "創企画設計",
+      "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
     }
   },
   "concernsPage": {
@@ -1346,6 +1364,349 @@
       "body": "カワイグループは明確なビジョンと卓越性への強いコミットメントを持って成長を続けています。製造の専門知識と多角的なビジネスソリューションを組み合わせて持続的な価値を創造します。私たちの成功は顧客、パートナー、コミュニティとの強い関係から生まれています。信頼が持続可能な成長を生み出すと私たちは信じています——そして共に、品質、イノベーション、共有の成長を通じてより強い未来を築くことができます。",
       "btnPrimary": "🤝 共に築きましょう",
       "btnSecondary": "🏢 グループ企業を見る →"
+    }
+  },
+  "careerPage": {
+    "badge": "全国募集",
+    "title": "認定ビジネスパートナーになりませんか",
+    "subtitle": "Kawaii Group Japanとともに、成功するキャリアとビジネスを築きましょう。バングラデシュ全土でAuthorized Business Partnerを募集しています。",
+    "ctaApply": "今すぐ応募",
+    "openForm": "新しいタブでフォームを開く",
+    "introTitle": "日本との新しいビジネスチャンス — 今日から始めよう",
+    "introBody": "日本へ向かう学生・求職者と関わりたい方、地域で持続可能で収益性のあるビジネスを築きたい方へ。フォームにご記入ください。チームが情報を確認し、次のステップについてご連絡します。",
+    "servicesTitle": "主なサービス",
+    "services": [
+      "日本語教育（JLPT / JFT）",
+      "SSW（特定技能）スキルテスト対策",
+      "SSWビザ手続き",
+      "日本就労（専門職）ビザ",
+      "日本留学ビザ",
+      "日本での就職・キャリアガイダンス"
+    ],
+    "provideTitle": "私たちが提供するもの",
+    "provide": [
+      "公式認可",
+      "充実したトレーニングとマーケティング支援",
+      "デジタルプロモーション支援",
+      "定期的なアップデートとカウンセリング",
+      "魅力的なコミッションと長期的なビジネス機会"
+    ],
+    "priorityTitle": "優先対象",
+    "priority": [
+      "旅行代理店",
+      "留学コンサルタンシー",
+      "トレーニングセンター",
+      "語学教育機関",
+      "経験豊富なマーケティング／ビジネスプロフェッショナル"
+    ],
+    "formTitle": "エージェント情報フォーム",
+    "formHint": "下記のステップフォームにご記入ください。送信後、応募内容の要約が画面に表示されます。",
+    "qrTitle": "スマホで応募",
+    "qrText": "QRコードをスキャンしてキャリアページを開き、フォームに記入してください。",
+    "officialForm": "公式フォーム",
+    "form": {
+      "cardTitle": "エージェント応募",
+      "cardSubtitle": "正確にご記入ください。* は必須項目です。",
+      "stepLabel": "ステップ",
+      "steps": {
+        "s1": "個人情報",
+        "s2": "住所・職業",
+        "s3": "ビジネス詳細"
+      },
+      "fields": {
+        "email": "メール",
+        "fullName": "氏名（NID/パスポート表記）",
+        "fatherName": "父の氏名",
+        "dob": "生年月日",
+        "gender": "性別",
+        "mobile": "携帯番号",
+        "currentAddress": "現住所",
+        "permanentAddress": "本籍・永久住所",
+        "occupation": "現在の職業",
+        "experience": "関連経験",
+        "area": "活動地域（地区／地域）",
+        "capacity": "月間候補者／クライアント対応数",
+        "workforce": "人材募集分野",
+        "reason": "当社のエージェントとして働きたい理由"
+      },
+      "placeholders": {
+        "email": "your@email.com",
+        "fullName": "氏名を入力",
+        "fatherName": "父の氏名を入力",
+        "mobile": "01XXXXXXXXX",
+        "currentAddress": "住所を入力",
+        "permanentAddress": "永久住所を入力",
+        "occupation": "現在の職業",
+        "area": "例：ダッカ、チッタゴン",
+        "capacity": "例：20–30",
+        "workforceOther": "その他を入力",
+        "reason": "簡潔にご記入ください"
+      },
+      "genderLabels": {
+        "male": "男性",
+        "female": "女性"
+      },
+      "experienceLabels": {
+        "yes": "はい",
+        "no": "いいえ"
+      },
+      "workforceOptions": [
+        "SSW",
+        "TITP/ESDP",
+        "Student"
+      ],
+      "other": "その他",
+      "next": "次へ",
+      "prev": "戻る",
+      "submit": "応募を送信",
+      "close": "閉じる",
+      "errors": {
+        "emailRequired": "メールは必須です",
+        "emailInvalid": "有効なメールを入力してください",
+        "fullNameRequired": "氏名は必須です",
+        "dobRequired": "生年月日は必須です",
+        "genderRequired": "性別を選択してください",
+        "mobileRequired": "携帯番号は必須です",
+        "capacityRequired": "月間対応数は必須です",
+        "workforceRequired": "人材募集分野を選択してください",
+        "workforceOtherRequired": "その他の内容を入力してください",
+        "reasonRequired": "応募理由を入力してください"
+      }
+    },
+    "success": {
+      "title": "応募を受け付けました",
+      "thankYouPrefix": "ありがとうございます、",
+      "thankYouSuffix": "エージェント応募は正常に記録されました。",
+      "summaryTitle": "応募内容の要約",
+      "next1": "チームが情報を確認します。",
+      "next2": "次のステップについてご連絡します。",
+      "next3": "電話とメールを受信できる状態にしておいてください。",
+      "done": "完了"
+    }
+  },
+  "seminar": {
+    "bannerAlt": "染谷俊介博士によるBIM・建設DXセミナー",
+    "urgency": {
+      "badge": "対面セミナー",
+      "title": "無料登録はまもなく終了！",
+      "dateLabel": "開催日：2026年8月18日（火）"
+    },
+    "countdown": {
+      "days": "日",
+      "hours": "時間",
+      "mins": "分",
+      "secs": "秒"
+    },
+    "registerNow": "今すぐ登録",
+    "meta": {
+      "date": {
+        "label": "日付",
+        "value": "2026年8月18日（火）",
+        "note": "カレンダー招待は後日送付"
+      },
+      "time": {
+        "label": "時間",
+        "value": "午後4:00〜",
+        "note": "バングラデシュ時間（BST）"
+      },
+      "location": {
+        "label": "会場",
+        "value": "IRIS Banquet Hall, Lakeshore Heights",
+        "note": "B-1階 · Gulshan 1, Dhaka"
+      },
+      "incentives": {
+        "label": "特典",
+        "value": "参加証明書",
+        "note": "積極的な参加者全員に授与"
+      },
+      "deadline": {
+        "label": "登録締切",
+        "value": "2026年8月16日（日）",
+        "note": "登録最終日"
+      }
+    },
+    "speaker": {
+      "badge": "講師",
+      "viewProfile": "公式プロフィールを見る",
+      "stats": {
+        "gcRd": "GC R&D",
+        "papers": "論文",
+        "patents": "特許",
+        "committees": "委員会"
+      },
+      "name": "Dr. SHUNSUKE SOMEYA",
+      "role": "一級建築士・工学博士（日本）",
+      "company": "Digital Construction Someya R&D 代表",
+      "bio": "染谷俊介博士は、学術的専門性と現場実務のユニークな交点に立つ人物です。工学博士および日本の一級建築士の資格を持ち、テクノロジー、現場の実践、企業戦略を結びつけ、建設DXとBIM変革をリードしています。",
+      "timelineTitle": "経歴",
+      "timeline": {
+        "t1": "Takenaka Corporation — 技術研究所、BIM推進室、本社チーフエキスパート（18年）。",
+        "t2": "芝浦工業大学 工学博士。",
+        "t3": "ABeam Consulting — 戦略コンサルタントマネージャー。",
+        "t4": "Digital Construction Someya R&D — 創業者・代表。"
+      },
+      "academicRoles": "学術・業界での役割：",
+      "academicRolesText": "日本建築学会（AIJ）VDC/BIM小委員会委員、日本精密工学会（JSPE）委員。"
+    },
+    "modules": {
+      "title": "本セミナーで扱う内容",
+      "m1": {
+        "title": "建設DX（デジタルトランスフォーメーション）",
+        "desc": "日本のMLIT基準と、手作業・レガシーシステムからデジタルネイティブ現場への移行を理解する。"
+      },
+      "m2": {
+        "title": "3D・多次元BIMワークフロー",
+        "desc": "Revit、Navisworks、Teklaを用いた2D CADから3D、4D（工程）、5D（原価）ワークフローへの移行。"
+      },
+      "m3": {
+        "title": "実践的クラッシュ検出",
+        "desc": "製作前に構造・MEP干渉を特定する手法で、再作業コストを大幅に削減。"
+      },
+      "m4": {
+        "title": "グローバルBIM求人機会",
+        "desc": "バングラデシュのエンジニア・建築家が国際的・日本企業向けにポートフォリオを準備する方法。"
+      }
+    },
+    "share": {
+      "title": "スキャン＆共有",
+      "desc": "モバイル端末でQRコードをスキャンして登録ページをすぐに開く",
+      "qrAlt": "登録用QRコード",
+      "copyLink": "共有リンクをコピー",
+      "linkCopied": "リンクをコピーしました！",
+      "shareEmail": "メールで共有",
+      "emailSubject": "ご招待：BIM・建設DXセミナー",
+      "emailBody": "2026年8月18日、Lakeshore Heights（Gulshan 1）にて染谷俊介博士による無料BIM・建設DXセミナーを開催します。登録はこちら:"
+    },
+    "help": {
+      "title": "お困りですか？",
+      "text": "技術的なサポートや一括登録については、Kawaii Group Bangladeshまでご連絡ください"
+    },
+    "form": {
+      "title": "セミナー登録フォーム",
+      "subtitle": "必須項目をすべてご記入ください。会場のご案内と資料は登録メールアドレスにお送りします。",
+      "stepLabel": "ステップ",
+      "close": "閉じる",
+      "steps": {
+        "s1": "連絡先・個人情報",
+        "s2": "学歴・職歴",
+        "s3": "染谷博士のご認知・コースへのご意見",
+        "s4": "目標・AutoCADレベル・情報源"
+      },
+      "fields": {
+        "fullName": "氏名 *",
+        "email": "メールアドレス *",
+        "phone": "WhatsApp/電話番号 *",
+        "linkedin": "LinkedInプロフィールリンク（任意）",
+        "status": "現在のステータス *",
+        "org": "所属組織 / 会社または大学名 *",
+        "designation": "役職 / 最終学歴と専攻 *",
+        "experience": "経験年数 / 学年 *",
+        "familiarity": "Dr. SHUNSUKE SOMEYAのプロフィール / 研究背景をご覧になりましたか？ *",
+        "opinion": "Kawaii Groupがこの国際BIM・建設DXコースを開始することについてのご意見 *",
+        "bimLevel": "BIMソフトウェア（Revit、Navisworks、Tekla等）の経験レベル *",
+        "goals": "本コースの主な目的（該当するものをすべて選択）",
+        "autocad": "2D製図（AutoCAD）の習熟度",
+        "suggestions": "コース中に染谷博士に取り上げてほしい特定のトピック（任意）",
+        "source": "本BIM・建設DXコースをどこで知りましたか？ *"
+      },
+      "placeholders": {
+        "name": "山田 太郎",
+        "email": "taro.yamada@example.com",
+        "phone": "+880 1XXXX XXXXX",
+        "linkedin": "https://linkedin.com/in/username",
+        "org": "例：BUET / 会社名",
+        "designation": "例：構造エンジニア / 土木工学学士",
+        "opinion": "コース開始についてのご意見をお聞かせください...",
+        "suggestions": "トピック、質問、BIMに関する具体的な質問..."
+      },
+      "selectStatus": "ステータスを選択",
+      "selectExperience": "経験 / 学年を選択",
+      "autocadBeginner": "初級",
+      "autocadAdvanced": "上級",
+      "prev": "前へ",
+      "next": "次のステップ",
+      "submit": "登録を送信",
+      "statusLabels": {
+        "professional": "社会人（構造/建築/土木/MEP）",
+        "graduate": "新卒（0〜1年の経験）",
+        "student": "大学生/大学院生",
+        "educator": "研究者/教育者",
+        "other": "その他"
+      },
+      "experienceLabels": {
+        "finalYear": "学生 — 最終学年",
+        "studentEarly": "学生（1〜3年）",
+        "exp13": "経験1〜3年",
+        "exp35": "経験3〜5年",
+        "exp5plus": "経験5年以上"
+      },
+      "familiarityLabels": {
+        "yes": "はい、プロフィールと業績を知っている",
+        "notYet": "まだだが、背景についてもっと知りたい",
+        "no": "いいえ"
+      },
+      "bimLevelLabels": {
+        "beginner": "完全初心者（未使用）",
+        "basic": "基礎（モデル閲覧・基本3D）",
+        "intermediate": "中級（要素モデリング・図面抽出）",
+        "advanced": "上級（クラッシュ検出、4D/5D、BEP）"
+      },
+      "goalsLabels": {
+        "g1": "実践的3D/4D/5D BIMワークフローとクラッシュ検出を習得",
+        "g2": "日本の建設DXとMLIT基準を学ぶ",
+        "g3": "日本/国際求人向けポートフォリオを強化",
+        "g4": "2D CADから3D BIMワークフローへ移行"
+      },
+      "sourceLabels": {
+        "social": "Kawaii Group Facebook / LinkedInページ",
+        "university": "大学クラブ / 掲示板",
+        "messaging": "WhatsAppグループ / Telegram",
+        "referral": "同僚 / 友人からの紹介",
+        "other": "その他"
+      },
+      "errors": {
+        "nameRequired": "氏名は必須です",
+        "emailRequired": "メールアドレスは必須です",
+        "emailInvalid": "有効なメールアドレスを入力してください",
+        "phoneRequired": "WhatsApp/電話番号は必須です",
+        "statusRequired": "ステータスを選択してください",
+        "orgRequired": "組織または大学名は必須です",
+        "designationRequired": "役職/専攻は必須です",
+        "experienceRequired": "経験レベルを選択してください",
+        "familiarityRequired": "この質問にお答えください",
+        "opinionRequired": "この項目は必須です",
+        "bimLevelRequired": "BIM経験レベルを選択してください",
+        "sourceRequired": "どこで知ったかを選択してください"
+      }
+    },
+    "success": {
+      "title": "登録完了！",
+      "thankYouPrefix": "ありがとうございます、",
+      "thankYouSuffix": "BIM・建設DXセミナーへのご登録が正常に完了しました。",
+      "nextTitle": "次のステップ",
+      "next1": "会場詳細を記載した確認メールをお送りします。",
+      "next2": "10分以内に届かない場合は迷惑メールフォルダをご確認ください。",
+      "next2Bold": "迷惑メールフォルダ",
+      "next3": "セミナーの24時間前にハンドアウト資料をメールでお送りします。",
+      "done": "完了"
+    },
+    "specialGuest": {
+      "badge": "特別ゲスト",
+      "name": "菅 俊郎",
+      "role": "シニアアーキテクト・アドバイザー",
+      "company": "創企画設計",
+      "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
+    },
+    "chiefGuest": {
+      "badge": "主賓",
+      "name": "Biswas Jahangir Alam",
+      "role": "国会議員、ナライル-1",
+      "company": "バングラデシュ人民共和国",
+      "bio": ""
+    },
+    "video": {
+      "title": "染谷俊介博士からのメッセージ",
+      "unsupported": "お使いのブラウザは動画再生に対応していません。"
     }
   }
 }

@@ -23,7 +23,14 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { useLocale, stripLocalePrefix } from '../../i18n/LocaleContext';
 
 /** Pages with light heroes — use dark nav text for contrast */
-const LIGHT_NAV_PATHS = ['/about', '/contact', '/concerns', '/our-business'];
+const LIGHT_NAV_PATHS = [
+  '/about',
+  '/contact',
+  '/concerns',
+  '/our-business',
+  '/masterclass',
+  '/seminar',
+];
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
@@ -255,16 +262,22 @@ const MainNav = () => {
                   Companies
                 </Link>
                 <Link
-                  href={localizedPath('/about')}
-                  className={`mainNav__link ${isLinkActive('/about') ? 'mainNav__link--active' : ''}`}
+                  href={localizedPath('/career')}
+                  className={`mainNav__link ${isLinkActive('/career') ? 'mainNav__link--active' : ''}`}
                 >
-                  Our Vision
+                  {t('nav.career')}
                 </Link>
                 <Link
-                  href={localizedPath('/services')}
-                  className={`mainNav__link ${isLinkActive('/services') ? 'mainNav__link--active' : ''}`}
+                  href={localizedPath('/masterclass')}
+                  className={`mainNav__link ${isLinkActive('/masterclass') ? 'mainNav__link--active' : ''}`}
                 >
-                  Business Areas
+                  {t('nav.bimMasterclass')}
+                </Link>
+                <Link
+                  href={localizedPath('/seminar')}
+                  className={`mainNav__link ${isLinkActive('/seminar') ? 'mainNav__link--active' : ''}`}
+                >
+                  {t('nav.bimSeminar')}
                 </Link>
               </div>
 
@@ -323,11 +336,11 @@ const MainNav = () => {
             Companies
           </Link>
           <Link
-            href={localizedPath('/services')}
-            className={`mobileSidebar__link ${isLinkActive('/services') ? 'mobileSidebar__link--active' : ''}`}
+            href={localizedPath('/career')}
+            className={`mobileSidebar__link ${isLinkActive('/career') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
-            Business Areas
+            {t('nav.career')}
           </Link>
 
           <Link
@@ -336,6 +349,14 @@ const MainNav = () => {
             onClick={closeSidebar}
           >
             {t('nav.bimMasterclass')}
+          </Link>
+
+          <Link
+            href={localizedPath('/seminar')}
+            className={`mobileSidebar__link mobileSidebar__link--hot ${isLinkActive('/seminar') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.bimSeminar')}
           </Link>
 
           <Link

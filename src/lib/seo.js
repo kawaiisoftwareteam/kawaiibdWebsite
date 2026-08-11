@@ -161,6 +161,23 @@ export const PAGE_SEO = {
         'カワイグループのBIMマスタークラスに登録。専門家による実践的な研修と、業界で活躍できるスキルを身につけたいプロフェッショナル・学生向けのキャリア重視の学びを提供します。',
     },
   },
+  '/seminar': {
+    en: {
+      title: 'BIM Seminar | Kawaii Group',
+      description:
+        'Register for the Kawaii Group BIM & Construction DX Seminar with Dr. Shunsuke Someya — in-person learning on digital construction, Japanese standards, and career-ready BIM skills.',
+    },
+    bn: {
+      title: 'BIM সেমিনার | কাওয়াই গ্রুপ',
+      description:
+        'ড. শুনসুকে সোমেয়ার সাথে কাওয়াই গ্রুপের BIM ও Construction DX সেমিনারে নিবন্ধন করুন—ডিজিটাল নির্মাণ, জাপানি মান ও ক্যারিয়ার-প্রস্তুত BIM দক্ষতা নিয়ে ইন-পারসন শিক্ষা।',
+    },
+    ja: {
+      title: 'BIMセミナー | カワイグループ',
+      description:
+        '染谷俊介博士によるカワイグループのBIM・Construction DXセミナーに登録。デジタル建設、日本の基準、キャリアにつながるBIMスキルを対面で学べます。',
+    },
+  },
   '/privacypolicy': {
     en: {
       title: 'Privacy Policy | Kawaii Group',

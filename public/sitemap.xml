@@ -138,4 +138,27 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/masterclass"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/masterclass"/>
   </url>
+
+  <!-- BIM Seminar -->
+  <url>
+    <loc>https://kawaiibd.com/en/seminar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/seminar"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/seminar"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/seminar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/seminar"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/seminar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/seminar"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/seminar"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/seminar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/seminar"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/seminar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/seminar"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/seminar"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/seminar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/seminar"/>
+  </url>
 </urlset>
