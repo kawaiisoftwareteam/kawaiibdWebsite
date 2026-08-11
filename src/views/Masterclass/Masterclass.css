@@ -5,8 +5,8 @@
   font-family: "Jost", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   color: #1f2937;
   background-color: #f9fafb;
-  /* MainNav is position:absolute (two-row) — keep banner clear of the links */
-  padding-top: 8.5rem;
+  /* Mobile: hamburger nav only — keep a tight clearance under the logo row */
+  padding-top: 4.75rem;
   width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -28,9 +28,10 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 640px) {
+/* Desktop: two-row absolute MainNav needs more clearance */
+@media (min-width: 1025px) {
   .masterclass-container {
-    padding-top: 9.5rem;
+    padding-top: 8.5rem;
   }
 }
 

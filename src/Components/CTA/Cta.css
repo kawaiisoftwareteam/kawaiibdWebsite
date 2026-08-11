@@ -1,208 +1,210 @@
-.cta_main
-{
-display: flex;
-/* min-height: 400px; */
-padding: 140px 240px;
-flex-direction: column;
-align-items: center;
-gap: 48px;
-align-self: stretch;
+.cta_main {
+  display: flex;
+  padding: var(--section-pad-y, clamp(48px, 8vw, 120px)) var(--page-pad-x, clamp(16px, 5vw, 80px));
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
 }
-.cta_sub
-{
-display: flex;
-height: 324px;
-align-items: flex-start;
-align-self: stretch;
-border-radius: 15px;
-background: #F1F1F1;
+
+.cta_sub {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 324px;
+  align-items: stretch;
+  align-self: stretch;
+  border-radius: 15px;
+  background: #f1f1f1;
+  overflow: hidden;
 }
 
 .left_cta {
-    display:block;
-    width: 480px;
-    align-self: stretch;
-    position: relative;
-    border-top-left-radius: 15px;     /* Only left side top corner */
-    border-bottom-left-radius: 15px;
-    overflow: hidden;
-  }
-  
-  .main_bg {
-    width: 439px;
-    height: 324px;
-    position: relative;
-    fill: var(--Kawaii-Red, #BE1E2D);
-  }
-  
-  .kg_logo_bg {
-    width: 150px;
-    height: 112.5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .left_frame {
-    position: absolute;
-    width: 222px;
-    height: 275px;
-    top: 49px;
-    left: 258px;
-    background-color: #D9D9D9;
-    clip-path: polygon(
-    222px 0,    /* top-right */
-    222px 275px,/* bottom-right */
-    0 275px,    /* bottom-left */
-    72px 0     /* top-left with 150px offset */
-  );
-    overflow: hidden; /* Add this to crop the overflowing image */
-  }
-  
-  .cta_pic_bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    position: absolute;
-    filter: brightness(0.8);
-    /* Keeping your specific offset */
-  }
-  .left_title {
-    position: absolute;
-    color: #fff;
-    font-family: "Inter";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 40px; /* 100% */
-    top: 50%; /* Center vertically */
-    left: 152px; /* Distance from left */
-    transform: translateY(-50%); /* Perfect vertical centering */
-    /* max-width: 200px; Control text width */
-    z-index: 1; /* Ensure text appears above other elements */
-  }
+  display: block;
+  flex: 0 0 min(40%, 480px);
+  max-width: 480px;
+  position: relative;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  overflow: hidden;
+  min-height: 280px;
+}
 
-.right_cta
-{
-    display: flex;
-    padding: 62px 161px 62px 149px;
-    align-items: center;
-    flex: 1 0 0;
-    align-self: stretch;
-    background: #F1F1F1;
-    border-top-right-radius: 15px;     /* Only left side top corner */
-  border-bottom-right-radius: 15px !important;
+.main_bg {
+  width: 100%;
+  height: 100%;
+  min-height: 324px;
+  position: relative;
+  background: var(--Kawaii-Red, #be1e2d);
 }
-.right_frame{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 30px;
+
+.main_bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
-.right_title
-{
-color: #212121;
-font-family: "Inter";
-font-size: 40px;
-font-style: normal;
-font-weight: 800;
-line-height: 40px; /* 100% */
+
+.kg_logo_bg {
+  width: clamp(80px, 12vw, 150px);
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-.right_description
-{
-overflow: hidden;
-color: #424242;
-text-overflow: ellipsis;
-font-family: "Segoe UI";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px; /* 125% */
+
+.left_frame {
+  position: absolute;
+  width: min(48%, 222px);
+  height: 85%;
+  top: 15%;
+  right: 0;
+  background-color: #d9d9d9;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 32% 0);
+  overflow: hidden;
 }
-.button_cta 
-{
-display: flex;
-padding: 12px 24px !important;
-justify-content: center;
-align-items: center;
-gap: 2px;
-border-radius: 3px;
-border-bottom: 4px solid #000;
-background: #BE1E2D!important;
-transition: background-color 0.3s ease;
+
+.cta_pic_bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
+  filter: brightness(0.8);
 }
+
+.left_title {
+  position: absolute;
+  color: #fff;
+  font-family: Inter, var(--font-display, sans-serif);
+  font-size: clamp(24px, 3vw, 40px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  top: 50%;
+  left: clamp(24px, 8%, 152px);
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 45%;
+}
+
+.right_cta {
+  display: flex;
+  padding: clamp(28px, 4vw, 62px) clamp(24px, 6vw, 80px);
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-self: stretch;
+  background: #f1f1f1;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.right_frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.right_title {
+  color: #212121;
+  font-family: Inter, var(--font-display, sans-serif);
+  font-size: clamp(24px, 3vw, 40px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.right_description {
+  color: #424242;
+  font-family: "Segoe UI", var(--font-body, sans-serif);
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.button_cta {
+  display: flex;
+  padding: 12px 24px !important;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border-radius: 3px;
+  border-bottom: 4px solid #000;
+  background: #be1e2d !important;
+  transition: background-color 0.3s ease;
+}
+
 .button_cta:hover {
-    background: #1A1A1A !important;
-}
-.btn_sub
-{
-display: flex;
-align-items: flex-start;
-}
-.btn_text
-{
-color: #FFF;
-leading-trim: both;
-text-edge: cap;
-font-family: "Segoe UI";
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 22px; /* 137.5% */
+  background: #1a1a1a !important;
 }
 
-@media (max-width: 1280px){
-    .cta_main
-{
-    display: flex;
-    min-height: 650px;
-    padding: 32px 16px;
+.btn_sub {
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn_text {
+  color: #fff;
+  font-family: "Segoe UI", var(--font-body, sans-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+@media (max-width: 1024px) {
+  .cta_sub {
     flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    align-self: stretch;
-    background: #FFF;
-}
-.cta_sub
-{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-align-self: stretch;
-border-radius: 15px 15px 0 15px;
-background: #F1F1F1;
-}
-.left_cta, .right_cta {
-    width: 100%; /* Ensure both take full width */
-    align-self: stretch;
+    min-height: 0;
   }
-.left_cta {
-    overflow: visible;
+
+  .left_cta {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    border-radius: 15px 15px 0 0;
+    min-height: 240px;
   }
-  
-  .right_cta
-{
-    display: flex;
-    padding: 22px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    align-self: stretch;
-    background: #F1F1F1;
-    border-top-right-radius: 0px;     /* Only left side top corner */
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+
+  .main_bg {
+    min-height: 240px;
+  }
+
+  .left_frame {
+    width: min(42%, 200px);
+  }
+
+  .right_cta {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    padding: 24px 20px 28px;
+  }
+
+  .right_frame {
+    gap: 16px;
+  }
 }
-  .right_frame{
-    display: flex;
-padding: 0px 16px;
-flex-direction: column;
-align-items: flex-start;
-gap: 16px;
-align-self: stretch;
-    }
-    .left_title {
-        left: 72px; /* Distance from left */
-      }
+
+@media (max-width: 640px) {
+  .cta_main {
+    padding: 40px 16px;
+    gap: 24px;
+  }
+
+  .left_title {
+    left: 20px;
+    max-width: 55%;
+    font-size: 22px;
+  }
+
+  .kg_logo_bg {
+    width: 72px;
+  }
 }

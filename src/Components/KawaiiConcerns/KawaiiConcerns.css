@@ -21,16 +21,16 @@
 }
 
 .kc-blob-1 {
-    width: 500px;
-    height: 500px;
+    width: min(500px, 80vw);
+    height: min(500px, 80vw);
     top: -100px;
     left: -100px;
     background: radial-gradient(circle, rgba(190, 30, 45, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .kc-blob-2 {
-    width: 600px;
-    height: 600px;
+    width: min(600px, 90vw);
+    height: min(600px, 90vw);
     top: 400px;
     right: -150px;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
@@ -185,7 +185,7 @@
 
 .kc-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
     gap: 28px;
 }
 

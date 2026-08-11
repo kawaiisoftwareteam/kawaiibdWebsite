@@ -1,21 +1,23 @@
-.heroSlider
-{
-width: 1350px;
-height: 670px;
-margin: 100px 240px;
-position: absolute;
-border-radius: 15px;
-background: #FFF;
-z-index:1;
+.heroSlider {
+  width: calc(100% - 2 * var(--page-pad-x, clamp(16px, 5vw, 80px)));
+  max-width: 1350px;
+  height: clamp(320px, 50vw, 670px);
+  margin: clamp(40px, 6vw, 100px) auto;
+  position: relative;
+  border-radius: 15px;
+  background: #fff;
+  z-index: 1;
+  box-sizing: border-box;
 }
+
 .heroSlide {
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    justify-content: center;
-    background-size: cover;
-    height: 670px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
+  background-size: cover;
+  height: clamp(320px, 50vw, 670px);
+  position: relative;
 }
 .heroOverlay {
     position: absolute;

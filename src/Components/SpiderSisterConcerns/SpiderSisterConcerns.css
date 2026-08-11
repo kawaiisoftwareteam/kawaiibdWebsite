@@ -152,8 +152,10 @@
 /* Center card — large rounded rectangle */
 .scGallery__center {
   position: relative;
-  flex: 0 1 clamp(520px, 58vw, 860px);
-  height: clamp(400px, 48vw, 520px);
+  flex: 1 1 clamp(220px, 58vw, 860px);
+  max-width: min(100%, 860px);
+  min-width: 0;
+  height: clamp(280px, 48vw, 520px);
   border-radius: 28px;
   overflow: hidden;
   text-decoration: none;
@@ -234,13 +236,13 @@
 /* ── Responsive ── */
 @media (max-width: 1100px) {
   .scGallery__pill {
-    flex-basis: 90px;
-    height: 400px;
+    flex-basis: clamp(64px, 9vw, 90px);
+    height: clamp(300px, 40vw, 400px);
   }
 
   .scGallery__center {
-    flex-basis: 560px;
-    height: 440px;
+    flex-basis: auto;
+    height: clamp(320px, 42vw, 440px);
   }
 }
 

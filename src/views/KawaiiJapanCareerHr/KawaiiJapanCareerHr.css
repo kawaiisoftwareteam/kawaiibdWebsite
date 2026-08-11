@@ -317,41 +317,60 @@
 
 @media (max-width: 768px) {
   .split-hero {
-    flex-direction: row;
-    height: 65vh;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
   }
 
   .split-side {
-    height: 100%;
+    flex: none;
+    width: 100%;
+    min-height: 42vh;
+    height: auto;
+  }
+
+  .split-side:hover {
+    flex: none;
   }
 
   .split-content-box {
-    padding: 0 8px;
+    padding: 32px 20px;
+    max-width: 100%;
   }
 
   .split-title {
-    font-size: 24px;
+    font-size: clamp(22px, 7vw, 32px);
     margin-bottom: 16px;
     line-height: 1.25;
   }
 
   .split-btn {
-    padding: 10px 24px;
+    padding: 12px 28px;
     font-size: 13px;
     letter-spacing: 0.5px;
   }
 
   .overview-container {
-    padding: 32px 24px;
+    padding: 32px 16px;
     gap: 32px;
   }
-  
+
   .overview-stats {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .kjchs-sectors .section-title,
+  .kjchs-achievements .section-title {
+    font-size: clamp(28px, 8vw, 44px) !important;
   }
 
   .achievement-card {
     padding: 24px !important;
+  }
+
+  .kjchs-page .stat-num,
+  .achievement-card span:first-of-type {
+    font-size: clamp(2rem, 10vw, 3.25rem) !important;
   }
 }

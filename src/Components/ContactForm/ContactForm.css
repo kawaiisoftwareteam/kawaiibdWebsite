@@ -281,7 +281,7 @@
 /* Side / Bottom Contact Cards */
 .contact_cards_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 24px;
   margin-top: 64px;
   padding-top: 40px;
@@ -360,10 +360,24 @@
 
 @media (max-width: 768px) {
   .contact_section_wrapper {
-    padding: 32px 16px 48px 16px;
+    padding: calc(var(--navbar-height, 80px) + 24px) 16px 48px;
   }
+
+  .contact_watermark {
+    white-space: normal;
+    font-size: clamp(2.25rem, 12vw, 3.5rem);
+  }
+
   .contact_cards_container {
     margin-top: 40px;
     padding-top: 30px;
+  }
+
+  .contact_card {
+    padding: 20px;
+  }
+
+  .submit_btn {
+    width: 100%;
   }
 }

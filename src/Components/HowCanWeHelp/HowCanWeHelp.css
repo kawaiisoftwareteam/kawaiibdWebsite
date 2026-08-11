@@ -1,188 +1,192 @@
-.hcwh_main
-{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-}
-.hcwh_top
-{
-    display: flex;
-    width: 100%;
-    min-height: 400px;
-    padding: 96px 240px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.8),  /* This creates 80% dark overlay */
-      rgba(0, 0, 0, 0.8)
-    ), url('../../Assets/hwch_top.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.hcwh_top_content_box
-{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 36px;
-align-self: stretch;
-}
-.hcwh_header
-{
-color: #FFF;
-text-align: center;
-font-size: 55px;
-font-style: normal;
-font-weight: 700;
-line-height: 60px; /* 109.091% */
-align-self: stretch;
+.hcwh_main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.hcwh_content
-{
-    /* overflow: hidden; */
-color: #FFF;
-text-align: center;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.hcwh_top {
+  display: flex;
+  width: 100%;
+  min-height: clamp(280px, 50vw, 400px);
+  padding: clamp(48px, 8vw, 96px) var(--page-pad-x, clamp(16px, 5vw, 80px));
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../../Assets/hwch_top.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.hcwh_top_content_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  align-self: stretch;
+}
+
+.hcwh_header {
+  color: #fff;
+  text-align: center;
+  font-size: clamp(28px, 5vw, 55px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.15;
+  align-self: stretch;
+}
+
+.hcwh_content {
+  color: #fff;
+  text-align: center;
+  font-size: clamp(16px, 2vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .hcwh_bottom {
-    display: flex;
-    width: 100%;
-    min-height: 870px;
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  min-height: 870px;
+  align-items: flex-start;
 }
 
 .hcwh_card {
-    display: flex;
-    min-height: 870px;
-    padding: 12px 12px 40px 12px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 12px;
-    flex: 1 0 0;
-    align-self: stretch;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  min-height: 870px;
+  padding: 12px 12px 40px 12px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .hcwh_card:hover {
-    flex: 2 0 0; /* Expands card to take more space on hover */
+  flex: 2 0 0;
 }
 
 .hcwh_card_box {
-    display: flex;
-    padding: 12px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    align-self: stretch;
-    transition: opacity 0.3s ease; /* Smooth fade-in for content */
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  transition: opacity 0.3s ease;
 }
 
 .hcwh_card_img {
-    border-radius: 5px;
-    background-color: #fff;
-    padding: 5px;
-    width: 200px;
-    height: auto;
-    transition: opacity 0.3s ease; /* Smooth fade-out on hover */
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+  width: min(200px, 70%);
+  height: auto;
+  transition: opacity 0.3s ease;
 }
 
 .hcwh_card_header {
-    color: #FFF;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px; /* 100% */
-    align-self: stretch;
+  color: #fff;
+  font-size: clamp(24px, 3vw, 40px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.15;
+  align-self: stretch;
 }
 
 .hcwh_card_Content {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
-    align-self: stretch;
+  color: #fff;
+  font-family: Inter, var(--font-display, sans-serif);
+  font-size: clamp(14px, 1.6vw, 20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  align-self: stretch;
 }
 
-.hcwh_card_description, .hcwh_card_btn {
-    display: none; /* Hidden by default */
+.hcwh_card_description,
+.hcwh_card_btn {
+  display: none;
 }
 
 .hcwh_card_description {
-    color: #FFF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    align-self: stretch;
-    transition: opacity 0.3s ease; /* Smooth fade-in on hover */
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: stretch;
+  transition: opacity 0.3s ease;
 }
 
 .hcwh_card:hover .hcwh_card_description,
 .hcwh_card:hover .hcwh_card_btn {
-    display: block; /* Shows description and button on hover */
-    opacity: 1; /* Ensures visibility */
+  display: block;
+  opacity: 1;
 }
 
 .hcwh_card:hover .hcwh_card_img {
-    display: none; /* Hides image on hover */
+  display: none;
 }
 
-
-  /* mobile responsiveness  */
-  @media (max-width: 768px) {
-    .hcwh_top
-{
-    display: flex;
-padding: 32px 0px;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-}
-.hcwh_top_content_box
-{ 
-padding: 0px 16px;
-align-items: center;
-gap: 32px;
-}
-.hcwh_header
-{
-font-family: Inter;
-font-size: 60px;
-font-weight: 600;
-}
-
-.hcwh_content
-{
-font-size: 18px;
-}
-.hcwh_bottom {
-flex-direction: column;
-}
-.hcwh_card {
-    min-height: 500px;
-}
-.hcwh_card_description, .hcwh_card_btn {
-    display: block; /* Shows description and button on hover */
-    opacity: 1; /* Ensures visibility */
-}
-.hcwh_card:hover .hcwh_card_img {
-    display: block; /* Shows description and button on hover */
-    opacity: 1; /* Ensures visibility */
-}
-
+@media (max-width: 1024px) {
+  .hcwh_bottom {
+    flex-wrap: wrap;
+    min-height: 0;
   }
 
+  .hcwh_card {
+    flex: 1 1 45%;
+    min-height: 420px;
+  }
+
+  .hcwh_card:hover {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hcwh_top {
+    padding: 40px 16px;
+    min-height: 0;
+  }
+
+  .hcwh_top_content_box {
+    gap: 24px;
+  }
+
+  .hcwh_bottom {
+    flex-direction: column;
+  }
+
+  .hcwh_card {
+    flex: none;
+    width: 100%;
+    min-height: 420px;
+  }
+
+  .hcwh_card:hover {
+    flex: none;
+  }
+
+  .hcwh_card_description,
+  .hcwh_card_btn {
+    display: block;
+    opacity: 1;
+  }
+
+  .hcwh_card:hover .hcwh_card_img {
+    display: block;
+    opacity: 1;
+  }
+}

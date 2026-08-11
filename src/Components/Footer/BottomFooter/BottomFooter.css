@@ -1,6 +1,6 @@
 .mainBottom{
 display: flex;
-padding: 20px 240px;
+padding: 20px var(--page-pad-x, clamp(16px, 5vw, 80px));
 align-items: center;
 gap: 24px;
 align-self: stretch;

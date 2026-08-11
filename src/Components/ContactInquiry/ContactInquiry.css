@@ -207,3 +207,27 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 640px) {
+  .contactInquiry {
+    padding: 28px 0 16px;
+  }
+
+  .contactInquiry__title {
+    font-size: clamp(36px, 12vw, 56px);
+    letter-spacing: 0.02em;
+  }
+
+  .contactInquiry__inner {
+    padding: 0 12px;
+  }
+
+  .contactInquiry__box {
+    padding: 24px 16px 24px;
+    border-radius: 28px;
+  }
+
+  .contactInquiry__formBtn {
+    max-width: none;
+  }
+}

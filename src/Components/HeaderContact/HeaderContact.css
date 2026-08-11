@@ -1,27 +1,25 @@
 .header_main_top {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 400px;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
+  min-height: clamp(180px, 32vw, 400px);
+  height: clamp(180px, 32vw, 400px);
   background-color: #000;
-  /* background-image: url('../../Assets/location.png'); */
   background-size: cover;
   background-position: center;
   position: relative;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Overlay */
 .header_main_top::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(34, 34, 34, 0.7);
   z-index: 1;
   pointer-events: none;
@@ -30,78 +28,100 @@
 /* Left white box */
 .leftWhite {
   display: flex;
-  width: 400px;
-  height: 300px;
+  width: min(28vw, 400px);
+  height: min(75%, 300px);
   position: absolute;
   top: 0;
   left: -28px;
   z-index: 2;
+  object-fit: contain;
+  object-position: left top;
+  pointer-events: none;
 }
 
 /* Right white box */
 .rightWhite {
   display: flex;
-  width: 400px;
-  height: 300px;
+  width: min(28vw, 400px);
+  height: min(75%, 300px);
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 2;
+  object-fit: contain;
+  object-position: right bottom;
+  pointer-events: none;
 }
 
 /* Text Box */
 .text_box_header {
   display: flex;
-  padding-left: 240px;
-  padding-right: 1100px;
+  width: 100%;
+  max-width: var(--page-max, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--page-pad-x, clamp(16px, 5vw, 80px));
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 .text_shape_header {
   display: flex;
-  padding: 24px 24px 24px 0px;
+  padding: 16px 0;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 14px;
+  max-width: min(100%, 720px);
 }
 
 .text_header_ {
-  color: #FFF;
-  font-family: Inter;
-  font-size: 60px;
+  color: #fff;
+  font-family: Inter, var(--font-display, sans-serif);
+  font-size: clamp(28px, 5vw, 60px);
   font-style: normal;
   font-weight: 600;
-  line-height: 80px; /* 133.333% */
+  line-height: 1.2;
+  word-break: break-word;
 }
 
-/* Responsive styles for screens smaller than 768px */
-@media (max-width: 768px) {
-  .header_main_top {
-    height: 180px; /* Shrink height */
-    background-size: cover;  /* Ensure it covers the container */
-    background-repeat: no-repeat; /* Shrink background to fit div */
+@media (max-width: 1024px) {
+  .leftWhite,
+  .rightWhite {
+    opacity: 0.35;
+    width: min(22vw, 220px);
   }
 
-  /* Hide the white boxes */
-  .leftWhite, .rightWhite {
+  .text_box_header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .text_shape_header {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_main_top {
+    min-height: 160px;
+    height: 180px;
+  }
+
+  .leftWhite,
+  .rightWhite {
     display: none;
   }
 
-  /* Center text */
   .text_box_header {
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    justify-content: center; /* Vertically center text */
-    align-items: center; /* Horizontally center text */
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .text_header_ {
-    font-size: 40px; /* Adjust font size for smaller screens */
-    line-height: 50px; /* Adjust line-height for smaller screens */
+    font-size: clamp(26px, 8vw, 40px);
   }
 }

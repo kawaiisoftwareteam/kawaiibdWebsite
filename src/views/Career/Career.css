@@ -27,15 +27,21 @@
   background-position: center;
   background-repeat: no-repeat;
   /* `MainNav` is `position:absolute`; reserve space so hero content doesn't sit under it */
-  padding: calc(7rem + 92px) 1.5rem 6rem;
+  padding: calc(var(--navbar-height, 80px) + 3.5rem) 1.5rem 5rem;
   text-align: center;
   color: #ffffff;
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+  .career-hero {
+    padding: 5rem 1.25rem 3.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .career-hero {
-    padding: calc(7rem + 70px) 1.5rem 6rem;
+    padding: 4.5rem 1rem 3rem;
   }
 }
 

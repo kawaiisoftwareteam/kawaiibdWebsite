@@ -174,19 +174,28 @@
 
 @media (max-width: 768px) {
   .overview-container {
-    padding: 32px 24px;
+    padding: 32px 16px;
     gap: 32px;
   }
-  
+
   .overview-stats {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .kgvl-leadership .grid {
-    grid-template-cols: 1fr;
-    max-w: 320px;
+    grid-template-columns: 1fr;
+    max-width: 320px;
     margin: 0 auto;
+  }
+
+  .kgvl-page .stat-num {
+    font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+  }
+
+  .kgvl-page .section-title,
+  .kgvl-page h2 {
+    font-size: clamp(1.75rem, 7vw, 2.75rem) !important;
   }
 }
 

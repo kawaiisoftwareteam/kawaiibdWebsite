@@ -172,27 +172,50 @@
 
 /* Sub Image — 1/2 on first image, 1/2 outside */
 .homeAboutUsSubImgWrapper {
-  width: 290px;
-  height: 190px;
-  border-radius: 30px;
+  width: min(72%, 290px);
+  height: auto;
+  aspect-ratio: 290 / 190;
+  border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
   /* half height up onto 1st image, half sticking out right */
-  margin-top: -95px;
-  margin-left: calc(100% - 145px);
+  margin-top: -18%;
+  margin-left: min(42%, calc(100% - 145px));
   position: relative;
   z-index: 3;
   border: 2px solid #CD2F3E;
   transition: transform 0.4s ease;
 }
 
+@media (max-width: 639px) {
+  .homeAboutUsImages {
+    overflow-x: clip;
+    padding-bottom: 8px;
+  }
+
+  .homeAboutUsSubImgWrapper {
+    width: min(68%, 240px);
+    margin-left: 36%;
+    border-radius: 20px;
+  }
+
+  .homeAboutUsTitle {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .homeAboutUsSubtitle {
+    font-size: clamp(1.35rem, 6vw, 1.85rem);
+  }
+}
+
 @media (min-width: 640px) {
   .homeAboutUsSubImgWrapper {
     width: 340px;
     height: 220px;
+    aspect-ratio: auto;
     border-radius: 34px;
     margin-top: -110px;
-    margin-left: 280px; /* main ~450 → half of 340 outside */
+    margin-left: min(280px, 55%);
     border-width: 2px;
   }
 }

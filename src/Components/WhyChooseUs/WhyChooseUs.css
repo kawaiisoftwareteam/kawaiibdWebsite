@@ -72,8 +72,9 @@
 .whyChoose__main {
   position: relative;
   z-index: 1;
-  padding: 48px 48px 56px 40px;
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 3.5vw, 48px) clamp(36px, 5vw, 56px) clamp(16px, 3vw, 40px);
   box-sizing: border-box;
+  min-width: 0;
 }
 
 /* ── Header ── */
@@ -483,14 +484,14 @@
 
 @media (max-width: 768px) {
   .whyChoose {
-    --curve-size: 100px;
+    --curve-size: 80px;
     --rail-width: 0px;
-    --bar-height: 40px;
+    --bar-height: 32px;
   }
 
   .whyChoose__panel {
     grid-template-columns: 1fr;
-    margin-left: 20px;
+    margin-left: 12px;
     border-radius: 0 0 0 var(--curve-size);
   }
 

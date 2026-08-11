@@ -1,6 +1,6 @@
 .mainTop {
   display: flex;
-  padding: 80px 240px;
+  padding: clamp(40px, 6vw, 80px) var(--page-pad-x, clamp(16px, 5vw, 80px));
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
