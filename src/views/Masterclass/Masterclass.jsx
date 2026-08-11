@@ -375,37 +375,39 @@ const Masterclass = () => {
       </div>
 
       {/* Countdown Timer & Urgency Bar */}
-      <div className="masterclass-page-shell mb-8 sm:mb-12 bg-gray-900 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 border border-gray-800">
-        <div className="space-y-2 text-center md:text-left w-full md:w-auto">
-          <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-xs font-semibold bg-rose-500/25 text-rose-300 border border-rose-500/30 uppercase tracking-widest pulse-animation">
+      <div className="masterclass-page-shell mb-8 sm:mb-12 bg-gradient-to-br from-gray-950 via-gray-900 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-gray-800/80 relative overflow-hidden">
+        <div className="absolute -right-16 -top-16 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="space-y-2 text-center md:text-left w-full md:w-auto z-10">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30 uppercase tracking-widest pulse-animation">
+            <span className="w-2 h-2 rounded-full bg-rose-400 animate-ping" />
             {t('masterclass.urgency.badge')}
           </span>
-          <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight">{t('masterclass.urgency.title')}</h2>
-          <p className="text-sm sm:text-base text-gray-400">{t('masterclass.urgency.dateLabel')}</p>
+          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">{t('masterclass.urgency.title')}</h2>
+          <p className="text-sm sm:text-base text-gray-300 font-medium">{t('masterclass.urgency.dateLabel')}</p>
         </div>
         
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full md:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6 w-full md:w-auto z-10">
           <div className="flex gap-2 sm:gap-3 text-center w-full sm:w-auto justify-between sm:justify-center">
-            <div className="countdown-unit bg-gray-800 rounded-xl sm:rounded-2xl border border-gray-700 flex-1 sm:flex-none">
-              <span className="countdown-value block font-bold text-rose-500">{timeLeft.days}</span>
+            <div className="countdown-unit bg-gray-900/90 rounded-2xl border border-gray-700/70 p-3 sm:p-4 min-w-[70px] sm:min-w-[84px] flex-1 sm:flex-none shadow-inner">
+              <span className="countdown-value block font-black text-2xl sm:text-3xl text-rose-400">{timeLeft.days}</span>
               <span className="text-[10px] sm:text-xs text-gray-400 uppercase font-bold tracking-wider">{t('masterclass.countdown.days')}</span>
             </div>
-            <div className="countdown-unit bg-gray-800 rounded-xl sm:rounded-2xl border border-gray-700 flex-1 sm:flex-none">
-              <span className="countdown-value block font-bold text-rose-500">{timeLeft.hours}</span>
+            <div className="countdown-unit bg-gray-900/90 rounded-2xl border border-gray-700/70 p-3 sm:p-4 min-w-[70px] sm:min-w-[84px] flex-1 sm:flex-none shadow-inner">
+              <span className="countdown-value block font-black text-2xl sm:text-3xl text-rose-400">{timeLeft.hours}</span>
               <span className="text-[10px] sm:text-xs text-gray-400 uppercase font-bold tracking-wider">{t('masterclass.countdown.hours')}</span>
             </div>
-            <div className="countdown-unit bg-gray-800 rounded-xl sm:rounded-2xl border border-gray-700 flex-1 sm:flex-none">
-              <span className="countdown-value block font-bold text-rose-500">{timeLeft.minutes}</span>
+            <div className="countdown-unit bg-gray-900/90 rounded-2xl border border-gray-700/70 p-3 sm:p-4 min-w-[70px] sm:min-w-[84px] flex-1 sm:flex-none shadow-inner">
+              <span className="countdown-value block font-black text-2xl sm:text-3xl text-rose-400">{timeLeft.minutes}</span>
               <span className="text-[10px] sm:text-xs text-gray-400 uppercase font-bold tracking-wider">{t('masterclass.countdown.mins')}</span>
             </div>
-            <div className="countdown-unit bg-gray-800 rounded-xl sm:rounded-2xl border border-gray-700 flex-1 sm:flex-none">
-              <span className="countdown-value block font-bold text-rose-500">{timeLeft.seconds}</span>
+            <div className="countdown-unit bg-gray-900/90 rounded-2xl border border-gray-700/70 p-3 sm:p-4 min-w-[70px] sm:min-w-[84px] flex-1 sm:flex-none shadow-inner">
+              <span className="countdown-value block font-black text-2xl sm:text-3xl text-rose-400">{timeLeft.seconds}</span>
               <span className="text-[10px] sm:text-xs text-gray-400 uppercase font-bold tracking-wider">{t('masterclass.countdown.secs')}</span>
             </div>
           </div>
           <a
             href="#register-section"
-            className="w-full sm:w-auto inline-flex justify-center items-center px-6 sm:px-10 py-3.5 sm:py-5 rounded-xl text-base sm:text-lg font-black bg-[#be1e2d] text-white hover:bg-[#9E1825] transition-all transform hover:scale-105 shadow-lg shadow-rose-900/20 whitespace-nowrap"
+            className="w-full sm:w-auto inline-flex justify-center items-center px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black bg-gradient-to-r from-[#be1e2d] to-[#e11d48] text-white hover:from-[#9E1825] hover:to-[#be1e2d] transition-all transform hover:-translate-y-0.5 shadow-xl shadow-rose-900/40 whitespace-nowrap"
           >
             {t('masterclass.registerNow')}
           </a>
@@ -413,69 +415,69 @@ const Masterclass = () => {
       </div>
 
       {/* Main Info Blocks & Speaker Cards */}
-      <div className="masterclass-page-shell grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] xl:grid-cols-[minmax(0,1fr)_minmax(300px,360px)] gap-8 items-start mb-16">
+      <div className="masterclass-page-shell grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(320px,380px)] xl:grid-cols-[minmax(0,1fr)_minmax(340px,400px)] gap-8 sm:gap-10 items-start mb-16">
         
         {/* Left column: Event Grid Cards */}
-        <div className="space-y-8 min-w-0">
+        <div className="space-y-8 sm:space-y-10 min-w-0">
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-3 sm:gap-4 hover-card-effect">
-              <div className="p-3 sm:p-4 bg-rose-50 text-[#be1e2d] rounded-xl flex-shrink-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+            <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start gap-4 hover-card-effect relative overflow-hidden group">
+              <div className="p-4 bg-gradient-to-br from-rose-50 to-rose-100/80 text-[#be1e2d] rounded-2xl flex-shrink-0 shadow-inner border border-rose-100/80 group-hover:scale-105 transition-transform duration-300">
                 <FaCalendarAlt className="text-2xl sm:text-3xl" />
               </div>
               <div className="min-w-0">
-                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">{t('masterclass.meta.date.label')}</h4>
-                <p className="text-lg sm:text-2xl font-bold text-gray-850 mt-1">{t('masterclass.meta.date.value')}</p>
-                <p className="text-sm sm:text-base text-gray-550 mt-1">{t('masterclass.meta.date.note')}</p>
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('masterclass.meta.date.label')}</h4>
+                <p className="text-lg sm:text-2xl font-black text-slate-900 mt-1">{t('masterclass.meta.date.value')}</p>
+                <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">{t('masterclass.meta.date.note')}</p>
               </div>
             </div>
 
-            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-3 sm:gap-4 hover-card-effect">
-              <div className="p-3 sm:p-4 bg-rose-50 text-[#be1e2d] rounded-xl flex-shrink-0">
+            <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start gap-4 hover-card-effect relative overflow-hidden group">
+              <div className="p-4 bg-gradient-to-br from-rose-50 to-rose-100/80 text-[#be1e2d] rounded-2xl flex-shrink-0 shadow-inner border border-rose-100/80 group-hover:scale-105 transition-transform duration-300">
                 <FaClock className="text-2xl sm:text-3xl" />
               </div>
               <div className="min-w-0">
-                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">{t('masterclass.meta.time.label')}</h4>
-                <p className="text-lg sm:text-2xl font-bold text-gray-850 mt-1">{t('masterclass.meta.time.value')}</p>
-                <p className="text-sm sm:text-base text-gray-550 mt-1">{t('masterclass.meta.time.note')}</p>
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('masterclass.meta.time.label')}</h4>
+                <p className="text-lg sm:text-2xl font-black text-slate-900 mt-1">{t('masterclass.meta.time.value')}</p>
+                <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">{t('masterclass.meta.time.note')}</p>
               </div>
             </div>
 
-            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-3 sm:gap-4 hover-card-effect">
-              <div className="p-3 sm:p-4 bg-rose-50 text-[#be1e2d] rounded-xl flex-shrink-0">
+            <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start gap-4 hover-card-effect relative overflow-hidden group">
+              <div className="p-4 bg-gradient-to-br from-rose-50 to-rose-100/80 text-[#be1e2d] rounded-2xl flex-shrink-0 shadow-inner border border-rose-100/80 group-hover:scale-105 transition-transform duration-300">
                 <FaMapMarkerAlt className="text-2xl sm:text-3xl" />
               </div>
               <div className="min-w-0">
-                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">{t('masterclass.meta.location.label')}</h4>
-                <p className="text-lg sm:text-2xl font-bold text-gray-850 mt-1">{t('masterclass.meta.location.value')}</p>
-                <p className="text-sm sm:text-base text-gray-550 mt-1">{t('masterclass.meta.location.note')}</p>
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('masterclass.meta.location.label')}</h4>
+                <p className="text-lg sm:text-2xl font-black text-slate-900 mt-1">{t('masterclass.meta.location.value')}</p>
+                <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">{t('masterclass.meta.location.note')}</p>
               </div>
             </div>
 
-            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-3 sm:gap-4 hover-card-effect">
-              <div className="p-3 sm:p-4 bg-rose-50 text-[#be1e2d] rounded-xl flex-shrink-0">
+            <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 flex items-start gap-4 hover-card-effect relative overflow-hidden group">
+              <div className="p-4 bg-gradient-to-br from-rose-50 to-rose-100/80 text-[#be1e2d] rounded-2xl flex-shrink-0 shadow-inner border border-rose-100/80 group-hover:scale-105 transition-transform duration-300">
                 <FaAward className="text-2xl sm:text-3xl" />
               </div>
               <div className="min-w-0">
-                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">{t('masterclass.meta.incentives.label')}</h4>
-                <p className="text-lg sm:text-2xl font-bold text-gray-850 mt-1">{t('masterclass.meta.incentives.value')}</p>
-                <p className="text-sm sm:text-base text-gray-550 mt-1">{t('masterclass.meta.incentives.note')}</p>
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('masterclass.meta.incentives.label')}</h4>
+                <p className="text-lg sm:text-2xl font-black text-slate-900 mt-1">{t('masterclass.meta.incentives.value')}</p>
+                <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">{t('masterclass.meta.incentives.note')}</p>
               </div>
             </div>
           </div>
 
           {/* Dr Shunsuke Someya profile card */}
-          <div id="speaker-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 relative overflow-hidden">
-            <div className="absolute top-0 right-0 h-40 w-40 bg-rose-50 rounded-bl-full -z-1 opacity-50"></div>
-            <div className="flex flex-col md:flex-row items-start gap-6 sm:gap-8">
-              <div className="w-full md:w-48 flex flex-col items-center gap-4 flex-shrink-0">
-                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100 relative">
+          <div id="speaker-section" className="bg-white p-6 sm:p-10 rounded-3xl shadow-sm border border-slate-200/80 relative overflow-hidden hover-card-effect">
+            <div className="absolute top-0 right-0 h-48 w-48 bg-gradient-to-bl from-rose-100/60 to-transparent rounded-bl-full pointer-events-none" />
+            <div className="flex flex-col md:flex-row items-start gap-6 sm:gap-10">
+              <div className="w-full md:w-52 flex flex-col items-center gap-4 flex-shrink-0">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100 relative group">
                   <img 
                     src={getSrc(shunsukeImg)} 
                     alt="Dr. Shunsuke Someya" 
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#be1e2d] bg-opacity-95 py-1 text-center text-[10px] uppercase font-bold tracking-widest text-white">
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#be1e2d] bg-opacity-95 py-1 text-center text-[10px] uppercase font-black tracking-widest text-white">
                     {t('masterclass.speaker.badge')}
                   </div>
                 </div>
@@ -491,72 +493,72 @@ const Masterclass = () => {
                   </a>
                 </div>
 
-                <div className="w-full grid grid-cols-2 gap-2 bg-gray-50 p-3 rounded-xl border border-gray-100 text-center">
+                <div className="w-full grid grid-cols-2 gap-2.5 bg-slate-50/90 p-3.5 rounded-2xl border border-slate-200/60 text-center shadow-inner">
                   <div>
-                    <div className="text-lg font-bold text-gray-800">18 Yr</div>
-                    <div className="text-[10px] text-gray-400 uppercase font-bold">{t('masterclass.speaker.stats.gcRd')}</div>
+                    <div className="text-xl font-black text-slate-900">18 Yr</div>
+                    <div className="text-[10px] text-slate-400 uppercase font-extrabold">{t('masterclass.speaker.stats.gcRd')}</div>
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-gray-800">20+</div>
-                    <div className="text-[10px] text-gray-400 uppercase font-bold">{t('masterclass.speaker.stats.papers')}</div>
+                    <div className="text-xl font-black text-slate-900">20+</div>
+                    <div className="text-[10px] text-slate-400 uppercase font-extrabold">{t('masterclass.speaker.stats.papers')}</div>
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-gray-800">10</div>
-                    <div className="text-[10px] text-gray-400 uppercase font-bold">{t('masterclass.speaker.stats.patents')}</div>
+                    <div className="text-xl font-black text-slate-900">10</div>
+                    <div className="text-[10px] text-slate-400 uppercase font-extrabold">{t('masterclass.speaker.stats.patents')}</div>
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-gray-800">2</div>
-                    <div className="text-[10px] text-gray-400 uppercase font-bold">{t('masterclass.speaker.stats.committees')}</div>
+                    <div className="text-xl font-black text-slate-900">2</div>
+                    <div className="text-[10px] text-slate-400 uppercase font-extrabold">{t('masterclass.speaker.stats.committees')}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-4 flex-1">
+              <div className="space-y-5 flex-1">
                 <div>
-                  <h3 className="text-3xl font-black text-gray-900">{t('masterclass.speaker.name')}</h3>
-                  <p className="text-lg font-semibold text-[#be1e2d] mt-1">{t('masterclass.speaker.role')}</p>
-                  <p className="text-sm text-gray-450 mt-0.5">{t('masterclass.speaker.company')}</p>
+                  <h3 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">{t('masterclass.speaker.name')}</h3>
+                  <p className="text-lg font-bold text-[#be1e2d] mt-1">{t('masterclass.speaker.role')}</p>
+                  <p className="text-sm font-semibold text-slate-500 mt-0.5">{t('masterclass.speaker.company')}</p>
                 </div>
                 
-                <p className="text-lg text-gray-650 leading-relaxed">
+                <p className="text-lg text-slate-600 leading-relaxed font-normal">
                   {t('masterclass.speaker.bio')}
                 </p>
 
-                <div className="space-y-2 border-t border-gray-100 pt-3">
-                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider">{t('masterclass.speaker.timelineTitle')}</h4>
-                  <div className="space-y-2 text-sm text-gray-600">
+                <div className="space-y-3 border-t border-slate-100 pt-4">
+                  <h4 className="text-xs font-extrabold text-slate-400 uppercase tracking-widest">{t('masterclass.speaker.timelineTitle')}</h4>
+                  <div className="space-y-2.5 text-sm text-slate-600 font-medium">
                     <div className="flex gap-4">
-                      <span className="font-bold text-[#be1e2d] w-20 flex-shrink-0">2007–2025</span>
+                      <span className="font-extrabold text-[#be1e2d] w-24 flex-shrink-0">2007–2025</span>
                       <span>{t('masterclass.speaker.timeline.t1')}</span>
                     </div>
                     <div className="flex gap-4">
-                      <span className="font-bold text-[#be1e2d] w-20 flex-shrink-0">2024</span>
+                      <span className="font-extrabold text-[#be1e2d] w-24 flex-shrink-0">2024</span>
                       <span>{t('masterclass.speaker.timeline.t2')}</span>
                     </div>
                     <div className="flex gap-4">
-                      <span className="font-bold text-[#be1e2d] w-20 flex-shrink-0">2025–2026</span>
+                      <span className="font-extrabold text-[#be1e2d] w-24 flex-shrink-0">2025–2026</span>
                       <span>{t('masterclass.speaker.timeline.t3')}</span>
                     </div>
                     <div className="flex gap-4">
-                      <span className="font-bold text-[#be1e2d] w-20 flex-shrink-0">2026–Pres</span>
+                      <span className="font-extrabold text-[#be1e2d] w-24 flex-shrink-0">2026–Pres</span>
                       <span>{t('masterclass.speaker.timeline.t4')}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="text-xs text-gray-500 bg-gray-50 p-3 rounded-lg border border-gray-100">
-                  <b>{t('masterclass.speaker.academicRoles')}</b> {t('masterclass.speaker.academicRolesText')}
+                <div className="text-xs text-slate-600 bg-slate-50/90 p-4 rounded-xl border border-slate-200/70 font-medium">
+                  <b className="font-extrabold text-slate-900">{t('masterclass.speaker.academicRoles')}</b> {t('masterclass.speaker.academicRolesText')}
                 </div>
               </div>
             </div>
           </div>
 
           {/* Speaker video */}
-          <div id="speaker-video-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 overflow-hidden">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <div id="speaker-video-section" className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200/80 overflow-hidden hover-card-effect">
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-4 sm:mb-6 tracking-tight">
               {t('masterclass.video.title')}
             </h3>
-            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-gray-100 bg-black shadow-md aspect-video">
+            <div className="rounded-2xl overflow-hidden border border-slate-200/80 bg-black shadow-lg aspect-video">
               <video
                 ref={videoRef}
                 className="w-full h-full object-contain"
@@ -572,39 +574,40 @@ const Masterclass = () => {
           </div>
 
           {/* Special Guest — Toshiro Kan */}
-          <div id="special-guest-section" className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-150 relative overflow-hidden">
-            <div className="absolute top-0 right-0 h-40 w-40 bg-rose-50 rounded-bl-full -z-1 opacity-50"></div>
+          <div id="special-guest-section" className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200/80 relative overflow-hidden hover-card-effect">
+            <div className="absolute top-0 right-0 h-40 w-40 bg-gradient-to-bl from-rose-100/50 to-transparent rounded-bl-full pointer-events-none"></div>
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
               <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
-                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-gray-100">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-slate-100">
                   <img
                     src={getSrc(specialGuestImg)}
                     alt={t('masterclass.specialGuest.name')}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="w-full bg-[#be1e2d] rounded-lg py-1.5 text-center text-[10px] uppercase font-bold tracking-widest text-white">
+                <div className="w-full bg-[#be1e2d] rounded-lg py-1.5 text-center text-[10px] uppercase font-black tracking-widest text-white">
                   {t('masterclass.specialGuest.badge')}
                 </div>
               </div>
               <div className="space-y-2 text-center sm:text-left flex-1">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">{t('masterclass.specialGuest.name')}</h3>
-                <p className="text-lg font-semibold text-[#be1e2d]">{t('masterclass.specialGuest.role')}</p>
-                <p className="text-sm sm:text-base text-gray-500">{t('masterclass.specialGuest.company')}</p>
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900">{t('masterclass.specialGuest.name')}</h3>
+                <p className="text-lg font-bold text-[#be1e2d]">{t('masterclass.specialGuest.role')}</p>
+                <p className="text-sm sm:text-base text-slate-500 font-medium">{t('masterclass.specialGuest.company')}</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-150 space-y-6">
-            <h3 className="text-2xl font-bold text-gray-900">{t('masterclass.modules.title')}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Modules Section */}
+          <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-sm border border-slate-200/80 space-y-6 hover-card-effect">
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t('masterclass.modules.title')}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {['m1', 'm2', 'm3', 'm4'].map((key, idx) => (
-                <div key={key} className="space-y-2">
-                  <h4 className="font-bold text-gray-800 flex items-center gap-2 text-lg">
-                    <span className="w-6 h-6 bg-rose-50 text-[#be1e2d] rounded-full flex items-center justify-center text-xs flex-shrink-0">{idx + 1}</span>
+                <div key={key} className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/60 hover:bg-white hover:shadow-md transition-all duration-300 space-y-2.5">
+                  <h4 className="font-extrabold text-slate-900 flex items-center gap-3 text-lg">
+                    <span className="w-8 h-8 bg-gradient-to-br from-[#be1e2d] to-[#e11d48] text-white rounded-xl flex items-center justify-center text-sm font-black shadow-md flex-shrink-0">{idx + 1}</span>
                     {t(`masterclass.modules.${key}.title`)}
                   </h4>
-                  <p className="text-base text-gray-500 pl-8">
+                  <p className="text-base text-slate-600 font-medium pl-11 leading-relaxed">
                     {t(`masterclass.modules.${key}.desc`)}
                   </p>
                 </div>
@@ -615,41 +618,41 @@ const Masterclass = () => {
 
         {/* Right column: QR Code / Sharing */}
         <div className="space-y-8 lg:sticky lg:top-24">
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-150 sharing-card space-y-6 flex flex-col items-center">
+          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200/80 sharing-card space-y-6 flex flex-col items-center hover-card-effect">
             <div className="text-center">
-              <h3 className="font-bold text-gray-800 text-xl">{t('masterclass.share.title')}</h3>
-              <p className="text-base text-gray-500 mt-2">{t('masterclass.share.desc')}</p>
+              <h3 className="font-black text-slate-900 text-xl tracking-tight">{t('masterclass.share.title')}</h3>
+              <p className="text-base text-slate-500 font-medium mt-2">{t('masterclass.share.desc')}</p>
             </div>
             
-            <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex items-center justify-center">
+            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200/80 flex items-center justify-center shadow-inner">
               <img 
                 src={qrCodeUrl} 
                 alt={t('masterclass.share.qrAlt')} 
-                className="w-48 h-48 block shadow-inner rounded-lg"
+                className="w-48 h-48 block rounded-xl shadow-sm"
               />
             </div>
 
             <div className="w-full space-y-3 pt-2">
               <button
                 onClick={handleCopyLink}
-                className="w-full flex items-center justify-center gap-2 px-4 py-4 rounded-xl text-base font-bold border border-gray-250 text-gray-700 bg-white hover:bg-gray-55 transition"
+                className="w-full flex items-center justify-center gap-2 px-5 py-4 rounded-2xl text-base font-extrabold border border-slate-200 text-slate-800 bg-white hover:bg-slate-50 transition shadow-sm"
               >
-                {copied ? <><FaCheckCircle className="text-green-500" /> {t('masterclass.share.linkCopied')}</> : <><FaCopy /> {t('masterclass.share.copyLink')}</>}
+                {copied ? <><FaCheckCircle className="text-emerald-500 text-lg" /> {t('masterclass.share.linkCopied')}</> : <><FaCopy className="text-slate-500" /> {t('masterclass.share.copyLink')}</>}
               </button>
               <a
                 href={`mailto:?subject=${encodeURIComponent(t('masterclass.share.emailSubject'))}&body=${encodeURIComponent(`${t('masterclass.share.emailBody')} ${registrationLink}`)}`}
-                className="w-full flex items-center justify-center gap-2 px-4 py-4 rounded-xl text-base font-bold bg-gray-900 text-white hover:bg-gray-950 transition"
+                className="w-full flex items-center justify-center gap-2 px-5 py-4 rounded-2xl text-base font-extrabold bg-slate-900 text-white hover:bg-slate-950 transition shadow-md"
               >
                 <FaShareAlt /> {t('masterclass.share.shareEmail')}
               </a>
             </div>
           </div>
 
-          <div className="bg-rose-50/50 p-6 rounded-3xl border border-rose-100 flex items-start gap-4">
-            <FaInfoCircle className="text-[#be1e2d] text-xl mt-0.5 flex-shrink-0" />
-            <div className="text-sm text-rose-800 space-y-1.5 leading-relaxed">
-              <p className="font-bold">{t('masterclass.help.title')}</p>
-              <p>{t('masterclass.help.text')} <a href="mailto:info@kawaiibd.com" className="font-semibold underline">info@kawaiibd.com</a>.</p>
+          <div className="bg-rose-50/70 p-6 rounded-3xl border border-rose-200/60 flex items-start gap-4 shadow-sm">
+            <FaInfoCircle className="text-[#be1e2d] text-2xl mt-0.5 flex-shrink-0" />
+            <div className="text-sm text-rose-900 space-y-1.5 leading-relaxed font-medium">
+              <p className="font-extrabold text-base">{t('masterclass.help.title')}</p>
+              <p>{t('masterclass.help.text')} <a href="mailto:info@kawaiibd.com" className="font-bold underline text-[#be1e2d]">info@kawaiibd.com</a>.</p>
             </div>
           </div>
         </div>
