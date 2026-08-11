@@ -49,8 +49,13 @@ const HomeAboutUs = () => {
           </h3>
 
           <p className="homeAboutUsDescription">
-            {t('home.aboutUs.description') ||
-              'We are a partner that connects the potential of individuals and businesses. We work closely with each client to address their specific challenges, providing reliable support and sincere assistance to help them grow together and find solutions for the future. We believe that the power of people is the most reliable path to resolution.'}
+            {t('home.aboutUs.description')}
+          </p>
+          <p className="homeAboutUsDescription homeAboutUsDescription--extra">
+            {t('home.aboutUs.description2')}
+          </p>
+          <p className="homeAboutUsDescription homeAboutUsDescription--extra">
+            {t('home.aboutUs.description3')}
           </p>
 
           <div className="homeAboutUsCtaRow">

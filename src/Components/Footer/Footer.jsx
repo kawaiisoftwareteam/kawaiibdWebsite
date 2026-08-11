@@ -42,28 +42,46 @@ const Footer = () => {
       </div>
 
       <div className="siteFooter__inner">
-        <div className="siteFooter__top">
+        <div className="siteFooter__top h-card" itemScope itemType="https://schema.org/Corporation">
           <div className="siteFooter__brand">
-            <Link href={localizedPath('/home')} className="siteFooter__logo">
-              <img src={getSrc(kgLogo)} alt="Kawaii Group" />
+            <Link
+              href={localizedPath('/home')}
+              className="siteFooter__logo u-url"
+              rel="me"
+              itemProp="url"
+            >
+              <img
+                src={getSrc(kgLogo)}
+                alt="Kawaii Group"
+                className="u-photo"
+                itemProp="logo"
+              />
             </Link>
+            <p className="siteFooter__orgName p-name p-org" itemProp="name">
+              Kawaii Group Bangladesh
+            </p>
+            <meta itemProp="legalName" content="Kawaii Group" />
+            <meta itemProp="foundingDate" content="1987" />
+            <p className="siteFooter__aboutBlurb p-note" itemProp="description">
+              {t('footer.aboutBlurb')}
+            </p>
             <p className="siteFooter__tagline">{t('footer.tagline')}</p>
             <div className="siteFooter__social">
               <a
                 href="https://www.linkedin.com/company/kawaii-group-bd"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer me"
                 aria-label="LinkedIn"
-                className="siteFooter__socialLink"
+                className="siteFooter__socialLink u-url"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61563359894758"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer me"
                 aria-label="Facebook"
-                className="siteFooter__socialLink"
+                className="siteFooter__socialLink u-url"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
@@ -97,22 +115,42 @@ const Footer = () => {
                 <li>
                   <FontAwesomeIcon icon={faPhone} className="siteFooter__icon" />
                   <div>
-                    <a href="tel:+8801901850570">+88 01901850570</a>
+                    <a href="tel:+8801901850570" className="p-tel" itemProp="telephone">
+                      +88 01901850570
+                    </a>
                   </div>
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faEnvelope} className="siteFooter__icon" />
-                  <a href="mailto:info@kawaiibd.com">info@kawaiibd.com</a>
+                  <a href="mailto:info@kawaiibd.com" className="u-email" itemProp="email">
+                    info@kawaiibd.com
+                  </a>
                 </li>
-                <li>
+                <li
+                  className="p-adr h-adr"
+                  itemProp="address"
+                  itemScope
+                  itemType="https://schema.org/PostalAddress"
+                >
                   <FontAwesomeIcon icon={faLocationDot} className="siteFooter__icon" />
                   <a
                     href="https://maps.app.goo.gl/sfL5dbZTL65kB2W19"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="p-street-address"
+                    itemProp="streetAddress"
                   >
                     {t('footer.address')}
                   </a>
+                  <span className="p-locality" itemProp="addressLocality" hidden>
+                    Dhaka
+                  </span>
+                  <span className="p-postal-code" itemProp="postalCode" hidden>
+                    1219
+                  </span>
+                  <span className="p-country-name" itemProp="addressCountry" hidden>
+                    BD
+                  </span>
                 </li>
               </ul>
             </div>

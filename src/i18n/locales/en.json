@@ -86,7 +86,7 @@
     ],
     "spiderConcerns": {
       "title": "Our Sister Concerns",
-      "subtitle": "Discover the diverse network of companies driving excellence across global industries under Kawaii Group.",
+      "subtitle": "Discover the diverse network of companies driving excellence across global industries under Kawaii Group. From human resources and Japanese language education to apparel, trade, technology, and Japan-focused ventures, each company contributes specialized capability while sharing Kawaii Group’s commitment to quality, integrity, and long-term partnership.",
       "explore": "Explore All Concerns",
       "allCompanies": "All Companies"
     },
@@ -94,7 +94,9 @@
       "watermark": "ABOUT US",
       "title": "We solve your issues",
       "subtitle": "Answers to the future.",
-      "description": "We are a partner that connects the potential of individuals and businesses. We work closely with each client to address their specific challenges, providing reliable support and sincere assistance to help them grow together and find solutions for the future. We believe that the power of people is the most reliable path to resolution.",
+      "description": "We are a partner that connects the potential of individuals and businesses. We work closely with each client to address their specific challenges, providing reliable support and sincere assistance to help them grow together and find solutions for the future. We believe that the power of people is the most reliable path to resolution. As a Japan-Bangladesh joint venture, Kawaii Group brings decades of cross-border experience in human resources, education, language training, business consultancy, and strategic partnerships that create lasting opportunity for companies and communities.",
+      "description2": "Since 1987, our group has grown into a diversified network spanning manufacturing, apparel, textiles, international trading, technology, recruitment, Japanese language education, and career support. Each sister concern works with shared values of quality, integrity, and customer-first service so partners can rely on one trusted brand across borders.",
+      "description3": "Whether you are a company expanding into Japan or Bangladesh, a student preparing for international study, or a professional seeking overseas employment, Kawaii Group provides practical guidance and end-to-end support. We build bridges between cultures, create smiles through opportunity, and help people and businesses grow with confidence.",
       "cta": "About Kawaii Group"
     },
     "ceo": {
@@ -222,6 +224,16 @@
     "cta": {
       "title": "Looking for a Trusted Partner in Global Business?",
       "text": "From recruitment to technology, we've got you covered."
+    },
+    "bridge": {
+      "eyebrow": "Japan · Bangladesh · Opportunity",
+      "title": "Building bridges between people, business, and culture",
+      "p1": "Kawaii Group was founded with one core idea: to create opportunities. Whether it is helping businesses thrive or guiding individuals toward new career paths, we are passionate about making a meaningful difference. With roots in both Japan and Bangladesh, our journey over the past decades has been about fostering connections — between countries, companies, and communities.",
+      "p2": "Through innovation, education, and strategic partnerships, we support manufacturing excellence, international recruitment, Japanese language learning, technology solutions, and global trade. Our sister concerns work together so clients can access specialized expertise under one trusted group identity.",
+      "p3": "We take time to understand people, culture, and opportunity before proposing solutions. That careful approach helps us deliver reliable service, ethical collaboration, and long-term value for employers, students, professionals, and business partners across borders.",
+      "p4": "From Dhaka to Tokyo and beyond, our teams remain focused on quality, transparency, and customer success. Explore our businesses, learn our story, and connect with us when you are ready to grow with a partner who builds bridges and creates smiles.",
+      "ctaAbout": "Read our story",
+      "ctaContact": "Start a conversation"
     }
   },
   "about": {
@@ -416,40 +428,103 @@
     }
   },
   "privacy": {
-    "pageTitle": "Privacy Policy for Kawaii Group",
+    "pageTitle": "Privacy Policy",
+    "eyebrow": "Legal · Trust · Transparency",
     "effectiveDate": "Effective Date: January 1, 2024",
-    "intro": "Kawaii Group (\"us\", \"we\", or \"our\") operates the website www.kawaiibd.com (the \"Service\"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.",
+    "lastUpdated": "Last Updated: August 10, 2026",
+    "intro": "Kawaii Group (\"us\", \"we\", or \"our\") operates the website www.kawaiibd.com (the \"Service\"). This Privacy Policy explains how we collect, use, store, share, and protect personal information when you visit our website, contact us, register for events, apply for opportunities, or otherwise interact with our Service. It also describes the choices and rights available to you.",
+    "tocLabel": "On this page",
+    "toc": {
+      "overview": "Overview",
+      "info-collect": "Information We Collect",
+      "personal-data": "Personal Data",
+      "usage-data": "Usage Data",
+      "cookies": "Cookies & Tracking",
+      "why-collect": "Why We Collect Data",
+      "disclosure": "Disclosure of Data",
+      "security": "Security of Data",
+      "retention": "Data Retention",
+      "rights": "Your Rights",
+      "children": "Children's Privacy",
+      "international": "International Transfers",
+      "changes": "Policy Changes",
+      "contact": "Contact Us"
+    },
     "sections": {
+      "overview": "Overview",
+      "overviewText": "Kawaii Group Bangladesh is a Japan-Bangladesh joint venture committed to building trust with clients, partners, students, job seekers, and website visitors. Protecting personal information is part of that commitment. We process data only for clear business purposes related to our services in education, human resources, recruitment, manufacturing support, technology, and cross-border collaboration.",
+      "overviewText2": "By using our Service, you acknowledge this Privacy Policy. If you do not agree with our practices, please discontinue use of the Service and contact us with any questions before sharing personal information.",
       "infoCollect": "Information We Collect",
-      "infoCollectIntro": "We collect several different types of information for various purposes to provide and improve our Service to you.",
+      "infoCollectIntro": "We collect several types of information to operate and improve our Service. The information we receive depends on how you interact with us — for example, browsing pages, submitting inquiry forms, registering for a masterclass or seminar, applying for career opportunities, or communicating by email or phone.",
+      "infoCollectIntro2": "We may collect information directly from you, automatically through your device and browser, and from trusted partners when needed to fulfill a request you initiated (such as event registration confirmation or recruitment coordination).",
       "personalData": "Personal Data",
+      "personalDataIntro": "Personal Data means information that can identify you as an individual. Depending on the form or service you use, this may include:",
       "personalItems": [
-        "Email address",
-        "First name and last name",
-        "Phone number",
-        "Address, State, Province, ZIP/Postal code, City"
+        "Full name and preferred form of address",
+        "Email address and phone number",
+        "Postal or office address, city, and country",
+        "Company name, designation, and professional background",
+        "Education, skills, language ability, and career preferences (when you apply or request counseling)",
+        "Messages, attachments, and details you voluntarily submit through contact or registration forms",
+        "Communication preferences and consent records"
       ],
+      "personalDataOutro": "Please provide only accurate information and avoid sharing sensitive data that is not required for your request. If you submit information on behalf of another person, you confirm you have authority to do so.",
       "usageData": "Usage Data",
-      "usageDataText": "We may also collect information on how the Service is accessed and used...",
+      "usageDataText": "We may automatically collect technical and usage information when you access the Service. This can include your IP address, browser type and version, device type, operating system, referring URLs, pages visited, time spent on pages, approximate location derived from IP, and diagnostic logs that help us understand performance and security.",
+      "usageDataText2": "Usage Data helps us improve navigation, fix errors, measure content usefulness, protect against abuse, and understand aggregated traffic patterns. We do not use Usage Data alone to make decisions about you that produce legal or similarly significant effects.",
       "cookies": "Cookies and Tracking Technologies",
-      "cookiesText": "We use cookies and similar tracking technologies...",
+      "cookiesText": "We use cookies and similar technologies to operate the website, remember preferences, measure traffic, and improve user experience. Cookies are small files stored on your device. You can control cookies through your browser settings, though disabling some cookies may affect site functionality.",
+      "cookiesText2": "Where we use analytics tools such as Google Analytics, those providers may process technical identifiers and usage metrics according to their own privacy policies. We configure analytics to support site improvement and audience understanding.",
+      "cookieItems": [
+        "Essential cookies required for core site features and security",
+        "Preference cookies that remember language or interface choices",
+        "Analytics cookies that help us understand how pages are used in aggregate",
+        "Performance cookies that support diagnostics and reliability monitoring"
+      ],
       "whyCollect": "Why We Collect Information",
+      "whyCollectIntro": "We use collected information for legitimate business and service purposes, including:",
       "whyItems": [
-        "To provide and maintain our Service",
-        "To notify you about changes..."
+        "To provide, maintain, and improve the website and related digital services",
+        "To respond to inquiries, partnership requests, and customer support messages",
+        "To process event, seminar, and masterclass registrations and send related updates",
+        "To evaluate career or education inquiries and coordinate follow-up where appropriate",
+        "To send service communications you request or that are necessary for a transaction",
+        "To analyze aggregated usage trends and improve content, accessibility, and performance",
+        "To detect, prevent, and address technical issues, fraud, or unauthorized activity",
+        "To comply with applicable legal obligations and enforce our terms and policies"
       ],
       "disclosure": "Disclosure of Data",
-      "disclosureText": "Kawaii Group may disclose your Personal Data in good faith...",
+      "disclosureText": "We do not sell your Personal Data. We may share information with trusted service providers who help us operate the Service (for example hosting, email delivery, analytics, or form processing), and only as needed to perform those functions under appropriate confidentiality expectations.",
+      "disclosureText2": "We may also disclose information when required by law, regulation, legal process, or governmental request; to protect the rights, safety, and property of Kawaii Group, our users, or the public; or in connection with a corporate reorganization, merger, or asset transfer where data remains protected consistently with this Policy.",
       "security": "Security of Data",
-      "securityText": "The security of your data is important...",
+      "securityText": "The security of your data is important to us. We apply administrative, technical, and organizational measures designed to protect Personal Data against accidental loss, unauthorized access, alteration, or disclosure. These measures may include access controls, secure transmission where appropriate, and staff awareness of privacy responsibilities.",
+      "securityText2": "No method of transmission over the Internet or electronic storage is completely secure. While we strive to use commercially reasonable safeguards, we cannot guarantee absolute security. Please use strong unique passwords for your accounts elsewhere and notify us promptly if you suspect unauthorized use of your information with us.",
+      "retention": "Data Retention",
+      "retentionText": "We retain Personal Data only for as long as needed to fulfill the purposes described in this Policy, unless a longer retention period is required or permitted by law. Retention periods may vary depending on the nature of the interaction (for example, a one-time inquiry versus an ongoing partnership or recruitment process).",
+      "retentionText2": "When information is no longer required, we take steps to delete, anonymize, or securely archive it according to our internal practices and applicable requirements.",
       "rights": "Your Data Protection Rights",
+      "rightsIntro": "Depending on your location and applicable law, you may have rights regarding your Personal Data. Subject to legal limitations, these may include:",
       "rightsItems": [
-        "The right to access..."
+        "The right to access Personal Data we hold about you",
+        "The right to request correction of inaccurate or incomplete information",
+        "The right to request deletion of Personal Data in certain circumstances",
+        "The right to object to or restrict certain processing activities",
+        "The right to withdraw consent where processing is based on consent",
+        "The right to request information about how your data has been used or shared"
       ],
+      "rightsOutro": "To exercise these rights, contact us using the details below. We may need to verify your identity before responding. We will handle requests in good faith and within a reasonable timeframe consistent with applicable law.",
+      "children": "Children's Privacy",
+      "childrenText": "Our Service is not directed to children under the age of 16, and we do not knowingly collect Personal Data from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate steps to review and delete the information where required.",
+      "international": "International Transfers",
+      "internationalText": "Kawaii Group operates with connections between Bangladesh, Japan, and other regions. Information you provide may be processed or stored in countries other than your own, including locations where our offices, partners, or service providers operate.",
+      "internationalText2": "When Personal Data is transferred internationally, we take reasonable steps intended to ensure an appropriate level of protection consistent with this Privacy Policy and applicable legal requirements.",
       "changes": "Changes to This Privacy Policy",
-      "changesText": "We may update our Privacy Policy from time to time...",
+      "changesText": "We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, or business operations. The updated version will be posted on this page with a revised effective or last-updated date.",
+      "changesText2": "We encourage you to review this page periodically. Continued use of the Service after changes become effective constitutes acceptance of the revised Policy, to the extent permitted by law.",
       "contact": "Contact Us",
-      "contactText": "If you have any questions about this Privacy Policy..."
+      "contactText": "If you have questions, concerns, or requests about this Privacy Policy or our data practices, please contact Kawaii Group Bangladesh. We welcome the opportunity to clarify how we handle personal information and to support your privacy preferences.",
+      "contactOrg": "Kawaii Group Bangladesh",
+      "contactCta": "Go to Contact Page"
     }
   },
   "nopages": {
@@ -995,7 +1070,7 @@
   "whyChooseSection": {
     "titleLine1": "WHY CHOOSE",
     "titleLine2": "KAWAII GROUP?",
-    "subtitle": "Businesses need reliable partners to achieve sustainable growth. Kawaii Group combines industry expertise with professional service to deliver consistent value.",
+    "subtitle": "Businesses need reliable partners to achieve sustainable growth. Kawaii Group combines industry expertise with professional service to deliver consistent value across manufacturing, recruitment, education, technology, and cross-border collaboration between Japan and Bangladesh.",
     "differentTitle": "What Makes Us Different?",
     "differentItems": [
       "Diversified business portfolio",
@@ -1010,11 +1085,10 @@
       "Long-term partnership commitment"
     ],
     "excellenceTitle": "Our Commitment to Excellence",
-    "excellenceBody": "Excellence drives every part of our business. We maintain high standards across every company. We focus on quality, efficiency, and customer satisfaction. Every client receives professional support. Every project receives dedicated attention. Every partnership reflects our commitment to trust and long-term success.",
+    "excellenceBody": "Excellence drives every part of our business. We maintain high standards across every company in the group. We focus on quality, efficiency, and customer satisfaction so partners receive dependable results. Every client receives professional support. Every project receives dedicated attention. Every partnership reflects our commitment to trust, transparent communication, and long-term success for communities connected through Japan-Bangladesh opportunity.",
     "seeMoreBtn": "See More"
   },
   "aboutUs": {
-
     "hero": {
       "eyebrow": "🌸 Japan · Bangladesh · Global",
       "title1": "Welcome to",
@@ -1031,9 +1105,11 @@
       "title2": "Lasting Value",
       "p1": "Our journey began with a clear purpose — to build businesses that create lasting value. Today, our companies serve clients across multiple industries. Every business follows the same commitment to quality, integrity, and customer satisfaction.",
       "p2": "We believe every partnership deserves trust and transparency. Our experienced team works with precision and care. We focus on quality, timely service, and long-term business success.",
-      "p3": "In addition, we are committed to providing reliable after-service support to ensure continued satisfaction and smooth operations for our partners and clients.",
+      "p3": "In addition, we are committed to providing reliable after-service support to ensure continued satisfaction and smooth operations for our partners and clients. From first consultation to ongoing collaboration, we stay close to every stakeholder.",
       "p4": "Whether you need manufacturing solutions, recruitment support, business partnerships, or educational services, Kawaii Group provides reliable solutions under one trusted brand.",
       "p5": "From our roots as a Japan-Bangladesh joint venture to our expansion into global markets, we have consistently delivered excellence. Our integrated approach helps businesses and individuals achieve their goals with confidence.",
+      "p6": "Over more than three decades, Kawaii Group has developed deep expertise in apparel and textile manufacturing, international trading, technology solutions, human resource development, Japanese language education, overseas employment support, and travel services. This breadth allows us to design connected solutions rather than isolated services.",
+      "p7": "Our story continues as we invest in people, strengthen Japan-Bangladesh collaboration, and create opportunities that uplift communities. We welcome partners who share our belief that business success and social impact can grow together.",
       "stats": {
         "companies": "Sister Companies",
         "countries": "Countries Served",
@@ -1047,9 +1123,9 @@
       "title2": "Purpose",
       "title3": "Vision",
       "missionTitle": "Our Mission",
-      "missionBody": "Our mission is to deliver world-class products and professional services that exceed customer expectations. We build lasting partnerships through quality, innovation, ethical business practices, and consistent performance.",
+      "missionBody": "Our mission is to deliver world-class products and professional services that exceed customer expectations. We build lasting partnerships through quality, innovation, ethical business practices, and consistent performance. Every team across Kawaii Group works to connect talent, technology, and trade so clients in Bangladesh, Japan, and beyond can grow with confidence and clarity.",
       "visionTitle": "Our Vision",
-      "visionBody": "Our vision is to become a globally recognized business group across manufacturing and diversified industries. We strive to create sustainable growth through innovation, excellence, and responsible business leadership."
+      "visionBody": "Our vision is to become a globally recognized business group across manufacturing and diversified industries. We strive to create sustainable growth through innovation, excellence, and responsible business leadership — becoming the preferred bridge between Japan and Bangladesh for education, careers, commerce, and long-term strategic collaboration."
     },
     "values": {
       "sectionLabel": "What We Stand For",
@@ -1271,27 +1347,5 @@
       "btnPrimary": "🤝 Let's Build Together",
       "btnSecondary": "🏢 Explore Our Companies →"
     }
-  },
-  "whyChooseSection": {
-    "titleLine1": "WHY CHOOSE",
-    "titleLine2": "KAWAII GROUP?",
-    "subtitle": "Businesses need reliable partners to achieve sustainable growth. Kawaii Group combines industry expertise with professional service to deliver consistent value.",
-    "differentTitle": "What Makes Us Different?",
-    "differentItems": [
-      "Diversified business portfolio",
-      "Strong manufacturing expertise",
-      "Premium apparel and textile solutions",
-      "Trusted international recruitment services",
-      "Professional technology solutions",
-      "Reliable global trading network",
-      "Customer-focused business approach",
-      "Ethical business practices",
-      "Experienced management team",
-      "Long-term partnership commitment"
-    ],
-    "excellenceTitle": "Our Commitment to Excellence",
-    "excellenceBody": "Excellence drives every part of our business. We maintain high standards across every company. We focus on quality, efficiency, and customer satisfaction. Every client receives professional support. Every project receives dedicated attention. Every partnership reflects our commitment to trust and long-term success.",
-    "seeMoreBtn": "See More"
   }
 }
-

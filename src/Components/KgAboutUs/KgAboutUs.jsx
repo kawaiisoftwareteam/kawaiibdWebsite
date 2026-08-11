@@ -182,8 +182,11 @@ const IntroSection = ({ t }) => {
           <p className="kg-story__lead">{t('aboutUs.intro.p1')}</p>
           <div className="kg-story__body">
             <p>{t('aboutUs.intro.p2')}</p>
+            <p>{t('aboutUs.intro.p3')}</p>
             <p>{t('aboutUs.intro.p4')}</p>
             <p>{t('aboutUs.intro.p5')}</p>
+            <p>{t('aboutUs.intro.p6')}</p>
+            <p>{t('aboutUs.intro.p7')}</p>
           </div>
         </div>
       </div>
