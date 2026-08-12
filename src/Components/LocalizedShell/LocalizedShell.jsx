@@ -11,11 +11,8 @@ import Footer from '../Footer/Footer';
 import ScrollOnLoad from '../ScrollOnLoad/ScrollOnLoad';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
-import { useRouteLoading } from '../../Hooks/useRouteLoading/useRouteLoading';
 
 const LocalizedShellInner = ({ children }) => {
-  const isLoading = useRouteLoading();
-
   return (
     <>
       <Suspense fallback={null}>
@@ -25,7 +22,6 @@ const LocalizedShellInner = ({ children }) => {
       <Navbar />
       <ScrollOnLoad />
       <ScrollToTop />
-      {isLoading && <LoadingSpinner />}
       <main>{children}</main>
       <Footer />
     </>
