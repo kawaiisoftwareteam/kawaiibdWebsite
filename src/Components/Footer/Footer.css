@@ -240,7 +240,8 @@
   font-size: clamp(48px, 9vw, 96px);
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.05;
+  line-height: 1.15;
+  overflow: visible;
 }
 
 @media (max-width: 1200px) {
@@ -361,6 +362,10 @@
 
   .siteFooter__statement {
     margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 0.12em;
     font-size: clamp(36px, 11vw, 52px);
+    line-height: 1.2;
+    overflow: visible;
   }
 }
