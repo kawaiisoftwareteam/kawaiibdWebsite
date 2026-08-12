@@ -1,44 +1,54 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './Hero.css';
 import gsap from 'gsap';
 import bangladeshSkyline from '../../Assets/view-landmark-asian-sky-reflection.jpg';
 import japanCastle from '../../Assets/cherry-blossoms-castle-himeji-japan.jpg';
 import dhakaCityscape from '../../Assets/pattaya-chonburi-thailand-28-may-2019-beautiful-landscape-cityscape-pattaya-city-is-popular-destination-thailand-with-white-cloud-blue-sky.jpg';
+import { useLocale } from '../../i18n/LocaleContext';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
-const slides = [
-  {
-    name: 'Bangladesh',
-    src: getSrc(bangladeshSkyline),
-    alt: 'Bangladesh city skyline across the river',
-  },
-  {
-    name: 'Japan',
-    src: getSrc(japanCastle),
-    alt: 'Himeji Castle with cherry blossoms in Japan',
-  },
-  {
-    name: 'Dhaka',
-    src: getSrc(dhakaCityscape),
-    alt: 'Dhaka city skyline',
-  },
-];
-
 const Hero = () => {
+  const { t, locale } = useLocale();
   const [currentSlide, setCurrentSlide] = useState(0);
   const titleRef = useRef(null);
   const maskRef = useRef(null);
   const isFirstRender = useRef(true);
+  const slidesRef = useRef([]);
+
+  const slides = useMemo(
+    () => [
+      {
+        id: 'bangladesh',
+        name: t('home.hero.bangladesh'),
+        src: getSrc(bangladeshSkyline),
+        alt: t('home.hero.bangladeshAlt'),
+      },
+      {
+        id: 'japan',
+        name: t('home.hero.japan'),
+        src: getSrc(japanCastle),
+        alt: t('home.hero.japanAlt'),
+      },
+      {
+        id: 'dhaka',
+        name: t('home.hero.dhaka'),
+        src: getSrc(dhakaCityscape),
+        alt: t('home.hero.dhakaAlt'),
+      },
+    ],
+    [t, locale]
+  );
+
+  slidesRef.current = slides;
 
   const fitTitle = useCallback(() => {
     const el = titleRef.current;
     const mask = maskRef.current;
     if (!el || !mask) return;
 
-    // Reset to CSS size, then shrink until the full word fits
     el.style.fontSize = '';
     const maxWidth = mask.clientWidth;
     if (maxWidth <= 0) return;
@@ -54,7 +64,7 @@ const Hero = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % slidesRef.current.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -66,14 +76,25 @@ const Hero = () => {
     return () => window.removeEventListener('resize', onResize);
   }, [fitTitle]);
 
+  // Keep visible title in sync when language changes
+  useEffect(() => {
+    const el = titleRef.current;
+    if (!el || isFirstRender.current) return;
+    el.textContent = slidesRef.current[currentSlide]?.name || '';
+    fitTitle();
+    // Only re-sync label text on locale change; slide animation owns currentSlide updates
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale, fitTitle]);
+
   useEffect(() => {
     const el = titleRef.current;
     if (!el) return;
 
-    // First load: name rises up into view
+    const slideName = slidesRef.current[currentSlide]?.name || '';
+
     if (isFirstRender.current) {
       isFirstRender.current = false;
-      el.textContent = slides[0].name;
+      el.textContent = slidesRef.current[0]?.name || '';
       fitTitle();
       gsap.fromTo(
         el,
@@ -90,7 +111,6 @@ const Hero = () => {
       return;
     }
 
-    // Auto change: current name goes up, next name comes from below
     const tl = gsap.timeline();
     tl.to(el, {
       y: '-110%',
@@ -99,7 +119,7 @@ const Hero = () => {
       ease: 'power2.in',
     })
       .set(el, {
-        textContent: slides[currentSlide].name,
+        textContent: slideName,
         y: '110%',
       })
       .add(() => fitTitle())
@@ -116,10 +136,10 @@ const Hero = () => {
 
   return (
     <div className="hero-container">
-      <section className="hero" id="hero" aria-label="Hero slideshow">
+      <section className="hero" id="hero" aria-label={t('home.hero.ariaLabel')}>
         {slides.map((slide, index) => (
           <div
-            key={slide.name}
+            key={slide.id}
             className={`hero__slide-bg ${index === currentSlide ? 'hero__slide-bg--active' : ''}`}
           >
             <img

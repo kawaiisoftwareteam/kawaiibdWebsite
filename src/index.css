@@ -44,7 +44,12 @@
   }
 }
 
-/* ── Bangla locale ── */
+/* ── Bangla locale — Anek Bangla across the site ── */
+html[lang="bn"] {
+  --font-display: "Anek Bangla", "Jost", sans-serif;
+  --font-body: "Anek Bangla", "Jost", sans-serif;
+}
+
 html[lang="bn"],
 html[lang="bn"] body {
   font-family: "Anek Bangla", "Jost", sans-serif;
@@ -55,6 +60,11 @@ html[lang="bn"] *:not(script):not(style):not(svg):not(path) {
 }
 
 /* ── Japanese locale ── */
+html[lang="ja"] {
+  --font-display: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-body: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
 html[lang="ja"],
 html[lang="ja"] body {
   font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;

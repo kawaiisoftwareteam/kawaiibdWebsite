@@ -120,24 +120,21 @@ const SpiderSisterConcerns = () => {
       <div className="scSection__inner">
         <header className="scIntro">
           <p className="scIntro__eyebrow">
-            {t('nav.sisterConcerns') || 'Sister Concerns'}
+            {t('nav.sisterConcerns')}
           </p>
           <div className="scIntro__row">
             <h2 className="scIntro__title">
-              Reliable Companies
+              {t('home.spiderConcerns.headline1')}
               <br />
-              Stronger <span>Together</span>
+              {t('home.spiderConcerns.headline2')}{' '}
+              <span>{t('home.spiderConcerns.headlineAccent')}</span>
             </h2>
             <div className="scIntro__aside">
               <p className="scIntro__subtitle">
-                {t('home.spiderConcerns.subtitle') ||
-                  'Discover our diverse companies driving innovation and excellence across industries'}
+                {t('home.spiderConcerns.subtitle')}
               </p>
               <Link href={localizedPath('/concerns')} className="scIntro__cta">
-                {t('home.spiderConcerns.allCompanies') &&
-                t('home.spiderConcerns.allCompanies') !== 'home.spiderConcerns.allCompanies'
-                  ? t('home.spiderConcerns.allCompanies')
-                  : 'All Companies'}
+                {t('home.spiderConcerns.allCompanies')}
               </Link>
             </div>
           </div>

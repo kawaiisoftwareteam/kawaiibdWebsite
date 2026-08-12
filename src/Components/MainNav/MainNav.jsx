@@ -226,13 +226,13 @@ const MainNav = () => {
             {/* Top Utility Bar */}
             <div className="mainNav__top-bar">
               <Link href={localizedPath('/home#news')} className="mainNav__top-link">
-                News & Media
+                {t('nav.newsMedia')}
               </Link>
               <Link href={localizedPath('/contact')} className="mainNav__top-link">
-                Contact Us
+                {t('nav.contactUs')}
               </Link>
               <div className="mainNav__top-social">
-                <span>Join us on:</span>
+                <span>{t('nav.joinUsOn')}</span>
                 <LanguageSwitcher isNavbar={true} />
               </div>
             </div>
@@ -253,13 +253,13 @@ const MainNav = () => {
                   href={localizedPath('/about')}
                   className={`mainNav__link ${isLinkActive('/about') ? 'mainNav__link--active' : ''}`}
                 >
-                  About Us
+                  {t('nav.aboutUs')}
                 </Link>
                 <Link
                   href={localizedPath('/concerns')}
                   className={`mainNav__link ${isLinkActive('/concerns') ? 'mainNav__link--active' : ''}`}
                 >
-                  Companies
+                  {t('nav.companies')}
                 </Link>
                 <Link
                   href={localizedPath('/career')}
@@ -283,7 +283,7 @@ const MainNav = () => {
 
               {/* Red Rectangular CTA Button */}
               <Link href={localizedPath('/contact')} className="mainNav__cta">
-                Get in Touch
+                {t('nav.getInTouch')}
               </Link>
             </div>
           </div>
@@ -326,14 +326,14 @@ const MainNav = () => {
             className={`mobileSidebar__link ${isLinkActive('/about') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
-            About Us
+            {t('nav.aboutUs')}
           </Link>
           <Link
             href={localizedPath('/concerns')}
             className={`mobileSidebar__link ${isLinkActive('/concerns') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
-            Companies
+            {t('nav.companies')}
           </Link>
           <Link
             href={localizedPath('/career')}
@@ -364,7 +364,7 @@ const MainNav = () => {
             className="mobileSidebar__link"
             onClick={closeSidebar}
           >
-            News & Media
+            {t('nav.newsMedia')}
           </Link>
 
           <Link

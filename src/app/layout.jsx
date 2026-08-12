@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Script from 'next/script';
 import GoogleAnalytics from '../Components/GoogleAnalytics/GoogleAnalytics';
 import { META, DEFAULT_LOCALE } from '../i18n/config';
 import { SITE_URL, SITE_NAME, SITE_OG_IMAGE, buildPageMetadata } from '../lib/seo';
@@ -40,10 +41,23 @@ export const metadata = {
   },
 };
 
+/** Sets <html lang> from the URL locale before paint so Anek Bangla / JP fonts apply. */
+const localeLangScript = `
+(function () {
+  try {
+    var m = location.pathname.match(/^\\/(en|bn|ja)(?=\\/|$)/);
+    if (m) document.documentElement.lang = m[1];
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <Script id="kg-locale-lang" strategy="beforeInteractive">
+          {localeLangScript}
+        </Script>
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>

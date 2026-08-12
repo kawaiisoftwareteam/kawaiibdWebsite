@@ -31,7 +31,7 @@
   }
 }
 
-/* Background Watermark "ABOUT US" — left side */
+/* Background Watermark — left side */
 .homeAboutUsWatermark {
   position: absolute;
   left: 0.5rem;
@@ -39,7 +39,7 @@
   top: 34%;
   transform: translateY(-50%);
   font-family: var(--font-display, 'Jost', sans-serif);
-  font-size: 4.5rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   color: rgba(205, 47, 62, 0.22);
@@ -51,6 +51,8 @@
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1;
+  max-height: 70vh;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -58,7 +60,7 @@
     left: 0.65rem;
     right: auto;
     top: 36%;
-    font-size: 6rem;
+    font-size: clamp(3.5rem, 5vw, 6rem);
     letter-spacing: 0.05em;
   }
 }
@@ -68,7 +70,21 @@
     left: 0.85rem;
     right: auto;
     top: 38%;
-    font-size: 7rem;
+    font-size: clamp(4rem, 5.5vw, 7rem);
+  }
+}
+
+html[lang="bn"] .homeAboutUsWatermark,
+html[lang="ja"] .homeAboutUsWatermark {
+  text-transform: none;
+  letter-spacing: 0.08em;
+  font-size: clamp(2rem, 3.5vw, 3.75rem);
+}
+
+@media (min-width: 1024px) {
+  html[lang="bn"] .homeAboutUsWatermark,
+  html[lang="ja"] .homeAboutUsWatermark {
+    font-size: clamp(2.75rem, 3.8vw, 4.5rem);
   }
 }
 
@@ -87,7 +103,7 @@
 @media (min-width: 1024px) {
   .homeAboutUsContainer {
     display: grid;
-    grid-template-columns: 510px 1fr;
+    grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
     gap: 3.5rem;
     align-items: start;
   }
@@ -95,7 +111,7 @@
 
 @media (min-width: 1280px) {
   .homeAboutUsContainer {
-    grid-template-columns: 560px 1fr;
+    grid-template-columns: minmax(320px, 40%) minmax(0, 1fr);
     gap: 4.5rem;
     max-width: 1400px;
   }
@@ -111,6 +127,7 @@
   flex-direction: column;
   align-items: flex-start;
   overflow: visible;
+  min-width: 0;
 }
 
 @media (min-width: 1024px) {
@@ -143,8 +160,8 @@
 
 @media (min-width: 1024px) {
   .homeAboutUsMainImgWrapper {
-    width: 490px;
-    max-width: none;
+    width: 100%;
+    max-width: 490px;
     border-radius: 48px;
     border-width: 2px;
   }
@@ -152,7 +169,8 @@
 
 @media (min-width: 1280px) {
   .homeAboutUsMainImgWrapper {
-    width: 540px;
+    width: 100%;
+    max-width: 540px;
     border-radius: 52px;
     border-width: 3px;
   }
@@ -198,14 +216,6 @@
     margin-left: 36%;
     border-radius: 20px;
   }
-
-  .homeAboutUsTitle {
-    font-size: clamp(2.5rem, 11vw, 3.4rem);
-  }
-
-  .homeAboutUsSubtitle {
-    font-size: clamp(1.35rem, 6vw, 1.85rem);
-  }
 }
 
 @media (min-width: 640px) {
@@ -222,22 +232,23 @@
 
 @media (min-width: 1024px) {
   .homeAboutUsSubImgWrapper {
-    width: 380px;
-    height: 248px;
+    width: min(72%, 380px);
+    height: auto;
+    aspect-ratio: 380 / 248;
     border-radius: 38px;
-    margin-top: -124px;
-    margin-left: 300px; /* main 490 → half of 380 outside */
+    margin-top: -18%;
+    margin-left: min(55%, 300px);
     border-width: 2px;
   }
 }
 
 @media (min-width: 1280px) {
   .homeAboutUsSubImgWrapper {
-    width: 420px;
-    height: 275px;
+    width: min(72%, 420px);
+    aspect-ratio: 420 / 275;
     border-radius: 42px;
-    margin-top: -138px;
-    margin-left: 330px; /* main 540 → half of 420 outside */
+    margin-top: -18%;
+    margin-left: min(58%, 330px);
     border-width: 3px;
   }
 }
@@ -257,6 +268,7 @@
 /* Right Content */
 .homeAboutUsContent {
   width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -277,56 +289,102 @@
   }
 }
 
-/* Title — "We solve" half on image, upper overlap */
+/* Title — overlaps image on desktop, wraps for long locales */
 .homeAboutUsTitle {
   font-family: var(--font-display, 'Jost', sans-serif);
-  font-size: clamp(3.4rem, 7.5vw, 4.75rem);
+  font-size: clamp(2.25rem, 8vw, 3.4rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.15;
   color: #CD2F3E;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
   margin: 0 0 1rem 0;
   position: relative;
   z-index: 10;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 @media (min-width: 1024px) {
   .homeAboutUsTitle {
-    font-size: clamp(5.75rem, 6.5vw, 7.5rem);
-    /* Pull further left — more of title on the image */
-    margin-left: calc(-1 * (3.5rem + 26rem));
+    font-size: clamp(3.25rem, 4.2vw, 5rem);
+    /* Soft overlap onto the image column without forcing overflow */
+    margin-left: clamp(-12rem, -18vw, -4rem);
     margin-bottom: 1.25rem;
-    white-space: nowrap;
+    max-width: calc(100% + 12rem);
   }
 }
 
 @media (min-width: 1280px) {
   .homeAboutUsTitle {
-    font-size: clamp(7rem, 7.5vw, 8.75rem);
-    margin-left: calc(-1 * (4.5rem + 30rem));
+    font-size: clamp(3.75rem, 4.5vw, 5.75rem);
+    margin-left: clamp(-14rem, -16vw, -6rem);
+    max-width: calc(100% + 14rem);
+  }
+}
+
+/* Bangla / Japanese titles need more line room and smaller display size */
+html[lang="bn"] .homeAboutUsTitle,
+html[lang="ja"] .homeAboutUsTitle {
+  font-size: clamp(2rem, 6.5vw, 2.85rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+@media (min-width: 1024px) {
+  html[lang="bn"] .homeAboutUsTitle,
+  html[lang="ja"] .homeAboutUsTitle {
+    font-size: clamp(2.6rem, 3.4vw, 3.75rem);
+    margin-left: clamp(-8rem, -12vw, -3rem);
+    max-width: calc(100% + 8rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  html[lang="bn"] .homeAboutUsTitle,
+  html[lang="ja"] .homeAboutUsTitle {
+    font-size: clamp(3rem, 3.6vw, 4.25rem);
   }
 }
 
 /* Subtitle */
 .homeAboutUsSubtitle {
   font-family: var(--font-display, 'Jost', sans-serif);
-  font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #1f191b;
   margin: 0 0 1.25rem 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (min-width: 1024px) {
   .homeAboutUsSubtitle {
-    font-size: clamp(2.65rem, 3.2vw, 3.55rem);
+    font-size: clamp(1.75rem, 2.4vw, 2.5rem);
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 1280px) {
   .homeAboutUsSubtitle {
-    font-size: clamp(3rem, 3.4vw, 4rem);
+    font-size: clamp(2rem, 2.6vw, 2.85rem);
+  }
+}
+
+html[lang="bn"] .homeAboutUsSubtitle,
+html[lang="ja"] .homeAboutUsSubtitle {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.4;
+}
+
+@media (min-width: 1024px) {
+  html[lang="bn"] .homeAboutUsSubtitle,
+  html[lang="ja"] .homeAboutUsSubtitle {
+    font-size: clamp(1.5rem, 2vw, 2.1rem);
   }
 }
 
@@ -338,7 +396,9 @@
   line-height: 1.75;
   color: #444444;
   margin: 0 0 1.25rem 0;
-  max-width: 600px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .homeAboutUsDescription--extra {
@@ -366,7 +426,9 @@
 .homeAboutUsCtaGroup {
   display: inline-flex;
   align-items: center;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  max-width: 100%;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -374,10 +436,12 @@
 
 .homeAboutUsCtaLabel {
   font-family: var(--font-display, 'Jost', sans-serif);
-  font-size: 1.4rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
   font-weight: 500;
   color: #2b2b2b;
   transition: color 0.3s ease;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .homeAboutUsCtaGroup:hover .homeAboutUsCtaLabel {
@@ -433,9 +497,34 @@
 @media (max-width: 1023px) {
   .homeAboutUsTitle {
     white-space: normal;
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .homeAboutUsWatermark {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .homeAboutUsSection {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .homeAboutUsTitle {
+    font-size: clamp(1.85rem, 8.5vw, 2.6rem);
+  }
+
+  .homeAboutUsSubtitle {
+    font-size: clamp(1.15rem, 5.5vw, 1.5rem);
+  }
+
+  .homeAboutUsDescription {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .homeAboutUsCtaLine {
     display: none;
   }
 }

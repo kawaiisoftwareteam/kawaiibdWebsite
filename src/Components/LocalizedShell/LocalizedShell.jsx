@@ -38,8 +38,10 @@ export default function LocalizedShell({ children, locale }) {
   }
 
   return (
-    <LocaleProvider>
-      <LocalizedShellInner>{children}</LocalizedShellInner>
-    </LocaleProvider>
+    <Suspense fallback={null}>
+      <LocaleProvider>
+        <LocalizedShellInner>{children}</LocalizedShellInner>
+      </LocaleProvider>
+    </Suspense>
   );
 }

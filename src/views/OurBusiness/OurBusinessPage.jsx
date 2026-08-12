@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 import './OurBusinessPage.css';
 import { useLocale } from '../../i18n/LocaleContext';
@@ -11,13 +11,38 @@ import ourBusinessBanner from '../../Assets/ourBusinessBanner.png';
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const OurBusinessPage = () => {
-  const { t, localizedPath } = useLocale();
+  const { t, localizedPath, locale } = useLocale();
 
   const getText = (key, fallback) => {
     const val = t(key);
     if (!val || typeof val !== 'string' || val === key) return fallback;
     return val;
   };
+
+  const services = useMemo(
+    () =>
+      businessServices.map((item) => {
+        const category = t(`ourBusiness.cards.${item.id}.category`);
+        const title = t(`ourBusiness.cards.${item.id}.title`);
+        const desc = t(`ourBusiness.cards.${item.id}.desc`);
+        return {
+          ...item,
+          category:
+            category && category !== `ourBusiness.cards.${item.id}.category`
+              ? category
+              : item.category,
+          title:
+            title && title !== `ourBusiness.cards.${item.id}.title`
+              ? title
+              : item.title,
+          desc:
+            desc && desc !== `ourBusiness.cards.${item.id}.desc`
+              ? desc
+              : item.desc,
+        };
+      }),
+    [t, locale]
+  );
 
   const title1 = getText('ourBusiness.titleLine1', 'OUR');
   const title2 = getText('ourBusiness.titleLine2', 'BUSINESS');
@@ -49,7 +74,7 @@ const OurBusinessPage = () => {
 
       <div className="obPage__body">
         <ol className="obPage__list">
-          {businessServices.map((item, idx) => (
+          {services.map((item, idx) => (
             <li className="obPage__item" key={item.id} id={item.id}>
               <div className="obPage__itemIndex" aria-hidden="true">
                 {String(idx + 1).padStart(2, '0')}

@@ -5,6 +5,7 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
 } from 'react';
@@ -106,10 +107,13 @@ export const LocaleProvider = ({ children }) => {
     (nextLocale, { replace = false } = {}) => {
       const rest = stripLocalePrefix(pathname);
       const nextPath = rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`;
+      const currentSearch =
+        typeof window !== 'undefined' ? window.location.search : '';
+      const href = nextPath + currentSearch;
       if (replace) {
-        router.replace(nextPath);
+        router.replace(href);
       } else {
-        router.push(nextPath);
+        router.push(href);
       }
     },
     [pathname, router]
@@ -139,6 +143,32 @@ export const LocaleProvider = ({ children }) => {
     [applyDocumentMeta, navigateToLocale]
   );
 
+  /**
+   * Used by GeoAutoSync after IP/browser detection.
+   * Updates React state (so the suggestion banner can show) and
+   * replaces the URL when the detected locale differs.
+   */
+  const applyDetectedLocale = useCallback(
+    (nextLocale, nextSource = 'auto', { search = '' } = {}) => {
+      if (!isValidLocale(nextLocale)) return;
+
+      setLocaleState(nextLocale);
+      setSource(nextSource);
+      persistLocale(nextLocale, nextSource);
+      applyDocumentMeta(nextLocale);
+
+      const rest = stripLocalePrefix(pathname);
+      const nextPath = rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`;
+      const currentSearch =
+        typeof window !== 'undefined' ? window.location.search : '';
+
+      if (nextLocale !== locale || currentSearch !== search) {
+        router.replace(nextPath + search);
+      }
+    },
+    [applyDocumentMeta, locale, pathname, router]
+  );
+
   const dismissBanner = useCallback(() => {
     setBannerDismissed(true);
     try {
@@ -149,6 +179,13 @@ export const LocaleProvider = ({ children }) => {
       /* ignore */
     }
   }, []);
+
+  // Set lang as early as possible so Anek Bangla / Noto Sans JP CSS apply
+  useLayoutEffect(() => {
+    if (isValidLocale(urlLocale)) {
+      document.documentElement.lang = urlLocale;
+    }
+  }, [urlLocale]);
 
   // Sync when URL locale changes
   useEffect(() => {
@@ -186,6 +223,7 @@ export const LocaleProvider = ({ children }) => {
       source,
       showBanner,
       setLocale,
+      applyDetectedLocale,
       dismissBanner,
       t,
       localizedPath: (path = '/') => {
@@ -194,7 +232,7 @@ export const LocaleProvider = ({ children }) => {
         return `/${locale}${clean}`;
       },
     }),
-    [locale, source, showBanner, setLocale, dismissBanner, t]
+    [locale, source, showBanner, setLocale, applyDetectedLocale, dismissBanner, t]
   );
 
   return (

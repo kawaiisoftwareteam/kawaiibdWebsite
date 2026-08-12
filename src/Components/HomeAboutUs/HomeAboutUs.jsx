@@ -16,7 +16,7 @@ const HomeAboutUs = () => {
     <section className="homeAboutUsSection">
       {/* Background Vertical Watermark */}
       <div className="homeAboutUsWatermark" aria-hidden="true">
-        {t('home.aboutUs.watermark') || 'ABOUT US'}
+        {t('home.aboutUs.watermark')}
       </div>
 
       <div className="homeAboutUsContainer">
@@ -41,11 +41,11 @@ const HomeAboutUs = () => {
         {/* Right Side: Content */}
         <div className="homeAboutUsContent">
           <h2 className="homeAboutUsTitle">
-            {t('home.aboutUs.title') || 'We solve your issues'}
+            {t('home.aboutUs.title')}
           </h2>
 
           <h3 className="homeAboutUsSubtitle">
-            {t('home.aboutUs.subtitle') || 'Answers to the future.'}
+            {t('home.aboutUs.subtitle')}
           </h3>
 
           <p className="homeAboutUsDescription">
@@ -61,7 +61,7 @@ const HomeAboutUs = () => {
           <div className="homeAboutUsCtaRow">
             <Link href={localizedPath('/about')} className="homeAboutUsCtaGroup">
               <span className="homeAboutUsCtaLabel">
-                {t('home.aboutUs.cta') || 'About Kawaii Group'}
+                {t('home.aboutUs.cta')}
               </span>
               <span className="homeAboutUsCtaLine"></span>
               <div className="homeAboutUsCtaButton">

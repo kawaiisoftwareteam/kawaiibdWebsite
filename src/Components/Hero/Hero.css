@@ -89,7 +89,7 @@
 .hero__place-name {
   font-family: var(--font-display), 'Jost', sans-serif !important;
   /*
-    Fit longest label ("BANGLADESH" ≈ 11 chars) to container width.
+    Fit longest label to container width.
     Uses cqi so it scales with the title area, not only the viewport.
   */
   font-size: clamp(1.5rem, 8.2cqi, 10rem);

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import './ServicesShowcase.css';
 import { useLocale } from '../../i18n/LocaleContext';
@@ -29,11 +29,36 @@ const ArrowRight = () => (
 );
 
 const ServicesShowcase = ({ showSeeMore = false }) => {
-  const { t, localizedPath } = useLocale();
+  const { t, localizedPath, locale } = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(3);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
+
+  const services = useMemo(
+    () =>
+      businessServices.map((item) => {
+        const category = t(`ourBusiness.cards.${item.id}.category`);
+        const title = t(`ourBusiness.cards.${item.id}.title`);
+        const desc = t(`ourBusiness.cards.${item.id}.desc`);
+        return {
+          ...item,
+          category:
+            category && category !== `ourBusiness.cards.${item.id}.category`
+              ? category
+              : item.category,
+          title:
+            title && title !== `ourBusiness.cards.${item.id}.title`
+              ? title
+              : item.title,
+          desc:
+            desc && desc !== `ourBusiness.cards.${item.id}.desc`
+              ? desc
+              : item.desc,
+        };
+      }),
+    [t, locale]
+  );
 
   const seeMoreText = (() => {
     const val = t('ourBusiness.seeMore');
@@ -52,7 +77,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const maxIndex = Math.max(0, businessServices.length - cardsToShow);
+  const maxIndex = Math.max(0, services.length - cardsToShow);
 
   useEffect(() => {
     if (currentIndex > maxIndex) setCurrentIndex(maxIndex);
@@ -66,7 +91,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
     return () => window.clearInterval(timerRef.current);
   }, [paused, maxIndex]);
 
-  const activeBg = businessServices[currentIndex]?.image || apparelImg;
+  const activeBg = services[currentIndex]?.image || apparelImg;
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
@@ -78,15 +103,15 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
 
   return (
     <section className="bizIntro">
-      <div className="bizIntro__curve" key={businessServices[currentIndex]?.id}>
+      <div className="bizIntro__curve" key={services[currentIndex]?.id}>
         <img src={getSrc(activeBg)} alt="" className="bizIntro__curveImg" />
       </div>
 
       <div className="bizIntro__inner">
         <header className="bizIntro__header">
           <h2 className="bizIntro__title">
-            <span>OUR</span>
-            <span>BUSINESS</span>
+            <span>{t('ourBusiness.titleLine1')}</span>
+            <span>{t('ourBusiness.titleLine2')}</span>
           </h2>
         </header>
 
@@ -111,7 +136,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
                 transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
               }}
             >
-              {businessServices.map((item) => (
+              {services.map((item) => (
                 <article
                   key={item.id}
                   className="bizIntro__card"

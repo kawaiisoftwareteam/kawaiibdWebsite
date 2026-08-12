@@ -1,13 +1,17 @@
 {
   "nav": {
     "home": "Home",
+    "aboutUs": "About Us",
+    "companies": "Companies",
     "whoWeAre": "Who We Are",
     "whatWeDo": "What We Do",
     "sisterConcerns": "Sister Concerns",
     "bimMasterclass": "BUET Masterclass",
     "career": "Career",
     "bimSeminar": "BIM Seminar",
-    "getInTouch": "Inquiry",
+    "newsMedia": "News & Media",
+    "contactUs": "Contact Us",
+    "getInTouch": "Get in Touch",
     "joinUsOn": "Join us on:",
     "tagline": "A Japan-Bangladesh Joint Venture Company",
     "copyright": "Copyright © 2024 Kawaii Group Bangladesh. All rights reserved."
@@ -56,6 +60,15 @@
     "button": "Let's Connect"
   },
   "home": {
+    "hero": {
+      "bangladesh": "Bangladesh",
+      "japan": "Japan",
+      "dhaka": "Dhaka",
+      "bangladeshAlt": "Bangladesh city skyline across the river",
+      "japanAlt": "Himeji Castle with cherry blossoms in Japan",
+      "dhakaAlt": "Dhaka city skyline",
+      "ariaLabel": "Hero slideshow"
+    },
     "slides": [
       {
         "head1": "Your Global",
@@ -88,6 +101,9 @@
     ],
     "spiderConcerns": {
       "title": "Our Sister Concerns",
+      "headline1": "Reliable Companies",
+      "headline2": "Stronger",
+      "headlineAccent": "Together",
       "subtitle": "Discover the diverse network of companies driving excellence across global industries under Kawaii Group. From human resources and Japanese language education to apparel, trade, technology, and Japan-focused ventures, each company contributes specialized capability while sharing Kawaii Group’s commitment to quality, integrity, and long-term partnership.",
       "explore": "Explore All Concerns",
       "allCompanies": "All Companies"
@@ -390,7 +406,84 @@
     "titleLine1": "OUR",
     "titleLine2": "BUSINESS",
     "subtitle": "A complete view of the sectors where Kawaii Group delivers manufacturing, trade, technology, education, and workforce solutions across Japan, Bangladesh, and global markets.",
-    "contactCta": "Get in Touch"
+    "contactCta": "Get in Touch",
+    "cards": {
+      "hr": {
+        "category": "Domestic Recruitment",
+        "title": "Domestic recruitment",
+        "desc": "We provide optimal talent matching, primarily in IT and specialized fields, while staying close to the needs of each company."
+      },
+      "tech": {
+        "category": "IT Development",
+        "title": "IT development",
+        "desc": "We support efficiency improvements and business growth through system development tailored to each company’s challenges and offshore infrastructure."
+      },
+      "apparel": {
+        "category": "Apparel",
+        "title": "Apparel",
+        "desc": "With high-quality production lines and flexible capabilities, we provide global apparel manufacturing services, including OEM and ODM."
+      },
+      "textile": {
+        "category": "Textile",
+        "title": "Textile Manufacturing",
+        "desc": "Advanced fabric production, premium material sourcing, and sustainable textile processing tailored to global industry standards."
+      },
+      "trading": {
+        "category": "Trading",
+        "title": "International Trading",
+        "desc": "Seamless cross-border commerce, import-export facilitation, and strategic global supply chain operations."
+      },
+      "recruitment": {
+        "category": "Overseas Recruitment",
+        "title": "Overseas recruitment",
+        "desc": "Connecting highly skilled international talent with leading global companies through transparent, reliable recruitment pathways."
+      },
+      "overseas": {
+        "category": "Employment Support",
+        "title": "Overseas Employment Support",
+        "desc": "End-to-end relocation guidance, documentation, orientation, and ongoing welfare support for overseas placements."
+      },
+      "japanese": {
+        "category": "Language Education",
+        "title": "Japanese Language Education",
+        "desc": "Specialized JLPT and NAT-TEST preparatory courses, Japanese business manners, and intensive language training programs."
+      },
+      "education": {
+        "category": "Education Services",
+        "title": "International Education Services",
+        "desc": "Guidance for higher education abroad, student exchange assistance, university admissions, and international academic pathways."
+      },
+      "career": {
+        "category": "Counseling",
+        "title": "Career Counseling",
+        "desc": "Personalized career roadmap planning, skill assessment, and professional mentoring for aspiring global professionals."
+      },
+      "skill": {
+        "category": "Skill Development",
+        "title": "Skill Development Programs",
+        "desc": "Practical technical and vocational training modules designed to meet evolving international labor market demands."
+      },
+      "travel": {
+        "category": "Tourism Services",
+        "title": "Travel and Tourism Services",
+        "desc": "Complete corporate travel management, customized tour packages, flight ticketing, and hospitality arrangements."
+      },
+      "visa": {
+        "category": "Visa Support",
+        "title": "Visa Assistance",
+        "desc": "Expert visa application handling, legal documentation guidance, and fast-track immigration processing support."
+      },
+      "global-business": {
+        "category": "Business Development",
+        "title": "Global Business Development",
+        "desc": "Strategic market entry consultancy, cross-border venture creation, and international commercial growth solutions."
+      },
+      "partnerships": {
+        "category": "Partnerships",
+        "title": "Strategic Business Partnerships",
+        "desc": "Building enduring corporate joint ventures, strategic technology alliances, and bilateral business investment networks."
+      }
+    }
   },
   "concerns": {
     "header": "Sister concerns"

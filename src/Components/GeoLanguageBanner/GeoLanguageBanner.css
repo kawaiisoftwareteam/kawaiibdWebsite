@@ -24,7 +24,7 @@
   font-size: 14px;
   line-height: 1.4;
   color: #222;
-  font-family: "Anek Bangla", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: inherit;
 }
 
 .geo-lang-banner__actions {
