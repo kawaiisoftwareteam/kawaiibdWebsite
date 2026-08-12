@@ -5,14 +5,6 @@ import Link from 'next/link';
 import './SpiderSisterConcerns.css';
 import { useLocale } from '../../i18n/LocaleContext';
 
-import achieveJapanImg from '../../Assets/Sister_Slider/achieve_japan.png';
-import sanjanaHrImg from '../../Assets/Sister_Slider/sanjana_hr.png';
-import bimanHolidaysImg from '../../Assets/Sister_Slider/biman_holidays.png';
-import tredmigImg from '../../Assets/Sister_Slider/tredmig_trade.png';
-import katslImg from '../../Assets/Sister_Slider/katsl_tech.png';
-import kgjImg from '../../Assets/Sister_Slider/kgj_japan.png';
-import kddlImg from '../../Assets/Sister_Slider/kddl_design.png';
-import kiecImg from '../../Assets/Sister_Slider/kiec_edu.png';
 import kgvlImg from '../../Assets/jpBusinessCenter.png';
 import kjchsImg from '../../Assets/ssw2.jpeg';
 
@@ -22,50 +14,50 @@ const sisterConcernsData = [
   {
     id: 'aj',
     name: 'Achieve Japan',
-    image: achieveJapanImg,
+    image: '/sister-slider/achieve_japan.jpg',
     externalLink: 'https://achievejapanssw.com/',
   },
   {
     id: 'sanjanaHr',
     name: 'M/S Sanjana International',
-    image: sanjanaHrImg,
+    image: '/sister-slider/sanjana_hr.jpg',
     externalLink: 'https://sanjanahr.com/',
   },
   {
     id: 'bh',
     name: 'Biman Holidays',
-    image: bimanHolidaysImg,
+    image: '/sister-slider/biman_holidays.jpg',
     externalLink: 'https://bimanholidays.com/',
   },
   {
     id: 'tredmig',
     name: 'Tredmig',
-    image: tredmigImg,
+    image: '/sister-slider/tredmig_trade.jpg',
     externalLink: 'https://tredmig.com/',
   },
   {
     id: 'katsl',
     name: 'Kawaii Advanced Technology & Solution',
-    image: katslImg,
+    image: '/sister-slider/katsl_tech.jpg',
     externalLink: 'https://katsl.vercel.app/',
   },
   {
     id: 'kgj',
     name: 'Kawaii Group Japan',
-    image: kgjImg,
+    image: '/sister-slider/kgj_japan.jpg',
     externalLink: 'https://kawaiigroupjapan.jp/',
     link: '/concerns',
   },
   {
     id: 'kddl',
     name: 'Japan Kawaii Design & Development',
-    image: kddlImg,
+    image: '/sister-slider/kddl_design.jpg',
     link: '/concerns',
   },
   {
     id: 'kiec',
     name: 'Kawaii International Education Center',
-    image: kiecImg,
+    image: '/sister-slider/kiec_edu.jpg',
     externalLink: 'https://kawaiieducationbd.com/',
   },
   {

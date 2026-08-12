@@ -101,7 +101,8 @@ const KawaiiConcerns = () => {
             concernName: 'Kawaii Group Japan',
             cardImg: hwch_6,
             cardLogo: kgjLogo,
-            externalLink: 'https://kawaiigroupjapan.jp/'
+            externalLink: 'https://kawaiigroupjapan.jp/',
+            featured: true
         },
         {
             cardId: 'bh',
