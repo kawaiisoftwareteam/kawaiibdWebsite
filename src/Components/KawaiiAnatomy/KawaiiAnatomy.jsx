@@ -1,7 +1,7 @@
 import React from 'react'
 import "./KawaiiAnatomy.css"
-import kawaiiLeftTitle from "../../Assets/kawaiiLeftBond.png"
-import kawaiiRightTitle from "../../Assets/bonding.png"
+import kawaiiLeftTitle from "../../Assets/kawaiiLeftBond.webp"
+import kawaiiRightTitle from "../../Assets/bonding.webp"
 import { useLocale } from '../../i18n/LocaleContext'
 
 const KawaiiAnatomy = () => {

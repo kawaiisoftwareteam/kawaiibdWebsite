@@ -5,7 +5,7 @@ import Link from 'next/link';
 import './ServicesShowcase.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import { businessServices } from '../../data/businessServices';
-import apparelImg from '../../Assets/services/Apparel Manufacturing.jpg';
+import apparelImg from '../../Assets/services/Apparel Manufacturing.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

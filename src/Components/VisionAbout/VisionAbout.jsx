@@ -2,8 +2,8 @@
 
 import React from 'react';
 import "./VisionAbout.css";
-import leftWhite from '../../Assets/KG_symbol_left_white.png';
-import rightWhite from '../../Assets/KG_symbol_right_white.png';
+import leftWhite from '../../Assets/KG_symbol_left_white.webp';
+import rightWhite from '../../Assets/KG_symbol_right_white.webp';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);

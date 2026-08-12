@@ -24,7 +24,7 @@ import {
   FaArrowRight,
   FaArrowLeft,
 } from 'react-icons/fa';
-import careerBannerBg from '../../Assets/career_banner_bg.png';
+import careerBannerBg from '../../Assets/career_banner_bg.webp';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const GOOGLE_FORM_URL = 'https://forms.gle/yEA2JZLPr43JAaiu9';

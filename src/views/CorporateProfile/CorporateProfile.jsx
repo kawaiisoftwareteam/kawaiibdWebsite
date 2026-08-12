@@ -5,8 +5,8 @@ import HeaderContact from '../../Components/HeaderContact/HeaderContact';
 import Cta from '../../Components/CTA/Cta';
 import CorporateProfileSection from '../../Components/CorporateProfileSection/CorporateProfileSection';
 import { useLocale } from '../../i18n/LocaleContext';
-import corporateProfileCover from '../../Assets/kg_corporateProfile.png';
-import bondingCover from '../../Assets/bonding.png';
+import corporateProfileCover from '../../Assets/kg_corporateProfile.webp';
+import bondingCover from '../../Assets/bonding.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

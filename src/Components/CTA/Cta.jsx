@@ -2,7 +2,7 @@
 
 import React from 'react';
 import "./Cta.css";
-import KgLogoBg from "../../Assets/KG_logo_bg.png";
+import KgLogoBg from "../../Assets/KG_logo_bg.webp";
 import Link from 'next/link';
 import ButtonKg from '../ButtonKg/ButtonKg';
 import { useLocale } from '../../i18n/LocaleContext';

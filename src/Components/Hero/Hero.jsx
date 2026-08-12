@@ -3,9 +3,9 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './Hero.css';
 import gsap from 'gsap';
-import bangladeshSkyline from '../../Assets/view-landmark-asian-sky-reflection.jpg';
-import japanCastle from '../../Assets/cherry-blossoms-castle-himeji-japan.jpg';
-import dhakaCityscape from '../../Assets/pattaya-chonburi-thailand-28-may-2019-beautiful-landscape-cityscape-pattaya-city-is-popular-destination-thailand-with-white-cloud-blue-sky.jpg';
+import bangladeshSkyline from '../../Assets/view-landmark-asian-sky-reflection.webp';
+import japanCastle from '../../Assets/cherry-blossoms-castle-himeji-japan.webp';
+import dhakaCityscape from '../../Assets/pattaya-chonburi-thailand-28-may-2019-beautiful-landscape-cityscape-pattaya-city-is-popular-destination-thailand-with-white-cloud-blue-sky.webp';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);

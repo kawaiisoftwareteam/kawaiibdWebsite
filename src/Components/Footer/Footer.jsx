@@ -9,7 +9,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
-import kgLogo from '../../Assets/kawaiigroup.png';
+import kgLogo from '../../Assets/kawaiigroup.webp';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import ContactInquiry from '../ContactInquiry/ContactInquiry';
 import { useLocale } from '../../i18n/LocaleContext';

@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import './KgAboutUs.css';
-import kawaiiJpeg from '../../Assets/kawaii.jpeg';
-import heroBg from '../../Assets/kawaii_hero_bg.png';
+import kawaiiJpeg from '../../Assets/kawaii.webp';
+import heroBg from '../../Assets/kawaii_hero_bg.webp';
 import { useLocale } from '../../i18n/LocaleContext';
 import ServicesShowcase from '../ServicesShowcase/ServicesShowcase';
 import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';

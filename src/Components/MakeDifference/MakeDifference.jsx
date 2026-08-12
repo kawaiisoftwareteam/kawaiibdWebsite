@@ -6,9 +6,9 @@ import mainbottomCorner from "../../Assets/diffcardmainbottomcorner.svg"
 import { useLocale } from '../../i18n/LocaleContext'
 
 const diffImages = [
-    require('../../Assets/diffcard1.png'),
-    require('../../Assets/diffcard2.png'),
-    require('../../Assets/diffcard3.png'),
+    require('../../Assets/diffcard1.webp'),
+    require('../../Assets/diffcard2.webp'),
+    require('../../Assets/diffcard3.webp'),
 ];
 
 const MakeDifference = () => {

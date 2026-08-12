@@ -4,12 +4,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './Masterclass.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import banarImg from '../../Assets/banar.jpeg';
-import shunsukeImg from '../../Assets/shunsuke_someya.jpg';
-import specialGuestImg from '../../Assets/special_guest.jpeg';
+import banarImg from '../../Assets/banar.webp';
+import shunsukeImg from '../../Assets/shunsuke_someya.webp';
+import specialGuestImg from '../../Assets/special_guest.webp';
 
 const masterclassVideo = '/videos/someya.mp4';
-const masterclassVideoPoster = '/videos/someya_poster.jpg';
+const masterclassVideoPoster = '/videos/someya_poster.webp';
 
 import { 
   FaCalendarAlt, 

@@ -5,8 +5,8 @@ import Link from 'next/link';
 import './SpiderSisterConcerns.css';
 import { useLocale } from '../../i18n/LocaleContext';
 
-import kgvlImg from '../../Assets/jpBusinessCenter.png';
-import kjchsImg from '../../Assets/ssw2.jpeg';
+import kgvlImg from '../../Assets/jpBusinessCenter.webp';
+import kjchsImg from '../../Assets/ssw2.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
@@ -14,50 +14,50 @@ const sisterConcernsData = [
   {
     id: 'aj',
     name: 'Achieve Japan',
-    image: '/sister-slider/achieve_japan.jpg',
+    image: '/sister-slider/achieve_japan.webp',
     externalLink: 'https://achievejapanssw.com/',
   },
   {
     id: 'sanjanaHr',
     name: 'M/S Sanjana International',
-    image: '/sister-slider/sanjana_hr.jpg',
+    image: '/sister-slider/sanjana_hr.webp',
     externalLink: 'https://sanjanahr.com/',
   },
   {
     id: 'bh',
     name: 'Biman Holidays',
-    image: '/sister-slider/biman_holidays.jpg',
+    image: '/sister-slider/biman_holidays.webp',
     externalLink: 'https://bimanholidays.com/',
   },
   {
     id: 'tredmig',
     name: 'Tredmig',
-    image: '/sister-slider/tredmig_trade.jpg',
+    image: '/sister-slider/tredmig_trade.webp',
     externalLink: 'https://tredmig.com/',
   },
   {
     id: 'katsl',
     name: 'Kawaii Advanced Technology & Solution',
-    image: '/sister-slider/katsl_tech.jpg',
+    image: '/sister-slider/katsl_tech.webp',
     externalLink: 'https://katsl.vercel.app/',
   },
   {
     id: 'kgj',
     name: 'Kawaii Group Japan',
-    image: '/sister-slider/kgj_japan.jpg',
+    image: '/sister-slider/kgj_japan.webp',
     externalLink: 'https://kawaiigroupjapan.jp/',
     link: '/concerns',
   },
   {
     id: 'kddl',
     name: 'Japan Kawaii Design & Development',
-    image: '/sister-slider/kddl_design.jpg',
+    image: '/sister-slider/kddl_design.webp',
     link: '/concerns',
   },
   {
     id: 'kiec',
     name: 'Kawaii International Education Center',
-    image: '/sister-slider/kiec_edu.jpg',
+    image: '/sister-slider/kiec_edu.webp',
     externalLink: 'https://kawaiieducationbd.com/',
   },
   {

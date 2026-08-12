@@ -1,18 +1,18 @@
 import React from 'react'; 
 // import bmet1 from '../../Assets/bmet_mou.jpg'; 
-import sswTraining from '../../Assets/sswTraining.png'; 
+import sswTraining from '../../Assets/sswTraining.webp'; 
 // import foodfest1 from "../../Assets/foodfest1.jpg";
-import foodfest2 from "../../Assets/foodfest2.jpg";
-import bmet2 from "../../Assets/bmet2.jpg"
-import egrowth from "../../Assets/egrowthmou.jpg"
-import itadvisor from "../../Assets/advisor.jpeg"
-import ssw from "../../Assets/10ssw.jpeg"
-import ssw1 from "../../Assets/ssw1.jpeg";
-import ssw2 from "../../Assets/ssw2.jpeg";
-import ssw3 from "../../Assets/ssw3.jpg";
-import ssw4 from "../../Assets/ssw4.jpg";
-import ssw5 from "../../Assets/ssw5.jpg";
-import ssw6 from "../../Assets/ssw6.jpg";
+import foodfest2 from "../../Assets/foodfest2.webp";
+import bmet2 from "../../Assets/bmet2.webp"
+import egrowth from "../../Assets/egrowthmou.webp"
+import itadvisor from "../../Assets/advisor.webp"
+import ssw from "../../Assets/10ssw.webp"
+import ssw1 from "../../Assets/ssw1.webp";
+import ssw2 from "../../Assets/ssw2.webp";
+import ssw3 from "../../Assets/ssw3.webp";
+import ssw4 from "../../Assets/ssw4.webp";
+import ssw5 from "../../Assets/ssw5.webp";
+import ssw6 from "../../Assets/ssw6.webp";
 
 const MasonryGallery = () => {     
     const images = [         

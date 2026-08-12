@@ -1,10 +1,10 @@
 import React from 'react'
 import "./KawaiiWay.css"
 import kawaiiWay from '../../Assets/kawaiiWay.svg'
-import icon1 from '../../Assets/wayIcon1.png'
-import icon2 from '../../Assets/wayIcon2.png'
-import icon3 from '../../Assets/wayIcon3.png'
-import icon4 from '../../Assets/wayIcon4.png'
+import icon1 from '../../Assets/wayIcon1.webp'
+import icon2 from '../../Assets/wayIcon2.webp'
+import icon3 from '../../Assets/wayIcon3.webp'
+import icon4 from '../../Assets/wayIcon4.webp'
 import cornerKg from "../../Assets/kg_left_corner_bottom.svg"
 import { useLocale } from '../../i18n/LocaleContext'
 

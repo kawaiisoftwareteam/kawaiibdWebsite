@@ -3,7 +3,7 @@
 import React from 'react';
 import './HeaderContact.css';
 import leftWhite from '../../Assets/top-left-corner-kg.svg';
-import rightWhite from '../../Assets/KG_symbol_right_white.png';
+import rightWhite from '../../Assets/KG_symbol_right_white.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

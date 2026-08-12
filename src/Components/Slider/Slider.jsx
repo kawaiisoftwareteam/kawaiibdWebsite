@@ -4,10 +4,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Slider.css';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import sliderImage1 from '../../Assets/slider_image_1.jpg';
-import sliderImage2 from '../../Assets/slider_image_2.png';
-import sliderImage3 from '../../Assets/slider_image_3.png';
-import sliderImage4 from '../../Assets/slider_image_4.png';
+import sliderImage1 from '../../Assets/slider_image_1.webp';
+import sliderImage2 from '../../Assets/slider_image_2.webp';
+import sliderImage3 from '../../Assets/slider_image_3.webp';
+import sliderImage4 from '../../Assets/slider_image_4.webp';
 import Link from 'next/link';
 import { useLocale } from '../../i18n/LocaleContext';
 

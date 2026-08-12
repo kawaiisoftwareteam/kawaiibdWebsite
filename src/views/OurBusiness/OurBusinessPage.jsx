@@ -6,7 +6,7 @@ import './OurBusinessPage.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import { businessServices } from '../../data/businessServices';
 
-import ourBusinessBanner from '../../Assets/ourBusinessBanner.png';
+import ourBusinessBanner from '../../Assets/ourBusinessBanner.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import './HomeAboutUs.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import aboutUs1 from '../../Assets/aboutUs1.png';
-import aboutUs2 from '../../Assets/aboutUs2.png';
+import aboutUs1 from '../../Assets/aboutUs1.webp';
+import aboutUs2 from '../../Assets/aboutUs2.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

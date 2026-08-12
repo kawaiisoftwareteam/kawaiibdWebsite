@@ -110,7 +110,19 @@ const fetchWithTimeout = async (url, ms = 3000) => {
 };
 
 /** Cloudflare Pages / proxied sites expose /cdn-cgi/trace with loc=XX */
+const isLocalDevHost = () => {
+  if (typeof window === 'undefined') return true;
+  const host = window.location.hostname;
+  if (host === 'localhost' || host === '127.0.0.1' || host === '::1') return true;
+  // Private LAN IPs used by `next dev -H 0.0.0.0`
+  if (/^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(host)) return true;
+  return false;
+};
+
 export const detectCountryFromCloudflare = async () => {
+  // Avoid noisy 404s on local Next (endpoint only exists behind Cloudflare)
+  if (isLocalDevHost()) return null;
+
   try {
     const res = await fetchWithTimeout('/cdn-cgi/trace', 2500);
     if (!res.ok) return null;

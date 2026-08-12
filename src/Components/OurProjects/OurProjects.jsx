@@ -7,10 +7,10 @@ import EmblaCarouselArrow from '../EmblaCarouselArrow/EmblaCarouselArrow';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const projectImages = [
-    require('../../Assets/sswTraining.png'),
-    require('../../Assets/jpBusinessCenter.png'),
-    require('../../Assets/JpGreenCity.png'),
-    require('../../Assets/jpPachdonaTower.png'),
+    require('../../Assets/sswTraining.webp'),
+    require('../../Assets/jpBusinessCenter.webp'),
+    require('../../Assets/JpGreenCity.webp'),
+    require('../../Assets/jpPachdonaTower.webp'),
 ];
 
 const OPTIONS = {
@@ -66,7 +66,7 @@ const OurProjects = () => {
     useInterval(autoplay, AUTOPLAY_INTERVAL);
 
     return (
-        <div className='ourProjectsMain' style={{ backgroundImage: `url(${require('../../Assets/projectBG.png')})` }}>
+        <div className='ourProjectsMain' style={{ backgroundImage: `url(${require('../../Assets/projectBG.webp')})` }}>
             <img src={projectSvgCorner} alt="projectSvgCorner" className='projectSvg' />
             <div className='w-full flex flex-col gap-[48px]'>
                 <div className='flex items-start justify-between gap-[24px]'>

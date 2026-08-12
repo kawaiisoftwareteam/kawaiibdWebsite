@@ -8,9 +8,9 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight'
 import { useLocale } from '../../i18n/LocaleContext'
 
 const newsImages = [
-    require('../../Assets/BMET27.jpg'),
-    require('../../Assets/foodfest2.jpg'),
-    require('../../Assets/egrowthmou.jpg'),
+    require('../../Assets/BMET27.webp'),
+    require('../../Assets/foodfest2.webp'),
+    require('../../Assets/egrowthmou.webp'),
 ];
 
 const LatestNews = () => {

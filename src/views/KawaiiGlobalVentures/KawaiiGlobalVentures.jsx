@@ -5,9 +5,9 @@ import HeaderContact from '../../Components/HeaderContact/HeaderContact';
 import Cta from '../../Components/CTA/Cta';
 import './KawaiiGlobalVentures.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import kgvlCover from '../../Assets/kgvl_cover.png';
-import jpBusinessCenter from '../../Assets/jpBusinessCenter.png';
-import bondingCover from '../../Assets/bonding.png';
+import kgvlCover from '../../Assets/kgvl_cover.webp';
+import jpBusinessCenter from '../../Assets/jpBusinessCenter.webp';
+import bondingCover from '../../Assets/bonding.webp';
 
 import { 
   FaHandshake, 

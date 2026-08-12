@@ -1,18 +1,18 @@
-import apparelImg from '../Assets/services/Apparel Manufacturing.jpg';
-import textileImg from '../Assets/services/Textile Manufacturing.jpg';
-import tradingImg from '../Assets/services/ International Trading.jpg';
-import techImg from '../Assets/services/Technology Solutions.jpg';
-import recruitmentImg from '../Assets/services/International Recruitment.jpg';
-import hrImg from '../Assets/services/Human Resource Solutions.jpg';
-import overseasImg from '../Assets/services/Overseas Employment Support.jpg';
-import japaneseImg from '../Assets/services/Japanese Language Education.jpg';
-import educationImg from '../Assets/services/International Education Services.jpg';
-import careerImg from '../Assets/services/Career Counseling.jpg';
-import skillImg from '../Assets/services/Skill Development Programs.jpg';
-import travelImg from '../Assets/services/Travel and Tourism Services.jpg';
-import visaImg from '../Assets/services/Visa Assistance.jpg';
-import globalBusinessImg from '../Assets/services/global-business.jpg';
-import partnershipImg from '../Assets/services/Strategic Business Partnerships.jpg';
+import apparelImg from '../Assets/services/Apparel Manufacturing.webp';
+import textileImg from '../Assets/services/Textile Manufacturing.webp';
+import tradingImg from '../Assets/services/ International Trading.webp';
+import techImg from '../Assets/services/Technology Solutions.webp';
+import recruitmentImg from '../Assets/services/International Recruitment.webp';
+import hrImg from '../Assets/services/Human Resource Solutions.webp';
+import overseasImg from '../Assets/services/Overseas Employment Support.webp';
+import japaneseImg from '../Assets/services/Japanese Language Education.webp';
+import educationImg from '../Assets/services/International Education Services.webp';
+import careerImg from '../Assets/services/Career Counseling.webp';
+import skillImg from '../Assets/services/Skill Development Programs.webp';
+import travelImg from '../Assets/services/Travel and Tourism Services.webp';
+import visaImg from '../Assets/services/Visa Assistance.webp';
+import globalBusinessImg from '../Assets/services/global-business.webp';
+import partnershipImg from '../Assets/services/Strategic Business Partnerships.webp';
 
 export const businessServices = [
   {

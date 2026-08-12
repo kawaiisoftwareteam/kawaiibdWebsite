@@ -4,9 +4,9 @@ import React from 'react';
 import Cta from '../../Components/CTA/Cta';
 import './KawaiiJapanCareerHr.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import kawaiiImg from '../../Assets/kawaii.png';
-import careerSupportImg from '../../Assets/career_support.png';
-import bondingCover from '../../Assets/bonding.png';
+import kawaiiImg from '../../Assets/kawaii.webp';
+import careerSupportImg from '../../Assets/career_support.webp';
+import bondingCover from '../../Assets/bonding.webp';
 
 import { 
   FaBuilding, 

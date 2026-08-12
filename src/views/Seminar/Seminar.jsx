@@ -4,13 +4,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './Seminar.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import banarImg from '../../Assets/banar18.jpeg';
-import shunsukeImg from '../../Assets/shunsuke_someya.jpg';
-import biswasImg from '../../Assets/biswas_jahangir_alam.jpeg';
-import specialGuestImg from '../../Assets/special_guest.jpeg';
+import banarImg from '../../Assets/banar18.webp';
+import shunsukeImg from '../../Assets/shunsuke_someya.webp';
+import biswasImg from '../../Assets/biswas_jahangir_alam.webp';
+import specialGuestImg from '../../Assets/special_guest.webp';
 
 const seminarVideo = '/videos/18thvideo.mp4';
-const videoPoster = '/videos/18thvideo_poster.jpg';
+const videoPoster = '/videos/18thvideo_poster.webp';
 
 import { 
   FaCalendarAlt, 

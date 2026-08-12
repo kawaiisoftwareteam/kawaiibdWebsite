@@ -4,7 +4,7 @@ import React from 'react';
 import HeaderContact from '../../Components/HeaderContact/HeaderContact';
 import ServicesShowcase from '../../Components/ServicesShowcase/ServicesShowcase';
 import { useLocale } from '../../i18n/LocaleContext';
-import sswCover from '../../Assets/sswCover.png';
+import sswCover from '../../Assets/sswCover.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

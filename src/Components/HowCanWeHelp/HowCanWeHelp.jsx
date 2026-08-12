@@ -2,17 +2,17 @@
 
 import React from 'react';
 import './HowCanWeHelp.css';
-import sanjanaLogo from '../../Assets/Sister_Concerns/sanjana_logo.png';
-import ajLogo from '../../Assets/Sister_Concerns/aj_logo.png';
-import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.png';
+import sanjanaLogo from '../../Assets/Sister_Concerns/sanjana_logo.webp';
+import ajLogo from '../../Assets/Sister_Concerns/aj_logo.webp';
+import katslLogo from '../../Assets/Sister_Concerns/KATSL_Logo.webp';
 import ButtonNormal from '../ButtonNormal/ButtonNormal';
 import ButtonTransparent from '../ButtonTransparent/ButtonTransparent';
 import arrow from '../../Assets/kg_button_indicator.svg';
 import { useLocale } from '../../i18n/LocaleContext';
 
-import hwch1 from '../../Assets/hwch_1.png';
-import hwch2 from '../../Assets/hwch_2.jpeg';
-import hwch3 from '../../Assets/hwch_3.jpeg';
+import hwch1 from '../../Assets/hwch_1.webp';
+import hwch2 from '../../Assets/hwch_2.webp';
+import hwch3 from '../../Assets/hwch_3.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 

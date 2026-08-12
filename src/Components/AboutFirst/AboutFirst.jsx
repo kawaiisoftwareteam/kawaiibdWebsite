@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import './AboutFirst.css';
-import aboutSection1 from "../../Assets/aboutFirst1.jpeg";
-import aboutSection2 from "../../Assets/aboutFirst2.jpeg";
-import aboutSection3 from "../../Assets/aboutSection3.jpg";
+import aboutSection1 from "../../Assets/aboutFirst1.webp";
+import aboutSection2 from "../../Assets/aboutFirst2.webp";
+import aboutSection3 from "../../Assets/aboutSection3.webp";
 import ButtonNormal from '../ButtonNormal/ButtonNormal';
 import download from '../../Assets/kg_download.svg';
 import ButtonTransparent from '../ButtonTransparent/ButtonTransparent';

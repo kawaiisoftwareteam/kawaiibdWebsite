@@ -5,7 +5,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import './WhyChooseUs.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import whyChooseBanner from '../../Assets/whyChooseBanner.png';
+import whyChooseBanner from '../../Assets/whyChooseBanner.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
