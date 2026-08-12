@@ -180,7 +180,7 @@ const WhyChooseUs = ({ showDifferent = true }) => {
             {/* Hero Banner & Intro Subtitle */}
             <div className="whyChoose__heroRow">
               <div className="whyChoose__heroMedia">
-                <img
+                <img loading="lazy" decoding="async"
                   src={getSrc(whyChooseBanner)}
                   alt="Why Choose Kawaii Group"
                   className="whyChoose__heroImg"

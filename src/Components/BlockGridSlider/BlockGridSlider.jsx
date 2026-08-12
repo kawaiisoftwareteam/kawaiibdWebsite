@@ -135,7 +135,7 @@ const BlockGridSlider = ({
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={activeSrc}
                   alt=""
                   className="blockGridSlider__cell-img"

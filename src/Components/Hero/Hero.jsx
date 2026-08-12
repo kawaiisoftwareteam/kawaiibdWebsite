@@ -142,7 +142,7 @@ const Hero = () => {
             key={slide.id}
             className={`hero__slide-bg ${index === currentSlide ? 'hero__slide-bg--active' : ''}`}
           >
-            <img
+            <img loading="eager" decoding="async"
               src={slide.src}
               alt={slide.alt}
               className="hero__slide-img"

@@ -104,7 +104,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
   return (
     <section className="bizIntro">
       <div className="bizIntro__curve" key={services[currentIndex]?.id}>
-        <img src={getSrc(activeBg)} alt="" className="bizIntro__curveImg" />
+        <img loading="lazy" decoding="async" src={getSrc(activeBg)} alt="" className="bizIntro__curveImg" />
       </div>
 
       <div className="bizIntro__inner">
@@ -144,7 +144,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
                 >
                   <div className="bizIntro__cardBody">
                     <div className="bizIntro__media">
-                      <img src={getSrc(item.image)} alt={item.title} />
+                      <img loading="lazy" decoding="async" src={getSrc(item.image)} alt={item.title} />
                     </div>
 
                     <div className="bizIntro__meta">

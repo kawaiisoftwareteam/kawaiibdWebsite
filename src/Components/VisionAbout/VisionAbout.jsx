@@ -13,7 +13,7 @@ const VisionAbout = () => {
 
   return (
     <div className='vision_about_main'>
-      <img src={getSrc(leftWhite)} alt="leftwhite" className='aboutleftWhite' />
+      <img loading="lazy" decoding="async" src={getSrc(leftWhite)} alt="leftwhite" className='aboutleftWhite' />
       <div className='about_text_box_shape'>
         <div className='about_text_box_header'>
           <div className='about_text_header_'>{t('about.vision.title')}</div>
@@ -22,7 +22,7 @@ const VisionAbout = () => {
           </div>
         </div>
       </div>
-      <img src={getSrc(rightWhite)} alt="rightwhite" className='aboutrightWhite' />
+      <img loading="lazy" decoding="async" src={getSrc(rightWhite)} alt="rightwhite" className='aboutrightWhite' />
     </div>
   );
 };

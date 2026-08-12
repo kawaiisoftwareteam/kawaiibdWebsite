@@ -19,7 +19,7 @@ const TopFooter = () => {
         <div className="mainTop">
             <div className='colLeft'>
                 <Link href={localizedPath('/home')}>
-                    <img src={getSrc(kgLogobh)} alt="kawaiiGroupgreyscale" />
+                    <img loading="lazy" decoding="async" src={getSrc(kgLogobh)} alt="kawaiiGroupgreyscale" />
                 </Link>
                 <div className="text-white text-base font-normal font-main leading-snug pr-5">
                     {t('footer.aboutBlurb')}{' '}

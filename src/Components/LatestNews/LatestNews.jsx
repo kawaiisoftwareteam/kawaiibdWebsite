@@ -31,7 +31,7 @@ const LatestNews = () => {
                             <div className='newsCardTitle'>{item.title}</div>
                         </div>
                         <div className='newsCardCornerBg'>
-                            <img src={topCorner} alt="" />
+                            <img loading="lazy" decoding="async" src={topCorner} alt="" />
                         </div>
                     </div>
                     <div className='newsCardContentBox'>
@@ -45,13 +45,13 @@ const LatestNews = () => {
                         </div>
                     </div>
                     <div className='newsCardCornerDownBg'>
-                        <img src={bottomCorner} alt="" />
+                        <img loading="lazy" decoding="async" src={bottomCorner} alt="" />
                     </div>
                 </div>
                 ))}
             </div>
             <div className='newsCardMainBottomCorner'>
-                <img src={mainbottomCorner} alt="" />
+                <img loading="lazy" decoding="async" src={mainbottomCorner} alt="" />
             </div>
         </div>
     )

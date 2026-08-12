@@ -163,7 +163,7 @@ const IntroSection = ({ t }) => {
           ref={mediaRef}
           className={`kg-story__media kg-fade-left ${mediaVisible ? 'kg-visible' : ''}`}
         >
-          <img
+          <img loading="lazy" decoding="async"
             src={getSrc(kawaiiJpeg)}
             alt="Kawaii Group Japan Bangladesh office"
             className="kg-story__img"

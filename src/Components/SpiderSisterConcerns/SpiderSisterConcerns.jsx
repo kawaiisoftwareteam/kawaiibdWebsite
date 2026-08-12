@@ -144,7 +144,7 @@ const SpiderSisterConcerns = () => {
                     rel={activeIsExternal ? 'noopener noreferrer' : undefined}
                     className="scGallery__center"
                   >
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={getSrc(item.image)}
                       alt={item.name}
                       className="scGallery__img"
@@ -162,7 +162,7 @@ const SpiderSisterConcerns = () => {
                   onClick={() => setActiveIndex(index)}
                   aria-label={`Show ${item.name}`}
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={getSrc(item.image)}
                     alt={item.name}
                     className="scGallery__img"

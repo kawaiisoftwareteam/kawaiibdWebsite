@@ -19,11 +19,11 @@ const KawaiiAnatomy = () => {
             <div className='anatomyLeftTitle'>{t('about.anatomy.title')}</div>
           </div>
           <div className='anatomyLeftBonding'>
-            <img src={kawaiiLeftTitle} alt="" />
+            <img loading="lazy" decoding="async" src={kawaiiLeftTitle} alt="" />
           </div>
         </div>
         <div className='anatomyRightBonding'>
-          <img src={kawaiiRightTitle} alt="" className='anatomyRightBondingImg' />
+          <img loading="lazy" decoding="async" src={kawaiiRightTitle} alt="" className='anatomyRightBondingImg' />
         </div>
       </div>
       {anatomyData.map((item, index) => (

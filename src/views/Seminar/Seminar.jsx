@@ -366,7 +366,7 @@ const Seminar = () => {
 
       {/* Visual Hero Banner */}
       <div className="seminar-page-shell mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
-        <img
+        <img loading="lazy" decoding="async"
           src={getSrc(banarImg)}
           alt={t('seminar.bannerAlt')}
           className="w-full h-auto block"
@@ -484,7 +484,7 @@ const Seminar = () => {
               {/* Speaker Avatar & Quick links */}
               <div className="w-full md:w-52 flex flex-col items-center gap-4 flex-shrink-0">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100 relative group">
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={getSrc(shunsukeImg)} 
                     alt="Dr. Shunsuke Someya" 
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -593,7 +593,7 @@ const Seminar = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
               <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-slate-100">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={getSrc(biswasImg)}
                     alt={t('seminar.chiefGuest.name')}
                     className="w-full h-full object-cover object-top"
@@ -617,7 +617,7 @@ const Seminar = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
               <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-slate-100">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={getSrc(specialGuestImg)}
                     alt={t('seminar.specialGuest.name')}
                     className="w-full h-full object-cover object-top"
@@ -663,7 +663,7 @@ const Seminar = () => {
             </div>
             
             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200/80 flex items-center justify-center shadow-inner">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={qrCodeUrl} 
                 alt={t('seminar.share.qrAlt')} 
                 className="w-48 h-48 block rounded-xl shadow-sm"

@@ -23,14 +23,14 @@ const HomeAboutUs = () => {
         {/* Left Side: Overlapping Images */}
         <div className="homeAboutUsImages">
           <div className="homeAboutUsMainImgWrapper">
-            <img
+            <img loading="lazy" decoding="async"
               src={getSrc(aboutUs1)}
               alt="Kawaii Group Team at Work"
               className="homeAboutUsMainImg"
             />
           </div>
           <div className="homeAboutUsSubImgWrapper">
-            <img
+            <img loading="lazy" decoding="async"
               src={getSrc(aboutUs2)}
               alt="Visionary Future"
               className="homeAboutUsSubImg"

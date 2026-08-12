@@ -20,13 +20,13 @@ const Cta = ({ title, text, text2, backgroundImage, marginY }) => {
             <svg style={{ borderTopLeftRadius: '15px' }} xmlns="http://www.w3.org/2000/svg" width="436" height="324" viewBox="0 0 436 324" fill="none">
               <path d="M-3 0H436L398 324H-3V0Z" fill="#BE1E2D" />
             </svg>
-            <img src={getSrc(KgLogoBg)} alt="kg_logo" className='kg_logo_bg' />
+            <img loading="lazy" decoding="async" src={getSrc(KgLogoBg)} alt="kg_logo" className='kg_logo_bg' />
             <div className='left_title'>
               {t('cta.leftTitle')}
             </div>
           </div>
           <div className='left_frame'>
-            <img src={getSrc(backgroundImage)} alt="" className='cta_pic_bg' />
+            <img loading="lazy" decoding="async" src={getSrc(backgroundImage)} alt="" className='cta_pic_bg' />
           </div>
         </div>
         <div className="right_cta">

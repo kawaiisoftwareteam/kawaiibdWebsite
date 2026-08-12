@@ -67,7 +67,7 @@ const OurProjects = () => {
 
     return (
         <div className='ourProjectsMain' style={{ backgroundImage: `url(${require('../../Assets/projectBG.webp')})` }}>
-            <img src={projectSvgCorner} alt="projectSvgCorner" className='projectSvg' />
+            <img loading="lazy" decoding="async" src={projectSvgCorner} alt="projectSvgCorner" className='projectSvg' />
             <div className='w-full flex flex-col gap-[48px]'>
                 <div className='flex items-start justify-between gap-[24px]'>
                     <div className="flex flex-col items-start gap-[24px] flex-1">

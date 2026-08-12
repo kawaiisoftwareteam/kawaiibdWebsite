@@ -58,7 +58,7 @@ const HowCanWeHelp = () => {
                     }}
                 >
                     <div className='hcwh_card_box'>
-                        <img src={cardLogos[index]} alt="" className='hcwh_card_img' />
+                        <img loading="lazy" decoding="async" src={cardLogos[index]} alt="" className='hcwh_card_img' />
                         <div className='hcwh_card_header'>{card.title}</div>
                         <div className='hcwh_card_Content'>{card.with}</div>
                         <div className='hcwh_card_description'>{card.desc}</div>

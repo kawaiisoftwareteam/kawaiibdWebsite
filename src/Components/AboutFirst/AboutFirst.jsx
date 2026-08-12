@@ -26,19 +26,19 @@ const AboutFirst = () => {
                 <div className='flex flex-col md:flex-row justify-center items-center gap-8 self-stretch'>
                     <div className="grid grid-cols-2 gap-8 order-2 md:order-1 p-6 md:p-0">
                         <div className="w-58 md:w-64 h-[222.5px] relative overflow-hidden rounded-xl group">
-                            <img
+                            <img loading="lazy" decoding="async"
                                 alt="gallery"
                                 className="block h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
                                 src={getSrc(aboutSection1)} />
                         </div>
                         <div className="row-span-2 w-58 md:w-64 h-[477px] relative overflow-hidden rounded-xl group">
-                            <img
+                            <img loading="lazy" decoding="async"
                                 alt="gallery"
                                 className="block h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
                                 src={getSrc(aboutSection3)} />
                         </div>
                         <div className="w-58 md:w-64 h-[222.5px] relative overflow-hidden rounded-xl group">
-                            <img
+                            <img loading="lazy" decoding="async"
                                 alt="gallery"
                                 className="block h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
                                 src={getSrc(aboutSection2)} />

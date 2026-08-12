@@ -11,7 +11,7 @@ const MeetTeam = () => {
       <div className='meet_team_box'>
         <div className='meet_team_image'>
           <div className='meet_img_1'>
-        <img src={meetPattern} alt="meetPattern" />
+        <img loading="lazy" decoding="async" src={meetPattern} alt="meetPattern" />
           </div>
           <div className='meet_img_2'></div>
           <div className='meet_img_3'></div>

@@ -218,7 +218,7 @@ const MainNav = () => {
         <div className="mainNav__inner">
           {/* Left Logo */}
           <Link href={localizedPath('/home')} className="mainNav__logo">
-            <img src={getSrc(kawaiiLogo)} alt="Kawaii Group Logo" />
+            <img loading="eager" decoding="async" src={getSrc(kawaiiLogo)} alt="Kawaii Group Logo" />
           </Link>
 
           {/* Right Navigation Section */}
@@ -306,10 +306,10 @@ const MainNav = () => {
       <div className={`mobileSidebar ${isSidebarOpen ? 'mobileSidebar--open' : ''}`}>
         <div className="mobileSidebar__top">
           <Link href={localizedPath('/home')} onClick={closeSidebar}>
-            <img src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
+            <img loading="eager" decoding="async" src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
           </Link>
           <button className="mobileSidebar__close" onClick={toggleSidebar} aria-label="Close menu">
-            <img src={getSrc(mobileCross)} alt="" />
+            <img loading="eager" decoding="async" src={getSrc(mobileCross)} alt="" />
           </button>
         </div>
 

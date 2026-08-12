@@ -77,7 +77,7 @@ const KawaiiGlobalVentures = () => {
           </div>
           <div className="overview-graphic flex-1 w-full flex justify-center">
             <div className="relative w-full max-w-md h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={getSrc(jpBusinessCenter)} 
                 alt={t('kgvl.hubAlt')} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

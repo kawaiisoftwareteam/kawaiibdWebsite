@@ -9,7 +9,7 @@ const Button_kg = ({ text }) => {
         <div className='btn_text'>
           {text}
         </div>
-        <img src={arrow} alt="arrow" className='mt-[0.35rem]'/>
+        <img loading="eager" decoding="async" src={arrow} alt="arrow" className='mt-[0.35rem]'/>
       </div>
     </div>
   )

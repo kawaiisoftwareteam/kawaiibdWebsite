@@ -176,7 +176,7 @@ const KawaiiJapanCareerHr = () => {
               <p className="text-gray-600 text-lg leading-relaxed text-justify mt-6">{t('kjchs.employersDesc')}</p>
             </div>
             <div className="flex-1 w-full flex justify-center">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={getSrc(kawaiiImg)} 
                 alt={t('kjchs.employersImgAlt')} 
                 className="w-full max-w-lg rounded-3xl shadow-lg object-cover h-80"
@@ -237,7 +237,7 @@ const KawaiiJapanCareerHr = () => {
               <p className="text-gray-600 text-lg leading-relaxed text-justify mt-6">{t('kjchs.seekersDesc')}</p>
             </div>
             <div className="flex-1 w-full lg:order-1 flex justify-center">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={getSrc(careerSupportImg)} 
                 alt={t('kjchs.seekersImgAlt')} 
                 className="w-full max-w-lg rounded-3xl shadow-lg object-cover h-80"

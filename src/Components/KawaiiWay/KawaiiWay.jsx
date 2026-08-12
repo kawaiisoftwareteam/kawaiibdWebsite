@@ -17,8 +17,8 @@ const KawaiiWay = () => {
   return (
     <div className='kawaii_way_main'>
       <div className='kawaii_sub_way'>
-        <img src={kawaiiWay} alt="" className='svgpattern' />
-        <img src={cornerKg} alt="" className='corner_kg_icon' />
+        <img loading="lazy" decoding="async" src={kawaiiWay} alt="" className='svgpattern' />
+        <img loading="lazy" decoding="async" src={cornerKg} alt="" className='corner_kg_icon' />
         <div className='left_img_frame_kg'>
           <div className='left_img_bg'> </div>
         </div>
@@ -32,7 +32,7 @@ const KawaiiWay = () => {
                 <div className='kawaii_way_icon_frame'>
                   <div className='kawaii_way_circle'>
                     <div className='kawaii_way_circle_bg'>
-                      <img src={wayIcons[index]} alt="" />
+                      <img loading="lazy" decoding="async" src={wayIcons[index]} alt="" />
                     </div>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ const KawaiiWay = () => {
                 <div className='kawaii_way_icon_frame'>
                   <div className='kawaii_way_circle'>
                     <div className='kawaii_way_circle_bg'>
-                      <img src={wayIcons[index + 2]} alt="" />
+                      <img loading="lazy" decoding="async" src={wayIcons[index + 2]} alt="" />
                     </div>
                   </div>
                 </div>

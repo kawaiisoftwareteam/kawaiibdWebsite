@@ -99,7 +99,7 @@ const MasonryGallery = () => {
                 key={index}
                 className="relative break-inside-avoid mb-4 transition-transform duration-300 hover:scale-105 group"
             >
-                <img
+                <img loading="lazy" decoding="async"
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-auto object-cover rounded-lg"

@@ -112,7 +112,7 @@ const Map = () => {
         </div>
       </div>
       <div className="md:col-span-2 md:row-span-3 col-span-1 row-span-1 order-2 md:order-5">
-        <img src={getSrc(location)} alt="" className='pt-0 md:pt-24' /></div>
+        <img loading="lazy" decoding="async" src={getSrc(location)} alt="" className='pt-0 md:pt-24' /></div>
       <div className="order-6 md:order-6 address_div">
         <div className='top_address_bar_gray'>
           {offices.germany}

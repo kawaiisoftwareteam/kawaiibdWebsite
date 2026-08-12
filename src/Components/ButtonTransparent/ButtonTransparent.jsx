@@ -13,7 +13,7 @@ const ButtonTransparent = ({ text, link, bgclass }) => {
           {text}
         </div>
         <div>
-          <img src={typeof arrow === 'string' ? arrow : arrow?.src || arrow} alt="arrow" className='mt-[0.35rem]' />
+          <img loading="eager" decoding="async" src={typeof arrow === 'string' ? arrow : arrow?.src || arrow} alt="arrow" className='mt-[0.35rem]' />
         </div>
       </div>
     </Link>

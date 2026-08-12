@@ -252,14 +252,14 @@ const KawaiiConcerns = () => {
 
                                 <div className="kc-logo-wrapper">
                                     <div className="kc-logo-box">
-                                        <img 
+                                        <img loading="lazy" decoding="async" 
                                             src={getSrc(card.cardLogo)} 
                                             alt={`${card.concernName} logo`} 
                                             className="kc-logo-img" 
                                         />
                                     </div>
                                     <div className="kc-image-preview">
-                                        <img 
+                                        <img loading="lazy" decoding="async" 
                                             src={getSrc(card.cardImg)} 
                                             alt={card.concernName} 
                                             className="kc-bg-thumb" 
@@ -334,14 +334,14 @@ const KawaiiConcerns = () => {
                         </button>
 
                         <div className="kc-modal-banner">
-                            <img 
+                            <img loading="lazy" decoding="async" 
                                 src={getSrc(selectedCompany.cardImg)} 
                                 alt={selectedCompany.concernName} 
                                 className="kc-modal-banner-img" 
                             />
                             <div className="kc-modal-banner-overlay"></div>
                             <div className="kc-modal-logo-float">
-                                <img 
+                                <img loading="lazy" decoding="async" 
                                     src={getSrc(selectedCompany.cardLogo)} 
                                     alt={`${selectedCompany.concernName} logo`} 
                                 />

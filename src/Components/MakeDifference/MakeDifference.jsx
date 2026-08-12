@@ -26,20 +26,20 @@ const MakeDifference = () => {
                     <div className='diffCardImg' style={{ backgroundImage: `url(${diffImages[index]})` }}>
                         <div className='DiffCardTitle'>{card.title}</div>
                         <div className='diffCardCornerBg'>
-                            <img src={topCorner} alt="" />
+                            <img loading="lazy" decoding="async" src={topCorner} alt="" />
                         </div>
                     </div>
                     <div className='diffCardContentBox'>
                         <div className='diffCardContentDescription'>{card.desc}</div>
                     </div>
                     <div className='diffCardCornerDownBg'>
-                        <img src={bottomCorner} alt="" />
+                        <img loading="lazy" decoding="async" src={bottomCorner} alt="" />
                     </div>
                 </div>
                 ))}
             </div>
             <div className='diffCardMainBottomCorner'>
-                <img src={mainbottomCorner} alt="" />
+                <img loading="lazy" decoding="async" src={mainbottomCorner} alt="" />
             </div>
         </div>
     )

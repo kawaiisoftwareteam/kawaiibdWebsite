@@ -8,12 +8,12 @@ const EmblaCarouselArrow = ({ onPrevClick, onNextClick }) => {
         <div className='projectheroPrevNext'>
             <div className='projectsliderArrowDirection' onClick={onPrevClick}>
                 <div className='projectherosliderArrow'>
-                    <img src={leftArrow} alt="leftArrow" />
+                    <img loading="eager" decoding="async" src={leftArrow} alt="leftArrow" />
                 </div>
             </div>
             <div className='projectsliderArrowDirection' onClick={onNextClick}>
                 <div className='projectherosliderArrow'>
-                    <img src={rightArrow} alt="rightArrow" />
+                    <img loading="eager" decoding="async" src={rightArrow} alt="rightArrow" />
                 </div>
             </div>
         </div>

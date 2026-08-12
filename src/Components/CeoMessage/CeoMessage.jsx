@@ -16,7 +16,7 @@ const CeoMessage = () => {
 
     return (
         <div className='ceoMessage'>
-            <img src={getSrc(commaMsg)} alt="Comma_Msg" className='commaCeoMsg' />
+            <img loading="lazy" decoding="async" src={getSrc(commaMsg)} alt="Comma_Msg" className='commaCeoMsg' />
             <div className='contentBoxMsg'>
                 <div className='contentLeftMsg'>
                     <div className='contentLeftMsgtext1'>{t('home.ceo.intro')}</div>
@@ -33,9 +33,9 @@ const CeoMessage = () => {
                 <div className='contentRightMsg'>
                     <div className='contentRightMsgBox'>
                         <div className='contentRightPattern'>
-                            <img src={getSrc(blob)} alt="" className='blobMsg' />
+                            <img loading="lazy" decoding="async" src={getSrc(blob)} alt="" className='blobMsg' />
                             <div className='msgKgPattern'>
-                                <img src={getSrc(msgKgSvg)} alt="msgKgSvg" />
+                                <img loading="lazy" decoding="async" src={getSrc(msgKgSvg)} alt="msgKgSvg" />
                             </div>
                         </div>
                         <div className='contentRightImage'>

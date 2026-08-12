@@ -50,7 +50,7 @@ const Footer = () => {
               rel="me"
               itemProp="url"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={getSrc(kgLogo)}
                 alt="Kawaii Group"
                 className="u-photo"

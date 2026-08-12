@@ -67,7 +67,7 @@ const OurBusinessPage = () => {
             <p className="obPage__subtitle">{subtitle}</p>
           </div>
           <div className="obPage__heroMedia">
-            <img src={getSrc(ourBusinessBanner)} alt="Kawaii Group Business Portfolio" />
+            <img loading="lazy" decoding="async" src={getSrc(ourBusinessBanner)} alt="Kawaii Group Business Portfolio" />
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ const OurBusinessPage = () => {
               </div>
 
               <div className="obPage__itemMedia">
-                <img src={getSrc(item.image)} alt={item.title} />
+                <img loading="lazy" decoding="async" src={getSrc(item.image)} alt={item.title} />
               </div>
 
               <div className="obPage__itemCopy">

@@ -49,7 +49,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
         aria-haspopup="listbox"
         aria-expanded={dropdownVisible}
       >
-        <img
+        <img loading="lazy" decoding="async"
           className="language-switcher__flag"
           src={flagImages[current.code]}
           alt=""
@@ -78,7 +78,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
               onClick={() => changeLanguage(lang.code)}
               className={`lang-dropdown__option ${lang.code === locale ? 'lang-dropdown__option--active' : ''}`}
             >
-              <img
+              <img loading="lazy" decoding="async"
                 className="language-switcher__flag language-switcher__flag--option"
                 src={flagImages[lang.code]}
                 alt=""
