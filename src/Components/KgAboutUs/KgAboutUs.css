@@ -3,9 +3,6 @@
    Light palette, large typography, rich animations
    ============================================================ */
 
-/* ---------- Google Fonts import ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
 /* ---------- CSS Variables ---------- */
 :root {
   --kg-red: #BE1E2D;

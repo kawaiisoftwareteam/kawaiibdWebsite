@@ -53,19 +53,52 @@ export const stripLocalePrefix = (pathname) => {
 /** Keep paths compatible with next.config trailingSlash: true */
 const withTrailingSlash = (path) => {
   if (!path || path === '/') return '/';
-  const [pathname, search = ''] = path.split('?');
-  const normalized = pathname.endsWith('/') ? pathname : `${pathname}/`;
+  const [pathnameOnly, search = ''] = path.split('?');
+  const normalized = pathnameOnly.endsWith('/') ? pathnameOnly : `${pathnameOnly}/`;
   return search ? `${normalized}?${search}` : normalized;
 };
 
-export const LocaleProvider = ({ children }) => {
+const localeFromPathname = (pathname) => {
+  if (!pathname || typeof pathname !== 'string') return null;
+  const part = pathname.split('/').filter(Boolean)[0];
+  return isValidLocale(part) ? part : null;
+};
+
+/** Normalize Next params.locale (string | string[]) */
+const normalizeParamLocale = (paramLocale) => {
+  if (Array.isArray(paramLocale)) return paramLocale[0] || null;
+  return paramLocale || null;
+};
+
+/**
+ * URL is the only source of truth for which language to show.
+ * Order: useParams → window.location (reload-safe) → pathname → layout prop
+ */
+const resolveActiveLocale = (paramLocale, initialLocale, pathname) => {
+  const fromParams = normalizeParamLocale(paramLocale);
+  if (isValidLocale(fromParams)) return fromParams;
+
+  if (typeof window !== 'undefined') {
+    const fromWindow = localeFromPathname(window.location.pathname);
+    if (fromWindow) return fromWindow;
+  }
+
+  const fromPath = localeFromPathname(pathname);
+  if (fromPath) return fromPath;
+
+  if (isValidLocale(initialLocale)) return initialLocale;
+
+  return DEFAULT_LOCALE;
+};
+
+export const LocaleProvider = ({ children, initialLocale }) => {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
-  const urlLocale = params?.locale;
 
-  const initialLocale = isValidLocale(urlLocale) ? urlLocale : DEFAULT_LOCALE;
-  const [locale, setLocaleState] = useState(initialLocale);
+  // Derived every render — never trust stale useState after reload/hydration
+  const locale = resolveActiveLocale(params?.locale, initialLocale, pathname);
+
   const [source, setSource] = useState(() => getStoredSource() || 'url');
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     try {
@@ -132,7 +165,6 @@ export const LocaleProvider = ({ children }) => {
   const setLocale = useCallback(
     (nextLocale, nextSource = 'manual') => {
       if (!isValidLocale(nextLocale)) return;
-      setLocaleState(nextLocale);
       setSource(nextSource);
       persistLocale(nextLocale, nextSource);
 
@@ -154,15 +186,25 @@ export const LocaleProvider = ({ children }) => {
   );
 
   /**
-   * Used by GeoAutoSync after IP/browser detection.
-   * Updates React state (so the suggestion banner can show) and
-   * replaces the URL when the detected locale differs.
+   * Geo detection helper — never overrides a locale already in the URL.
    */
   const applyDetectedLocale = useCallback(
     (nextLocale, nextSource = 'auto', { search = '' } = {}) => {
       if (!isValidLocale(nextLocale)) return;
 
-      setLocaleState(nextLocale);
+      const locked =
+        localeFromPathname(
+          typeof window !== 'undefined' ? window.location.pathname : ''
+        ) || localeFromPathname(pathname);
+
+      // URL already has /ja or /bn or /en — keep it (do not switch to geo English)
+      if (locked) {
+        setSource(nextSource === 'auto' ? 'url' : nextSource);
+        persistLocale(locked, nextSource === 'auto' ? 'url' : nextSource);
+        applyDocumentMeta(locked);
+        return;
+      }
+
       setSource(nextSource);
       persistLocale(nextLocale, nextSource);
       applyDocumentMeta(nextLocale);
@@ -178,7 +220,6 @@ export const LocaleProvider = ({ children }) => {
       const currentSearch =
         typeof window !== 'undefined' ? window.location.search : '';
 
-      // Only navigate when locale/path/search actually change (avoids reload loops)
       if (nextPath !== currentPath || search !== currentSearch) {
         router.replace(nextPath + search);
       }
@@ -197,29 +238,22 @@ export const LocaleProvider = ({ children }) => {
     }
   }, []);
 
-  // Set lang as early as possible so Anek Bangla / Noto Sans JP CSS apply
   useLayoutEffect(() => {
-    if (isValidLocale(urlLocale)) {
-      document.documentElement.lang = urlLocale;
-    }
-  }, [urlLocale]);
+    document.documentElement.lang = locale;
+    applyDocumentMeta(locale);
+    persistLocale(locale, getStoredSource() === 'manual' ? 'manual' : 'url');
+  }, [locale, applyDocumentMeta]);
 
-  // Sync when URL locale changes
   useEffect(() => {
-    if (!isValidLocale(urlLocale)) return;
-    setLocaleState(urlLocale);
-    applyDocumentMeta(urlLocale);
-
     const existingSource = getStoredSource();
     if (existingSource === 'manual') {
       setSource('manual');
-      persistLocale(urlLocale, 'manual');
-    } else if (existingSource === 'auto') {
-      setSource('auto');
+      persistLocale(locale, 'manual');
     } else {
-      setSource('url');
+      setSource(existingSource === 'auto' ? 'auto' : 'url');
+      persistLocale(locale, existingSource === 'auto' ? 'auto' : 'url');
     }
-  }, [urlLocale, applyDocumentMeta]);
+  }, [locale]);
 
   const t = useCallback(
     (key, fallback = '') => {
@@ -244,7 +278,12 @@ export const LocaleProvider = ({ children }) => {
       dismissBanner,
       t,
       localizedPath: (path = '/') => {
-        const clean = !path || path === '/' || path === '/home' ? '/' : path.startsWith('/') ? path : `/${path}`;
+        const clean =
+          !path || path === '/' || path === '/home'
+            ? '/'
+            : path.startsWith('/')
+              ? path
+              : `/${path}`;
         if (clean === '/') return withTrailingSlash(`/${locale}`);
         return withTrailingSlash(`/${locale}${clean}`);
       },

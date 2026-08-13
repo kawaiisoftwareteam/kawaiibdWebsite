@@ -2,7 +2,7 @@ import apparelImg from '../Assets/services/Apparel Manufacturing.webp';
 import textileImg from '../Assets/services/Textile Manufacturing.webp';
 import tradingImg from '../Assets/services/ International Trading.webp';
 import techImg from '../Assets/services/Technology Solutions.webp';
-import recruitmentImg from '../Assets/services/International Recruitment.webp';
+import recruitmentImg from '../Assets/services/Overseas recruitment.webp';
 import hrImg from '../Assets/services/Human Resource Solutions.webp';
 import overseasImg from '../Assets/services/Overseas Employment Support.webp';
 import japaneseImg from '../Assets/services/Japanese Language Education.webp';

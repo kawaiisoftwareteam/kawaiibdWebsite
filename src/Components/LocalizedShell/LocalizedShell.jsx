@@ -39,7 +39,7 @@ export default function LocalizedShell({ children, locale }) {
 
   return (
     <Suspense fallback={null}>
-      <LocaleProvider>
+      <LocaleProvider initialLocale={locale}>
         <LocalizedShellInner>{children}</LocalizedShellInner>
       </LocaleProvider>
     </Suspense>

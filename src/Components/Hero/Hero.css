@@ -7,7 +7,11 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: #0F1117;
+  /* Fallback while slide bitmaps decode — never a bare black void */
+  background-color: #1a1d27;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero {
@@ -28,8 +32,8 @@
   inset: 0;
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
-  will-change: opacity;
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero__slide-bg--active {
@@ -87,7 +91,7 @@
 }
 
 .hero__place-name {
-  font-family: var(--font-display), 'Jost', sans-serif !important;
+  font-family: var(--font-display), sans-serif !important;
   /*
     Fit longest label to container width.
     Uses cqi so it scales with the title area, not only the viewport.
@@ -109,7 +113,6 @@
   text-overflow: clip;
   text-shadow: none;
   user-select: none;
-  will-change: transform, opacity;
 }
 
 /* Fallback when container queries aren't available */

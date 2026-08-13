@@ -3,6 +3,7 @@ import Script from 'next/script';
 import GoogleAnalytics from '../Components/GoogleAnalytics/GoogleAnalytics';
 import { META, DEFAULT_LOCALE } from '../i18n/config';
 import { SITE_URL, SITE_NAME, SITE_OG_IMAGE, buildPageMetadata } from '../lib/seo';
+import { fontVariables } from '../lib/fonts';
 import '../index.css';
 import '../App.css';
 
@@ -53,7 +54,7 @@ const localeLangScript = `
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={fontVariables} suppressHydrationWarning>
       <body>
         <Script id="kg-locale-lang" strategy="beforeInteractive">
           {localeLangScript}

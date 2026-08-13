@@ -28,12 +28,21 @@ const ArrowRight = () => (
   </svg>
 );
 
+const preloadSrc = (src) => {
+  if (!src || typeof window === 'undefined') return;
+  const img = new Image();
+  img.decoding = 'async';
+  img.src = src;
+};
+
 const ServicesShowcase = ({ showSeeMore = false }) => {
   const { t, localizedPath, locale } = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(3);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
+  const sectionRef = useRef(null);
+  const isVisibleRef = useRef(true);
 
   const services = useMemo(
     () =>
@@ -83,9 +92,32 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
     if (currentIndex > maxIndex) setCurrentIndex(maxIndex);
   }, [currentIndex, maxIndex]);
 
+  // Warm-decode visible + nearby slides so cards/bg appear instantly
+  useEffect(() => {
+    const start = Math.max(0, currentIndex - 1);
+    const end = Math.min(services.length, currentIndex + cardsToShow + 2);
+    for (let i = start; i < end; i += 1) {
+      preloadSrc(getSrc(services[i]?.image));
+    }
+  }, [services, currentIndex, cardsToShow]);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     if (paused || maxIndex === 0) return undefined;
     timerRef.current = window.setInterval(() => {
+      if (!isVisibleRef.current) return;
       setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
     }, AUTO_MS);
     return () => window.clearInterval(timerRef.current);
@@ -102,9 +134,16 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
   };
 
   return (
-    <section className="bizIntro">
+    <section className="bizIntro" ref={sectionRef}>
       <div className="bizIntro__curve" key={services[currentIndex]?.id}>
-        <img loading="lazy" decoding="async" src={getSrc(activeBg)} alt="" className="bizIntro__curveImg" />
+        <img
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          src={getSrc(activeBg)}
+          alt=""
+          className="bizIntro__curveImg"
+        />
       </div>
 
       <div className="bizIntro__inner">
@@ -136,37 +175,48 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
                 transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
               }}
             >
-              {services.map((item) => (
-                <article
-                  key={item.id}
-                  className="bizIntro__card"
-                  style={{ flex: `0 0 ${100 / cardsToShow}%` }}
-                >
-                  <div className="bizIntro__cardBody">
-                    <div className="bizIntro__media">
-                      <img loading="lazy" decoding="async" src={getSrc(item.image)} alt={item.title} />
-                    </div>
-
-                    <div className="bizIntro__meta">
-                      <p className="bizIntro__category">{item.category}</p>
-                      <div className="bizIntro__titleRow">
-                        <h3 className="bizIntro__cardTitle">{item.title}</h3>
-                        <div className="bizIntro__action">
-                          <span className="bizIntro__line" />
-                          <Link
-                            href={localizedPath('/our-business')}
-                            className="bizIntro__arrow"
-                            aria-label={`Explore ${item.title}`}
-                          >
-                            <ArrowIcon direction="right" />
-                          </Link>
-                        </div>
+              {services.map((item, index) => {
+                const isNear =
+                  index >= currentIndex - 1 &&
+                  index <= currentIndex + cardsToShow + 1;
+                return (
+                  <article
+                    key={item.id}
+                    className="bizIntro__card"
+                    style={{ flex: `0 0 ${100 / cardsToShow}%` }}
+                  >
+                    <div className="bizIntro__cardBody">
+                      <div className="bizIntro__media">
+                        <img
+                          src={getSrc(item.image)}
+                          alt={item.title}
+                          loading={isNear ? 'eager' : 'lazy'}
+                          decoding="async"
+                          fetchPriority={index < cardsToShow ? 'high' : 'auto'}
+                        />
                       </div>
-                      <p className="bizIntro__desc">{item.desc}</p>
+
+                      <div className="bizIntro__meta">
+                        <p className="bizIntro__category">{item.category}</p>
+                        <div className="bizIntro__titleRow">
+                          <h3 className="bizIntro__cardTitle">{item.title}</h3>
+                          <div className="bizIntro__action">
+                            <span className="bizIntro__line" />
+                            <Link
+                              href={localizedPath('/our-business')}
+                              className="bizIntro__arrow"
+                              aria-label={`Explore ${item.title}`}
+                            >
+                              <ArrowIcon direction="right" />
+                            </Link>
+                          </div>
+                        </div>
+                        <p className="bizIntro__desc">{item.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                );
+              })}
             </div>
           </div>
 

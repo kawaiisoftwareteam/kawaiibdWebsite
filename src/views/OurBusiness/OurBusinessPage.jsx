@@ -6,8 +6,6 @@ import './OurBusinessPage.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import { businessServices } from '../../data/businessServices';
 
-import ourBusinessBanner from '../../Assets/ourBusinessBanner.webp';
-
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const OurBusinessPage = () => {
@@ -66,9 +64,6 @@ const OurBusinessPage = () => {
             </h1>
             <p className="obPage__subtitle">{subtitle}</p>
           </div>
-          <div className="obPage__heroMedia">
-            <img loading="lazy" decoding="async" src={getSrc(ourBusinessBanner)} alt="Kawaii Group Business Portfolio" />
-          </div>
         </div>
       </div>
 
@@ -81,7 +76,13 @@ const OurBusinessPage = () => {
               </div>
 
               <div className="obPage__itemMedia">
-                <img loading="lazy" decoding="async" src={getSrc(item.image)} alt={item.title} />
+                <img
+                  loading={idx < 4 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchPriority={idx < 2 ? 'high' : 'auto'}
+                  src={getSrc(item.image)}
+                  alt={item.title}
+                />
               </div>
 
               <div className="obPage__itemCopy">

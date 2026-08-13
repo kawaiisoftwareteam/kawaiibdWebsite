@@ -180,6 +180,19 @@ const MainNav = () => {
     document.body.style.touchAction = '';
   }, []);
 
+  /** Already on home → scroll only (avoids remount + hero image reload / black flash) */
+  const handleHomeNav = useCallback(
+    (e) => {
+      const bare = stripLocalePrefix(pathname || '');
+      if (bare === '/' || bare === '') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        closeSidebar();
+      }
+    },
+    [pathname, closeSidebar]
+  );
+
   const resolveConcernPath = (path, isExternal) =>
     isExternal ? path : localizedPath(path);
 
@@ -217,7 +230,11 @@ const MainNav = () => {
       >
         <div className="mainNav__inner">
           {/* Left Logo */}
-          <Link href={localizedPath('/home')} className="mainNav__logo">
+          <Link
+            href={localizedPath('/home')}
+            className="mainNav__logo"
+            onClick={handleHomeNav}
+          >
             <img loading="eager" decoding="async" src={getSrc(kawaiiLogo)} alt="Kawaii Group Logo" />
           </Link>
 
@@ -246,6 +263,7 @@ const MainNav = () => {
                 <Link
                   href={localizedPath('/home')}
                   className={`mainNav__link ${isLinkActive('/home') ? 'mainNav__link--active' : ''}`}
+                  onClick={handleHomeNav}
                 >
                   {t('nav.home')}
                 </Link>
@@ -305,7 +323,7 @@ const MainNav = () => {
       {/* Mobile sidebar */}
       <div className={`mobileSidebar ${isSidebarOpen ? 'mobileSidebar--open' : ''}`}>
         <div className="mobileSidebar__top">
-          <Link href={localizedPath('/home')} onClick={closeSidebar}>
+          <Link href={localizedPath('/home')} onClick={handleHomeNav}>
             <img loading="eager" decoding="async" src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
           </Link>
           <button className="mobileSidebar__close" onClick={toggleSidebar} aria-label="Close menu">
@@ -317,7 +335,7 @@ const MainNav = () => {
           <Link
             href={localizedPath('/home')}
             className={`mobileSidebar__link ${isLinkActive('/home') ? 'mobileSidebar__link--active' : ''}`}
-            onClick={closeSidebar}
+            onClick={handleHomeNav}
           >
             {t('nav.home')}
           </Link>
