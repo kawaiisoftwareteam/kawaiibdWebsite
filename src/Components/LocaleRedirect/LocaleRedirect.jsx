@@ -48,9 +48,10 @@ const LocaleRedirect = () => {
       const restParts =
         parts[0] && isValidLocale(parts[0]) ? parts.slice(1) : parts;
       const rest = restParts.join('/');
-      const nextPath = rest
+      const base = rest
         ? `/${resolved.locale}/${rest}`
         : `/${resolved.locale}`;
+      const nextPath = base.endsWith('/') ? base : `${base}/`;
 
       router.replace(nextPath + cleanSearch);
     };

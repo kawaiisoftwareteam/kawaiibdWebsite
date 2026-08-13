@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 
+// Note: middleware does not run with `output: "export"` (static cPanel deploy).
+// Kept for local `next dev` / Node hosting only.
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  // Suppress a known dev-only missing source map request from the app chunk.
   if (
     pathname.startsWith('/_next/static/chunks/app/') &&
     pathname.endsWith('/LayoutGroupContext.mjs.map')

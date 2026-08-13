@@ -50,6 +50,14 @@ export const stripLocalePrefix = (pathname) => {
   return pathname || '/';
 };
 
+/** Keep paths compatible with next.config trailingSlash: true */
+const withTrailingSlash = (path) => {
+  if (!path || path === '/') return '/';
+  const [pathname, search = ''] = path.split('?');
+  const normalized = pathname.endsWith('/') ? pathname : `${pathname}/`;
+  return search ? `${normalized}?${search}` : normalized;
+};
+
 export const LocaleProvider = ({ children }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -96,7 +104,7 @@ export const LocaleProvider = ({ children }) => {
         link.setAttribute('data-kg-hreflang', '1');
         link.setAttribute('hreflang', hreflang);
         const targetLocale = hreflang === 'x-default' ? DEFAULT_LOCALE : hreflang;
-        link.setAttribute('href', `${origin}/${targetLocale}${suffix}`);
+        link.setAttribute('href', `${origin}/${targetLocale}${suffix}/`);
         document.head.appendChild(link);
       });
     },
@@ -106,7 +114,9 @@ export const LocaleProvider = ({ children }) => {
   const navigateToLocale = useCallback(
     (nextLocale, { replace = false } = {}) => {
       const rest = stripLocalePrefix(pathname);
-      const nextPath = rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`;
+      const nextPath = withTrailingSlash(
+        rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`
+      );
       const currentSearch =
         typeof window !== 'undefined' ? window.location.search : '';
       const href = nextPath + currentSearch;
@@ -158,15 +168,22 @@ export const LocaleProvider = ({ children }) => {
       applyDocumentMeta(nextLocale);
 
       const rest = stripLocalePrefix(pathname);
-      const nextPath = rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`;
+      const nextPath = withTrailingSlash(
+        rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`
+      );
+      const currentPath =
+        typeof window !== 'undefined'
+          ? withTrailingSlash(window.location.pathname)
+          : withTrailingSlash(pathname);
       const currentSearch =
         typeof window !== 'undefined' ? window.location.search : '';
 
-      if (nextLocale !== locale || currentSearch !== search) {
+      // Only navigate when locale/path/search actually change (avoids reload loops)
+      if (nextPath !== currentPath || search !== currentSearch) {
         router.replace(nextPath + search);
       }
     },
-    [applyDocumentMeta, locale, pathname, router]
+    [applyDocumentMeta, pathname, router]
   );
 
   const dismissBanner = useCallback(() => {
@@ -228,8 +245,8 @@ export const LocaleProvider = ({ children }) => {
       t,
       localizedPath: (path = '/') => {
         const clean = !path || path === '/' || path === '/home' ? '/' : path.startsWith('/') ? path : `/${path}`;
-        if (clean === '/') return `/${locale}`;
-        return `/${locale}${clean}`;
+        if (clean === '/') return withTrailingSlash(`/${locale}`);
+        return withTrailingSlash(`/${locale}${clean}`);
       },
     }),
     [locale, source, showBanner, setLocale, applyDetectedLocale, dismissBanner, t]
