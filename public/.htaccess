@@ -44,6 +44,12 @@ DirectoryIndex index.html
   RewriteRule ^seminar/?$ /ja/seminar/ [R=302,L]
   RewriteRule ^seminar/?$ /en/seminar/ [R=301,L]
 
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^career/?$ /bn/career/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^career/?$ /ja/career/ [R=302,L]
+  RewriteRule ^career/?$ /en/career/ [R=301,L]
+
   # Old broken img src="[object Object]" became crawlable relative URLs
   RewriteRule ^/?(en|bn|ja)/.+/\%5Bobject\%20Object\%5D/?$ /$1/ [R=301,L,NC,NE]
   RewriteRule ^/?(en|bn|ja)/.+/\[object Object\]/?$ /$1/ [R=301,L,NC,NE]
