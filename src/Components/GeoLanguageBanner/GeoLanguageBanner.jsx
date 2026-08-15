@@ -21,18 +21,17 @@ const GeoLanguageBanner = () => {
         <div className="geo-lang-banner__actions">
           <button
             type="button"
-            className="geo-lang-banner__switch"
+            className="geo-lang-banner__yes"
             onClick={() => setLocale('en', 'manual')}
           >
-            {t('banner.switchToEnglish')}
+            {t('banner.yes')}
           </button>
           <button
             type="button"
-            className="geo-lang-banner__dismiss"
+            className="geo-lang-banner__no"
             onClick={dismissBanner}
-            aria-label={t('banner.dismiss')}
           >
-            ×
+            {t('banner.no')}
           </button>
         </div>
       </div>

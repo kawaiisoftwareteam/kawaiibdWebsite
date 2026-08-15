@@ -143,37 +143,26 @@ const parseCountryCode = (value) => {
   return /^[A-Z]{2}$/.test(country) ? country : null;
 };
 
-/** Host-agnostic IP geolocation fallbacks (no API key) */
+/** Host-agnostic IP geolocation fallbacks (no API key). Parallel + short timeout. */
 export const detectCountryFromIpApi = async () => {
   const providers = [
     async () => {
-      const res = await fetchWithTimeout('https://api.country.is/', 3000);
+      const res = await fetchWithTimeout('https://api.country.is/', 800);
       if (!res.ok) return null;
       const data = await res.json();
       return parseCountryCode(data?.country);
     },
     async () => {
-      const res = await fetchWithTimeout('https://get.geojs.io/v1/ip/country.json', 3000);
+      const res = await fetchWithTimeout('https://get.geojs.io/v1/ip/country.json', 800);
       if (!res.ok) return null;
       const data = await res.json();
       return parseCountryCode(data?.country);
-    },
-    async () => {
-      const res = await fetchWithTimeout('https://ipapi.co/country/', 3000);
-      if (!res.ok) return null;
-      const text = await res.text();
-      if (text.includes('<') || text.length > 8) return null;
-      return parseCountryCode(text);
     },
   ];
 
-  for (const provider of providers) {
-    try {
-      const country = await provider();
-      if (country) return country;
-    } catch (_) {
-      /* try next */
-    }
+  const results = await Promise.allSettled(providers.map((fn) => fn()));
+  for (const result of results) {
+    if (result.status === 'fulfilled' && result.value) return result.value;
   }
 
   return null;
@@ -198,8 +187,8 @@ export const resolveVisitorLocale = async ({ forceCountry = null, forceRedetect 
   const stored = getStoredLocale();
   const source = getStoredSource();
 
-  if (!forceRedetect && stored && source === 'manual') {
-    return { locale: stored, source: 'manual', country: null };
+  if (!forceRedetect && stored && isValidLocale(stored)) {
+    return { locale: stored, source: source || 'url', country: null };
   }
 
   const country =

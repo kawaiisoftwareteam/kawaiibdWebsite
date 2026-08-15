@@ -7,7 +7,7 @@ import {
   getStoredSource,
   resolveVisitorLocale,
 } from '../../Hooks/useGeoLanguage/useGeoLanguage';
-import { isValidLocale } from '../../i18n/config';
+import { BANNER_DISMISSED_KEY, DEFAULT_LOCALE, isValidLocale } from '../../i18n/config';
 import { useLocale } from '../../i18n/LocaleContext';
 
 // One geo check per browser tab session (unless testing query params are used).
@@ -34,12 +34,13 @@ const GeoAutoSync = () => {
     const forceRedetect = searchParams?.get('redetect') === '1';
     const source = getStoredSource();
     const forced = Boolean(forceCountry || forceRedetect);
-    const pathLocale = localeFromPath(pathname);
-
-    // URL is source of truth — do not replace /ja with geo English/Bangla on reload
-    if (pathLocale && !forced) {
-      sessionGeoChecked = true;
-      return;
+    let bannerDismissed = false;
+    try {
+      bannerDismissed =
+        typeof window !== 'undefined' &&
+        localStorage.getItem(BANNER_DISMISSED_KEY) === '1';
+    } catch (_) {
+      bannerDismissed = false;
     }
 
     if (!forced && source === 'manual') {
@@ -73,21 +74,37 @@ const GeoAutoSync = () => {
           sessionGeoChecked = true;
         }
 
-        // Still on a locale URL (race) — keep URL locale
+        const params = new URLSearchParams(searchParams?.toString() || '');
+        params.delete('forceCountry');
+        params.delete('redetect');
+        const cleanSearch = params.toString() ? `?${params.toString()}` : '';
+
+        // URL already has a locale — never replace it, but mark auto so the
+        // first-visit English Yes/No banner can show on bn/ja.
         const latestPathLocale = localeFromPath(window.location.pathname);
         if (latestPathLocale && !forced) {
+          if (
+            !bannerDismissed &&
+            resolved.source === 'auto' &&
+            resolved.locale === latestPathLocale &&
+            latestPathLocale !== DEFAULT_LOCALE
+          ) {
+            applyDetectedLocale(resolved.locale, 'auto', { search: cleanSearch });
+          }
           return;
         }
 
         // Don't thrash if already matching
         if (resolved.locale === locale && !forced) {
+          if (
+            !bannerDismissed &&
+            resolved.source === 'auto' &&
+            locale !== DEFAULT_LOCALE
+          ) {
+            applyDetectedLocale(resolved.locale, 'auto', { search: cleanSearch });
+          }
           return;
         }
-
-        const params = new URLSearchParams(searchParams?.toString() || '');
-        params.delete('forceCountry');
-        params.delete('redetect');
-        const cleanSearch = params.toString() ? `?${params.toString()}` : '';
 
         applyDetectedLocale(resolved.locale, resolved.source, {
           search: cleanSearch,

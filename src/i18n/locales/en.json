@@ -40,6 +40,8 @@
     "bn": "Viewing in Bangla. Switch to English?",
     "ja": "日本語で表示しています。英語で表示しますか？",
     "switchToEnglish": "Switch to English",
+    "yes": "Yes",
+    "no": "No",
     "dismiss": "Dismiss"
   },
   "language": {

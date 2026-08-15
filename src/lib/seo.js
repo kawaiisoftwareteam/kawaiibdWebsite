@@ -253,7 +253,7 @@ export function buildPageMetadata({ locale, path = '/', title, description } = {
   const pageTitle = title || seo.title;
   const pageDescription = description || seo.description;
   const normalized = normalizePath(path);
-  const pathSuffix = normalized === '/' ? '' : normalized;
+  const pathSuffix = normalized === '/' ? '/' : `${normalized}/`;
   const canonical = `${SITE_URL}/${localeKey}${pathSuffix}`;
 
   const languages = {};

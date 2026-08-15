@@ -50,9 +50,9 @@ export const stripLocalePrefix = (pathname) => {
   return pathname || '/';
 };
 
-/** Keep paths compatible with next.config trailingSlash: true */
-const withTrailingSlash = (path) => {
-  if (!path || path === '/') return '/';
+/** Ensure URLs have trailing slashes for static export compatibility */
+const ensureTrailingSlash = (path) => {
+  if (!path) return '/';
   const [pathnameOnly, search = ''] = path.split('?');
   const normalized = pathnameOnly.endsWith('/') ? pathnameOnly : `${pathnameOnly}/`;
   return search ? `${normalized}?${search}` : normalized;
@@ -99,14 +99,8 @@ export const LocaleProvider = ({ children, initialLocale }) => {
   // Derived every render — never trust stale useState after reload/hydration
   const locale = resolveActiveLocale(params?.locale, initialLocale, pathname);
 
-  const [source, setSource] = useState(() => getStoredSource() || 'url');
-  const [bannerDismissed, setBannerDismissed] = useState(() => {
-    try {
-      return typeof window !== 'undefined' && localStorage.getItem(BANNER_DISMISSED_KEY) === '1';
-    } catch (_) {
-      return false;
-    }
-  });
+  const [source, setSource] = useState('url');
+  const [bannerDismissed, setBannerDismissed] = useState(false);
 
   const applyDocumentMeta = useCallback(
     (nextLocale) => {
@@ -137,7 +131,7 @@ export const LocaleProvider = ({ children, initialLocale }) => {
         link.setAttribute('data-kg-hreflang', '1');
         link.setAttribute('hreflang', hreflang);
         const targetLocale = hreflang === 'x-default' ? DEFAULT_LOCALE : hreflang;
-        link.setAttribute('href', `${origin}/${targetLocale}${suffix}/`);
+        link.setAttribute('href', `${origin}/${targetLocale}${suffix}`);
         document.head.appendChild(link);
       });
     },
@@ -147,7 +141,7 @@ export const LocaleProvider = ({ children, initialLocale }) => {
   const navigateToLocale = useCallback(
     (nextLocale, { replace = false } = {}) => {
       const rest = stripLocalePrefix(pathname);
-      const nextPath = withTrailingSlash(
+      const nextPath = ensureTrailingSlash(
         rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`
       );
       const currentSearch =
@@ -197,10 +191,11 @@ export const LocaleProvider = ({ children, initialLocale }) => {
           typeof window !== 'undefined' ? window.location.pathname : ''
         ) || localeFromPathname(pathname);
 
-      // URL already has /ja or /bn or /en — keep it (do not switch to geo English)
+      // URL already has /ja or /bn or /en — keep the path, but preserve auto
+      // so first-visit "Switch to English?" can still appear.
       if (locked) {
-        setSource(nextSource === 'auto' ? 'url' : nextSource);
-        persistLocale(locked, nextSource === 'auto' ? 'url' : nextSource);
+        setSource(nextSource);
+        persistLocale(locked, nextSource);
         applyDocumentMeta(locked);
         return;
       }
@@ -210,13 +205,13 @@ export const LocaleProvider = ({ children, initialLocale }) => {
       applyDocumentMeta(nextLocale);
 
       const rest = stripLocalePrefix(pathname);
-      const nextPath = withTrailingSlash(
+      const nextPath = ensureTrailingSlash(
         rest === '/' ? `/${nextLocale}` : `/${nextLocale}${rest}`
       );
       const currentPath =
         typeof window !== 'undefined'
-          ? withTrailingSlash(window.location.pathname)
-          : withTrailingSlash(pathname);
+          ? ensureTrailingSlash(window.location.pathname)
+          : ensureTrailingSlash(pathname);
       const currentSearch =
         typeof window !== 'undefined' ? window.location.search : '';
 
@@ -241,17 +236,30 @@ export const LocaleProvider = ({ children, initialLocale }) => {
   useLayoutEffect(() => {
     document.documentElement.lang = locale;
     applyDocumentMeta(locale);
-    persistLocale(locale, getStoredSource() === 'manual' ? 'manual' : 'url');
+    const existingSource = getStoredSource();
+    persistLocale(
+      locale,
+      existingSource === 'manual' || existingSource === 'auto' ? existingSource : 'url'
+    );
   }, [locale, applyDocumentMeta]);
 
   useEffect(() => {
+    try {
+      setBannerDismissed(localStorage.getItem(BANNER_DISMISSED_KEY) === '1');
+    } catch (_) {
+      /* ignore */
+    }
+
     const existingSource = getStoredSource();
     if (existingSource === 'manual') {
       setSource('manual');
       persistLocale(locale, 'manual');
+    } else if (existingSource === 'auto') {
+      setSource('auto');
+      persistLocale(locale, 'auto');
     } else {
-      setSource(existingSource === 'auto' ? 'auto' : 'url');
-      persistLocale(locale, existingSource === 'auto' ? 'auto' : 'url');
+      setSource(existingSource || 'url');
+      persistLocale(locale, existingSource || 'url');
     }
   }, [locale]);
 
@@ -266,7 +274,7 @@ export const LocaleProvider = ({ children, initialLocale }) => {
   );
 
   const showBanner =
-    source === 'auto' && locale !== DEFAULT_LOCALE && !bannerDismissed;
+    locale !== DEFAULT_LOCALE && source !== 'manual' && !bannerDismissed;
 
   const value = useMemo(
     () => ({
@@ -284,8 +292,8 @@ export const LocaleProvider = ({ children, initialLocale }) => {
             : path.startsWith('/')
               ? path
               : `/${path}`;
-        if (clean === '/') return withTrailingSlash(`/${locale}`);
-        return withTrailingSlash(`/${locale}${clean}`);
+        if (clean === '/') return `/${locale}/`;
+        return ensureTrailingSlash(`/${locale}${clean}`);
       },
     }),
     [locale, source, showBanner, setLocale, applyDetectedLocale, dismissBanner, t]

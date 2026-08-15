@@ -33,37 +33,37 @@
   gap: 8px;
 }
 
-.geo-lang-banner__switch {
+.geo-lang-banner__yes,
+.geo-lang-banner__no {
   appearance: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.geo-lang-banner__yes {
   border: 1px solid #be1e2d;
   background: #be1e2d;
   color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.geo-lang-banner__switch:hover {
+.geo-lang-banner__yes:hover {
   background: #9e1825;
   border-color: #9e1825;
 }
 
-.geo-lang-banner__dismiss {
-  appearance: none;
-  border: none;
-  background: transparent;
-  color: #666;
-  font-size: 22px;
-  line-height: 1;
-  padding: 0 6px;
-  cursor: pointer;
+.geo-lang-banner__no {
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  color: #333;
 }
 
-.geo-lang-banner__dismiss:hover {
-  color: #222;
+.geo-lang-banner__no:hover {
+  border-color: #999;
+  background: #f3f3f3;
 }
 
 @media (max-width: 640px) {
