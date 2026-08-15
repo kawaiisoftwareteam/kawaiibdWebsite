@@ -58,10 +58,10 @@
     "privacyPolicy": "プライバシーポリシー"
   },
   "masterclass": {
-    "bannerAlt": "染谷俊介博士によるBIM・建設DXマスタークラス",
-    "pageTitle": "BIM・建設DXマスタークラス",
+    "bannerAlt": "BUET限定 — 染谷俊介博士によるBIM・建設DXマスタークラス",
+    "pageTitle": "BUET限定 — BIM・建設DXマスタークラス",
     "urgency": {
-      "badge": "ライブZoomマスタークラス",
+      "badge": "BUET限定 · 対面マスタークラス",
       "title": "無料登録はまもなく終了！",
       "dateLabel": "開催日：2026年8月17日（月）"
     },
@@ -85,8 +85,8 @@
       },
       "location": {
         "label": "場所",
-        "value": "Zoomオンライン",
-        "note": "登録後にリンクをメールでお送りします"
+        "value": "Council Hall, BUET, ダッカ",
+        "note": "BUET限定 · 対面開催 · 事前登録必須"
       },
       "incentives": {
         "label": "特典",
@@ -148,16 +148,16 @@
       "copyLink": "共有リンクをコピー",
       "linkCopied": "リンクをコピーしました！",
       "shareEmail": "メールで共有",
-      "emailSubject": "ご招待：BIM・建設DXマスタークラス",
-      "emailBody": "2026年8月17日開催、染谷俊介博士による無料BIM・建設DXマスタークラスをご覧ください。登録はこちら："
+      "emailSubject": "ご招待：BUET BIM・建設DXマスタークラス",
+      "emailBody": "2026年8月17日、BUET Council Hallにて染谷俊介博士によるBUET限定無料BIM・建設DXマスタークラスを開催します。登録はこちら:"
     },
     "help": {
       "title": "お困りですか？",
       "text": "技術的なサポートや一括登録については、Kawaii Group Bangladeshまでご連絡ください"
     },
     "form": {
-      "title": "マスタークラス登録フォーム",
-      "subtitle": "必須項目をすべてご記入ください。Zoomアクセスコードと資料は登録メールアドレスにお送りします。",
+      "title": "BUETマスタークラス登録フォーム",
+      "subtitle": "本マスタークラスはBUETの学生・教員および関係者限定です。会場確認とハンドアウトは登録メールアドレスにお送りします。",
       "stepLabel": "ステップ",
       "close": "閉じる",
       "steps": {
@@ -274,7 +274,8 @@
       "role": "シニアアーキテクト・アドバイザー",
       "company": "創企画設計",
       "bio": "BUETマスタークラスおよびBIM・建設DXセミナー双方の特別ゲスト。"
-    }
+    },
+    "buetOnlyNotice": "このマスタークラスはBUET限定です。"
   },
   "concernsPage": {
     "title": "カワイグループファミリー概要",

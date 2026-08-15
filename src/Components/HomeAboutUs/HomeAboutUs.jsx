@@ -6,8 +6,8 @@ import './HomeAboutUs.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import aboutUs1 from '../../Assets/aboutUs1.webp';
 import aboutUs2 from '../../Assets/aboutUs2.webp';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const HomeAboutUs = () => {
   const { t, localizedPath } = useLocale();
@@ -24,14 +24,14 @@ const HomeAboutUs = () => {
         <div className="homeAboutUsImages">
           <div className="homeAboutUsMainImgWrapper">
             <img loading="lazy" decoding="async"
-              src={getSrc(aboutUs1)}
+              {...resolveImage(aboutUs1)}
               alt="Kawaii Group Team at Work"
               className="homeAboutUsMainImg"
             />
           </div>
           <div className="homeAboutUsSubImgWrapper">
             <img loading="lazy" decoding="async"
-              src={getSrc(aboutUs2)}
+              {...resolveImage(aboutUs2)}
               alt="Visionary Future"
               className="homeAboutUsSubImg"
             />

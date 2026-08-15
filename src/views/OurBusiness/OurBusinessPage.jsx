@@ -5,8 +5,8 @@ import Link from 'next/link';
 import './OurBusinessPage.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import { businessServices } from '../../data/businessServices';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const OurBusinessPage = () => {
   const { t, localizedPath, locale } = useLocale();
@@ -80,7 +80,7 @@ const OurBusinessPage = () => {
                   loading={idx < 4 ? 'eager' : 'lazy'}
                   decoding="async"
                   fetchPriority={idx < 2 ? 'high' : 'auto'}
-                  src={getSrc(item.image)}
+                  {...resolveImage(item.image)}
                   alt={item.title}
                 />
               </div>

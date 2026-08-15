@@ -120,9 +120,9 @@ const ContactInquiry = () => {
   return (
     <section className="contactInquiry" aria-labelledby="contact-inquiry-title">
       <div className="contactInquiry__inner">
-        <h2 id="contact-inquiry-title" className="contactInquiry__title">
+        <p id="contact-inquiry-title" className="contactInquiry__title">
           {title}
-        </h2>
+        </p>
 
         <div className="contactInquiry__box">
           <p className="contactInquiry__label">{label}</p>
@@ -134,7 +134,7 @@ const ContactInquiry = () => {
                   <div className="contactInquiry__divider" aria-hidden="true" />
                 )}
                 <div className="contactInquiry__office">
-                  <h3 className="contactInquiry__officeTitle">{office.title}</h3>
+                  <p className="contactInquiry__officeTitle">{office.title}</p>
 
                   <ul className="contactInquiry__details">
                     {office.phones.map((phone) => (

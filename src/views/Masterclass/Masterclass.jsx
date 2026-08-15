@@ -4,13 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './Masterclass.css';
 import { useLocale } from '../../i18n/LocaleContext';
+import { resolveImage } from '../../lib/image';
 import banarImg from '../../Assets/banar.webp';
 import shunsukeImg from '../../Assets/shunsuke_someya.webp';
 import specialGuestImg from '../../Assets/special_guest.webp';
-
-const masterclassVideo = '/videos/someya.mp4';
-const masterclassVideoPoster = '/videos/someya_poster.webp';
-
+import ishtiaqueImg from '../../Assets/ishtiaque_ahmed.webp';
 import { 
   FaCalendarAlt, 
   FaClock, 
@@ -27,7 +25,8 @@ import {
   FaAward
 } from 'react-icons/fa';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
+const masterclassVideo = '/videos/someya.mp4';
+const masterclassVideoPoster = '/videos/someya_poster.webp';
 
 const FORM_VALUES = {
   status: {
@@ -368,11 +367,15 @@ const Masterclass = () => {
       {/* Visual Hero Banner */}
       <div className="masterclass-page-shell mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
         <img loading="lazy" decoding="async" 
-          src={getSrc(banarImg)} 
+          {...resolveImage(banarImg)} 
           alt={t('masterclass.bannerAlt')} 
           className="w-full h-auto block"
         />
       </div>
+
+      <p className="buet-only-notice masterclass-page-shell mb-4 sm:mb-6 text-center text-lg sm:text-2xl font-extrabold text-[#be1e2d] tracking-wide">
+        {t('masterclass.buetOnlyNotice')}
+      </p>
 
       <div className="masterclass-page-shell mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
@@ -470,6 +473,23 @@ const Masterclass = () => {
                 <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">{t('masterclass.meta.incentives.note')}</p>
               </div>
             </div>
+
+            <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 flex items-center gap-4 sm:gap-6 hover-card-effect sm:col-span-2 relative overflow-hidden group">
+              <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden flex-shrink-0 shadow-md border-2 border-slate-100">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  {...resolveImage(ishtiaqueImg)}
+                  alt={t('masterclass.meta.chair.value')}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('masterclass.meta.chair.label')}</h4>
+                <p className="text-xl sm:text-3xl font-black text-slate-900 mt-1">{t('masterclass.meta.chair.value')}</p>
+                <p className="text-sm sm:text-base text-slate-500 font-medium mt-1">{t('masterclass.meta.chair.note')}</p>
+              </div>
+            </div>
           </div>
 
           {/* Dr Shunsuke Someya profile card */}
@@ -479,7 +499,7 @@ const Masterclass = () => {
               <div className="w-full md:w-52 flex flex-col items-center gap-4 flex-shrink-0">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100 relative group">
                   <img loading="lazy" decoding="async" 
-                    src={getSrc(shunsukeImg)} 
+                    {...resolveImage(shunsukeImg)} 
                     alt="Dr. Shunsuke Someya" 
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
@@ -586,7 +606,7 @@ const Masterclass = () => {
               <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-slate-100">
                   <img loading="lazy" decoding="async"
-                    src={getSrc(specialGuestImg)}
+                    {...resolveImage(specialGuestImg)}
                     alt={t('masterclass.specialGuest.name')}
                     className="w-full h-full object-cover object-top"
                   />
@@ -632,7 +652,9 @@ const Masterclass = () => {
             
             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200/80 flex items-center justify-center shadow-inner">
               <img loading="lazy" decoding="async" 
-                src={qrCodeUrl} 
+                src={qrCodeUrl}
+                width={300}
+                height={300}
                 alt={t('masterclass.share.qrAlt')} 
                 className="w-48 h-48 block rounded-xl shadow-sm"
               />

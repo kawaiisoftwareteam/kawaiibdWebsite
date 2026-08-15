@@ -6,8 +6,8 @@ import gsap from 'gsap';
 import './WhyChooseUs.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import whyChooseBanner from '../../Assets/whyChooseBanner.webp';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 // Icons for the 10 differentiators
 const itemIcons = [
@@ -163,10 +163,10 @@ const WhyChooseUs = ({ showDifferent = true }) => {
       <div className="whyChoose__frame">
         <div className="whyChoose__panel">
           <aside className="whyChoose__rail">
-            <h2 className="whyChoose__railTitle">
+            <p className="whyChoose__railTitle">
               <span className="whyChoose__railTitleMain">{title1}</span>
               <span className="whyChoose__railTitleSub">{title2}</span>
-            </h2>
+            </p>
           </aside>
 
           <div className="whyChoose__main">
@@ -181,7 +181,7 @@ const WhyChooseUs = ({ showDifferent = true }) => {
             <div className="whyChoose__heroRow">
               <div className="whyChoose__heroMedia">
                 <img loading="lazy" decoding="async"
-                  src={getSrc(whyChooseBanner)}
+                  {...resolveImage(whyChooseBanner)}
                   alt="Why Choose Kawaii Group"
                   className="whyChoose__heroImg"
                 />

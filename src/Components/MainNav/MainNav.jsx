@@ -21,6 +21,7 @@ import kgvlLogo from '../../Assets/Sister_Concerns/kgvl_logo.svg';
 import kjchsLogo from '../../Assets/Sister_Concerns/Asset_2_2x-removebg-preview.webp';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { useLocale, stripLocalePrefix } from '../../i18n/LocaleContext';
+import { resolveImage, getSrc } from '../../lib/image';
 
 /** Pages with light heroes — use dark nav text for contrast */
 const LIGHT_NAV_PATHS = [
@@ -32,16 +33,15 @@ const LIGHT_NAV_PATHS = [
   '/seminar',
 ];
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const concernLinks = [
   {
     id: 2,
-    path: "https://katsl.vercel.app/",
+    path: "/concerns",
     name: "Kawaii Advanced Technology & Solution Ltd.",
     logo: getSrc(katslLogo),
     alt: "KAtslLogo",
-    isExternal: true
+    isExternal: false
   },
   {
     id: 4,
@@ -236,7 +236,7 @@ const MainNav = () => {
             className="mainNav__logo"
             onClick={handleHomeNav}
           >
-            <img loading="eager" decoding="async" src={getSrc(kawaiiLogo)} alt="Kawaii Group Logo" />
+            <img loading="eager" decoding="async" {...resolveImage(kawaiiLogo)} alt="Kawaii Group Logo" />
           </Link>
 
           {/* Right Navigation Section */}
@@ -325,10 +325,10 @@ const MainNav = () => {
       <div className={`mobileSidebar ${isSidebarOpen ? 'mobileSidebar--open' : ''}`}>
         <div className="mobileSidebar__top">
           <Link href={localizedPath('/')} onClick={handleHomeNav}>
-            <img loading="eager" decoding="async" src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
+            <img loading="eager" decoding="async" {...resolveImage(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
           </Link>
           <button className="mobileSidebar__close" onClick={toggleSidebar} aria-label="Close menu">
-            <img loading="eager" decoding="async" src={getSrc(mobileCross)} alt="Close menu" />
+            <img loading="eager" decoding="async" {...resolveImage(mobileCross)} alt="Close menu" />
           </button>
         </div>
 

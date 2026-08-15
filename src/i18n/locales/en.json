@@ -642,10 +642,10 @@
     "title": "No pages"
   },
   "masterclass": {
-    "bannerAlt": "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
-    "pageTitle": "BIM & Construction DX Masterclass",
+    "bannerAlt": "BUET Only — BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
+    "pageTitle": "BUET Only — BIM & Construction DX Masterclass",
     "urgency": {
-      "badge": "Live Zoom Masterclass",
+      "badge": "BUET Only · In-Person Masterclass",
       "title": "Free Registration Closes Soon!",
       "dateLabel": "Masterclass Date: Monday, Aug 17, 2026"
     },
@@ -669,8 +669,8 @@
       },
       "location": {
         "label": "Location",
-        "value": "Online via Zoom",
-        "note": "Link emailed upon registration"
+        "value": "Council Hall, BUET, Dhaka",
+        "note": "BUET only · In-person · Pre-registration required"
       },
       "incentives": {
         "label": "Incentives",
@@ -732,16 +732,16 @@
       "copyLink": "Copy Shareable Link",
       "linkCopied": "Link Copied!",
       "shareEmail": "Share via Email",
-      "emailSubject": "Invitation: BIM and Construction DX Masterclass",
-      "emailBody": "Check out this free BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 17, 2026. Register here:"
+      "emailSubject": "Invitation: BUET BIM and Construction DX Masterclass",
+      "emailBody": "Check out this free BUET-only BIM and Construction DX masterclass featuring Dr. Shunsuke Someya on August 17, 2026 at Council Hall, BUET. Register here:"
     },
     "help": {
       "title": "Need Help?",
       "text": "For any technical assistance or bulk registrations, contact Kawaii Group Bangladesh via"
     },
     "form": {
-      "title": "Masterclass Registration Form",
-      "subtitle": "Please fill out all required details. Zoom access codes and handouts will be sent to your registered email address.",
+      "title": "BUET Masterclass Registration Form",
+      "subtitle": "This masterclass is exclusively for BUET students, faculty, and affiliated participants. Venue confirmation and handouts will be sent to your registered email.",
       "stepLabel": "Step",
       "close": "Close",
       "steps": {
@@ -857,7 +857,8 @@
       "name": "Toshiro Kan",
       "role": "Senior Architect and Advisor",
       "company": "So Kikaku Sekkei"
-    }
+    },
+    "buetOnlyNotice": "This masterclass is only for BUET."
   },
   "concernsPage": {
     "title": "Kawaii Group Family At a Glance",

@@ -4,14 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './Seminar.css';
 import { useLocale } from '../../i18n/LocaleContext';
+import { resolveImage, getSrc } from '../../lib/image';
 import banarImg from '../../Assets/banar18.webp';
 import shunsukeImg from '../../Assets/shunsuke_someya.webp';
 import biswasImg from '../../Assets/biswas_jahangir_alam.webp';
 import specialGuestImg from '../../Assets/special_guest.webp';
-
-const seminarVideo = '/videos/18thvideo.mp4';
-const videoPoster = '/videos/18thvideo_poster.webp';
-
 import { 
   FaCalendarAlt, 
   FaClock, 
@@ -28,7 +25,8 @@ import {
   FaAward
 } from 'react-icons/fa';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
+const seminarVideo = '/videos/18thvideo.mp4';
+const videoPoster = '/videos/18thvideo_poster.webp';
 
 const FORM_VALUES = {
   status: {
@@ -367,7 +365,7 @@ const Seminar = () => {
       {/* Visual Hero Banner */}
       <div className="seminar-page-shell mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
         <img loading="lazy" decoding="async" 
-          src={getSrc(banarImg)} 
+          {...resolveImage(banarImg)} 
           alt={t('seminar.bannerAlt')} 
           className="w-full h-auto block"
         />
@@ -491,7 +489,7 @@ const Seminar = () => {
               <div className="w-full md:w-52 flex flex-col items-center gap-4 flex-shrink-0">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100 relative group">
                   <img loading="lazy" decoding="async" 
-                    src={getSrc(shunsukeImg)} 
+                    {...resolveImage(shunsukeImg)} 
                     alt="Dr. Shunsuke Someya" 
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
@@ -587,7 +585,7 @@ const Seminar = () => {
                 playsInline
                 poster={getSrc(videoPoster)}
               >
-                <source src={getSrc(seminarVideo)} type="video/mp4" />
+                <source src={seminarVideo} type="video/mp4" />
                 {t('seminar.video.unsupported')}
               </video>
             </div>
@@ -600,7 +598,7 @@ const Seminar = () => {
               <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-slate-100">
                   <img loading="lazy" decoding="async"
-                    src={getSrc(biswasImg)}
+                    {...resolveImage(biswasImg)}
                     alt={t('seminar.chiefGuest.name')}
                     className="w-full h-full object-cover object-top"
                   />
@@ -624,7 +622,7 @@ const Seminar = () => {
               <div className="flex flex-col items-center gap-2 flex-shrink-0 w-28 sm:w-36">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-slate-100">
                   <img loading="lazy" decoding="async"
-                    src={getSrc(specialGuestImg)}
+                    {...resolveImage(specialGuestImg)}
                     alt={t('seminar.specialGuest.name')}
                     className="w-full h-full object-cover object-top"
                   />
@@ -670,7 +668,9 @@ const Seminar = () => {
             
             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200/80 flex items-center justify-center shadow-inner">
               <img loading="lazy" decoding="async" 
-                src={qrCodeUrl} 
+                src={qrCodeUrl}
+                width={300}
+                height={300}
                 alt={t('seminar.share.qrAlt')} 
                 className="w-48 h-48 block rounded-xl shadow-sm"
               />

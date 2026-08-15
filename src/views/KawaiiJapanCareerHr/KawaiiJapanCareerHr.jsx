@@ -4,10 +4,10 @@ import React from 'react';
 import Cta from '../../Components/CTA/Cta';
 import './KawaiiJapanCareerHr.css';
 import { useLocale } from '../../i18n/LocaleContext';
+import { resolveImage } from '../../lib/image';
 import kawaiiImg from '../../Assets/kawaii.webp';
 import careerSupportImg from '../../Assets/career_support.webp';
 import bondingCover from '../../Assets/bonding.webp';
-
 import { 
   FaBuilding, 
   FaBullseye, 
@@ -25,7 +25,6 @@ import {
   FaUsers
 } from 'react-icons/fa';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const SECTOR_KEYS = ['it', 'manufacturing', 'garments', 'pharma', 'healthcare', 'banking', 'fmcg', 'bpo'];
 const SECTOR_ICONS = {
@@ -53,10 +52,18 @@ const KawaiiJapanCareerHr = () => {
     <div className="kjchs-page">
       <div className="split-hero">
         {/* Left Side: For Companies */}
-        <div className="split-side left-side" style={{ backgroundImage: `url(${getSrc(kawaiiImg)})` }}>
+        <div className="split-side left-side">
+          <img
+            className="split-side__img"
+            {...resolveImage(kawaiiImg)}
+            alt={t('kjchs.employersImgAlt') || 'Kawaii Japan Career & HR for companies'}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
           <div className="split-overlay"></div>
           <div className="split-content-box">
-            <h2 className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroCompaniesTitle').replace(/\n/g, '<br />') }} />
+            <p className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroCompaniesTitle').replace(/\n/g, '<br />') }} />
             <button 
               onClick={() => document.getElementById('companies-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="split-btn"
@@ -67,10 +74,17 @@ const KawaiiJapanCareerHr = () => {
         </div>
 
         {/* Right Side: For Job Seekers */}
-        <div className="split-side right-side" style={{ backgroundImage: `url(${getSrc(careerSupportImg)})` }}>
+        <div className="split-side right-side">
+          <img
+            className="split-side__img"
+            {...resolveImage(careerSupportImg)}
+            alt={t('kjchs.seekersImgAlt') || 'Career support for job seekers in Bangladesh'}
+            loading="eager"
+            decoding="async"
+          />
           <div className="split-overlay"></div>
           <div className="split-content-box">
-            <h2 className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroSeekersTitle').replace(/\n/g, '<br />') }} />
+            <p className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroSeekersTitle').replace(/\n/g, '<br />') }} />
             <button 
               onClick={() => document.getElementById('candidates-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="split-btn"
@@ -112,12 +126,19 @@ const KawaiiJapanCareerHr = () => {
       {/* About Us section */}
       <section className="kjchs-about-sec py-16 bg-gradient-to-b from-gray-50 to-white px-6 md:px-32">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
-          <div className="about-graphic flex-1 w-full lg:order-2 flex justify-center">
+          <div className="about-text flex-1">
+            <span className="section-subtitle-red text-sm font-bold uppercase tracking-wider text-[#BE1E2D] block">{t('kjchs.aboutSubtitle')}</span>
+            <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kjchs.aboutTitle')}</h2>
+            <div className="h-1 w-16 bg-[#BE1E2D] mt-4 mb-6 rounded-full"></div>
+            <p className="text-gray-600 text-lg leading-relaxed text-justify mb-4">{t('kjchs.aboutP1')}</p>
+            <p className="text-gray-600 text-lg leading-relaxed text-justify">{t('kjchs.aboutP2')}</p>
+          </div>
+          <div className="about-graphic flex-1 w-full flex justify-center">
             <div className="border bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-2xl max-w-md w-full border-gray-100 relative">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-[#FFE9E9] rounded-2xl flex items-center justify-center shadow-lg">
                 <FaAward className="text-[#BE1E2D] text-2xl" />
               </div>
-              <h3 className="font-bold text-xl text-[#0C0C0C] mb-4">{t('kjchs.standardsTitle')}</h3>
+              <p className="font-bold text-xl text-[#0C0C0C] mb-4">{t('kjchs.standardsTitle')}</p>
               <p className="text-gray-600 text-sm leading-relaxed text-justify mb-6">
                 {t('kjchs.standardsIntro')}
               </p>
@@ -133,13 +154,6 @@ const KawaiiJapanCareerHr = () => {
               </div>
             </div>
           </div>
-          <div className="about-text flex-1 lg:order-1">
-            <span className="section-subtitle-red text-sm font-bold uppercase tracking-wider text-[#BE1E2D] block">{t('kjchs.aboutSubtitle')}</span>
-            <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kjchs.aboutTitle')}</h2>
-            <div className="h-1 w-16 bg-[#BE1E2D] mt-4 mb-6 rounded-full"></div>
-            <p className="text-gray-600 text-lg leading-relaxed text-justify mb-4">{t('kjchs.aboutP1')}</p>
-            <p className="text-gray-600 text-lg leading-relaxed text-justify">{t('kjchs.aboutP2')}</p>
-          </div>
         </div>
       </section>
 
@@ -151,7 +165,7 @@ const KawaiiJapanCareerHr = () => {
             <div className="icon-wrapper bg-[#FFE9E9] p-4 rounded-2xl mb-6">
               <FaBullseye className="text-2xl text-[#BE1E2D]" />
             </div>
-            <h3 className="card-title text-2xl font-bold text-[#0C0C0C]">{t('kjchs.visionTitle')}</h3>
+            <p className="card-title text-2xl font-bold text-[#0C0C0C]">{t('kjchs.visionTitle')}</p>
             <p className="card-text text-gray-600 mt-4 leading-relaxed text-justify">{t('kjchs.visionText')}</p>
           </div>
 
@@ -160,7 +174,7 @@ const KawaiiJapanCareerHr = () => {
             <div className="icon-wrapper bg-gray-100 p-4 rounded-2xl mb-6">
               <FaLightbulb className="text-2xl text-[#0C0C0C]" />
             </div>
-            <h3 className="card-title text-2xl font-bold text-[#0C0C0C]">{t('kjchs.missionTitle')}</h3>
+            <p className="card-title text-2xl font-bold text-[#0C0C0C]">{t('kjchs.missionTitle')}</p>
             <p className="card-text text-gray-600 mt-4 leading-relaxed text-justify">{t('kjchs.missionText')}</p>
           </div>
         </div>
@@ -177,7 +191,7 @@ const KawaiiJapanCareerHr = () => {
             </div>
             <div className="flex-1 w-full flex justify-center">
               <img loading="lazy" decoding="async" 
-                src={getSrc(kawaiiImg)} 
+                {...resolveImage(kawaiiImg)} 
                 alt={t('kjchs.employersImgAlt')} 
                 className="w-full max-w-lg rounded-3xl shadow-lg object-cover h-80"
               />
@@ -186,17 +200,17 @@ const KawaiiJapanCareerHr = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
-              <h3 className="text-xl font-bold text-[#0c0c0c] mb-6 border-b pb-4">{t('kjchs.ourServices')}</h3>
+              <p className="text-xl font-bold text-[#0c0c0c] mb-6 border-b pb-4">{t('kjchs.ourServices')}</p>
               <ul className="space-y-4">{renderList('kjchs.employerServices')}</ul>
             </div>
 
             <div className="flex flex-col gap-6">
               <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex-1">
-                <h3 className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourExpertise')}</h3>
+                <p className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourExpertise')}</p>
                 <p className="text-sm text-gray-600 leading-relaxed text-justify">{t('kjchs.employerExpertise')}</p>
               </div>
               <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 flex-1">
-                <h3 className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourPhilosophy')}</h3>
+                <p className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourPhilosophy')}</p>
                 <blockquote className="border-l-4 border-[#BE1E2D] pl-4 italic text-sm text-gray-600">{t('kjchs.employerPhilosophy')}</blockquote>
               </div>
             </div>
@@ -204,14 +218,14 @@ const KawaiiJapanCareerHr = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
-              <h3 className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.ourProcess')}</h3>
+              <p className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.ourProcess')}</p>
               <p className="text-sm text-gray-600 leading-relaxed text-justify mb-6">{t('kjchs.employerProcessIntro')}</p>
               <div className="space-y-4">
                 {['s1', 's2', 's3'].map((step, idx) => (
                   <div key={step} className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#FFE9E9] text-[#BE1E2D] font-bold text-sm flex items-center justify-center shrink-0">{idx + 1}</div>
                     <div>
-                      <h4 className="font-bold text-sm text-[#0C0C0C]">{t(`kjchs.employerSteps.${step}.title`)}</h4>
+                      <p className="font-bold text-sm text-[#0C0C0C]">{t(`kjchs.employerSteps.${step}.title`)}</p>
                       <p className="text-xs text-gray-500 mt-1">{t(`kjchs.employerSteps.${step}.desc`)}</p>
                     </div>
                   </div>
@@ -219,7 +233,7 @@ const KawaiiJapanCareerHr = () => {
               </div>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
-              <h3 className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.whyChooseUs')}</h3>
+              <p className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.whyChooseUs')}</p>
               <p className="text-sm text-gray-600 leading-relaxed text-justify mb-4">{t('kjchs.employerWhy1')}</p>
               <p className="text-sm text-gray-600 leading-relaxed text-justify">{t('kjchs.employerWhy2')}</p>
             </div>
@@ -238,7 +252,7 @@ const KawaiiJapanCareerHr = () => {
             </div>
             <div className="flex-1 w-full lg:order-1 flex justify-center">
               <img loading="lazy" decoding="async" 
-                src={getSrc(careerSupportImg)} 
+                {...resolveImage(careerSupportImg)} 
                 alt={t('kjchs.seekersImgAlt')} 
                 className="w-full max-w-lg rounded-3xl shadow-lg object-cover h-80"
               />
@@ -247,30 +261,30 @@ const KawaiiJapanCareerHr = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <div className="bg-gray-50 p-8 rounded-3xl shadow-md border border-gray-100">
-              <h3 className="text-xl font-bold text-[#0c0c0c] mb-6 border-b pb-4">{t('kjchs.ourServices')}</h3>
+              <p className="text-xl font-bold text-[#0c0c0c] mb-6 border-b pb-4">{t('kjchs.ourServices')}</p>
               <ul className="space-y-4">{renderList('kjchs.seekerServices')}</ul>
             </div>
             <div className="flex flex-col gap-6">
               <div className="bg-gray-50 p-8 rounded-3xl shadow-md border border-gray-100 flex-1">
-                <h3 className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourExpertise')}</h3>
+                <p className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourExpertise')}</p>
                 <p className="text-sm text-gray-600 leading-relaxed text-justify">{t('kjchs.seekerExpertise')}</p>
               </div>
               <div className="bg-gray-50 p-8 rounded-3xl shadow-md border border-gray-100 flex-1">
-                <h3 className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourPhilosophy')}</h3>
+                <p className="text-lg font-bold text-[#0c0c0c] mb-3">{t('kjchs.ourPhilosophy')}</p>
                 <blockquote className="border-l-4 border-[#BE1E2D] pl-4 italic text-sm text-gray-600">{t('kjchs.seekerPhilosophy')}</blockquote>
               </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="bg-gray-50 p-8 rounded-3xl shadow-md border border-gray-100">
-              <h3 className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.ourProcess')}</h3>
+              <p className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.ourProcess')}</p>
               <p className="text-sm text-gray-600 leading-relaxed text-justify mb-6">{t('kjchs.seekerProcessIntro')}</p>
               <div className="space-y-4">
                 {['s1', 's2', 's3'].map((step, idx) => (
                   <div key={step} className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#FFE9E9] text-[#BE1E2D] font-bold text-sm flex items-center justify-center shrink-0">{idx + 1}</div>
                     <div>
-                      <h4 className="font-bold text-sm text-[#0C0C0C]">{t(`kjchs.seekerSteps.${step}.title`)}</h4>
+                      <p className="font-bold text-sm text-[#0C0C0C]">{t(`kjchs.seekerSteps.${step}.title`)}</p>
                       <p className="text-xs text-gray-500 mt-1">{t(`kjchs.seekerSteps.${step}.desc`)}</p>
                     </div>
                   </div>
@@ -278,7 +292,7 @@ const KawaiiJapanCareerHr = () => {
               </div>
             </div>
             <div className="bg-gray-50 p-8 rounded-3xl shadow-md border border-gray-100">
-              <h3 className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.whyChooseUs')}</h3>
+              <p className="text-lg font-bold text-[#0c0c0c] mb-4">{t('kjchs.whyChooseUs')}</p>
               <p className="text-sm text-gray-600 leading-relaxed text-justify mb-4">{t('kjchs.seekerWhy1')}</p>
               <p className="text-sm text-gray-600 leading-relaxed text-justify">{t('kjchs.seekerWhy2')}</p>
             </div>
@@ -302,9 +316,9 @@ const KawaiiJapanCareerHr = () => {
                 <div className="sector-icon-box mb-4 p-3 rounded-xl bg-gray-50 group-hover:bg-[#FFE9E9] text-[#BE1E2D] transition-colors duration-300 w-fit">
                   <Icon className="sector-icon" />
                 </div>
-                <h3 className="sector-title font-bold text-sm text-[#0C0C0C] mb-2 group-hover:text-[#BE1E2D] transition-colors duration-300">
+                <p className="sector-title font-bold text-sm text-[#0C0C0C] mb-2 group-hover:text-[#BE1E2D] transition-colors duration-300">
                   {t(`kjchs.sectors.${key}.name`)}
-                </h3>
+                </p>
                 <p className="sector-desc text-xs text-gray-500 leading-relaxed text-justify">
                   {t(`kjchs.sectors.${key}.desc`)}
                 </p>
@@ -351,7 +365,7 @@ const KawaiiJapanCareerHr = () => {
       <Cta 
         title={t('kjchs.ctaTitle')} 
         text={t('kjchs.ctaText')}
-        backgroundImage={getSrc(bondingCover)} 
+        backgroundImage={bondingCover} 
       />
     </div>
   );

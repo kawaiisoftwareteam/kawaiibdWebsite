@@ -7,7 +7,7 @@ import { useLocale } from '../../i18n/LocaleContext';
 import { businessServices } from '../../data/businessServices';
 import apparelImg from '../../Assets/services/Apparel Manufacturing.webp';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
+import { resolveImage, getSrc } from '../../lib/image';
 
 const AUTO_MS = 4500;
 
@@ -140,7 +140,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
           loading="eager"
           decoding="async"
           fetchPriority="high"
-          src={getSrc(activeBg)}
+          {...resolveImage(activeBg)}
           alt={services[currentIndex]?.title || t('ourBusiness.eyebrow') || 'Kawaii Group business'}
           className="bizIntro__curveImg"
         />
@@ -188,7 +188,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
                     <div className="bizIntro__cardBody">
                       <div className="bizIntro__media">
                         <img
-                          src={getSrc(item.image)}
+                          {...resolveImage(item.image)}
                           alt={item.title}
                           loading={isNear ? 'eager' : 'lazy'}
                           decoding="async"

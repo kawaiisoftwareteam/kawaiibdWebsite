@@ -1,8 +1,7 @@
 import React from 'react'
 import './ButtonKg.css'
 import arrow from '../../Assets/kg_button_indicator.svg'
-
-const arrowSrc = typeof arrow === 'string' ? arrow : arrow?.src || ''
+import { resolveImage } from '../../lib/image';
 
 const Button_kg = ({ text }) => {
   return (
@@ -11,7 +10,7 @@ const Button_kg = ({ text }) => {
         <div className='btn_text'>
           {text}
         </div>
-        <img loading="eager" decoding="async" src={arrowSrc} alt="Continue" className='mt-[0.35rem]' />
+        <img loading="eager" decoding="async" {...resolveImage(arrow)} alt="Continue" className='mt-[0.35rem]' />
       </div>
     </div>
   )

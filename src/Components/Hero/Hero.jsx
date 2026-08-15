@@ -7,8 +7,8 @@ import bangladeshSkyline from '../../Assets/view-landmark-asian-sky-reflection.w
 import japanCastle from '../../Assets/cherry-blossoms-castle-himeji-japan.webp';
 import dhakaCityscape from '../../Assets/pattaya-chonburi-thailand-28-may-2019-beautiful-landscape-cityscape-pattaya-city-is-popular-destination-thailand-with-white-cloud-blue-sky.webp';
 import { useLocale } from '../../i18n/LocaleContext';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const decodeImage = (src) =>
   new Promise((resolve) => {
@@ -47,19 +47,19 @@ const Hero = () => {
       {
         id: 'bangladesh',
         name: t('home.hero.bangladesh'),
-        src: getSrc(bangladeshSkyline),
+        ...resolveImage(bangladeshSkyline),
         alt: t('home.hero.bangladeshAlt'),
       },
       {
         id: 'japan',
         name: t('home.hero.japan'),
-        src: getSrc(japanCastle),
+        ...resolveImage(japanCastle),
         alt: t('home.hero.japanAlt'),
       },
       {
         id: 'dhaka',
         name: t('home.hero.dhaka'),
-        src: getSrc(dhakaCityscape),
+        ...resolveImage(dhakaCityscape),
         alt: t('home.hero.dhakaAlt'),
       },
     ],
@@ -243,6 +243,8 @@ const Hero = () => {
             >
               <img
                 src={slide.src}
+                width={slide.width}
+                height={slide.height}
                 alt={slide.alt}
                 className="hero__slide-img"
                 loading={index === 0 ? 'eager' : 'lazy'}

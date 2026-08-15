@@ -30,8 +30,8 @@ import {
     faGlobe, 
     faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const KawaiiConcerns = () => {
     const { t, localizedPath } = useLocale();
@@ -90,7 +90,7 @@ const KawaiiConcerns = () => {
             concernName: 'Kawaii Advanced Technology & Solution',
             cardImg: hwch_3,
             cardLogo: kastlLogo,
-            externalLink: 'https://katsl.vercel.app/'
+            internalPath: '/concerns',
         },
         {
             cardId: 'kgj',
@@ -224,7 +224,10 @@ const KawaiiConcerns = () => {
             </header>
 
             {/* Premium Card Grid */}
-            <section className="kc-grid-section">
+            <section className="kc-grid-section" aria-labelledby="kc-companies-heading">
+                <h2 id="kc-companies-heading" className="sr-only">
+                    {t('nav.sisterConcerns') || 'Sister Concerns'}
+                </h2>
                 <div className="kc-cards-grid">
                     {filteredCards.map((card) => {
                         const typeText = t(`concernsPage.cards.${card.cardId}.type`) !== `concernsPage.cards.${card.cardId}.type`
@@ -253,14 +256,14 @@ const KawaiiConcerns = () => {
                                 <div className="kc-logo-wrapper">
                                     <div className="kc-logo-box">
                                         <img loading="lazy" decoding="async" 
-                                            src={getSrc(card.cardLogo)} 
+                                            {...resolveImage(card.cardLogo)}
                                             alt={`${card.concernName} logo`} 
                                             className="kc-logo-img" 
                                         />
                                     </div>
                                     <div className="kc-image-preview">
                                         <img loading="lazy" decoding="async" 
-                                            src={getSrc(card.cardImg)} 
+                                            {...resolveImage(card.cardImg)}
                                             alt={card.concernName} 
                                             className="kc-bg-thumb" 
                                         />
@@ -335,14 +338,14 @@ const KawaiiConcerns = () => {
 
                         <div className="kc-modal-banner">
                             <img loading="lazy" decoding="async" 
-                                src={getSrc(selectedCompany.cardImg)} 
+                                {...resolveImage(selectedCompany.cardImg)} 
                                 alt={selectedCompany.concernName} 
                                 className="kc-modal-banner-img" 
                             />
                             <div className="kc-modal-banner-overlay"></div>
                             <div className="kc-modal-logo-float">
                                 <img loading="lazy" decoding="async" 
-                                    src={getSrc(selectedCompany.cardLogo)} 
+                                    {...resolveImage(selectedCompany.cardLogo)} 
                                     alt={`${selectedCompany.concernName} logo`} 
                                 />
                             </div>

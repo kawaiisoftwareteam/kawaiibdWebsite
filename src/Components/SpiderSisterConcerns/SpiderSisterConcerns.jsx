@@ -7,8 +7,8 @@ import { useLocale } from '../../i18n/LocaleContext';
 
 import kgvlImg from '../../Assets/jpBusinessCenter.webp';
 import kjchsImg from '../../Assets/ssw2.webp';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const sisterConcernsData = [
   {
@@ -39,7 +39,7 @@ const sisterConcernsData = [
     id: 'katsl',
     name: 'Kawaii Advanced Technology & Solution',
     image: '/sister-slider/katsl_tech.webp',
-    externalLink: 'https://katsl.vercel.app/',
+    link: '/concerns',
   },
   {
     id: 'kgj',
@@ -145,7 +145,7 @@ const SpiderSisterConcerns = () => {
                     className="scGallery__center"
                   >
                     <img loading="lazy" decoding="async"
-                      src={getSrc(item.image)}
+                      {...resolveImage(item.image)}
                       alt={item.name}
                       className="scGallery__img"
                     />
@@ -163,7 +163,7 @@ const SpiderSisterConcerns = () => {
                   aria-label={`Show ${item.name}`}
                 >
                   <img loading="lazy" decoding="async"
-                    src={getSrc(item.image)}
+                    {...resolveImage(item.image)}
                     alt={item.name}
                     className="scGallery__img"
                   />

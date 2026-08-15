@@ -27,7 +27,7 @@ const cardLogos = [getSrc(sanjanaLogo), getSrc(ajLogo), getSrc(katslLogo)];
 const cardLinks = [
     'https://sanjanahr.com/',
     'https://achievejapanssw.com/',
-    'https://katsl.vercel.app/',
+    '/concerns',
 ];
 
 const HowCanWeHelp = () => {

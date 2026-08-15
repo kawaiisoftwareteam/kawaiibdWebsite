@@ -2,4 +2,7 @@
 User-agent: *
 Allow: /
 
+# Do not Disallow /_next/ — Google needs JS/CSS to render pages.
+# Asset noindex is handled via X-Robots-Tag in .htaccess.
+
 Sitemap: https://kawaiibd.com/sitemap.xml

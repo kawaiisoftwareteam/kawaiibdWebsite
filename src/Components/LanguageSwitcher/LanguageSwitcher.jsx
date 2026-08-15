@@ -7,13 +7,13 @@ import { useLocale } from '../../i18n/LocaleContext';
 import usFlag from './flags/us.svg';
 import bdFlag from './flags/bd.svg';
 import jpFlag from './flags/jp.svg';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const flagImages = {
-  en: getSrc(usFlag),
-  bn: getSrc(bdFlag),
-  ja: getSrc(jpFlag),
+  en: usFlag,
+  bn: bdFlag,
+  ja: jpFlag,
 };
 
 const LanguageSwitcher = ({ isNavbar = false }) => {
@@ -51,7 +51,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
       >
         <img loading="lazy" decoding="async"
           className="language-switcher__flag"
-          src={flagImages[current.code]}
+          {...resolveImage(flagImages[current.code])}
           alt={`${current.nativeName} flag`}
         />
         <span className="lang-trigger__label">{current.nativeName}</span>
@@ -79,7 +79,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
             >
               <img loading="lazy" decoding="async"
                 className="language-switcher__flag language-switcher__flag--option"
-                src={flagImages[lang.code]}
+                {...resolveImage(flagImages[lang.code])}
                 alt={`${lang.nativeName} flag`}
               />
               {lang.nativeName}

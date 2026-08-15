@@ -9,8 +9,8 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
 import kgLogobh from '../../../Assets/kawaiigroup.webp';
 import { useLocale } from '../../../i18n/LocaleContext';
+import { resolveImage } from '../../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const TopFooter = () => {
     const { t, localizedPath } = useLocale();
@@ -19,7 +19,7 @@ const TopFooter = () => {
         <div className="mainTop">
             <div className='colLeft'>
                 <Link href={localizedPath('/')}>
-                    <img loading="lazy" decoding="async" src={getSrc(kgLogobh)} alt="kawaiiGroupgreyscale" />
+                    <img loading="lazy" decoding="async" {...resolveImage(kgLogobh)} alt="Kawaii Group" />
                 </Link>
                 <div className="text-white text-base font-normal font-main leading-snug pr-5">
                     {t('footer.aboutBlurb')}{' '}

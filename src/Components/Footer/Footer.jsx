@@ -14,8 +14,8 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import ContactInquiry from '../ContactInquiry/ContactInquiry';
 import { useLocale } from '../../i18n/LocaleContext';
 import './Footer.css';
+import { resolveImage } from '../../lib/image';
 
-const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
 
 const Footer = () => {
   const { t, localizedPath } = useLocale();
@@ -51,7 +51,7 @@ const Footer = () => {
               itemProp="url"
             >
               <img loading="lazy" decoding="async"
-                src={getSrc(kgLogo)}
+                {...resolveImage(kgLogo)}
                 alt="Kawaii Group"
                 className="u-photo"
                 itemProp="logo"
@@ -99,7 +99,7 @@ const Footer = () => {
 
           <div className="siteFooter__links">
             <div className="siteFooter__col">
-              <h3 className="siteFooter__heading">{t('footer.quickLinks')}</h3>
+              <p className="siteFooter__heading">{t('footer.quickLinks')}</p>
               <ul className="siteFooter__list">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
@@ -110,7 +110,7 @@ const Footer = () => {
             </div>
 
             <div className="siteFooter__col siteFooter__col--contact">
-              <h3 className="siteFooter__heading">{t('footer.contactInfo')}</h3>
+              <p className="siteFooter__heading">{t('footer.contactInfo')}</p>
               <ul className="siteFooter__contact">
                 <li>
                   <FontAwesomeIcon icon={faPhone} className="siteFooter__icon" />
@@ -156,7 +156,7 @@ const Footer = () => {
             </div>
 
             <div className="siteFooter__col">
-              <h3 className="siteFooter__heading">{t('footer.servicesTitle')}</h3>
+              <p className="siteFooter__heading">{t('footer.servicesTitle')}</p>
               <ul className="siteFooter__list">
                 {services.map((service) => (
                   <li key={service}>
@@ -180,7 +180,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <h2 className="siteFooter__statement">{t('footer.statement')}</h2>
+        <p className="siteFooter__statement">{t('footer.statement')}</p>
       </div>
     </footer>
   );

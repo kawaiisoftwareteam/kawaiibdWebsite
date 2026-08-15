@@ -20,7 +20,7 @@ export const navData = [
             },
             {
                 title: "Kawaii Advanced Technology & Solution Ltd.",
-                path: "https://katsl.vercel.app/"
+                path: "/concerns"
             },
             {
                 title: "Achieve Japan",
