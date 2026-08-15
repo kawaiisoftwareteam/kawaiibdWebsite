@@ -46,6 +46,7 @@
   letter-spacing: -0.01em;
   margin: 0;
   text-transform: lowercase;
+  line-height: 1.2;
 }
 
 .contact_subtitle {
@@ -57,6 +58,60 @@
   max-width: 600px;
   margin: 6px auto 0;
   line-height: 1.5;
+}
+
+.contact_intro {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  text-align: left;
+}
+
+.contact_intro_text {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.contact_intro_heading {
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0c0c0c;
+}
+
+.contact_intro_list {
+  margin: 0 0 0.5rem;
+  padding-left: 1.25rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.contact_intro_list li {
+  margin-bottom: 0.4rem;
+}
+
+.contact_intro_hours {
+  margin-bottom: 0.35rem;
+}
+
+.contact_intro_offices {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .contact_intro_offices {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact_intro_office_title {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #be1e2d;
 }
 
 /* Status Message */

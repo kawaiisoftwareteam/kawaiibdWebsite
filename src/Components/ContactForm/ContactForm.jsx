@@ -61,6 +61,30 @@ const ContactForm = () => {
                 <p className="contact_subtitle">{t('contact.form.lead')}</p>
             </div>
 
+            <div className="contact_intro">
+                <p className="contact_intro_text">{t('contact.intro.p1')}</p>
+                <p className="contact_intro_text">{t('contact.intro.p2')}</p>
+                <h2 className="contact_intro_heading">{t('contact.intro.topicsTitle')}</h2>
+                <ul className="contact_intro_list">
+                    {(t('contact.intro.topics') || []).map((topic, i) => (
+                        <li key={i}>{topic}</li>
+                    ))}
+                </ul>
+                <h2 className="contact_intro_heading">{t('contact.intro.hoursTitle')}</h2>
+                <p className="contact_intro_text contact_intro_hours">{t('contact.intro.hoursBd')}</p>
+                <p className="contact_intro_text contact_intro_hours">{t('contact.intro.hoursJp')}</p>
+                <div className="contact_intro_offices">
+                    <div>
+                        <h3 className="contact_intro_office_title">{t('contact.inquiry.bd.title')}</h3>
+                        <p className="contact_intro_text">{t('contact.inquiry.bd.address')}</p>
+                    </div>
+                    <div>
+                        <h3 className="contact_intro_office_title">{t('contact.inquiry.jp.title')}</h3>
+                        <p className="contact_intro_text">{t('contact.inquiry.jp.address')}</p>
+                    </div>
+                </div>
+            </div>
+
             {/* Main Form Container */}
             <div className="contact_form_card">
                 {status.message && (

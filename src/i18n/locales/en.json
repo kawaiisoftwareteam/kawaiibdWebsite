@@ -357,6 +357,20 @@
   },
   "contact": {
     "header": "Get in Touch",
+    "intro": {
+      "p1": "Kawaii Group Bangladesh welcomes inquiries from companies, partners, students, and professionals across Bangladesh and Japan. Whether you need recruitment support, Japanese language or BIM training information, business consultancy, or partnership opportunities, our Dhaka and Tokyo teams are ready to help.",
+      "p2": "Share your goals through the form below, email us, or call our offices during business hours. We typically respond within one to two business days and will connect you with the right specialist for education, HR, trade, or cross-border collaboration.",
+      "topicsTitle": "How we can help",
+      "topics": [
+        "Japan Career & HR Solutions, SSW / TITP pathways, and domestic recruitment",
+        "Japanese language education (JLPT), BIM Masterclass, and Construction DX seminars",
+        "Business consultancy, investment introductions, and Japan–Bangladesh partnerships",
+        "Trading, garments sourcing, technology solutions, and group company referrals"
+      ],
+      "hoursTitle": "Office hours",
+      "hoursBd": "Bangladesh (Dhaka): Saturday–Thursday, 9:00–18:00 (closed Friday)",
+      "hoursJp": "Japan (Tokyo): Monday–Friday, 9:30–18:30"
+    },
     "inquiry": {
       "title": "CONTACT",
       "label": "inquiry",

@@ -56,7 +56,7 @@ const KawaiiJapanCareerHr = () => {
         <div className="split-side left-side" style={{ backgroundImage: `url(${getSrc(kawaiiImg)})` }}>
           <div className="split-overlay"></div>
           <div className="split-content-box">
-            <h1 className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroCompaniesTitle').replace(/\n/g, '<br />') }} />
+            <h2 className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroCompaniesTitle').replace(/\n/g, '<br />') }} />
             <button 
               onClick={() => document.getElementById('companies-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="split-btn"
@@ -70,7 +70,7 @@ const KawaiiJapanCareerHr = () => {
         <div className="split-side right-side" style={{ backgroundImage: `url(${getSrc(careerSupportImg)})` }}>
           <div className="split-overlay"></div>
           <div className="split-content-box">
-            <h1 className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroSeekersTitle').replace(/\n/g, '<br />') }} />
+            <h2 className="split-title" dangerouslySetInnerHTML={{ __html: t('kjchs.heroSeekersTitle').replace(/\n/g, '<br />') }} />
             <button 
               onClick={() => document.getElementById('candidates-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="split-btn"
@@ -86,9 +86,9 @@ const KawaiiJapanCareerHr = () => {
         <div className="overview-container bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 flex flex-col lg:flex-row gap-12 items-center">
           <div className="overview-text flex-1">
             <span className="badge-jp-bd">{t('kjchs.badge')}</span>
-            <h2 className="section-title mt-4 text-[#0C0C0C] font-bold text-3xl md:text-4xl leading-tight">
+            <h1 className="section-title mt-4 text-[#0C0C0C] font-bold text-3xl md:text-4xl leading-tight">
               {t('kjchs.overviewTitle')}
-            </h2>
+            </h1>
             <p className="overview-desc mt-6 text-gray-600 text-lg leading-relaxed text-justify">
               {t('kjchs.overviewP1')}
             </p>
