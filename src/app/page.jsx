@@ -6,7 +6,11 @@ import { DEFAULT_LOCALE } from '../i18n/config';
 import { buildPageMetadata } from '../lib/seo';
 
 export async function generateMetadata() {
-  return buildPageMetadata({ locale: DEFAULT_LOCALE, path: '/' });
+  // Apex `/` is 301'd to `/en/` in .htaccess; if HTML is ever served, don't index it.
+  return {
+    ...buildPageMetadata({ locale: DEFAULT_LOCALE, path: '/' }),
+    robots: { index: false, follow: true },
+  };
 }
 
 /**

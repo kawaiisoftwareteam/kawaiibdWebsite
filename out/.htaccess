@@ -16,6 +16,14 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_HOST} ^www\.kawaiibd\.com$ [NC]
   RewriteRule ^(.*)$ https://kawaiibd.com/$1 [R=301,L]
 
+  # Apex `/` → locale home (avoids duplicate English homepage)
+  # Honor saved locale cookie; otherwise default to /en/ (canonical English home)
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^$ /bn/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^$ /ja/ [R=302,L]
+  RewriteRule ^$ /en/ [R=301,L]
+
   # Redirect /jp or /jp/ to /ja/
   RewriteRule ^jp/?(.*)$ /ja/$1 [R=301,L]
 
@@ -58,14 +66,6 @@ DirectoryIndex index.html
   Header set Access-Control-Allow-Origin "*"
   Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
   Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
-
-  # Keep hashed media/fonts out of the search index (decorative assets)
-  <IfModule mod_setenvif.c>
-    SetEnvIf Request_URI "^/_next/static/media/" KG_STATIC_ASSET=1
-    SetEnvIf Request_URI "^/_next/static/css/" KG_STATIC_ASSET=1
-    SetEnvIf Request_URI "^/_next/static/chunks/" KG_STATIC_ASSET=1
-    Header set X-Robots-Tag "noindex, nofollow" env=KG_STATIC_ASSET
-  </IfModule>
 </IfModule>
 
 # Browser Caching for static assets
