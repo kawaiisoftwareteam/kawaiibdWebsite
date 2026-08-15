@@ -353,7 +353,7 @@ const Career = () => {
             <FaPaperPlane className="career-btn-icon" />
             {t('careerPage.officialForm')}
           </span>
-          <h2 className="form-section-heading">{t('careerPage.formTitle')}</h2>
+          <h3 className="form-section-heading">{t('careerPage.formTitle')}</h3>
           <p className="career-form-hint">{t('careerPage.formHint')}</p>
         </div>
 

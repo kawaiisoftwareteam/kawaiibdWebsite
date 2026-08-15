@@ -68,6 +68,7 @@ const OurBusinessPage = () => {
       </div>
 
       <div className="obPage__body">
+        <h2 className="sr-only">{getText('ourBusiness.listHeading', 'Business services')}</h2>
         <ol className="obPage__list">
           {services.map((item, idx) => (
             <li className="obPage__item" key={item.id} id={item.id}>
@@ -87,7 +88,7 @@ const OurBusinessPage = () => {
 
               <div className="obPage__itemCopy">
                 <span className="obPage__itemCat">{item.category}</span>
-                <h2 className="obPage__itemTitle">{item.title}</h2>
+                <h3 className="obPage__itemTitle">{item.title}</h3>
                 <p className="obPage__itemDesc">{item.desc}</p>
               </div>
             </li>

@@ -113,7 +113,7 @@ const KawaiiGlobalVentures = () => {
       <section className="kgvl-services py-16 px-6 md:px-32 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="section-subtitle-red text-sm font-bold uppercase tracking-wider text-[#BE1E2D] block">{t('kgvl.servicesSubtitle')}</span>
-          <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kgvl.servicesTitle')}</h2>
+          <h3 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kgvl.servicesTitle')}</h3>
           <div className="h-1 w-16 bg-[#BE1E2D] mx-auto mt-4 rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -140,7 +140,7 @@ const KawaiiGlobalVentures = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="section-subtitle-red text-sm font-bold uppercase tracking-wider text-[#BE1E2D] block">{t('kgvl.leadershipSubtitle')}</span>
-            <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kgvl.leadershipTitle')}</h2>
+            <h3 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kgvl.leadershipTitle')}</h3>
             <div className="h-1 w-16 bg-[#BE1E2D] mx-auto mt-4 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12 justify-center">
@@ -162,7 +162,7 @@ const KawaiiGlobalVentures = () => {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
           <div className="commitment-text flex-1 z-10">
             <span className="text-[#BE1E2D] uppercase font-bold tracking-widest text-xs">{t('kgvl.commitmentBadge')}</span>
-            <h2 className="text-3xl font-extrabold mt-3">{t('kgvl.commitmentTitle')}</h2>
+            <h3 className="text-3xl font-extrabold mt-3">{t('kgvl.commitmentTitle')}</h3>
             <p className="text-gray-300 mt-6 text-sm leading-relaxed text-justify">{t('kgvl.commitmentDesc')}</p>
             <div className="grid grid-cols-2 gap-4 mt-8">
               {[

@@ -12,9 +12,9 @@ const HomeBridge = () => {
     <section className="homeBridge" aria-labelledby="home-bridge-title">
       <div className="homeBridge__inner">
         <p className="homeBridge__eyebrow">{t('home.bridge.eyebrow')}</p>
-        <h2 id="home-bridge-title" className="homeBridge__title">
+        <h3 id="home-bridge-title" className="homeBridge__title">
           {t('home.bridge.title')}
-        </h2>
+        </h3>
         <div className="homeBridge__copy">
           <p>{t('home.bridge.p1')}</p>
           <p>{t('home.bridge.p2')}</p>

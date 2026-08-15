@@ -186,7 +186,7 @@ const KawaiiJapanCareerHr = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
             <div className="flex-1">
               <span className="badge-jp-bd">{t('kjchs.employersBadge')}</span>
-              <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-4">{t('kjchs.employersTitle')}</h2>
+              <h3 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-4">{t('kjchs.employersTitle')}</h3>
               <p className="text-gray-600 text-lg leading-relaxed text-justify mt-6">{t('kjchs.employersDesc')}</p>
             </div>
             <div className="flex-1 w-full flex justify-center">
@@ -247,7 +247,7 @@ const KawaiiJapanCareerHr = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
             <div className="flex-1 lg:order-2">
               <span className="badge-jp-bd">{t('kjchs.seekersBadge')}</span>
-              <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-4">{t('kjchs.seekersTitle')}</h2>
+              <h3 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-4">{t('kjchs.seekersTitle')}</h3>
               <p className="text-gray-600 text-lg leading-relaxed text-justify mt-6">{t('kjchs.seekersDesc')}</p>
             </div>
             <div className="flex-1 w-full lg:order-1 flex justify-center">
@@ -304,7 +304,7 @@ const KawaiiJapanCareerHr = () => {
       <section className="kjchs-sectors py-16 px-6 md:px-32 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="section-subtitle-red text-sm font-bold uppercase tracking-wider text-[#BE1E2D] block">{t('kjchs.sectorsSubtitle')}</span>
-          <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kjchs.sectorsTitle')}</h2>
+          <h3 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kjchs.sectorsTitle')}</h3>
           <div className="h-1 w-16 bg-[#BE1E2D] mx-auto mt-4 rounded-full"></div>
           <p className="text-gray-500 text-sm mt-4 max-w-2xl mx-auto">{t('kjchs.sectorsIntro')}</p>
         </div>
@@ -332,7 +332,7 @@ const KawaiiJapanCareerHr = () => {
       <section className="kjchs-achievements py-16 bg-gradient-to-b from-white to-gray-50 px-6 md:px-32 border-t border-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <span className="section-subtitle-red text-sm font-bold uppercase tracking-wider text-[#BE1E2D] block">{t('kjchs.milestonesSubtitle')}</span>
-          <h2 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kjchs.milestonesTitle')}</h2>
+          <h3 className="section-title text-[#0C0C0C] font-bold text-3xl md:text-4xl mt-2">{t('kjchs.milestonesTitle')}</h3>
           <div className="h-1 w-16 bg-[#BE1E2D] mx-auto mt-4 rounded-full"></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-4xl mx-auto">
             <div className="achievement-card bg-white p-8 rounded-3xl shadow-lg border border-gray-50">

@@ -88,7 +88,7 @@ DirectoryIndex index.html
 
   # Keep JS/CSS/fonts/maps out of the search index (Screaming Frog "Indexable" assets)
   <FilesMatch "\.(js|css|map|woff2?|ttf|eot)$">
-    Header set X-Robots-Tag "noindex, nofollow"
+    Header set X-Robots-Tag "noindex"
   </FilesMatch>
 </IfModule>
 

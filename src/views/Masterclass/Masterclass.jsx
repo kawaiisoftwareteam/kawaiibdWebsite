@@ -693,7 +693,7 @@ const Masterclass = () => {
           <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-5 pointer-events-none">
             <FaAward className="text-6xl sm:text-9xl" />
           </div>
-          <h2 className="text-xl sm:text-4xl font-extrabold text-white pr-8">{t('masterclass.form.title')}</h2>
+          <h3 className="text-xl sm:text-4xl font-extrabold text-white pr-8">{t('masterclass.form.title')}</h3>
           <p className="text-gray-300 text-sm sm:text-lg mt-2 max-w-xl">
             {t('masterclass.form.subtitle')}
           </p>

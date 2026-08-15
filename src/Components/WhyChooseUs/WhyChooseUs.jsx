@@ -171,10 +171,10 @@ const WhyChooseUs = ({ showDifferent = true }) => {
 
           <div className="whyChoose__main">
             <header className="whyChoose__header">
-              <h2 className="whyChoose__title">
+              <h3 className="whyChoose__title">
                 <span>{title1}</span>
                 <span>{title2}</span>
-              </h2>
+              </h3>
             </header>
 
             {/* Hero Banner & Intro Subtitle */}

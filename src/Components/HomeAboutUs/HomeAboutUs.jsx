@@ -40,13 +40,13 @@ const HomeAboutUs = () => {
 
         {/* Right Side: Content */}
         <div className="homeAboutUsContent">
-          <h2 className="homeAboutUsTitle">
+          <h3 className="homeAboutUsTitle">
             {t('home.aboutUs.title')}
-          </h2>
-
-          <h3 className="homeAboutUsSubtitle">
-            {t('home.aboutUs.subtitle')}
           </h3>
+
+          <p className="homeAboutUsSubtitle">
+            {t('home.aboutUs.subtitle')}
+          </p>
 
           <p className="homeAboutUsDescription">
             {t('home.aboutUs.description')}

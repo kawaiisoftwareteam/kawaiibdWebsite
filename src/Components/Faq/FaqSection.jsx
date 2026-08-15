@@ -47,9 +47,9 @@ export default function FaqSection() {
       <div className="faq-container">
         <div className="faq-header">
           <span className="faq-badge">{currentText.tag}</span>
-          <h2 id="faq-title" className="faq-title">
+          <h3 id="faq-title" className="faq-title">
             {currentText.title}
-          </h2>
+          </h3>
           <p className="faq-subtitle">{currentText.subtitle}</p>
         </div>
 

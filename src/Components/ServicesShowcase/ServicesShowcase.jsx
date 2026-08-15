@@ -148,10 +148,10 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
 
       <div className="bizIntro__inner">
         <header className="bizIntro__header">
-          <h2 className="bizIntro__title">
+          <h3 className="bizIntro__title">
             <span>{t('ourBusiness.titleLine1')}</span>
             <span>{t('ourBusiness.titleLine2')}</span>
-          </h2>
+          </h3>
         </header>
 
         <div

@@ -141,7 +141,7 @@ const SpiderSisterConcerns = () => {
                     key={`${item.id}-center`}
                     href={activeHref}
                     target={activeIsExternal ? '_blank' : undefined}
-                    rel={activeIsExternal ? 'noopener noreferrer' : undefined}
+                    rel={activeIsExternal ? 'noopener noreferrer nofollow' : undefined}
                     className="scGallery__center"
                   >
                     <img loading="lazy" decoding="async"

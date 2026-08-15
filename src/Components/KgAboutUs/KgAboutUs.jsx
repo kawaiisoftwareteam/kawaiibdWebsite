@@ -227,10 +227,10 @@ const MissionVisionSection = ({ t }) => {
         <div className="kg-section-label" style={{ justifyContent: 'center' }}>
           {t('aboutUs.mv.sectionLabel')}
         </div>
-        <h2 className="kg-section-title" style={{ textAlign: 'center' }}>
+        <h3 className="kg-section-title" style={{ textAlign: 'center' }}>
           {t('aboutUs.mv.title1')} <span>{t('aboutUs.mv.title2')}</span> &amp;{' '}
           <span>{t('aboutUs.mv.title3')}</span>
-        </h2>
+        </h3>
       </div>
 
       <div className="kg-mv-grid kg-stagger">
@@ -278,9 +278,9 @@ const CoreValuesSection = ({ t }) => {
         <div className="kg-section-label" style={{ justifyContent: 'center' }}>
           {t('aboutUs.values.sectionLabel')}
         </div>
-        <h2 className="kg-section-title" style={{ textAlign: 'center' }}>
+        <h3 className="kg-section-title" style={{ textAlign: 'center' }}>
           {t('aboutUs.values.title1')} <span>{t('aboutUs.values.title2')}</span>
-        </h2>
+        </h3>
         <p
           className="kg-section-body"
           style={{ textAlign: 'center', margin: '0 auto 0' }}

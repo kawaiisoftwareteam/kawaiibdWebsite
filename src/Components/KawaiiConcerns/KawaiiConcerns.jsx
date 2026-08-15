@@ -290,18 +290,7 @@ const KawaiiConcerns = () => {
                                         <FontAwesomeIcon icon={faChevronRight} className="kc-arrow-icon" />
                                     </button>
 
-                                    {card.externalLink ? (
-                                        <a 
-                                            href={card.externalLink} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="kc-ext-link-btn"
-                                            title="Visit Official Website"
-                                            onClick={(e) => e.stopPropagation()}
-                                        >
-                                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                                        </a>
-                                    ) : card.internalPath ? (
+                                    {card.internalPath ? (
                                         <a 
                                             href={localizedPath(card.internalPath)} 
                                             className="kc-ext-link-btn"
@@ -357,8 +346,8 @@ const KawaiiConcerns = () => {
                                 <span className="kc-modal-location"><FontAwesomeIcon icon={faGlobe} /> {selectedCompany.location}</span>
                             </div>
 
-                            <h2 className="kc-modal-title">{selectedCompany.concernName}</h2>
-                            <h4 className="kc-modal-type">{t(`concernsPage.cards.${selectedCompany.cardId}.type`)}</h4>
+                            <h3 className="kc-modal-title">{selectedCompany.concernName}</h3>
+                            <p className="kc-modal-type">{t(`concernsPage.cards.${selectedCompany.cardId}.type`)}</p>
 
                             <p className="kc-modal-desc">
                                 {t(`concernsPage.details.${selectedCompany.cardId}.body`) !== `concernsPage.details.${selectedCompany.cardId}.body`
@@ -385,7 +374,7 @@ const KawaiiConcerns = () => {
                                     <a 
                                         href={selectedCompany.externalLink} 
                                         target="_blank" 
-                                        rel="noopener noreferrer"
+                                        rel="noopener noreferrer nofollow"
                                         className="kc-btn-primary"
                                     >
                                         <span>Visit Website</span>

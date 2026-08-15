@@ -70,7 +70,7 @@ const ContactForm = () => {
                         <li key={i}>{topic}</li>
                     ))}
                 </ul>
-                <h2 className="contact_intro_heading">{t('contact.intro.hoursTitle')}</h2>
+                <h3 className="contact_intro_heading">{t('contact.intro.hoursTitle')}</h3>
                 <p className="contact_intro_text contact_intro_hours">{t('contact.intro.hoursBd')}</p>
                 <p className="contact_intro_text contact_intro_hours">{t('contact.intro.hoursJp')}</p>
                 <div className="contact_intro_offices">
