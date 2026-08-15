@@ -16,14 +16,14 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_HOST} ^www\.kawaiibd\.com$ [NC]
   RewriteRule ^(.*)$ https://kawaiibd.com/$1 [R=301,L]
 
-  # Apex `/` → locale home (avoids duplicate English homepage)
-  # Honor saved locale cookie; otherwise serve English home via internal rewrite
-  # (200 + canonical /en/) so crawlers don't flag a root 301.
+  # Apex `/` → locale home (correct i18n setup — one English URL: /en/)
+  # SF will list this as a 301 "Internal Redirect". That is expected, not a bug.
+  # Do NOT rewrite to /en/index.html (that creates a "Canonicalised" soft duplicate).
   RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
   RewriteRule ^$ /bn/ [R=302,L]
   RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
   RewriteRule ^$ /ja/ [R=302,L]
-  RewriteRule ^$ /en/index.html [L]
+  RewriteRule ^$ /en/ [R=301,L]
 
   # Redirect /jp or /jp/ to /ja/
   RewriteRule ^jp/?(.*)$ /ja/$1 [R=301,L]
