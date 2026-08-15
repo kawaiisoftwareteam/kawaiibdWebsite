@@ -366,11 +366,17 @@ const Seminar = () => {
 
       {/* Visual Hero Banner */}
       <div className="seminar-page-shell mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-100 bg-white">
-        <img loading="lazy" decoding="async"
-          src={getSrc(banarImg)}
-          alt={t('seminar.bannerAlt')}
+        <img loading="lazy" decoding="async" 
+          src={getSrc(banarImg)} 
+          alt={t('seminar.bannerAlt')} 
           className="w-full h-auto block"
         />
+      </div>
+
+      <div className="seminar-page-shell mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
+          {t('seminar.pageTitle')}
+        </h1>
       </div>
 
       {/* Countdown Timer & Urgency Bar */}

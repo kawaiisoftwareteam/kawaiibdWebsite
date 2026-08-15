@@ -10,7 +10,7 @@ const ButtonNormal = ({ text, arrow }) => {
             {text}
           </div>
           {arrowSrc ? (
-            <img loading="eager" decoding="async" src={arrowSrc} alt="" className='mt-[0.35rem]' aria-hidden="true" />
+            <img loading="eager" decoding="async" src={arrowSrc} alt="Continue" className='mt-[0.35rem]' />
           ) : null}
         </div>
       </div>

@@ -44,34 +44,34 @@ export const PAGE_SEO = {
   },
   '/about': {
     en: {
-      title: 'About Us | Kawaii Group',
+      title: 'About Kawaii Group | Japan-Bangladesh Venture',
       description:
         'Learn about Kawaii Group’s 35+ year journey as a Japan-Bangladesh joint venture. Discover our mission, vision, values, and how we connect people, businesses, and cultures through innovation and partnership.',
     },
     bn: {
-      title: 'আমাদের সম্পর্কে | কাওয়াই গ্রুপ',
+      title: 'কাওয়াই গ্রুপ সম্পর্কে | জাপান-বাংলাদেশ যৌথ উদ্যোগ',
       description:
         'জাপান-বাংলাদেশ যৌথ উদ্যোগ হিসেবে কাওয়াই গ্রুপের ৩৫+ বছরের যাত্রা জানুন। আমাদের মিশন, ভিশন, মূল্যবোধ এবং উদ্ভাবন ও অংশীদারিত্বের মাধ্যমে মানুষ, ব্যবসা ও সংস্কৃতিকে কীভাবে সংযুক্ত করি তা আবিষ্কার করুন।',
     },
     ja: {
-      title: '会社概要 | カワイグループ',
+      title: 'カワイグループについて | 日バングラデシュ合弁',
       description:
         '日本・バングラデシュ合弁企業としてのカワイグループの35年以上の歩みをご紹介。ミッション・ビジョン・価値観、そしてイノベーションとパートナーシップで人とビジネス、文化をつなぐ取り組みをぜひご覧ください。',
     },
   },
   '/services': {
     en: {
-      title: 'Our Services | Kawaii Group',
+      title: 'Our Services | HR, Education & Business Solutions',
       description:
         'Explore Kawaii Group services including business consultancy, human resource development, education and Japanese language training, recruitment, and digital transformation solutions for companies and individuals.',
     },
     bn: {
-      title: 'আমাদের সেবা | কাওয়াই গ্রুপ',
+      title: 'আমাদের সেবা | এইচআর, শিক্ষা ও ব্যবসায়িক সমাধান',
       description:
         'কাওয়াই গ্রুপের সেবাসমূহ অন্বেষণ করুন—ব্যবসায়িক পরামর্শ, মানব সম্পদ উন্নয়ন, শিক্ষা ও জাপানি ভাষা প্রশিক্ষণ, নিয়োগ এবং ডিজিটাল রূপান্তর সমাধান কোম্পানি ও ব্যক্তিদের জন্য।',
     },
     ja: {
-      title: 'サービス | カワイグループ',
+      title: 'サービス紹介 | 人材・教育・ビジネス支援',
       description:
         'ビジネスコンサルティング、人材開発、教育・日本語研修、採用支援、デジタルトランスフォーメーションなど、企業と個人向けのカワイグループのサービスをご覧ください。',
     },
@@ -95,17 +95,17 @@ export const PAGE_SEO = {
   },
   '/contact': {
     en: {
-      title: 'Contact Us | Kawaii Group',
+      title: 'Contact Kawaii Group Bangladesh Office',
       description:
         'Get in touch with Kawaii Group Bangladesh. Contact our Dhaka office for business partnerships, career support, education programs, and Japan-Bangladesh collaboration inquiries.',
     },
     bn: {
-      title: 'যোগাযোগ | কাওয়াই গ্রুপ',
+      title: 'কাওয়াই গ্রুপ বাংলাদেশ অফিসে যোগাযোগ',
       description:
         'কাওয়াই গ্রুপ বাংলাদেশের সাথে যোগাযোগ করুন। ব্যবসায়িক অংশীদারিত্ব, ক্যারিয়ার সহায়তা, শিক্ষা কর্মসূচি এবং জাপান-বাংলাদেশ সহযোগিতার জন্য আমাদের ঢাকা অফিসে যোগাযোগ করুন।',
     },
     ja: {
-      title: 'お問い合わせ | カワイグループ',
+      title: 'お問い合わせ | カワイグループ・バングラデシュ',
       description:
         'カワイグループバングラデシュへのお問い合わせはこちら。ビジネス提携、キャリア支援、教育プログラム、日バングラデシュ協力に関するご相談をダッカ事務所で受け付けています。',
     },
@@ -129,19 +129,36 @@ export const PAGE_SEO = {
   },
   '/our-business': {
     en: {
-      title: 'Our Business | Kawaii Group',
+      title: 'Our Business Portfolio | Kawaii Group',
       description:
         'Explore Kawaii Group’s business portfolio across consultancy, HR, education, recruitment, and cross-border ventures that connect Bangladesh and Japan for sustainable growth.',
     },
     bn: {
-      title: 'আমাদের ব্যবসা | কাওয়াই গ্রুপ',
+      title: 'আমাদের ব্যবসায়িক পোর্টফোলিও | কাওয়াই গ্রুপ',
       description:
         'পরামর্শ, এইচআর, শিক্ষা, নিয়োগ এবং আন্তঃসীমান্ত উদ্যোগসহ কাওয়াই গ্রুপের ব্যবসায়িক পোর্টফোলিও অন্বেষণ করুন—টেকসই প্রবৃদ্ধির জন্য বাংলাদেশ ও জাপানকে সংযুক্ত করে।',
     },
     ja: {
-      title: '事業紹介 | カワイグループ',
+      title: '事業ポートフォリオ | カワイグループ',
       description:
         'コンサルティング、人材、教育、採用、クロスボーダー事業など、バングラデシュと日本をつなぐカワイグループの事業ポートフォリオをご覧ください。',
+    },
+  },
+  '/career': {
+    en: {
+      title: 'Careers in Japan | Apply with Kawaii Group',
+      description:
+        'Apply for Japan career pathways with Kawaii Group Bangladesh — SSW, TITP, and skilled worker support including training, documentation guidance, and placement assistance.',
+    },
+    bn: {
+      title: 'জাপানে ক্যারিয়ার | কাওয়াই গ্রুপে আবেদন করুন',
+      description:
+        'কাওয়াই গ্রুপ বাংলাদেশের সাথে জাপান ক্যারিয়ার পথে আবেদন করুন—SSW, TITP ও দক্ষ কর্মী সহায়তাসহ প্রশিক্ষণ, ডকুমেন্টেশন ও প্লেসমেন্ট সহায়তা।',
+    },
+    ja: {
+      title: '日本でのキャリア応募 | カワイグループ',
+      description:
+        'カワイグループバングラデシュで日本へのキャリア応募。特定技能・技能実習などの研修、書類案内、就職支援をご提供します。',
     },
   },
   '/masterclass': {
@@ -163,34 +180,34 @@ export const PAGE_SEO = {
   },
   '/seminar': {
     en: {
-      title: 'BIM Seminar | Kawaii Group',
+      title: 'BIM & Construction DX Seminar | Kawaii Group',
       description:
         'Register for the Kawaii Group BIM & Construction DX Seminar with Dr. Shunsuke Someya — in-person learning on digital construction, Japanese standards, and career-ready BIM skills.',
     },
     bn: {
-      title: 'BIM সেমিনার | কাওয়াই গ্রুপ',
+      title: 'BIM ও Construction DX সেমিনার | কাওয়াই গ্রুপ',
       description:
         'ড. শুনসুকে সোমেয়ার সাথে কাওয়াই গ্রুপের BIM ও Construction DX সেমিনারে নিবন্ধন করুন—ডিজিটাল নির্মাণ, জাপানি মান ও ক্যারিয়ার-প্রস্তুত BIM দক্ষতা নিয়ে ইন-পারসন শিক্ষা।',
     },
     ja: {
-      title: 'BIMセミナー | カワイグループ',
+      title: 'BIM・建設DXセミナー | カワイグループ',
       description:
         '染谷俊介博士によるカワイグループのBIM・Construction DXセミナーに登録。デジタル建設、日本の基準、キャリアにつながるBIMスキルを対面で学べます。',
     },
   },
   '/privacypolicy': {
     en: {
-      title: 'Privacy Policy | Kawaii Group',
+      title: 'Privacy Policy | Kawaii Group Bangladesh',
       description:
         'Read the Kawaii Group privacy policy to understand how we collect, use, store, share, and protect personal information when you visit kawaiibd.com, contact our team, register for events, or use our education, recruitment, and business services across Bangladesh and Japan.',
     },
     bn: {
-      title: 'গোপনীয়তা নীতি | কাওয়াই গ্রুপ',
+      title: 'গোপনীয়তা নীতি | কাওয়াই গ্রুপ বাংলাদেশ',
       description:
         'কাওয়াই গ্রুপের গোপনীয়তা নীতি পড়ুন—kawaiibd.com ভিজিট, যোগাযোগ, ইভেন্ট নিবন্ধন বা শিক্ষা, নিয়োগ ও ব্যবসায়িক সেবা ব্যবহারের সময় আমরা কীভাবে ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার, সংরক্ষণ, শেয়ার ও সুরক্ষা করি তা জানুন।',
     },
     ja: {
-      title: 'プライバシーポリシー | カワイグループ',
+      title: 'プライバシーポリシー | カワイグループBD',
       description:
         'カワイグループのプライバシーポリシー。kawaiibd.comの利用、お問い合わせ、イベント登録、教育・採用・ビジネスサービスのご利用時に、個人情報をどのように収集・利用・保管・共有・保護するかをご確認ください。',
     },

@@ -59,6 +59,7 @@
   },
   "masterclass": {
     "bannerAlt": "染谷俊介博士によるBIM・建設DXマスタークラス",
+    "pageTitle": "BIM・建設DXマスタークラス",
     "urgency": {
       "badge": "ライブZoomマスタークラス",
       "title": "無料登録はまもなく終了！",
@@ -1087,7 +1088,7 @@
     }
   },
   "services": {
-    "header": "特定技能（SSW）"
+    "header": "サービス"
   },
   "ourBusiness": {
     "seeMore": "もっと見る",
@@ -1581,6 +1582,7 @@
   },
   "seminar": {
     "bannerAlt": "染谷俊介博士によるBIM・建設DXセミナー",
+    "pageTitle": "BIM・建設DXセミナー",
     "urgency": {
       "badge": "対面セミナー",
       "title": "無料登録はまもなく終了！",

@@ -58,6 +58,14 @@ DirectoryIndex index.html
   Header set Access-Control-Allow-Origin "*"
   Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
   Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
+
+  # Keep hashed media/fonts out of the search index (decorative assets)
+  <IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/_next/static/media/" KG_STATIC_ASSET=1
+    SetEnvIf Request_URI "^/_next/static/css/" KG_STATIC_ASSET=1
+    SetEnvIf Request_URI "^/_next/static/chunks/" KG_STATIC_ASSET=1
+    Header set X-Robots-Tag "noindex, nofollow" env=KG_STATIC_ASSET
+  </IfModule>
 </IfModule>
 
 # Browser Caching for static assets

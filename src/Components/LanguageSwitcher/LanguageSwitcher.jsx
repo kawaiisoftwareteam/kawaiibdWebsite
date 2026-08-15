@@ -52,8 +52,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
         <img loading="lazy" decoding="async"
           className="language-switcher__flag"
           src={flagImages[current.code]}
-          alt=""
-          aria-hidden="true"
+          alt={`${current.nativeName} flag`}
         />
         <span className="lang-trigger__label">{current.nativeName}</span>
         <svg
@@ -81,8 +80,7 @@ const LanguageSwitcher = ({ isNavbar = false }) => {
               <img loading="lazy" decoding="async"
                 className="language-switcher__flag language-switcher__flag--option"
                 src={flagImages[lang.code]}
-                alt=""
-                aria-hidden="true"
+                alt={`${lang.nativeName} flag`}
               />
               {lang.nativeName}
             </button>

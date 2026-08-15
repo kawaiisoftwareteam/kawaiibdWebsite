@@ -26,7 +26,7 @@ const Cta = ({ title, text, text2, backgroundImage, marginY }) => {
             </div>
           </div>
           <div className='left_frame'>
-            <img loading="lazy" decoding="async" src={getSrc(backgroundImage)} alt="" className='cta_pic_bg' />
+            <img loading="lazy" decoding="async" src={getSrc(backgroundImage)} alt={title || t('cta.leftTitle') || 'Kawaii Group'} className='cta_pic_bg' />
           </div>
         </div>
         <div className="right_cta">

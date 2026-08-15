@@ -11,7 +11,7 @@ const Button_kg = ({ text }) => {
         <div className='btn_text'>
           {text}
         </div>
-        <img loading="eager" decoding="async" src={arrowSrc} alt="" className='mt-[0.35rem]' aria-hidden="true" />
+        <img loading="eager" decoding="async" src={arrowSrc} alt="Continue" className='mt-[0.35rem]' />
       </div>
     </div>
   )

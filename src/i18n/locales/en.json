@@ -400,7 +400,7 @@
     }
   },
   "services": {
-    "header": "Specified Skilled Worker (SSW)"
+    "header": "Our Services"
   },
   "ourBusiness": {
     "seeMore": "See More",
@@ -629,6 +629,7 @@
   },
   "masterclass": {
     "bannerAlt": "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
+    "pageTitle": "BIM & Construction DX Masterclass",
     "urgency": {
       "badge": "Live Zoom Masterclass",
       "title": "Free Registration Closes Soon!",
@@ -1580,6 +1581,7 @@
   },
   "seminar": {
     "bannerAlt": "BIM & Construction DX Seminar with Dr. Shunsuke Someya",
+    "pageTitle": "BIM & Construction DX Seminar",
     "urgency": {
       "badge": "In-Person Seminar",
       "title": "Free Registration Closes Soon!",

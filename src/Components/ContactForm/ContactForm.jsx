@@ -57,7 +57,7 @@ const ContactForm = () => {
             {/* Watermark Header & Title */}
             <div className="contact_header_container">
                 <div className="contact_watermark">{t('contact.inquiry.title') || 'CONTACT'}</div>
-                <h2 className="contact_title">{t('contact.inquiry.label') || 'inquiry'}</h2>
+                <h1 className="contact_title">{t('contact.header') || 'Get in Touch'}</h1>
                 <p className="contact_subtitle">{t('contact.form.lead')}</p>
             </div>
 

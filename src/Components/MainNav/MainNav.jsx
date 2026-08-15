@@ -328,7 +328,7 @@ const MainNav = () => {
             <img loading="eager" decoding="async" src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
           </Link>
           <button className="mobileSidebar__close" onClick={toggleSidebar} aria-label="Close menu">
-            <img loading="eager" decoding="async" src={getSrc(mobileCross)} alt="" />
+            <img loading="eager" decoding="async" src={getSrc(mobileCross)} alt="Close menu" />
           </button>
         </div>
 

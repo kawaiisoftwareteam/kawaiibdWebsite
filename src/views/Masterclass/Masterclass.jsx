@@ -374,6 +374,12 @@ const Masterclass = () => {
         />
       </div>
 
+      <div className="masterclass-page-shell mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
+          {t('masterclass.pageTitle')}
+        </h1>
+      </div>
+
       {/* Countdown Timer & Urgency Bar */}
       <div className="masterclass-page-shell mb-8 sm:mb-12 bg-gradient-to-br from-gray-950 via-gray-900 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-gray-800/80 relative overflow-hidden">
         <div className="absolute -right-16 -top-16 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />

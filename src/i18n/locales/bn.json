@@ -59,6 +59,7 @@
   },
   "masterclass": {
     "bannerAlt": "ডঃ শুনসুকে সোমেয়ার সাথে BIM ও Construction DX মাস্টারক্লাস",
+    "pageTitle": "BIM ও Construction DX মাস্টারক্লাস",
     "urgency": {
       "badge": "লাইভ জুম মাস্টারক্লাস",
       "title": "বিনামূল্যে নিবন্ধন শীঘ্রই বন্ধ!",
@@ -1087,7 +1088,7 @@
     }
   },
   "services": {
-    "header": "Specified Skilled Worker (SSW)"
+    "header": "আমাদের সেবা"
   },
   "ourBusiness": {
     "seeMore": "আরও দেখুন",
@@ -1581,6 +1582,7 @@
   },
   "seminar": {
     "bannerAlt": "ডঃ শুনসুকে সোমেয়ার সাথে BIM ও Construction DX সেমিনার",
+    "pageTitle": "BIM ও Construction DX সেমিনার",
     "urgency": {
       "badge": "সশরীরে সেমিনার",
       "title": "বিনামূল্যে নিবন্ধন শীঘ্রই বন্ধ!",

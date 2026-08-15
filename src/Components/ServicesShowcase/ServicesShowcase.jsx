@@ -141,7 +141,7 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
           decoding="async"
           fetchPriority="high"
           src={getSrc(activeBg)}
-          alt=""
+          alt={services[currentIndex]?.title || t('ourBusiness.eyebrow') || 'Kawaii Group business'}
           className="bizIntro__curveImg"
         />
       </div>

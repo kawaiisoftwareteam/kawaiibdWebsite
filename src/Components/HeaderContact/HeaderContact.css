@@ -85,6 +85,7 @@
   font-weight: 600;
   line-height: 1.2;
   word-break: break-word;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
