@@ -65,11 +65,11 @@ const Map = () => {
           <div className='contact_frame'>
             <div className='mobile_frame'>
               <FontAwesomeIcon icon={faPhone} className='h-6 w-6' style={{ color: '#475569' }} />
-              <div className='number_style'><a href="tel:+81343635903">+810343635903</a></div>
+              <div className='number_style'><a href="tel:+81369105465">+81 03-6910-5465</a></div>
             </div>
             <div className='mobile_frame'>
               <FontAwesomeIcon icon={faEnvelope} className='h-6 w-6' style={{ color: '#475569' }} />
-              <div className='number_style'><a href="mailto:japan@achievejapan.com" target='_blank' rel="noreferrer">japan@achievejapan.com</a></div>
+              <div className='number_style'><a href="mailto:info@kawaiigroupjapan.com" target='_blank' rel="noreferrer">info@kawaiigroupjapan.com</a></div>
             </div>
           </div>
           <div className='mobile_frame'>

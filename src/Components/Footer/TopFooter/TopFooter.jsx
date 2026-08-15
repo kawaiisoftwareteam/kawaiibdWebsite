@@ -88,13 +88,13 @@ const TopFooter = () => {
                     <div className='frame'>
                         <FontAwesomeIcon icon={faPhone} className='iconF' />
                         <div>
-                            <a href="tel:+81343635903">+81 03-4363-5903</a>
+                            <a href="tel:+81369105465">+81 03-6910-5465</a>
                         </div>
                     </div>
                     <div className='frame'>
                         <FontAwesomeIcon icon={faEnvelope} className='iconF' />
                         <div>
-                            <a href="mailto:japan@achievejapan.com" target='_blank' rel="noreferrer">japan@achievejapan.com</a>
+                            <a href="mailto:info@kawaiigroupjapan.com" target='_blank' rel="noreferrer">info@kawaiigroupjapan.com</a>
                         </div>
 
                     </div>

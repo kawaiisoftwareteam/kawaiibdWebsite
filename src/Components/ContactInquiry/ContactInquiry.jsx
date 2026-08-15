@@ -110,8 +110,8 @@ const ContactInquiry = () => {
     {
       key: 'jp',
       title: jpTitle,
-      phones: [{ display: '+81 03-4363-5903', href: 'tel:+81343635903' }],
-      email: { display: 'japan@achievejapan.com', href: 'mailto:japan@achievejapan.com' },
+      phones: [{ display: '+81 03-6910-5465', href: 'tel:+81369105465' }],
+      email: { display: 'info@kawaiigroupjapan.com', href: 'mailto:info@kawaiigroupjapan.com' },
       address: jpAddress,
       mapHref: 'https://www.google.com/maps/search/?api=1&query=ITO+Daikanyama,+2-17-8+Ebisu-Nishi,+Shibuya-ku,+Tokyo+150-0021,+Japan',
     },
