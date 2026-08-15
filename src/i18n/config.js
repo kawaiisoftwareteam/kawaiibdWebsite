@@ -22,17 +22,17 @@ export const META = {
   en: {
     title: 'Kawaii Group | Japan-Bangladesh Joint Venture',
     description:
-      'Kawaii Group Bangladesh is a Japan-Bangladesh joint venture creating opportunities through innovation, education, human resources, and strategic partnerships. Bridging cultures and empowering businesses and careers across both nations.',
+      'Kawaii Group is a premier Japan-Bangladesh joint venture empowering businesses and careers through global HR recruitment, Japanese language training, and BIM education.',
   },
   bn: {
     title: 'কাওয়াই গ্রুপ | জাপান-বাংলাদেশ যৌথ উদ্যোগ',
     description:
-      'কাওয়াই গ্রুপ বাংলাদেশ একটি জাপান-বাংলাদেশ যৌথ উদ্যোগ যা উদ্ভাবন, শিক্ষা, মানব সম্পদ ও কৌশলগত অংশীদারিত্বের মাধ্যমে সুযোগ সৃষ্টি করে। দুই দেশের সংস্কৃতি সেতুবন্ধন করে ব্যবসা ও ক্যারিয়ারকে এগিয়ে নিয়ে যাই।',
+      'কাওয়াই গ্রুপ একটি বিশ্বস্ত জাপান-বাংলাদেশ যৌথ উদ্যোগ—আন্তর্জাতিক নিয়োগ, জাপানি ভাষা শিক্ষা, BIM ট্রেনিং ও ক্রস-বর্ডার ব্যবসায়িক পরামর্শের নির্ভরযোগ্য প্ল্যাটফর্ম।',
   },
   ja: {
     title: 'カワイグループ | 日本・バングラデシュ合弁企業',
     description:
-      'カワイグループバングラデシュは、イノベーション・教育・人材・戦略的パートナーシップを通じて機会を創出する日本・バングラデシュ合弁企業です。両国の文化をつなぎ、ビジネスとキャリアの成長を支援します。',
+      'カワイグループは日本とバングラデシュをつなぐ総合ビジネス合弁企業。特定技能や技術者の人材紹介・採用、実践的日本語教育、BIM研修、進出支援を提供します。',
   },
 };
 

@@ -21,7 +21,7 @@ const Footer = () => {
   const { t, localizedPath } = useLocale();
 
   const quickLinks = [
-    { label: t('nav.home'), href: localizedPath('/home') },
+    { label: t('nav.home'), href: localizedPath('/') },
     { label: t('nav.whoWeAre'), href: localizedPath('/about') },
     { label: t('nav.whatWeDo'), href: localizedPath('/services') },
     { label: t('nav.sisterConcerns'), href: localizedPath('/concerns') },
@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="siteFooter__top h-card" itemScope itemType="https://schema.org/Corporation">
           <div className="siteFooter__brand">
             <Link
-              href={localizedPath('/home')}
+              href={localizedPath('/')}
               className="siteFooter__logo u-url"
               rel="me"
               itemProp="url"

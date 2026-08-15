@@ -29,17 +29,17 @@ export const PAGE_SEO = {
     en: {
       title: 'Kawaii Group | Japan-Bangladesh Joint Venture',
       description:
-        'Kawaii Group Bangladesh is a Japan-Bangladesh joint venture creating opportunities through innovation, education, human resources, and strategic partnerships. Bridging cultures and empowering businesses and careers across both nations.',
+        'Kawaii Group is a premier Japan-Bangladesh joint venture empowering businesses and careers through global HR recruitment, Japanese language training, and BIM education.',
     },
     bn: {
       title: 'কাওয়াই গ্রুপ | জাপান-বাংলাদেশ যৌথ উদ্যোগ',
       description:
-        'কাওয়াই গ্রুপ বাংলাদেশ একটি জাপান-বাংলাদেশ যৌথ উদ্যোগ যা উদ্ভাবন, শিক্ষা, মানব সম্পদ ও কৌশলগত অংশীদারিত্বের মাধ্যমে সুযোগ সৃষ্টি করে। দুই দেশের সংস্কৃতি সেতুবন্ধন করে ব্যবসা ও ক্যারিয়ারকে এগিয়ে নিয়ে যাই।',
+        'কাওয়াই গ্রুপ একটি বিশ্বস্ত জাপান-বাংলাদেশ যৌথ উদ্যোগ—আন্তর্জাতিক নিয়োগ, জাপানি ভাষা শিক্ষা, BIM ট্রেনিং ও ক্রস-বর্ডার ব্যবসায়িক পরামর্শের নির্ভরযোগ্য প্ল্যাটফর্ম।',
     },
     ja: {
       title: 'カワイグループ | 日本・バングラデシュ合弁企業',
       description:
-        'カワイグループバングラデシュは、イノベーション・教育・人材・戦略的パートナーシップを通じて機会を創出する日本・バングラデシュ合弁企業です。両国の文化をつなぎ、ビジネスとキャリアの成長を支援します。',
+        'カワイグループは日本とバングラデシュをつなぐ総合ビジネス合弁企業。特定技能や技術者の人材紹介・採用、実践的日本語教育、BIM研修、進出支援を提供します。',
     },
   },
   '/about': {
@@ -254,6 +254,8 @@ export function buildPageMetadata({ locale, path = '/', title, description } = {
   const pageDescription = description || seo.description;
   const normalized = normalizePath(path);
   const pathSuffix = normalized === '/' ? '/' : `${normalized}/`;
+  // Always locale-prefixed with trailing slash (matches trailingSlash: true).
+  // Root `/` and `/en/` both canonicalize to `/en/` so English has one preferred URL.
   const canonical = `${SITE_URL}/${localeKey}${pathSuffix}`;
 
   const languages = {};
@@ -371,3 +373,203 @@ export function getAboutPageJsonLd(locale = 'en') {
     inLanguage: locale,
   };
 }
+
+export function getLocalBusinessJsonLd() {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': ['LocalBusiness', 'ProfessionalService'],
+      '@id': `${SITE_URL}/#localbusiness-dhaka`,
+      name: 'Kawaii Group Bangladesh (Headquarters)',
+      image: SITE_OG_IMAGE,
+      url: SITE_URL,
+      telephone: '+8801901850570',
+      email: 'info@kawaiibd.com',
+      priceRange: '$$',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura',
+        addressLocality: 'Dhaka',
+        postalCode: '1219',
+        addressCountry: 'BD',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 23.7656,
+        longitude: 90.4285,
+      },
+      hasMap: 'https://maps.app.goo.gl/sfL5dbZTL65kB2W19',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Saturday', 'Sunday'],
+          opens: '09:00',
+          closes: '18:00',
+        },
+      ],
+      areaServed: [
+        { '@type': 'Country', name: 'Bangladesh' },
+        { '@type': 'Country', name: 'Japan' },
+      ],
+      sameAs: ORGANIZATION.sameAs,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': ['LocalBusiness', 'ProfessionalService'],
+      '@id': `${SITE_URL}/#localbusiness-tokyo`,
+      name: 'Kawaii Group Japan Branch',
+      image: SITE_OG_IMAGE,
+      url: SITE_URL,
+      telephone: '+81369105465',
+      email: 'info@kawaiigroupjapan.com',
+      priceRange: '$$',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi',
+        addressLocality: 'Shibuya-ku, Tokyo',
+        postalCode: '150-0021',
+        addressCountry: 'JP',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 35.6483,
+        longitude: 139.7042,
+      },
+      hasMap:
+        'https://www.google.com/maps/search/?api=1&query=ITO+Daikanyama,+2-17-8+Ebisu-Nishi,+Shibuya-ku,+Tokyo+150-0021,+Japan',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:30',
+          closes: '18:30',
+        },
+      ],
+      areaServed: [{ '@type': 'Country', name: 'Japan' }],
+    },
+  ];
+}
+
+export function getBreadcrumbJsonLd(locale = 'en', path = '/', pageTitle = '') {
+  const normalized = normalizePath(path);
+  const segments = normalized.split('/').filter(Boolean);
+
+  const itemListElement = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${SITE_URL}/${locale}/`,
+    },
+  ];
+
+  if (segments.length > 0) {
+    const currentPath = `${SITE_URL}/${locale}/${segments.join('/')}/`;
+    itemListElement.push({
+      '@type': 'ListItem',
+      position: 2,
+      name: pageTitle || segments[segments.length - 1].replace(/-/g, ' '),
+      item: currentPath,
+    });
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement,
+  };
+}
+
+export function getFaqJsonLd(faqItems = []) {
+  if (!faqItems || faqItems.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+export function getContactPageJsonLd(locale = 'en') {
+  const seo = getPageSeo(locale, '/contact');
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': `${SITE_URL}/${locale}/contact#webpage`,
+    url: `${SITE_URL}/${locale}/contact`,
+    name: seo.title,
+    description: seo.description,
+    isPartOf: {
+      '@id': `${SITE_URL}/#website`,
+    },
+    mainEntity: {
+      '@id': `${SITE_URL}/#organization`,
+    },
+    inLanguage: locale,
+  };
+}
+
+export function getServicesPageJsonLd(locale = 'en', path = '/services') {
+  const seo = getPageSeo(locale, path);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE_URL}/${locale}${path}#service`,
+    name: seo.title,
+    description: seo.description,
+    provider: {
+      '@id': `${SITE_URL}/#organization`,
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'Bangladesh' },
+      { '@type': 'Country', name: 'Japan' },
+    ],
+    serviceType: 'Japan-Bangladesh Business & HR Solutions',
+  };
+}
+
+export function getEventJsonLd(locale = 'en', eventType = 'seminar') {
+  const isMasterclass = eventType === 'masterclass';
+  const path = isMasterclass ? '/masterclass' : '/seminar';
+  const seo = getPageSeo(locale, path);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'EducationEvent',
+    '@id': `${SITE_URL}/${locale}${path}#event`,
+    name: seo.title,
+    description: seo.description,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    organizer: {
+      '@id': `${SITE_URL}/#organization`,
+    },
+    location: {
+      '@type': 'Place',
+      name: 'Kawaii Group Dhaka Office / Seminar Hall',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura',
+        addressLocality: 'Dhaka',
+        postalCode: '1219',
+        addressCountry: 'BD',
+      },
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'BDT',
+      availability: 'https://schema.org/InStock',
+      url: `${SITE_URL}/${locale}${path}`,
+    },
+    inLanguage: locale,
+  };
+}
+
+

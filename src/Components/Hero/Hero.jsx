@@ -258,7 +258,7 @@ const Hero = () => {
 
         <div className="hero__content">
           <div className="hero__title-mask" ref={maskRef}>
-            <h1 className="hero__place-name" ref={titleRef}>
+            <h1 className="hero__place-name" ref={titleRef} aria-label="Kawaii Group - Japan-Bangladesh Joint Venture">
               {slides[0].name}
             </h1>
           </div>

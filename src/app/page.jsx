@@ -1,13 +1,16 @@
-'use client';
-
-import React, { Suspense } from 'react';
 import Script from 'next/script';
-import LocaleRedirect from '../Components/LocaleRedirect/LocaleRedirect';
-import LoadingSpinner from '../Components/LoadingSpinner/LoadingSpinner';
+import Home from '../views/Home/Home';
+import LocalizedShell from '../Components/LocalizedShell/LocalizedShell';
+import JsonLd from '../Components/Seo/JsonLd';
+import { DEFAULT_LOCALE } from '../i18n/config';
+import { buildPageMetadata } from '../lib/seo';
+
+export async function generateMetadata() {
+  return buildPageMetadata({ locale: DEFAULT_LOCALE, path: '/' });
+}
 
 /**
- * Runs before React hydrates so kawaiibd.com enters a locale instantly
- * (no geo API wait). Stored language wins; otherwise English.
+ * Runs before React hydrates so kawaiibd.com enters a locale instantly if user has a non-English saved preference.
  */
 const instantLocaleRedirect = `
 (function () {
@@ -22,7 +25,9 @@ const instantLocaleRedirect = `
         if (c) loc = c[1];
       }
     } catch (e) {}
-    location.replace('/' + loc + '/' + location.search + location.hash);
+    if (loc && loc !== 'en') {
+      location.replace('/' + loc + '/' + location.search + location.hash);
+    }
   } catch (e) {}
 })();
 `;
@@ -33,9 +38,11 @@ export default function RootPage() {
       <Script id="kg-instant-locale" strategy="beforeInteractive">
         {instantLocaleRedirect}
       </Script>
-      <Suspense fallback={<LoadingSpinner />}>
-        <LocaleRedirect />
-      </Suspense>
+      <JsonLd />
+      <LocalizedShell locale={DEFAULT_LOCALE}>
+        <Home />
+      </LocalizedShell>
     </>
   );
 }
+

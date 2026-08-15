@@ -1,9 +1,11 @@
 import {
   getOrganizationJsonLd,
   getWebsiteJsonLd,
+  getLocalBusinessJsonLd,
 } from '../../lib/seo';
 
-function LdScript({ id, data }) {
+export function LdScript({ id, data }) {
+  if (!data) return null;
   return (
     <script
       id={id}
@@ -13,11 +15,20 @@ function LdScript({ id, data }) {
   );
 }
 
-export default function JsonLd() {
+export default function JsonLd({ extraSchemas = [] }) {
+  const localBusinesses = getLocalBusinessJsonLd();
+
   return (
     <>
       <LdScript id="ld-organization" data={getOrganizationJsonLd()} />
       <LdScript id="ld-website" data={getWebsiteJsonLd()} />
+      {localBusinesses.map((biz, idx) => (
+        <LdScript key={biz['@id']} id={`ld-localbusiness-${idx}`} data={biz} />
+      ))}
+      {extraSchemas.map((schema, idx) => (
+        <LdScript key={schema['@id'] || `extra-schema-${idx}`} id={`ld-extra-${idx}`} data={schema} />
+      ))}
     </>
   );
 }
+

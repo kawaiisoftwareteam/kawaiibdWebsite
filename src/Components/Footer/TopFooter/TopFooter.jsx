@@ -18,7 +18,7 @@ const TopFooter = () => {
     return (
         <div className="mainTop">
             <div className='colLeft'>
-                <Link href={localizedPath('/home')}>
+                <Link href={localizedPath('/')}>
                     <img loading="lazy" decoding="async" src={getSrc(kgLogobh)} alt="kawaiiGroupgreyscale" />
                 </Link>
                 <div className="text-white text-base font-normal font-main leading-snug pr-5">
@@ -31,7 +31,7 @@ const TopFooter = () => {
                     <b> {t('footer.quickLinks')}</b>
                     <br />
                     <span style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                        <Link href={localizedPath('/home')}>
+                        <Link href={localizedPath('/')}>
                             {t('nav.home')}
                         </Link>
                         <Link href={localizedPath('/about')}>

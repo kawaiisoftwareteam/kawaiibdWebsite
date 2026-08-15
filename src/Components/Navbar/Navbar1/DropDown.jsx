@@ -11,7 +11,7 @@ const DropDown = () => {
     <header className='header'>
       <div className="wrapper">
         <div className="logo">
-          <h1>logo</h1>
+          <span>logo</span>
         </div>
         <ul className="navigation">
           {navData.map((menu, i) => (

@@ -19,13 +19,15 @@ export const anekBangla = Anek_Bangla({
   subsets: ['bengali', 'latin'],
   variable: '--font-anek-bangla',
   display: 'swap',
+  preload: false,
 });
 
 export const notoSansJP = Noto_Sans_JP({
-  weight: ['400', '500', '700', '900'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-noto-sans-jp',
   display: 'swap',
+  preload: false,
 });
 
 export const playfair = Playfair_Display({

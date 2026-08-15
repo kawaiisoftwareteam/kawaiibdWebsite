@@ -208,8 +208,9 @@ const MainNav = () => {
 
   const isLinkActive = (path) => {
     if (!pathname) return false;
-    const target = localizedPath(path);
-    return pathname === target;
+    const target = localizedPath(path).replace(/\/+$/, '') || '/';
+    const current = pathname.replace(/\/+$/, '') || '/';
+    return current === target;
   };
 
   const barePath = stripLocalePrefix(pathname);
@@ -231,7 +232,7 @@ const MainNav = () => {
         <div className="mainNav__inner">
           {/* Left Logo */}
           <Link
-            href={localizedPath('/home')}
+            href={localizedPath('/')}
             className="mainNav__logo"
             onClick={handleHomeNav}
           >
@@ -242,7 +243,7 @@ const MainNav = () => {
           <div className="mainNav__right-area">
             {/* Top Utility Bar */}
             <div className="mainNav__top-bar">
-              <Link href={localizedPath('/home#news')} className="mainNav__top-link">
+              <Link href={localizedPath('/#news')} className="mainNav__top-link">
                 {t('nav.newsMedia')}
               </Link>
               <Link href={localizedPath('/contact')} className="mainNav__top-link">
@@ -261,8 +262,8 @@ const MainNav = () => {
             <div className="mainNav__bottom-bar">
               <div className="mainNav__links">
                 <Link
-                  href={localizedPath('/home')}
-                  className={`mainNav__link ${isLinkActive('/home') ? 'mainNav__link--active' : ''}`}
+                  href={localizedPath('/')}
+                  className={`mainNav__link ${isLinkActive('/') ? 'mainNav__link--active' : ''}`}
                   onClick={handleHomeNav}
                 >
                   {t('nav.home')}
@@ -323,7 +324,7 @@ const MainNav = () => {
       {/* Mobile sidebar */}
       <div className={`mobileSidebar ${isSidebarOpen ? 'mobileSidebar--open' : ''}`}>
         <div className="mobileSidebar__top">
-          <Link href={localizedPath('/home')} onClick={handleHomeNav}>
+          <Link href={localizedPath('/')} onClick={handleHomeNav}>
             <img loading="eager" decoding="async" src={getSrc(kawaiiLogobh)} alt="Kawaii Group" className="mobileSidebar__logo" />
           </Link>
           <button className="mobileSidebar__close" onClick={toggleSidebar} aria-label="Close menu">
@@ -333,8 +334,8 @@ const MainNav = () => {
 
         <div className="mobileSidebar__nav">
           <Link
-            href={localizedPath('/home')}
-            className={`mobileSidebar__link ${isLinkActive('/home') ? 'mobileSidebar__link--active' : ''}`}
+            href={localizedPath('/')}
+            className={`mobileSidebar__link ${isLinkActive('/') ? 'mobileSidebar__link--active' : ''}`}
             onClick={handleHomeNav}
           >
             {t('nav.home')}
@@ -378,7 +379,7 @@ const MainNav = () => {
           </Link>
 
           <Link
-            href={localizedPath('/home#news')}
+            href={localizedPath('/#news')}
             className="mobileSidebar__link"
             onClick={closeSidebar}
           >

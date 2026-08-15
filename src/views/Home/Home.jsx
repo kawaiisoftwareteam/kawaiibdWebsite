@@ -7,6 +7,7 @@ import HomeAboutUs from '../../Components/HomeAboutUs/HomeAboutUs';
 import HomeBridge from '../../Components/HomeBridge/HomeBridge';
 import ServicesShowcase from '../../Components/ServicesShowcase/ServicesShowcase';
 import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs';
+import FaqSection from '../../Components/Faq/FaqSection';
 
 const Home = () => {
   return (
@@ -17,11 +18,10 @@ const Home = () => {
       <HomeBridge />
       <ServicesShowcase showSeeMore />
       <WhyChooseUs showDifferent={false} />
+      <FaqSection />
     </div>
   );
 };
 
-
-
-
 export default Home;
+

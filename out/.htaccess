@@ -8,6 +8,24 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Prefer apex host (matches canonical URLs)
+  RewriteCond %{HTTP_HOST} ^www\.kawaiibd\.com$ [NC]
+  RewriteRule ^(.*)$ https://kawaiibd.com/$1 [R=301,L]
+
+  # Redirect /jp or /jp/ to /ja/
+  RewriteRule ^jp/?(.*)$ /ja/$1 [R=301,L]
+
+  # Legacy /{locale}/home → /{locale}/
+  RewriteRule ^/?(en|bn|ja)/home(/.*)?$ /$1/ [R=301,L,NE,QSA]
+
+  # Old broken img src="[object Object]" became crawlable relative URLs
+  RewriteRule ^/?(en|bn|ja)/.+/\%5Bobject\%20Object\%5D/?$ /$1/ [R=301,L,NC,NE]
+  RewriteRule ^/?(en|bn|ja)/.+/\[object Object\]/?$ /$1/ [R=301,L,NC,NE]
+
   # After an internal rewrite, stop
   RewriteCond %{ENV:REDIRECT_STATUS} 200
   RewriteRule ^ - [L]
@@ -20,13 +38,38 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Clean URLs fallback for index.html in subfolders
+  # Clean URLs fallback for index.html in subfolders (e.g. /en or /en/)
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-  RewriteRule ^(.+)$ $1/index.html [L]
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
 
   # Clean URLs fallback for .html files
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# Security & SEO Diagnostic Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
+  Header set Access-Control-Allow-Origin "*"
+  Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+  Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
+</IfModule>
+
+# Browser Caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
 <IfModule mod_autoindex.c>

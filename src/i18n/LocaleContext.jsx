@@ -53,9 +53,17 @@ export const stripLocalePrefix = (pathname) => {
 /** Ensure URLs have trailing slashes for static export compatibility */
 const ensureTrailingSlash = (path) => {
   if (!path) return '/';
-  const [pathnameOnly, search = ''] = path.split('?');
-  const normalized = pathnameOnly.endsWith('/') ? pathnameOnly : `${pathnameOnly}/`;
-  return search ? `${normalized}?${search}` : normalized;
+  const hashIdx = path.indexOf('#');
+  const hash = hashIdx >= 0 ? path.slice(hashIdx) : '';
+  const withoutHash = hashIdx >= 0 ? path.slice(0, hashIdx) : path;
+  const [pathnameOnly, search = ''] = withoutHash.split('?');
+  const normalized =
+    !pathnameOnly || pathnameOnly === '/'
+      ? '/'
+      : pathnameOnly.endsWith('/')
+        ? pathnameOnly
+        : `${pathnameOnly}/`;
+  return `${normalized}${search ? `?${search}` : ''}${hash}`;
 };
 
 const localeFromPathname = (pathname) => {
@@ -121,9 +129,14 @@ export const LocaleProvider = ({ children, initialLocale }) => {
         .querySelectorAll('link[data-kg-hreflang]')
         .forEach((node) => node.remove());
 
-      const pathWithoutLocale = stripLocalePrefix(pathname);
+      // Keep client-injected hreflang aligned with buildPageMetadata (trailing slashes).
+      let pathWithoutLocale = stripLocalePrefix(pathname);
+      if (pathWithoutLocale === '/home') pathWithoutLocale = '/';
       const origin = typeof window !== 'undefined' ? window.location.origin : '';
-      const suffix = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
+      const pathSuffix =
+        !pathWithoutLocale || pathWithoutLocale === '/'
+          ? '/'
+          : `${pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale}/`;
 
       [...LOCALES, 'x-default'].forEach((hreflang) => {
         const link = document.createElement('link');
@@ -131,7 +144,7 @@ export const LocaleProvider = ({ children, initialLocale }) => {
         link.setAttribute('data-kg-hreflang', '1');
         link.setAttribute('hreflang', hreflang);
         const targetLocale = hreflang === 'x-default' ? DEFAULT_LOCALE : hreflang;
-        link.setAttribute('href', `${origin}/${targetLocale}${suffix}`);
+        link.setAttribute('href', `${origin}/${targetLocale}${pathSuffix}`);
         document.head.appendChild(link);
       });
     },
@@ -286,14 +299,30 @@ export const LocaleProvider = ({ children, initialLocale }) => {
       dismissBanner,
       t,
       localizedPath: (path = '/') => {
+        let hash = '';
+        let pathname = path || '/';
+        const hashIdx = pathname.indexOf('#');
+        if (hashIdx >= 0) {
+          hash = pathname.slice(hashIdx);
+          pathname = pathname.slice(0, hashIdx) || '/';
+        }
+        let search = '';
+        const qIdx = pathname.indexOf('?');
+        if (qIdx >= 0) {
+          search = pathname.slice(qIdx);
+          pathname = pathname.slice(0, qIdx) || '/';
+        }
         const clean =
-          !path || path === '/' || path === '/home'
+          !pathname || pathname === '/' || pathname === '/home'
             ? '/'
-            : path.startsWith('/')
-              ? path
-              : `/${path}`;
-        if (clean === '/') return `/${locale}/`;
-        return ensureTrailingSlash(`/${locale}${clean}`);
+            : pathname.startsWith('/')
+              ? pathname
+              : `/${pathname}`;
+        const base =
+          clean === '/'
+            ? `/${locale}/`
+            : ensureTrailingSlash(`/${locale}${clean}`);
+        return `${base}${search}${hash}`;
       },
     }),
     [locale, source, showBanner, setLocale, applyDetectedLocale, dismissBanner, t]
