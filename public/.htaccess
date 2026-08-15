@@ -30,6 +30,20 @@ DirectoryIndex index.html
   # Legacy /{locale}/home → /{locale}/
   RewriteRule ^/?(en|bn|ja)/home(/.*)?$ /$1/ [R=301,L,NE,QSA]
 
+  # QR / short links (printed codes use /masterclass and /seminar — do not change QR data)
+  # Honor saved locale cookie; otherwise default to /en/
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^masterclass/?$ /bn/masterclass/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^masterclass/?$ /ja/masterclass/ [R=302,L]
+  RewriteRule ^masterclass/?$ /en/masterclass/ [R=301,L]
+
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^seminar/?$ /bn/seminar/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^seminar/?$ /ja/seminar/ [R=302,L]
+  RewriteRule ^seminar/?$ /en/seminar/ [R=301,L]
+
   # Old broken img src="[object Object]" became crawlable relative URLs
   RewriteRule ^/?(en|bn|ja)/.+/\%5Bobject\%20Object\%5D/?$ /$1/ [R=301,L,NC,NE]
   RewriteRule ^/?(en|bn|ja)/.+/\[object Object\]/?$ /$1/ [R=301,L,NC,NE]
