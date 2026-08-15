@@ -17,7 +17,7 @@ const Services = () => {
         text={t('services.header')}
         backgroundImage={getSrc(sswCover)}
       />
-      <ServicesShowcase />
+      <ServicesShowcase titleAs="h2" />
     </>
   );
 };

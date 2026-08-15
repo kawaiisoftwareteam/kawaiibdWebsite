@@ -6,7 +6,7 @@ import { DEFAULT_LOCALE } from '../i18n/config';
 import { buildPageMetadata } from '../lib/seo';
 
 export async function generateMetadata() {
-  // Apex `/` is 301'd to `/en/` in .htaccess; if HTML is ever served, don't index it.
+  // Apex `/` is rewritten to `/en/` in .htaccess; keep noindex if this HTML is ever served directly.
   return {
     ...buildPageMetadata({ locale: DEFAULT_LOCALE, path: '/' }),
     robots: { index: false, follow: true },

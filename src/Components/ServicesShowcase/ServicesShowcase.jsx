@@ -35,7 +35,7 @@ const preloadSrc = (src) => {
   img.src = src;
 };
 
-const ServicesShowcase = ({ showSeeMore = false }) => {
+const ServicesShowcase = ({ showSeeMore = false, titleAs: TitleTag = 'h3' }) => {
   const { t, localizedPath, locale } = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(3);
@@ -148,10 +148,10 @@ const ServicesShowcase = ({ showSeeMore = false }) => {
 
       <div className="bizIntro__inner">
         <header className="bizIntro__header">
-          <h3 className="bizIntro__title">
+          <TitleTag className="bizIntro__title">
             <span>{t('ourBusiness.titleLine1')}</span>
             <span>{t('ourBusiness.titleLine2')}</span>
-          </h3>
+          </TitleTag>
         </header>
 
         <div
