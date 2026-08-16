@@ -373,10 +373,6 @@ const Masterclass = () => {
         />
       </div>
 
-      <p className="buet-only-notice masterclass-page-shell mb-4 sm:mb-6 text-center text-lg sm:text-2xl font-extrabold text-[#be1e2d] tracking-wide">
-        {t('masterclass.buetOnlyNotice')}
-      </p>
-
       <div className="masterclass-page-shell mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900">
           {t('masterclass.pageTitle')}
