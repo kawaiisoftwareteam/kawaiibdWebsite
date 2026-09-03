@@ -195,6 +195,23 @@ export const PAGE_SEO = {
         '染谷俊介博士によるカワイグループのBIM・Construction DXセミナーに登録。デジタル建設、日本の基準、キャリアにつながるBIMスキルを対面で学べます。',
     },
   },
+  '/news': {
+    en: {
+      title: 'News & Media | Kawaii Group',
+      description:
+        'Explore Kawaii Group news and media — BIM Technology & Construction DX seminar highlights, MoU signing moments, leadership addresses, and partnership updates from Bangladesh and Japan.',
+    },
+    bn: {
+      title: 'নিউজ ও মিডিয়া | কাওয়াই গ্রুপ',
+      description:
+        'কাওয়াই গ্রুপের নিউজ ও মিডিয়া দেখুন—BIM Technology & Construction DX সেমিনার, MoU স্বাক্ষর, নেতৃত্বের বক্তব্য এবং বাংলাদেশ-জাপান অংশীদারিত্বের আপডেট।',
+    },
+    ja: {
+      title: 'ニュース＆メディア | カワイグループ',
+      description:
+        'カワイグループのニュース＆メディア。BIMテクノロジー＆建設DXセミナー、MoU調印、リーダーシップの講演、バングラデシュと日本のパートナーシップ最新情報をご覧ください。',
+    },
+  },
   '/privacypolicy': {
     en: {
       title: 'Privacy Policy | Kawaii Group Bangladesh',

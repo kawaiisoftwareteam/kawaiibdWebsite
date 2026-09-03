@@ -213,17 +213,17 @@
         {
           "title": "Kawaii Group-Bureau of Manpower Employment and Training (BMET) MOU Signing Ceremony",
           "desc": "BMET partnered with Kawaii Group to enhance workforce readiness for Japan's Specified Skilled Worker (SSW) program. Kawaii Group's extensive experience and strong presence in Japan make it a key player in facilitating smooth migration and employment for Bangladeshi workers.",
-          "date": "05 March 2025"
+          "date": "17–18 August 2026"
         },
         {
           "title": "Japanese Food and Traditional Green Tea Ceremony",
           "desc": "On February 21st, International Mother Language Day, Achieve Japan hosted a Japanese Food and Traditional Green Tea Ceremony attended by Japan Foundation representatives including Ms. Kyoko Takemoto, Mr. Okubo, Mr. Kasai, and officials from JF KC in Osaka. Students demonstrated Japanese culinary traditions and cultural values. Discussions covered Bangladesh's current Japanese language training landscape, the impact of enhanced teacher training methods, IRODORI materials' significance, and strategic approaches to SSW program advancement. The Japan Foundation pledged comprehensive support for Achieve Japan's development initiatives.",
-          "date": "21 February 2025"
+          "date": "17–18 August 2026"
         },
         {
           "title": "Kawaii Group-Egrowth Inc. MOU Signing Ceremony",
           "desc": "On December 17th, during the Japan Day event organized by BASIS: Japan Desk, Kawaii Advanced Technology & Solution Ltd participated as a Gold Sponsor. As part of the event, the company signed a Memorandum of Understanding (MoU) with Egrowth, aiming to create new opportunities in IT engineer training and job placement. This collaboration marks a step forward in strengthening global tech talent exchange and workforce development.",
-          "date": "17 December 2024"
+          "date": "17–18 August 2026"
         }
       ]
     },
@@ -1816,6 +1816,74 @@
     "video": {
       "title": "Message from Dr. Shunsuke Someya",
       "unsupported": "Your browser does not support video playback."
+    },
+    "highlights": {
+      "title": "Event Highlights",
+      "desc": "Watch the BIM Technology & Construction DX seminar recording and explore moments from the MoU signing ceremony.",
+      "videoTitle": "BIM Seminar Recording",
+      "galleryTitle": "From the Seminar Floor",
+      "photos": [
+        "Dewan Samir, CEO of Kawaii Group BD, delivers the keynote address.",
+        "MoU signing with Biswas Jahangir Alam, Dewan Samir, Toshiro Kan, Md Habib Ullah Babul, and Dr. Shunsuke Someya.",
+        "Commemorative group photo after the MoU signing ceremony."
+      ],
+      "more": "See full News & Media coverage"
+    }
+  },
+  "newsMedia": {
+    "eyebrow": "News & Media",
+    "title": "News & Media",
+    "intro": "Highlights from Kawaii Group events, partnerships, and community moments across Bangladesh and Japan.",
+    "archiveTitle": "Earlier Highlights",
+    "feature": {
+      "tag": "BIM Seminar",
+      "date": "17–18 August 2026",
+      "title": "BIM Technology & Construction DX Seminar and MoU Signing",
+      "lead": "Kawaii Group Japan hosted a seminar on Building Information Modelling (BIM) — Technology & Construction DX, bringing together industry leaders, partners, and guests to advance digital construction collaboration.",
+      "body": "The program featured keynote remarks from Dewan Samir, CEO of Kawaii Group BD, followed by a Memorandum of Understanding signing ceremony with distinguished guests from Bangladesh and Japan.",
+      "videoTitle": "Watch the BIM Seminar",
+      "galleryTitle": "Event Gallery",
+      "peopleTitle": "Guests & Leadership",
+      "photos": [
+        {
+          "title": "Keynote Address",
+          "caption": "Dewan Samir, CEO of Kawaii Group BD, delivers the keynote at the BIM Technology & Construction DX seminar."
+        },
+        {
+          "title": "MoU Signing Ceremony",
+          "caption": "Memorandum of Understanding signing for BIM Technology & Construction DX, with dignitaries including Biswas Jahangir Alam, Dewan Samir, Toshiro Kan, Md Habib Ullah Babul, and Dr. Shunsuke Someya."
+        },
+        {
+          "title": "Commemorative Group Photo",
+          "caption": "Leaders and guests gather after the MoU signing for a commemorative photograph."
+        }
+      ],
+      "people": [
+        {
+          "name": "Dewan Samir",
+          "role": "CEO, Kawaii Group BD"
+        },
+        {
+          "name": "Biswas Jahangir Alam",
+          "role": "Member of Parliament, Narail-1"
+        },
+        {
+          "name": "Toshiro Kan",
+          "role": "Senior Architect and Advisor"
+        },
+        {
+          "name": "Md Habib Ullah Babul",
+          "role": "President, Dhanmondi Club & Prominent Business Personality; Chairman & CEO, A2Z Global Solution; Vice Chairman, Kawaii TREDMIG Training Institute (KTTI)"
+        },
+        {
+          "name": "Md. Shafiuddin",
+          "role": "Managing Director, KTTI"
+        },
+        {
+          "name": "Dr. Shunsuke Someya",
+          "role": "BIM & Construction DX Speaker"
+        }
+      ]
     }
   }
 }

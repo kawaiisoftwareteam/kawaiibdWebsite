@@ -31,6 +31,13 @@ const LIGHT_NAV_PATHS = [
   '/our-business',
   '/masterclass',
   '/seminar',
+  '/news',
+  '/career',
+  '/privacypolicy',
+  '/corporateprofile',
+  '/kawaii-global-ventures',
+  '/kawaii-japan-career-hr',
+  '/services',
 ];
 
 
@@ -243,7 +250,7 @@ const MainNav = () => {
           <div className="mainNav__right-area">
             {/* Top Utility Bar */}
             <div className="mainNav__top-bar">
-              <Link href={localizedPath('/#news')} className="mainNav__top-link">
+              <Link href={localizedPath('/news')} className="mainNav__top-link">
                 {t('nav.newsMedia')}
               </Link>
               <Link href={localizedPath('/contact')} className="mainNav__top-link">
@@ -379,8 +386,8 @@ const MainNav = () => {
           </Link>
 
           <Link
-            href={localizedPath('/#news')}
-            className="mobileSidebar__link"
+            href={localizedPath('/news')}
+            className={`mobileSidebar__link ${isLinkActive('/news') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
             {t('nav.newsMedia')}

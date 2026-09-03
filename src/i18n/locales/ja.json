@@ -901,17 +901,17 @@
         {
           "title": "Kawaii Group-BMET MOU署名式",
           "desc": "BMETはカワイグループと提携し、日本の特定技能（SSW）プログラム向け人材準備を強化。カワイグループの日本での豊富な経験と強固なプレゼンスが、バングラデシュ人労働者の円滑な移住・就労を支援する鍵となります。",
-          "date": "2025年3月5日"
+          "date": "2026年8月17–18日"
         },
         {
           "title": "日本料理と伝統的な茶道",
           "desc": "2月21日の国際母語デーに、Achieve Japanは日本料理と伝統的な茶道を開催。日本財団の代表者らが出席。バングラデシュの日本語研修状況、教師研修、IRODORI教材、SSWプログラム推進について議論。日本財団はAchieve Japanの開発支援を約束しました。",
-          "date": "2025年2月21日"
+          "date": "2026年8月17–18日"
         },
         {
           "title": "Kawaii Group-Egrowth Inc. MOU署名式",
           "desc": "12月17日、BASIS Japan Desk主催のJapan Dayイベントで、Kawaii Advanced Technology & Solution Ltdがゴールドスポンサーとして参加。EgrowthとMoUを締結し、ITエンジニア研修と就職支援の新たな機会創出を目指します。",
-          "date": "2024年12月17日"
+          "date": "2026年8月17–18日"
         }
       ]
     },
@@ -1818,6 +1818,74 @@
     "video": {
       "title": "染谷俊介博士からのメッセージ",
       "unsupported": "お使いのブラウザは動画再生に対応していません。"
+    },
+    "highlights": {
+      "title": "イベントハイライト",
+      "desc": "BIMテクノロジー＆建設DXセミナーの録画と、MoU調印式の様子をご覧ください。",
+      "videoTitle": "BIMセミナー録画",
+      "galleryTitle": "セミナー会場より",
+      "photos": [
+        "カワイグループBDのCEO、デワン・サミル氏による基調講演。",
+        "ビスワス・ジャハンギル・アラム氏、デワン・サミル氏、トシロー・カン氏、Md.ハビブ・ウッラー・バブル氏、染谷俊介博士によるMoU調印。",
+        "MoU調印後の記念集合写真。"
+      ],
+      "more": "ニュース＆メディアの全文を見る"
+    }
+  },
+  "newsMedia": {
+    "eyebrow": "ニュース＆メディア",
+    "title": "ニュース＆メディア",
+    "intro": "バングラデシュと日本におけるカワイグループのイベント、パートナーシップ、コミュニティ活動のハイライトです。",
+    "archiveTitle": "これまでのハイライト",
+    "feature": {
+      "tag": "BIMセミナー",
+      "date": "2026年8月17–18日",
+      "title": "BIMテクノロジー＆建設DXセミナーおよびMoU調印式",
+      "lead": "カワイグループ・ジャパンは、Building Information Modelling（BIM）— Technology & Construction DXに関するセミナーを開催し、業界リーダー、パートナー、ゲストがデジタル建設の連携を推進するために集いました。",
+      "body": "プログラムでは、カワイグループBDのCEO、デワン・サミル氏による基調講演が行われ、その後、バングラデシュと日本の来賓を迎えて了解覚書（MoU）の調印式が執り行われました。",
+      "videoTitle": "BIMセミナー動画を見る",
+      "galleryTitle": "イベントギャラリー",
+      "peopleTitle": "ゲスト＆リーダーシップ",
+      "photos": [
+        {
+          "title": "基調講演",
+          "caption": "カワイグループBDのCEO、デワン・サミル氏がBIM Technology & Construction DXセミナーで基調講演を行いました。"
+        },
+        {
+          "title": "MoU調印式",
+          "caption": "BIM Technology & Construction DXに関する了解覚書の調印。ビスワス・ジャハンギル・アラム氏、デワン・サミル氏、トシロー・カン氏、Md.ハビブ・ウッラー・バブル氏、染谷俊介博士らが出席しました。"
+        },
+        {
+          "title": "記念集合写真",
+          "caption": "MoU調印後、リーダーとゲストが記念撮影のために集まりました。"
+        }
+      ],
+      "people": [
+        {
+          "name": "デワン・サミル",
+          "role": "CEO、カワイグループBD"
+        },
+        {
+          "name": "ビスワス・ジャハンギル・アラム",
+          "role": "国会議員、ナライル-1"
+        },
+        {
+          "name": "トシロー・カン",
+          "role": "シニアアーキテクト兼アドバイザー"
+        },
+        {
+          "name": "Md.ハビブ・ウッラー・バブル",
+          "role": "ダヌモンディ・クラブ会長／著名な実業家；A2Z Global Solution 会長兼CEO；カワイTREDMIG Training Institute（KTTI）副会長"
+        },
+        {
+          "name": "Md.シャフィウッディン",
+          "role": "マネージングディレクター、KTTI"
+        },
+        {
+          "name": "染谷俊介博士",
+          "role": "BIM＆建設DXスピーカー"
+        }
+      ]
     }
   }
 }

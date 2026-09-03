@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import Link from 'next/link';
 import './Seminar.css';
 import { useLocale } from '../../i18n/LocaleContext';
 import { resolveImage, getSrc } from '../../lib/image';
@@ -28,6 +29,22 @@ import {
 const seminarVideo = '/videos/18thvideo.mp4';
 const videoPoster = '/videos/18thvideo_poster.webp';
 const REGISTRATION_OPEN = false;
+const BIM_SEMINAR_YOUTUBE = 'https://www.youtube.com/embed/sjQUOtl07mg';
+const BIM_EVENT_PHOTOS = [
+  {
+    src: '/news-media/BIM/bim-ceo-speech.jpeg',
+    captionKey: 0,
+  },
+  {
+    src: '/news-media/BIM/bim-mou-signing.jpeg',
+    captionKey: 1,
+  },
+  {
+    src: '/news-media/BIM/bim-mou-group.jpeg',
+    captionKey: 2,
+  },
+];
+
 
 const FORM_VALUES = {
   status: {
@@ -78,7 +95,7 @@ const GOAL_KEYS = ['g1', 'g2', 'g3', 'g4'];
 const SOURCE_KEYS = ['social', 'university', 'messaging', 'referral', 'other'];
 
 const Seminar = () => {
-  const { t } = useLocale();
+  const { t, localizedPath } = useLocale();
   // Form State
   const [formData, setFormData] = useState({
     name: '',
@@ -430,6 +447,65 @@ const Seminar = () => {
         
         {/* Left column: Event Grid Cards */}
         <div className="space-y-8 sm:space-y-10 min-w-0">
+
+          {/* Event Highlights — YouTube + gallery */}
+          <div id="event-highlights" className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200/80 overflow-hidden hover-card-effect space-y-5">
+            <div>
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                {t('seminar.highlights.title')}
+              </h3>
+              <p className="text-base text-slate-600 font-medium mt-2 leading-relaxed">
+                {t('seminar.highlights.desc')}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-extrabold text-slate-400 uppercase tracking-widest mb-3">
+                {t('seminar.highlights.videoTitle')}
+              </h4>
+              <div className="rounded-2xl overflow-hidden border border-slate-200/80 bg-black shadow-lg aspect-video relative">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={BIM_SEMINAR_YOUTUBE}
+                  title={t('seminar.highlights.videoTitle')}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-extrabold text-slate-400 uppercase tracking-widest mb-3">
+                {t('seminar.highlights.galleryTitle')}
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {BIM_EVENT_PHOTOS.map((photo) => (
+                  <figure key={photo.src} className="rounded-2xl overflow-hidden border border-slate-200/80 bg-slate-50">
+                    <img
+                      src={photo.src}
+                      alt={t(`seminar.highlights.photos.${photo.captionKey}`)}
+                      className="w-full aspect-[4/3] object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption className="p-3 text-xs sm:text-sm text-slate-600 leading-snug font-medium">
+                      {t(`seminar.highlights.photos.${photo.captionKey}`)}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href={localizedPath('/news')}
+              className="inline-flex items-center gap-2 text-base font-extrabold text-[#be1e2d] hover:text-[#9E1825] transition"
+            >
+              {t('seminar.highlights.more')}
+              <FaArrowRight className="text-sm" />
+            </Link>
+          </div>
           
           {/* Card grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">

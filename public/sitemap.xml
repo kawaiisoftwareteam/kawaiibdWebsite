@@ -162,6 +162,29 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/seminar/"/>
   </url>
 
+  <!-- News & Media -->
+  <url>
+    <loc>https://kawaiibd.com/en/news/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/news/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/news/"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/news/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/news/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/news/"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/news/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/news/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/news/"/>
+  </url>
+
   <!-- Career -->
   <url>
     <loc>https://kawaiibd.com/en/career/</loc>
