@@ -27,6 +27,7 @@ import {
 
 const masterclassVideo = '/videos/someya.mp4';
 const masterclassVideoPoster = '/videos/someya_poster.webp';
+const REGISTRATION_OPEN = false;
 
 const FORM_VALUES = {
   status: {
@@ -134,6 +135,11 @@ const Masterclass = () => {
 
   // Countdown timer logic
   useEffect(() => {
+    if (!REGISTRATION_OPEN) {
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      return undefined;
+    }
+
     const targetDate = new Date('2026-08-17T23:59:59+06:00');
 
     const updateTimer = () => {
@@ -410,12 +416,14 @@ const Masterclass = () => {
               <span className="text-[10px] sm:text-xs text-gray-400 uppercase font-bold tracking-wider">{t('masterclass.countdown.secs')}</span>
             </div>
           </div>
-          <a
-            href="#register-section"
-            className="w-full sm:w-auto inline-flex justify-center items-center px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black bg-gradient-to-r from-[#be1e2d] to-[#e11d48] text-white hover:from-[#9E1825] hover:to-[#be1e2d] transition-all transform hover:-translate-y-0.5 shadow-xl shadow-rose-900/40 whitespace-nowrap"
-          >
-            {t('masterclass.registerNow')}
-          </a>
+          {REGISTRATION_OPEN && (
+            <a
+              href="#register-section"
+              className="w-full sm:w-auto inline-flex justify-center items-center px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black bg-gradient-to-r from-[#be1e2d] to-[#e11d48] text-white hover:from-[#9E1825] hover:to-[#be1e2d] transition-all transform hover:-translate-y-0.5 shadow-xl shadow-rose-900/40 whitespace-nowrap"
+            >
+              {t('masterclass.registerNow')}
+            </a>
+          )}
         </div>
       </div>
 
@@ -683,6 +691,7 @@ const Masterclass = () => {
       </div>
 
       {/* Form Submission Section */}
+      {REGISTRATION_OPEN && (
       <div id="register-section" className="masterclass-form-shell bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-150 overflow-hidden mb-10 sm:mb-16">
         
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-5 sm:p-10 relative">
@@ -1123,6 +1132,7 @@ const Masterclass = () => {
           </form>
         </div>
       </div>
+      )}
     </div>
   );
 };

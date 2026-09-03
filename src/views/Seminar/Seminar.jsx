@@ -27,6 +27,7 @@ import {
 
 const seminarVideo = '/videos/18thvideo.mp4';
 const videoPoster = '/videos/18thvideo_poster.webp';
+const REGISTRATION_OPEN = false;
 
 const FORM_VALUES = {
   status: {
@@ -129,6 +130,11 @@ const Seminar = () => {
 
   // Countdown timer logic
   useEffect(() => {
+    if (!REGISTRATION_OPEN) {
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      return undefined;
+    }
+
     // Registration closes Sunday, Aug 16, 2026 (BST / Bangladesh Time, UTC+06:00)
     // Event date: Tuesday, Aug 18, 2026
     const targetDate = new Date('2026-08-16T23:59:59+06:00');
@@ -408,12 +414,14 @@ const Seminar = () => {
               <span className="text-[10px] sm:text-xs text-gray-400 uppercase font-bold tracking-wider">{t('seminar.countdown.secs')}</span>
             </div>
           </div>
-          <a
-            href="#register-section"
-            className="w-full sm:w-auto inline-flex justify-center items-center px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black bg-gradient-to-r from-[#be1e2d] to-[#e11d48] text-white hover:from-[#9E1825] hover:to-[#be1e2d] transition-all transform hover:-translate-y-0.5 shadow-xl shadow-rose-900/40 whitespace-nowrap"
-          >
-            {t('seminar.registerNow')}
-          </a>
+          {REGISTRATION_OPEN && (
+            <a
+              href="#register-section"
+              className="w-full sm:w-auto inline-flex justify-center items-center px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black bg-gradient-to-r from-[#be1e2d] to-[#e11d48] text-white hover:from-[#9E1825] hover:to-[#be1e2d] transition-all transform hover:-translate-y-0.5 shadow-xl shadow-rose-900/40 whitespace-nowrap"
+            >
+              {t('seminar.registerNow')}
+            </a>
+          )}
         </div>
       </div>
 
@@ -703,6 +711,7 @@ const Seminar = () => {
       </div>
 
       {/* Form Submission Section */}
+      {REGISTRATION_OPEN && (
       <div id="register-section" className="seminar-form-shell bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-150 overflow-hidden mb-10 sm:mb-16">
         
         {/* Header decoration */}
@@ -1155,6 +1164,7 @@ const Seminar = () => {
             </form>
           </div>
       </div>
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ module.exports = {
     bannerAlt: "BIM & Construction DX Masterclass with Dr. Shunsuke Someya",
     urgency: {
       badge: "Live Zoom Masterclass",
-      title: "Free Registration Closes Soon!",
+      title: "Free Registration Closed!",
       dateLabel: "Masterclass Date: Monday, Aug 17, 2026"
     },
     countdown: { days: "Days", hours: "Hours", mins: "Mins", secs: "Secs" },
@@ -167,7 +167,7 @@ module.exports = {
     bannerAlt: "ডঃ শুনসুকে সোমেয়ার সাথে BIM ও Construction DX মাস্টারক্লাস",
     urgency: {
       badge: "লাইভ জুম মাস্টারক্লাস",
-      title: "বিনামূল্যে নিবন্ধন শীঘ্রই বন্ধ!",
+      title: "বিনামূল্যে নিবন্ধন বন্ধ!",
       dateLabel: "মাস্টারক্লাসের তারিখ: সোমবার, ১৭ আগস্ট, ২০২৬"
     },
     countdown: { days: "দিন", hours: "ঘণ্টা", mins: "মিনিট", secs: "সেকেন্ড" },
@@ -331,7 +331,7 @@ module.exports = {
     bannerAlt: "染谷俊介博士によるBIM・建設DXマスタークラス",
     urgency: {
       badge: "ライブZoomマスタークラス",
-      title: "無料登録はまもなく終了！",
+      title: "無料登録は終了しました！",
       dateLabel: "開催日：2026年8月17日（月）"
     },
     countdown: { days: "日", hours: "時間", mins: "分", secs: "秒" },
