@@ -294,16 +294,10 @@ const MainNav = () => {
                   {t('nav.career')}
                 </Link>
                 <Link
-                  href={localizedPath('/masterclass')}
-                  className={`mainNav__link ${isLinkActive('/masterclass') ? 'mainNav__link--active' : ''}`}
+                  href={localizedPath('/mock-interview')}
+                  className={`mainNav__link ${isLinkActive('/mock-interview') ? 'mainNav__link--active' : ''}`}
                 >
-                  {t('nav.bimMasterclass')}
-                </Link>
-                <Link
-                  href={localizedPath('/seminar')}
-                  className={`mainNav__link ${isLinkActive('/seminar') ? 'mainNav__link--active' : ''}`}
-                >
-                  {t('nav.bimSeminar')}
+                  {t('nav.mockInterview')}
                 </Link>
               </div>
 
@@ -370,19 +364,11 @@ const MainNav = () => {
           </Link>
 
           <Link
-            href={localizedPath('/masterclass')}
-            className={`mobileSidebar__link mobileSidebar__link--hot ${isLinkActive('/masterclass') ? 'mobileSidebar__link--active' : ''}`}
+            href={localizedPath('/mock-interview')}
+            className={`mobileSidebar__link mobileSidebar__link--hot ${isLinkActive('/mock-interview') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
-            {t('nav.bimMasterclass')}
-          </Link>
-
-          <Link
-            href={localizedPath('/seminar')}
-            className={`mobileSidebar__link mobileSidebar__link--hot ${isLinkActive('/seminar') ? 'mobileSidebar__link--active' : ''}`}
-            onClick={closeSidebar}
-          >
-            {t('nav.bimSeminar')}
+            {t('nav.mockInterview')}
           </Link>
 
           <Link

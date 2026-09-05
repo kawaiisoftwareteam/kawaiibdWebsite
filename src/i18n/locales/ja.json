@@ -7,6 +7,7 @@
     "whatWeDo": "事業内容",
     "sisterConcerns": "グループ企業",
     "career": "キャリア",
+    "mockInterview": "模擬面接",
     "bimMasterclass": "BUETマスタークラス",
     "newsMedia": "ニュース＆メディア",
     "contactUs": "お問い合わせ",
@@ -1886,6 +1887,158 @@
           "role": "BIM＆建設DXスピーカー"
         }
       ]
+    }
+  },
+  "mockInterview": {
+    "brand": "カワイグループ",
+    "title": "日本語模擬面接",
+    "lead": "日本語コースを修了しましたか？ネイティブ日本人面接官との練習で、今後の本採用面接に備えましょう。",
+    "registerCta": "今すぐ登録",
+    "learnMore": "この面接について",
+    "ctaBadge": "無料の機会",
+    "ctaInvite": "日本語模擬面接の準備はできていますか？",
+    "ctaNote": "2分以内で登録。ネイティブ日本人面接官との練習で、本採用に備えましょう。",
+    "heroImgAlt": "日本の風景 — カワイグループ日本語模擬面接",
+    "problemEyebrow": "語学のあとに残る不安",
+    "problemTitle": "語学はできた。面接はまだ不安。",
+    "problemLead": "多くの方が JLPT N5 / N4 や JFT A1 / A2 を修了しても、実際の日本語面接が近づくと緊張してしまいます。",
+    "problems": [
+      "日本語でどう自己紹介すればよいか",
+      "面接官にどう答えればよいか",
+      "どんな質問が来るか",
+      "日本人面接官の前で自信を持って話せるか"
+    ],
+    "solutionEyebrow": "この機会",
+    "solutionTitle": "本番の前に練習する",
+    "solutionLead": "カワイグループは、カワイグループジャパンと連携し、N5・N4修了者向けの特別な日本語実践模擬面接を開催します。",
+    "solutionBody": "バングラデシュ人トレーナーとの練習だけではありません。経験豊富なネイティブ日本人面接官のもと、本番に近い面接体験ができます。",
+    "solutionImgAlt": "カワイグループのキャリアサポートと面接準備",
+    "nativeInterviewer": "ネイティブ日本人面接官による面接",
+    "highlights": [
+      "無料の実践的日本語模擬面接",
+      "日本人面接官との本番に近い練習",
+      "コミュニケーション・自信・応答力を高める",
+      "今後の本採用機会につながる道筋"
+    ],
+    "journeyEyebrow": "カワイグループと進む道",
+    "journeyTitle": "練習から日本へ",
+    "journeyLead": "模擬面接で合格すれば、チームが日本への次のステップをガイドします。",
+    "journey": [
+      {
+        "title": "模擬面接",
+        "desc": "日本人面接官との本番スタイル練習。"
+      },
+      {
+        "title": "選考",
+        "desc": "準備度を示し、合格すれば次へ進みます。"
+      },
+      {
+        "title": "書類サポート",
+        "desc": "必要書類と手続きの案内。"
+      },
+      {
+        "title": "申請",
+        "desc": "日本申請のステップをサポート。"
+      },
+      {
+        "title": "日本へ",
+        "desc": "カワイグループと一緒に目標へ近づく。"
+      }
+    ],
+    "forEyebrow": "対象者",
+    "forTitle": "N5・N4修了者のために",
+    "forLead": "日本語コースを終え、次の面接ステップに不安がある方へ — この機会はあなたのためのものです。",
+    "forWhom": [
+      "JLPT N5 または N4 修了（または同等の JFT A1 / A2）",
+      "現在コースを修了中の方",
+      "COE / 企業面接の準備に不安がある方",
+      "今後の日本企業採用を目指す候補者"
+    ],
+    "form": {
+      "eyebrow": "登録",
+      "title": "日本語模擬面接に登録する",
+      "subtitle": "下記のフォームにご記入ください。無料の実践面接と今後の採用機会について、チームより近日中にご連絡します。",
+      "sections": {
+        "basic": "基本情報",
+        "skills": "語学・スキル背景",
+        "interest": "面接への関心・確認"
+      },
+      "fields": {
+        "fullName": "氏名",
+        "mobile": "携帯番号",
+        "whatsapp": "WhatsApp番号",
+        "courseComplete": "日本語コースを修了しましたか？",
+        "languageLevel": "日本語レベル",
+        "skillAssessment": "Skill Assessmentを完了しましたか？",
+        "interviewInterest": "面接に興味がありますか？",
+        "interviewReady": "日本企業の実践面接の準備はできていますか？"
+      },
+      "placeholders": {
+        "fullName": "フルネーム",
+        "mobile": "01XXXXXXXXX",
+        "whatsapp": "01XXXXXXXXX"
+      },
+      "optionLabels": {
+        "courseComplete": {
+          "Yes": "はい",
+          "Currently studying": "学習中",
+          "No": "いいえ"
+        },
+        "languageLevel": {
+          "JLPT N5": "JLPT N5",
+          "JLPT N4": "JLPT N4",
+          "JFT A1": "JFT A1",
+          "JFT A2": "JFT A2",
+          "Other": "その他"
+        },
+        "skillAssessment": {
+          "Yes": "はい",
+          "Currently studying": "学習中",
+          "No": "いいえ"
+        },
+        "interviewInterest": {
+          "Yes": "はい",
+          "Need more information": "もっと情報が必要"
+        },
+        "interviewReady": {
+          "Yes, I'm interested": "はい、興味があります",
+          "I want to know more": "もっと知りたい"
+        }
+      },
+      "errors": {
+        "fullName": "氏名は必須です",
+        "mobile": "携帯番号は必須です",
+        "whatsapp": "WhatsApp番号は必須です",
+        "courseComplete": "選択してください",
+        "languageLevel": "レベルを選択してください",
+        "skillAssessment": "選択してください",
+        "interviewInterest": "選択してください",
+        "interviewReady": "選択してください"
+      },
+      "submit": "登録を送信",
+      "submitting": "送信中...",
+      "openGoogle": "Googleフォームを開く",
+      "close": "閉じる",
+      "privacyNote": "ご入力内容はカワイグループが大切に取り扱います。",
+      "asidePoints": [
+        "無料の実践的日本語模擬面接",
+        "ネイティブ日本人面接官との経験",
+        "今後の採用ステップをサポート"
+      ]
+    },
+    "success": {
+      "eyebrow": "受付完了",
+      "title": "登録が完了しました！",
+      "thankYouPrefix": "ありがとうございます、",
+      "thankYouSuffix": "チームより近日中にご連絡します。",
+      "summaryTitle": "ご入力内容",
+      "nextTitle": "次のステップ",
+      "nextSteps": [
+        "チームが登録内容を確認します",
+        "まもなくお電話またはWhatsAppでご連絡します",
+        "日本語模擬面接の準備をしてお待ちください"
+      ],
+      "done": "ページに戻る"
     }
   }
 }

@@ -139,6 +139,29 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/masterclass/"/>
   </url>
 
+  <!-- Japanese Mock Interview -->
+  <url>
+    <loc>https://kawaiibd.com/en/mock-interview/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/mock-interview/"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/bn/mock-interview/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/mock-interview/"/>
+  </url>
+  <url>
+    <loc>https://kawaiibd.com/ja/mock-interview/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kawaiibd.com/en/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://kawaiibd.com/bn/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kawaiibd.com/ja/mock-interview/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawaiibd.com/en/mock-interview/"/>
+  </url>
+
   <!-- BIM Seminar -->
   <url>
     <loc>https://kawaiibd.com/en/seminar/</loc>

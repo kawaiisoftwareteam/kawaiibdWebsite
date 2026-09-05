@@ -161,6 +161,23 @@ export const PAGE_SEO = {
         'カワイグループバングラデシュで日本へのキャリア応募。特定技能・技能実習などの研修、書類案内、就職支援をご提供します。',
     },
   },
+  '/mock-interview': {
+    en: {
+      title: 'Japanese Mock Interview | Kawaii Group',
+      description:
+        'Free Japanese practical mock interview for JLPT N5 & N4 graduates — practice with a native Japanese interviewer and prepare for upcoming real recruitment opportunities with Kawaii Group.',
+    },
+    bn: {
+      title: 'জাপানিজ মক ইন্টারভিউ | কাওয়াই গ্রুপ',
+      description:
+        'JLPT N5 ও N4 সম্পন্ন শিক্ষার্থীদের জন্য ফ্রি জাপানিজ প্র্যাকটিক্যাল মক ইন্টারভিউ—নেটিভ জাপানিজ ইন্টারভিউয়ারের সাথে অনুশীলন করুন এবং আসন্ন রিয়েল রিক্রুটমেন্ট সুযোগের জন্য প্রস্তুত হোন।',
+    },
+    ja: {
+      title: '日本語模擬面接 | カワイグループ',
+      description:
+        'JLPT N5・N4修了者向け無料の実践的日本語模擬面接。ネイティブ日本人面接官との練習で、今後の本採用面接に備えましょう。',
+    },
+  },
   '/masterclass': {
     en: {
       title: 'BIM Masterclass | Kawaii Group',
