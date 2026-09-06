@@ -228,6 +228,45 @@
         }
       ]
     },
+    "visiting": {
+      "eyebrow": "News & Media",
+      "title": "Japanese Leaders Visit Kawaii Group",
+      "lead": "From Japan to Bangladesh — a diplomatic and business visit hosted by CEO Dewan Samir, including meetings with Naoki Kazama, Osamu Uemura, Takuya Suzuki, and a tour of HA-MEEM Group.",
+      "date": "Aug–Sep 2026",
+      "tag": "Visiting",
+      "seeMore": "See More",
+      "seeLess": "Show Less",
+      "readFull": "Full story in News & Media",
+      "openFull": "View full image",
+      "close": "Close",
+      "photos": [
+        {
+          "label": "Welcome",
+          "title": "Welcome Ceremony",
+          "role": "Japanese delegation welcomed at Kawaii Group"
+        },
+        {
+          "label": "Executive",
+          "title": "Naoki Kazama",
+          "role": "Former Parliamentary Vice-Minister · with CEO Dewan Samir"
+        },
+        {
+          "label": "Partnership",
+          "title": "Osamu Uemura",
+          "role": "President, &CREATE Co., Ltd. · with CEO Dewan Samir"
+        },
+        {
+          "label": "Partnership",
+          "title": "Takuya Suzuki",
+          "role": "CEO, Taku Suzuki & Co., Ltd. · with CEO Dewan Samir"
+        },
+        {
+          "label": "Industry",
+          "title": "HA-MEEM Group Visit",
+          "role": "Delegation welcomed at HA-MEEM Group"
+        }
+      ]
+    },
     "gallery": {
       "title": "Images Gallery"
     },
@@ -1836,6 +1875,76 @@
     "title": "News & Media",
     "intro": "Highlights from Kawaii Group events, partnerships, and community moments across Bangladesh and Japan.",
     "archiveTitle": "Earlier Highlights",
+    "visiting": {
+      "tag": "Japan Visit",
+      "date": "August–September 2026",
+      "title": "Japanese Business Leaders Visit Kawaii Group",
+      "lead": "A distinguished delegation from Japan visited Kawaii Group in Bangladesh — strengthening diplomatic ties, business partnerships, and Japan–Bangladesh collaboration.",
+      "body": "Kawaii Group CEO Dewan Samir welcomed former Parliamentary Vice-Minister Naoki Kazama, &CREATE President Osamu Uemura, and Taku Suzuki & Co. CEO Takuya Suzuki. The visit included an official welcome at the Kawaii Group office and an industry tour to HA-MEEM Group.",
+      "galleryTitle": "Visit Gallery",
+      "galleryLead": "Moments from the welcome ceremony, executive meetings, and the HA-MEEM Group industry visit. Click any photo to view full size.",
+      "openFull": "View full image",
+      "close": "Close",
+      "guestsTitle": "Delegation & Hosts",
+      "photos": [
+        {
+          "label": "Welcome",
+          "title": "Official Welcome Ceremony",
+          "role": "Kawaii Group Office, Dhaka",
+          "caption": "The Japanese delegation is welcomed with flowers and flags of Japan and Bangladesh at the Kawaii Group reception."
+        },
+        {
+          "label": "Executive Meeting",
+          "title": "Naoki Kazama",
+          "role": "Former Parliamentary Vice-Minister for Foreign Affairs · CEO, National Brains Co., Ltd.",
+          "caption": "With Kawaii Group CEO Dewan Samir — a diplomatic and business exchange focused on Japan–Bangladesh partnership."
+        },
+        {
+          "label": "Partnership",
+          "title": "Osamu Uemura",
+          "role": "President, &CREATE Co., Ltd. · Associated with STRICT Co., Ltd. · Osaka, Japan",
+          "caption": "Meeting with Kawaii Group CEO Dewan Samir to explore joint-venture and collaboration opportunities."
+        },
+        {
+          "label": "Partnership",
+          "title": "Takuya Suzuki",
+          "role": "CEO, Taku Suzuki & Co., Ltd. · Osaka, Japan",
+          "caption": "Business dialogue with Kawaii Group CEO Dewan Samir at the Japan–Bangladesh joint-venture headquarters."
+        },
+        {
+          "label": "Industry Visit",
+          "title": "HA-MEEM Group Visit",
+          "role": "Welcome to HA-MEEM Group",
+          "caption": "The Japanese visiting delegation tours HA-MEEM Group facilities as part of the industry and partnership program."
+        }
+      ],
+      "guests": [
+        {
+          "name": "Dewan Samir",
+          "title": "CEO",
+          "org": "Kawaii Group",
+          "note": "Host of the Japan visiting delegation."
+        },
+        {
+          "name": "Naoki Kazama",
+          "title": "Former Parliamentary Vice-Minister for Foreign Affairs",
+          "org": "Representative Director & CEO, National Brains Co., Ltd.",
+          "note": "Executive profile visit with Kawaii Group leadership."
+        },
+        {
+          "name": "Osamu Uemura",
+          "title": "President",
+          "org": "&CREATE Co., Ltd. · Associated company STRICT Co., Ltd. · Osaka",
+          "note": "Business partnership discussions with Dewan Samir."
+        },
+        {
+          "name": "Takuya Suzuki",
+          "title": "CEO",
+          "org": "Taku Suzuki & Co., Ltd. · Osaka",
+          "note": "Executive meeting at Kawaii Group Japan–Bangladesh joint venture."
+        }
+      ]
+    },
     "feature": {
       "tag": "BIM Seminar",
       "date": "17–18 August 2026",

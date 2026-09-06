@@ -6,6 +6,7 @@ import SpiderSisterConcerns from '../../Components/SpiderSisterConcerns/SpiderSi
 import HomeAboutUs from '../../Components/HomeAboutUs/HomeAboutUs';
 import HomeBridge from '../../Components/HomeBridge/HomeBridge';
 import ServicesShowcase from '../../Components/ServicesShowcase/ServicesShowcase';
+import HomeVisiting from '../../Components/HomeVisiting/HomeVisiting';
 import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs';
 import FaqSection from '../../Components/Faq/FaqSection';
 
@@ -17,6 +18,7 @@ const Home = () => {
       <HomeAboutUs />
       <HomeBridge />
       <ServicesShowcase showSeeMore />
+      <HomeVisiting />
       <WhyChooseUs showDifferent={false} />
       <FaqSection />
     </div>
