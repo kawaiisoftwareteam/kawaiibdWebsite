@@ -8,7 +8,7 @@
     "sisterConcerns": "Sister Concerns",
     "bimMasterclass": "BUET Masterclass",
     "career": "Career",
-    "mockInterview": "Mock Interview",
+    "mockInterview": "Practical Interview",
     "bimSeminar": "BIM Seminar",
     "newsMedia": "News & Media",
     "contactUs": "Contact Us",
@@ -1889,14 +1889,14 @@
   },
   "mockInterview": {
     "brand": "Kawaii Group",
-    "title": "Japanese Mock Interview",
+    "title": "Japanese Practical Interview",
     "lead": "Completed your Japanese language course? Practice with a native Japanese interviewer and prepare for upcoming real recruitment opportunities.",
     "registerCta": "Register Now",
     "learnMore": "Why this interview",
     "ctaBadge": "Free opportunity",
-    "ctaInvite": "Ready for your Japanese mock interview?",
+    "ctaInvite": "Ready for your Japanese practical interview?",
     "ctaNote": "Register in under 2 minutes. Practice with a native Japanese interviewer and prepare for real recruitment.",
-    "heroImgAlt": "Free Japanese Interview and Recruitment Opportunity — Kawaii Group",
+    "heroImgAlt": "Free Japanese Practical Interview & Recruitment — Kawaii Group",
     "problemEyebrow": "The gap after language class",
     "problemTitle": "Language done. Interview still feels uncertain.",
     "problemLead": "Many students complete JLPT N5 / N4 or JFT A1 / A2 successfully — yet feel nervous when a real Japanese interview approaches.",
@@ -1908,22 +1908,22 @@
     ],
     "solutionEyebrow": "The opportunity",
     "solutionTitle": "Practice before the real interview",
-    "solutionLead": "Kawaii Group, in collaboration with Kawaii Group Japan, is hosting a special Japanese Practical Mock Interview for N5 and N4 completed students.",
+    "solutionLead": "Kawaii Group, in collaboration with Kawaii Group Japan, is hosting a special Japanese Practical Interview for N5 and N4 completed students.",
     "solutionBody": "This is not practice with a Bangladeshi trainer alone — you will experience an interview environment closer to the real thing, with an experienced native Japanese interviewer.",
     "solutionImgAlt": "Career support and interview preparation with Kawaii Group",
     "nativeInterviewer": "Interviewed by a native Japanese interviewer",
     "highlights": [
-      "Free practical Japanese mock interview",
+      "Free Japanese practical interview",
       "Real interview-style practice with a Japanese interviewer",
       "Build communication, confidence, and response skills",
       "Pathway to upcoming real recruitment opportunities"
     ],
     "journeyEyebrow": "Your path with Kawaii Group",
     "journeyTitle": "From practice to Japan",
-    "journeyLead": "If you qualify through the mock interview, our team guides you through the next steps of your Japan journey.",
+    "journeyLead": "If you qualify through the practical interview, our team guides you through the next steps of your Japan journey.",
     "journey": [
       {
-        "title": "Mock Interview",
+        "title": "Practical Interview",
         "desc": "Practice with a Japanese interviewer in a real-style setting."
       },
       {
@@ -1954,7 +1954,7 @@
     ],
     "form": {
       "eyebrow": "Registration",
-      "title": "Register for the Japanese Mock Interview",
+      "title": "Register for the Japanese Practical Interview",
       "subtitle": "Fill in the form below. Our team will contact you shortly about the free practical interview and upcoming recruitment opportunity.",
       "sections": {
         "basic": "Basic Information",
@@ -2019,7 +2019,7 @@
       "close": "Close",
       "privacyNote": "Your details stay private with Kawaii Group.",
       "asidePoints": [
-        "Free practical Japanese mock interview",
+        "Free Japanese practical interview",
         "Native Japanese interviewer experience",
         "Support for upcoming recruitment steps"
       ]
@@ -2034,7 +2034,7 @@
       "nextSteps": [
         "Our team will review your registration",
         "You will get a call or WhatsApp update soon",
-        "Prepare for the Japanese mock interview session"
+        "Prepare for the Japanese practical interview session"
       ],
       "done": "Back to page"
     }

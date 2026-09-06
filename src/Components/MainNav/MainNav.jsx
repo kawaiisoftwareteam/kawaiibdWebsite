@@ -295,7 +295,7 @@ const MainNav = () => {
                 </Link>
                 <Link
                   href={localizedPath('/mock-interview')}
-                  className={`mainNav__link ${isLinkActive('/mock-interview') ? 'mainNav__link--active' : ''}`}
+                  className={`mainNav__link mainNav__link--bold ${isLinkActive('/mock-interview') ? 'mainNav__link--active' : ''}`}
                 >
                   {t('nav.mockInterview')}
                 </Link>
@@ -365,7 +365,7 @@ const MainNav = () => {
 
           <Link
             href={localizedPath('/mock-interview')}
-            className={`mobileSidebar__link mobileSidebar__link--hot ${isLinkActive('/mock-interview') ? 'mobileSidebar__link--active' : ''}`}
+            className={`mobileSidebar__link mobileSidebar__link--hot mobileSidebar__link--bold ${isLinkActive('/mock-interview') ? 'mobileSidebar__link--active' : ''}`}
             onClick={closeSidebar}
           >
             {t('nav.mockInterview')}

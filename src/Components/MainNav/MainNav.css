@@ -142,6 +142,11 @@ html[lang="ja"] .mainNav__top-social {
   font-weight: 700;
 }
 
+.mainNav__link--bold {
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
+}
+
 /* ── Light pages (e.g. About Us) — dark text on pale heroes ── */
 .mainNav--light .mainNav__top-link,
 .mainNav--light .mainNav__top-social {
@@ -369,6 +374,10 @@ html[lang="ja"] .mainNav__top-social {
 .mobileSidebar__link--hot {
   color: #FFD2D6;
   font-weight: 700;
+}
+
+.mobileSidebar__link--bold {
+  font-weight: 800;
 }
 
 .mobileSidebar__arrow {
