@@ -112,19 +112,19 @@ export const PAGE_SEO = {
   },
   '/corporateprofile': {
     en: {
-      title: 'Corporate Profile | Kawaii Group',
+      title: 'Company Profile | Kawaii Group',
       description:
-        'View the corporate profile of Kawaii Group Bangladesh — company overview, leadership, business pillars, and our commitment to Japan-Bangladesh partnership and community growth.',
+        'Company profile of Kawaii Group Bangladesh — listing status, head and corporate offices, capital, banking partners, and group affiliation.',
     },
     bn: {
-      title: 'কর্পোরেট প্রোফাইল | কাওয়াই গ্রুপ',
+      title: 'কোম্পানি প্রোফাইল | কাওয়াই গ্রুপ',
       description:
-        'কাওয়াই গ্রুপ বাংলাদেশের কর্পোরেট প্রোফাইল দেখুন—কোম্পানি ওভারভিউ, নেতৃত্ব, ব্যবসায়িক স্তম্ভ এবং জাপান-বাংলাদেশ অংশীদারিত্ব ও সম্প্রদায় উন্নয়নে আমাদের অঙ্গীকার।',
+        'কাওয়াই গ্রুপ বাংলাদেশের কোম্পানি প্রোফাইল—তালিকাভুক্তি অবস্থা, প্রধান ও কর্পোরেট অফিস, মূলধন, ব্যাংকিং অংশীদার এবং গ্রুপ অধিভুক্তি।',
     },
     ja: {
-      title: 'コーポレートプロフィール | カワイグループ',
+      title: '会社概要 | カワイグループ',
       description:
-        'カワイグループバングラデシュのコーポレートプロフィール。会社概要、リーダーシップ、事業の柱、日バングラデシュパートナーシップへの取り組みをご覧ください。',
+        'カワイグループ・バングラデシュの会社概要。上場状況、本社・コーポレートオフィス、資本金、取引銀行、グループ所属をご確認ください。',
     },
   },
   '/our-business': {

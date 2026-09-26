@@ -34,7 +34,6 @@ const LIGHT_NAV_PATHS = [
   '/news',
   '/career',
   '/privacypolicy',
-  '/corporateprofile',
   '/kawaii-global-ventures',
   '/kawaii-japan-career-hr',
   '/services',
@@ -282,6 +281,12 @@ const MainNav = () => {
                   {t('nav.aboutUs')}
                 </Link>
                 <Link
+                  href={localizedPath('/corporateprofile')}
+                  className={`mainNav__link ${isLinkActive('/corporateprofile') ? 'mainNav__link--active' : ''}`}
+                >
+                  {t('nav.companyProfile')}
+                </Link>
+                <Link
                   href={localizedPath('/concerns')}
                   className={`mainNav__link ${isLinkActive('/concerns') ? 'mainNav__link--active' : ''}`}
                 >
@@ -347,6 +352,13 @@ const MainNav = () => {
             onClick={closeSidebar}
           >
             {t('nav.aboutUs')}
+          </Link>
+          <Link
+            href={localizedPath('/corporateprofile')}
+            className={`mobileSidebar__link ${isLinkActive('/corporateprofile') ? 'mobileSidebar__link--active' : ''}`}
+            onClick={closeSidebar}
+          >
+            {t('nav.companyProfile')}
           </Link>
           <Link
             href={localizedPath('/concerns')}

@@ -5,7 +5,6 @@ import HeaderContact from '../../Components/HeaderContact/HeaderContact';
 import Cta from '../../Components/CTA/Cta';
 import CorporateProfileSection from '../../Components/CorporateProfileSection/CorporateProfileSection';
 import { useLocale } from '../../i18n/LocaleContext';
-import corporateProfileCover from '../../Assets/kg_corporateProfile.webp';
 import bondingCover from '../../Assets/bonding.webp';
 
 const getSrc = (img) => (typeof img === 'string' ? img : img?.src || img);
@@ -15,10 +14,7 @@ const CorporateProfile = () => {
 
   return (
     <>
-      <HeaderContact
-        text={t('corporate.pageTitle')}
-        backgroundImage={getSrc(corporateProfileCover)}
-      />
+      <HeaderContact text={t('corporate.pageTitle')} />
       <CorporateProfileSection />
       <Cta
         title={t('about.cta.title')}

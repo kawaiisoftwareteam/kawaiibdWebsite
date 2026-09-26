@@ -8,8 +8,13 @@ import { resolveImage, getSrc } from '../../lib/image';
 
 
 const HeaderContact = ({ text, backgroundImage }) => {
+  const imageSrc = backgroundImage ? getSrc(backgroundImage) : null;
+
   return (
-    <div className='header_main_top' style={{ backgroundImage: `url(${getSrc(backgroundImage)})` }}>
+    <div
+      className={`header_main_top${imageSrc ? '' : ' header_main_top--solid'}`}
+      style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined}
+    >
       <img loading="lazy" decoding="async" {...resolveImage(leftWhite)} alt="Kawaii Group decorative corner" className='leftWhite' />
       <div className='text_box_header'>
         <div className='text_shape_header'>

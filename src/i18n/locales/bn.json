@@ -3,6 +3,7 @@
     "home": "হোম",
     "aboutUs": "আমাদের সম্পর্কে",
     "companies": "কোম্পানিসমূহ",
+    "companyProfile": "কোম্পানি প্রোফাইল",
     "whoWeAre": "আমরা কে",
     "whatWeDo": "আমরা কী করি",
     "sisterConcerns": "সহযোগী প্রতিষ্ঠান",
@@ -613,37 +614,46 @@
     "ctaText": "Employer হোন বা job seeker — আন্তর্জাতিক pathway-তে connect করি।"
   },
   "corporate": {
-    "pageTitle": "কর্পোরেট প্রোফাইল",
+    "pageTitle": "কোম্পানি প্রোফাইল",
     "companyHeader": "Kawaii Group",
+    "heroTitle": "কোম্পানি প্রোফাইল",
+    "heroText": "কাওয়াই গ্রুপ বাংলাদেশের মূল কর্পোরেট তথ্য—নিবন্ধন অবস্থা, অফিস, মূলধন এবং গ্রুপ অধিভুক্তি।",
     "tabs": {
       "profile": "কর্পোরেট প্রোফাইল",
       "history": "ইতিহাস",
       "management": "সিনিয়র ম্যানেজমেন্ট",
-      "governance": "কর্পোরেট গভর্নance"
+      "governance": "কর্পোরেট গভর্নেন্স"
     },
-    "sectionTitle": "কর্পোরেট প্রোফাইল",
-    "asOf": "২০২৪ সালের জুলাই মাসে শেষ হওয়া অর্থবছর অনুযায়ী।",
+    "sectionEyebrow": "অফিসিয়াল তথ্য",
+    "sectionTitle": "কর্পোরেট বিবরণ",
+    "asOf": "তথ্য ২০২৬ সাল অনুযায়ী হালনাগাদ। “প্রদান করা হবে” চিহ্নিত ক্ষেত্রগুলো পাওয়া মাত্র আপডেট করা হবে।",
     "fields": {
       "companyName": "কোম্পানির নাম",
-      "headOffice": "প্রধান কার্যালয়ের ঠিকানা",
-      "japanOffice": "জাপান অফিসের ঠিকানা",
-      "tel": "টেলিফোন",
-      "managingDirector": "Managing Director & Group CEO",
-      "incorporated": "প্রতিষ্ঠিত",
-      "capital": "কোম্পানির মূলধন",
+      "corporateNumber": "কর্পোরেট নম্বর",
+      "listingMarket": "তালিকাভুক্ত বাজার",
+      "representative": "প্রতিনিধি",
+      "headOffice": "প্রধান কার্যালয়",
+      "corporateOffice": "কর্পোরেট অফিস",
+      "established": "প্রতিষ্ঠার তারিখ",
+      "capital": "অনুমোদিত / পরিশোধিত মূলধন",
       "employees": "কর্মচারীর সংখ্যা",
-      "sisterConcerns": "সহযোগী প্রতিষ্ঠান"
+      "majorBanks": "প্রধান ব্যাংকসমূহ",
+      "affiliation": "সাবসিডিয়ারি / গ্রুপ অধিভুক্তি",
+      "website": "ওয়েবসাইট"
     },
     "values": {
-      "companyName": "Kawaii Group Limited",
-      "headOffice": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219",
-      "japanOffice": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan",
-      "tel": "+88 01901850570, +81 03-6910-5465",
-      "managingDirector": "Dewan Samir",
-      "incorporated": "2015",
+      "companyName": "Kawaii Group Bangladesh",
+      "corporateNumber": "[প্রদান করা হবে]",
+      "listingMarket": "প্রাইভেট / আনলিস্টেড",
+      "representative": "[প্রদান করা হবে]",
+      "headOffice": "বনশ্রী, রামপুরা, ঢাকা, বাংলাদেশ",
+      "corporateOffice": "তাজ ক্যাসিলিনা, এল-২, ২৫ গুলশান অ্যাভিনিউ, গুলশান-১, ঢাকা-১২১২, বাংলাদেশ",
+      "established": "[প্রদান করা হবে]",
       "capital": "১০ কোটি টাকা",
-      "employees": "২০",
-      "sisterConcerns": "৮+"
+      "employees": "১২",
+      "majorBanks": "সিটি ব্যাংক পিএলসি; সাউথইস্ট ব্যাংক পিএলসি",
+      "affiliation": "Kawaii Group",
+      "website": "Kawaii Group Bangladesh"
     }
   },
   "privacy": {

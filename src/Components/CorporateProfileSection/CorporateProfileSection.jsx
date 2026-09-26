@@ -1,35 +1,50 @@
-import React from 'react'
-import './CorporateProfileSection.css'
+'use client';
+
+import React from 'react';
+import './CorporateProfileSection.css';
 import CorporateProfileInfo from '../CorporateProfileInfo/CorporateProfileInfo';
 import { useLocale } from '../../i18n/LocaleContext';
 
 const FIELD_KEYS = [
   'companyName',
+  'corporateNumber',
+  'listingMarket',
+  'representative',
   'headOffice',
-  'japanOffice',
-  'tel',
-  'managingDirector',
-  'incorporated',
+  'corporateOffice',
+  'established',
   'capital',
   'employees',
-  'sisterConcerns',
+  'majorBanks',
+  'affiliation',
+  'website',
 ];
 
+const STAT_KEYS = ['listingMarket', 'capital', 'employees'];
+
 const CorporateProfileSection = () => {
-    const { t } = useLocale();
+  const { t } = useLocale();
 
   return (
-    <div className='cp_main relative'>
-      <div className='cp_bar'>
-      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.profile')}</div></div>
-      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.history')}</div></div>
-      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.management')}</div></div>
-      <div className="cp_bar_box"><div className='cp_bar_text'>{t('corporate.tabs.governance')}</div></div>
+    <section className="cp_main">
+      <div className="cp_intro">
+        <p className="cp_intro__eyebrow">{t('corporate.companyHeader')}</p>
+        <h2 className="cp_intro__title">{t('corporate.heroTitle')}</h2>
+        <p className="cp_intro__text">{t('corporate.heroText')}</p>
       </div>
-      <div className='cp_company_header'>{t('corporate.companyHeader')}</div>
-      <CorporateProfileInfo fieldKeys={FIELD_KEYS} />
-    </div>
-  )
-}
 
-export default CorporateProfileSection
+      <div className="cp_stats" aria-label={t('corporate.sectionTitle')}>
+        {STAT_KEYS.map((key) => (
+          <div className="cp_stat" key={key}>
+            <span className="cp_stat__label">{t(`corporate.fields.${key}`)}</span>
+            <span className="cp_stat__value">{t(`corporate.values.${key}`)}</span>
+          </div>
+        ))}
+      </div>
+
+      <CorporateProfileInfo fieldKeys={FIELD_KEYS} />
+    </section>
+  );
+};
+
+export default CorporateProfileSection;

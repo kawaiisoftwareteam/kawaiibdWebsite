@@ -25,6 +25,16 @@
   pointer-events: none;
 }
 
+/* Solid hero — no photo background */
+.header_main_top--solid {
+  background-color: #1a1a1a;
+  background-image: linear-gradient(135deg, #1a1a1a 0%, #2a2224 45%, #1a1a1a 100%);
+}
+
+.header_main_top--solid::after {
+  background-color: rgba(26, 26, 26, 0.25);
+}
+
 /* Left white box */
 .leftWhite {
   display: flex;

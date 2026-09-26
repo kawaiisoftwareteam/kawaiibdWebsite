@@ -99,7 +99,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 16px 20px;
-  max-width: min(720px, 62vw);
+  max-width: min(820px, 68vw);
 }
 
 .mainNav__link {

@@ -1,2 +1,0 @@
-# Not used on cPanel / LiteSpeed.
-# Kept empty on purpose — a Cloudflare SPA fallback here used to break multi-page routes.
