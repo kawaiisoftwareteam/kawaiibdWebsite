@@ -4,7 +4,11 @@ import React from 'react';
 import './CorporateProfileInfo.css';
 import { useLocale } from '../../i18n/LocaleContext';
 
-const PENDING_KEYS = new Set(['corporateNumber', 'representative', 'established']);
+const LINKS = {
+  website: { href: 'https://kawaiibd.com', external: true },
+  email: { href: 'mailto:info@kawaiibd.com' },
+  telephone: { href: 'tel:+8801901850570' },
+};
 
 const CorporateProfileInfo = ({ fieldKeys }) => {
   const { t } = useLocale();
@@ -20,14 +24,15 @@ const CorporateProfileInfo = ({ fieldKeys }) => {
       <dl className="cp_info__table">
         {fieldKeys.map((key) => {
           const value = t(`corporate.values.${key}`);
-          const isPending = PENDING_KEYS.has(key) || value.startsWith('[');
+          const link = LINKS[key];
+          const isPending = value === '—' || value.startsWith('[');
 
           return (
             <div className="cp_info__row" key={key}>
               <dt className="cp_info__label">{t(`corporate.fields.${key}`)}</dt>
               <dd className={`cp_info__value${isPending ? ' cp_info__value--pending' : ''}`}>
-                {key === 'website' ? (
-                  <a href="https://kawaiibd.com" target="_blank" rel="noreferrer">
+                {link ? (
+                  <a href={link.href} {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})}>
                     {value}
                   </a>
                 ) : (

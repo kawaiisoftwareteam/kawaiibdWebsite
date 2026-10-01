@@ -26,6 +26,7 @@ import { resolveImage, getSrc } from '../../lib/image';
 /** Pages with light heroes — use dark nav text for contrast */
 const LIGHT_NAV_PATHS = [
   '/about',
+  '/corporateprofile',
   '/contact',
   '/concerns',
   '/our-business',

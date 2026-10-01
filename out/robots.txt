@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Do not Disallow /_next/ — Google needs JS/CSS to render pages.
+
+Sitemap: https://kawaiibd.com/sitemap.xml
