@@ -455,7 +455,115 @@
     }
   },
   "services": {
-    "header": "Our Services"
+    "header": "Our Services",
+    "eyebrow": "COMPREHENSIVE BILATERAL SOLUTIONS",
+    "title": "Empowering Growth Across Japan & Bangladesh",
+    "subtitle": "From Foreign Direct Investment (FDI) consulting and global HR recruitment to advanced technology solutions, world-class manufacturing, and bilateral business alliances.",
+    "ctaTitle": "Looking to Partner or Expand Across Japan & Bangladesh?",
+    "ctaText": "Connect with Kawaii Group's bilingual advisory team in Dhaka and Tokyo to initiate your FDI, recruitment, technology, or trade venture.",
+    "pillarsHeading": "Core Service Pillars",
+    "pillarsSubheading": "Integrated cross-border expertise driving long-term commercial and career success.",
+    "pillars": {
+      "fdi": {
+        "badge": "Investment & Advisory",
+        "title": "FDI Consulting & Market Entry",
+        "desc": "End-to-end Foreign Direct Investment advisory facilitating smooth cross-border market entry for Japanese enterprises in Bangladesh and Bangladeshi firms in Japan.",
+        "items": [
+          "BIDA (Bangladesh Investment Development Authority) registration and regulatory compliance",
+          "Special Economic Zone (BSEZ Japanese Economic Zone in Araihazar) site selection & setup",
+          "Comprehensive market feasibility studies, legal structuring, and tax advisory",
+          "Local company formation, entity registration, and corporate banking assistance"
+        ]
+      },
+      "hr": {
+        "badge": "Workforce & Talent",
+        "title": "Human Resources & Global Recruitment",
+        "desc": "Connecting leading Japanese corporations with top-tier Bangladeshi engineers, software developers, and certified skilled workers.",
+        "items": [
+          "Specified Skilled Worker (SSW - 特定技能) recruitment in government-approved categories",
+          "Technical Intern Training Program (TITP - 技能実習) preparation and placement",
+          "High-skill Engineering, Specialist in Humanities & International Services visas",
+          "Tokyo-based post-arrival support, accommodation settlement, and employer liaison"
+        ]
+      },
+      "education": {
+        "badge": "Language & Academy",
+        "title": "Japanese Language & International Education",
+        "desc": "Delivering rigorous Japanese language mastery, corporate business manners, and trusted international university placement services.",
+        "items": [
+          "JLPT (N5 to N1) and NAT-TEST intensive preparatory curriculums",
+          "Corporate Japanese etiquette, Keigo (honorific language), and Horenso communication",
+          "Study in Japan admissions counseling for top universities and vocational colleges",
+          "Scholarship guidance (MEXT, JASSO) and student visa documentation"
+        ]
+      },
+      "tech": {
+        "badge": "Digital & Engineering",
+        "title": "Technology Solutions & Construction DX",
+        "desc": "Scalable software engineering, dedicated offshore development centers (ODC), and BIM Construction Digital Transformation (DX).",
+        "items": [
+          "Dedicated Offshore Development Centers (ODC) in Dhaka with bilingual BrSE leadership",
+          "Enterprise web, mobile, cloud solutions, and customized business automation software",
+          "BIM (Building Information Modeling) and Revit 3D/4D engineering outsourcing for Japan AEC",
+          "Construction DX seminars, masterclasses, and digital engineering workforce upskilling"
+        ]
+      },
+      "manufacturing": {
+        "badge": "Production & Sourcing",
+        "title": "Manufacturing & International Trade",
+        "desc": "Combining Bangladesh's competitive manufacturing strength with Japanese precision standards in garment production and cross-border trade.",
+        "items": [
+          "OEM and ODM apparel manufacturing for international fashion brands and retailers",
+          "Sustainable fabric production, raw material sourcing, and specialized textile finishing",
+          "Strict Japanese quality inspection (Kenpin) ensuring zero-defect export standards",
+          "End-to-end import-export facilitation, customs clearance, and global supply chain logistics"
+        ]
+      },
+      "travel": {
+        "badge": "Corporate Mobility",
+        "title": "Corporate Travel & Japan Visa Assistance",
+        "desc": "Delivering professional business travel management, delegation logistics, and comprehensive Japan visa application support.",
+        "items": [
+          "Official Japan business visa, employment visa, and student visa processing guidance",
+          "Bilateral corporate delegation travel planning, hotel bookings, and flight ticketing",
+          "Bilingual interpretation, executive transport, and meeting coordination in Tokyo & Dhaka",
+          "Travel insurance arrangements and dedicated 24/7 travel support"
+        ]
+      },
+      "partnerships": {
+        "badge": "Strategic Alliances",
+        "title": "Japan–Bangladesh Business Partnerships",
+        "desc": "Building sustainable joint ventures, strategic equity partnerships, and bilateral corporate alliances for long-term commercial success.",
+        "items": [
+          "Cross-border joint venture (JV) inception, equity structuring, and shareholder agreements",
+          "Curated B2B matchmaking sessions and high-level corporate introductions",
+          "MoU (Memorandum of Understanding) facilitation and bilateral trade mission support",
+          "Close institutional liaison with JETRO, JBCCI, and Embassy commercial wings"
+        ]
+      }
+    },
+    "whyTitle": "Why Choose Kawaii Group for Japan-Bangladesh Ventures",
+    "whySubtitle": "Three decades of trusted bridge-building across cultures, industries, and borders.",
+    "whyCards": [
+      {
+        "title": "35+ Years of Proven Heritage",
+        "desc": "Founded in 1987, Kawaii Group has cultivated deep, enduring relationships with Japanese corporate and governmental entities."
+      },
+      {
+        "title": "Dual Strategic Headquarters",
+        "desc": "Operating on-the-ground offices in both Dhaka (Banasree) and Tokyo (Ebisu, Shibuya-ku) ensuring seamless bilateral execution."
+      },
+      {
+        "title": "100% Regulatory Compliance",
+        "desc": "Officially certified recruitment, corporate registration, and educational licenses adhering strictly to Bangladesh and Japan legal frameworks."
+      },
+      {
+        "title": "End-to-End Synergy",
+        "desc": "A unified ecosystem linking talent training, recruitment, corporate setup, technology, and trade under one roof."
+      }
+    ],
+    "inquireBtn": "Inquire About This Service",
+    "contactBtn": "Schedule a Consultation"
   },
   "ourBusiness": {
     "seeMore": "See More",

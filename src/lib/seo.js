@@ -27,19 +27,19 @@ export const ORGANIZATION = {
 export const PAGE_SEO = {
   '/': {
     en: {
-      title: 'Kawaii Group | Japan-Bangladesh Joint Venture',
+      title: 'Kawaii Group | Japan-Bangladesh Partnerships, FDI Consulting & HR',
       description:
-        'Kawaii Group is a premier Japan-Bangladesh joint venture empowering businesses and careers through global HR recruitment, Japanese language training, and BIM education.',
+        'Kawaii Group is a leading Japan-Bangladesh joint venture specializing in FDI consulting, human resources and recruitment, Japanese language and international education, technology solutions, manufacturing and trade, and bilateral business partnerships.',
     },
     bn: {
-      title: 'কাওয়াই গ্রুপ | জাপান-বাংলাদেশ যৌথ উদ্যোগ',
+      title: 'কাওয়াই গ্রুপ | জাপান-বাংলাদেশ পার্টনারশিপ, FDI কনসাল্টিং ও এইচআর',
       description:
-        'কাওয়াই গ্রুপ একটি বিশ্বস্ত জাপান-বাংলাদেশ যৌথ উদ্যোগ—আন্তর্জাতিক নিয়োগ, জাপানি ভাষা শিক্ষা, BIM ট্রেনিং ও ক্রস-বর্ডার ব্যবসায়িক পরামর্শের নির্ভরযোগ্য প্ল্যাটফর্ম।',
+        'কাওয়াই গ্রুপ একটি শীর্ষস্থানীয় জাপান-বাংলাদেশ যৌথ উদ্যোগ—FDI কনসাল্টিং, আন্তর্জাতিক নিয়োগ, জাপানি ভাষা ও আন্তর্জাতিক শিক্ষা, প্রযুক্তি সমাধান, উৎপাদন ও বাণিজ্য এবং দ্বিপাক্ষিক ব্যবসায়িক অংশীদারিত্বের বিশ্বস্ত প্ল্যাটফর্ম।',
     },
     ja: {
-      title: 'カワイグループ | 日本・バングラデシュ合弁企業',
+      title: 'カワイグループ | 日本・バングラデシュ合弁企業・FDI進出支援・人材採用',
       description:
-        'カワイグループは日本とバングラデシュをつなぐ総合ビジネス合弁企業。特定技能や技術者の人材紹介・採用、実践的日本語教育、BIM研修、進出支援を提供します。',
+        'カワイグループは日本とバングラデシュを結ぶ総合合弁企業。FDI進出コンサルティング、人材紹介・特定技能採用、実践的日本語・国際教育、IT・DX技術ソリューション、アパレル製造・貿易、ビジネス提携を提供します。',
     },
   },
   '/about': {
@@ -61,19 +61,19 @@ export const PAGE_SEO = {
   },
   '/services': {
     en: {
-      title: 'Our Services | HR, Education & Business Solutions',
+      title: 'Our Services | FDI Consulting, HR Recruitment, IT, Trade & Travel | Kawaii Group',
       description:
-        'Explore Kawaii Group services including business consultancy, human resource development, education and Japanese language training, recruitment, and digital transformation solutions for companies and individuals.',
+        'Comprehensive Japan-Bangladesh services by Kawaii Group: FDI consulting, human resources and recruitment for Japan, Japanese language and international education, technology solutions, manufacturing and trade, travel services, and bilateral business partnerships.',
     },
     bn: {
-      title: 'আমাদের সেবা | এইচআর, শিক্ষা ও ব্যবসায়িক সমাধান',
+      title: 'আমাদের সেবা | FDI কনসাল্টিং, এইচআর নিয়োগ, প্রযুক্তি, বাণিজ্য ও ভ্রমণ | কাওয়াই গ্রুপ',
       description:
-        'কাওয়াই গ্রুপের সেবাসমূহ অন্বেষণ করুন—ব্যবসায়িক পরামর্শ, মানব সম্পদ উন্নয়ন, শিক্ষা ও জাপানি ভাষা প্রশিক্ষণ, নিয়োগ এবং ডিজিটাল রূপান্তর সমাধান কোম্পানি ও ব্যক্তিদের জন্য।',
+        'কাওয়াই গ্রুপের সেবা: FDI কনসাল্টিং, জাপানে এইচআর নিয়োগ, জাপানি ভাষা ও আন্তর্জাতিক শিক্ষা, সফটওয়্যার ও BIM DX প্রযুক্তি সমাধান, গার্মেন্টস উৎপাদন ও বাণিজ্য, ভ্রমণ ও ভিসা এবং দ্বিপাক্ষিক ব্যবসায়িক অংশীদারিত্ব।',
     },
     ja: {
-      title: 'サービス紹介 | 人材・教育・ビジネス支援',
+      title: 'サービス一覧 | FDI進出支援・人材採用・ITソリューション・製造貿易 | カワイグループ',
       description:
-        'ビジネスコンサルティング、人材開発、教育・日本語研修、採用支援、デジタルトランスフォーメーションなど、企業と個人向けのカワイグループのサービスをご覧ください。',
+        'カワイグループの事業一覧：FDI進出支援コンサルティング、日本向け人材紹介・特定技能、日本語・国際教育、IT開発・BIM DX、衣料製造・貿易、海外渡航支援、日バングラデシュ企業提携。',
     },
   },
   '/concerns': {
@@ -129,19 +129,19 @@ export const PAGE_SEO = {
   },
   '/our-business': {
     en: {
-      title: 'Our Business Portfolio | Kawaii Group',
+      title: 'Business Portfolio | FDI, HR, Technology, Manufacturing & Trade | Kawaii Group',
       description:
-        'Explore Kawaii Group’s business portfolio across consultancy, HR, education, recruitment, and cross-border ventures that connect Bangladesh and Japan for sustainable growth.',
+        'Discover Kawaii Group’s diverse business portfolio: Foreign Direct Investment (FDI) consulting, Japan HR recruitment, Japanese language education, technology solutions, apparel manufacturing, and international trade.',
     },
     bn: {
-      title: 'আমাদের ব্যবসায়িক পোর্টফোলিও | কাওয়াই গ্রুপ',
+      title: 'আমাদের ব্যবসায়িক পোর্টফোলিও | FDI, এইচআর, প্রযুক্তি, উৎপাদন ও বাণিজ্য | কাওয়াই গ্রুপ',
       description:
-        'পরামর্শ, এইচআর, শিক্ষা, নিয়োগ এবং আন্তঃসীমান্ত উদ্যোগসহ কাওয়াই গ্রুপের ব্যবসায়িক পোর্টফোলিও অন্বেষণ করুন—টেকসই প্রবৃদ্ধির জন্য বাংলাদেশ ও জাপানকে সংযুক্ত করে।',
+        'কাওয়াই গ্রুপের ব্যবসায়িক পোর্টফোলিও: FDI কনসাল্টিং, জাপানে নিয়োগ, জাপানি ভাষা শিক্ষা, সফটওয়্যার ও BIM প্রযুক্তি, গার্মেন্টস উৎপাদন, আন্তর্জাতিক বাণিজ্য এবং আন্তঃসীমান্ত ব্যবসায়িক উদ্যোগ।',
     },
     ja: {
-      title: '事業ポートフォリオ | カワイグループ',
+      title: '事業ポートフォリオ | FDI・人材・IT・製造・貿易 | カワイグループ',
       description:
-        'コンサルティング、人材、教育、採用、クロスボーダー事業など、バングラデシュと日本をつなぐカワイグループの事業ポートフォリオをご覧ください。',
+        'カワイグループの事業ポートフォリオ：FDI進出支援、日本就職・人材紹介、日本語教育、IT技術開発、アパレル製造、国際貿易、そして日本・バングラデシュ合弁事業。',
     },
   },
   '/career': {
@@ -582,6 +582,96 @@ export function getServicesPageJsonLd(locale = 'en', path = '/services') {
       { '@type': 'Country', name: 'Japan' },
     ],
     serviceType: 'Japan-Bangladesh Business & HR Solutions',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Kawaii Group Core Business Pillars',
+      itemListElement: [
+        {
+          '@type': 'OfferCatalog',
+          name: 'FDI Consulting & Market Entry',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Foreign Direct Investment (FDI) Consulting Japan–Bangladesh',
+              description:
+                'End-to-end FDI consulting, BIDA registration, special economic zones entry (BSEZ), joint ventures, and regulatory setup for Japanese businesses in Bangladesh.',
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Human Resources & Recruitment',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Human Resources & Japan Recruitment Solutions',
+              description:
+                'Recruiting and placing skilled Bangladeshi engineers, IT professionals, and Specified Skilled Workers (SSW/TITP) in Japan.',
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Japanese Language & International Education',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Japanese Language Education & Study in Japan',
+              description:
+                'JLPT N5-N1 preparation, NAT-TEST training, corporate Japanese business etiquette, and university admissions guidance for Japan.',
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Technology Solutions & Construction DX',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Technology Solutions & BIM DX Outsourcing',
+              description:
+                'Offshore software development, enterprise cloud systems, and BIM (Building Information Modeling) engineering outsourcing conforming to Japanese architectural standards.',
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Manufacturing & International Trade',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Apparel Manufacturing & Global International Trade',
+              description:
+                'OEM/ODM garment manufacturing, sustainable textile sourcing, strict Japanese quality inspection (Kenpin), and cross-border trade logistics.',
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Corporate Travel & Japan Visa Assistance',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Travel Services & Japan Visa Assistance',
+              description:
+                'Corporate business delegation travel management, itinerary planning, executive logistics, and official Japan visa documentation assistance.',
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Japan–Bangladesh Business Partnerships',
+          itemListElement: [
+            {
+              '@type': 'Service',
+              name: 'Bilateral Joint Ventures & Strategic Business Partnerships',
+              description:
+                'Cross-border joint ventures, B2B matchmaking, MoU signing, and strategic corporate alliances between Japan and Bangladesh.',
+            },
+          ],
+        },
+      ],
+    },
   };
 }
 

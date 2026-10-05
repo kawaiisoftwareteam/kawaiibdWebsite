@@ -1,0 +1,374 @@
+/* ==========================================================================
+   ServicesPillars.css - High-Converting, Semantic SEO Service Showcase
+   ========================================================================== */
+
+.svcPillars {
+  position: relative;
+  background: #ffffff;
+  padding: 80px 24px 100px;
+  overflow: hidden;
+}
+
+.svcPillars__container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Header */
+.svcPillars__header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 64px;
+}
+
+.svcPillars__eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #BE1E2D;
+  background: #FFE9E9;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+.svcPillars__title {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #0c0c0c;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+.svcPillars__divider {
+  width: 56px;
+  height: 4px;
+  background: #BE1E2D;
+  border-radius: 9999px;
+  margin: 0 auto 20px;
+}
+
+.svcPillars__subtitle {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Cards Grid */
+.svcPillars__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Individual Card */
+.svcCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.svcCard:hover {
+  transform: translateY(-4px);
+  border-color: #fca5a5;
+  box-shadow: 0 20px 40px -12px rgba(190, 30, 45, 0.12);
+}
+
+@media (min-width: 900px) {
+  .svcCard {
+    flex-direction: row;
+    min-height: 380px;
+  }
+
+  .svcCard--reversed {
+    flex-direction: row-reverse;
+  }
+
+  .svcCard__media {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+
+  .svcCard__content {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+}
+
+/* Media */
+.svcCard__media {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.svcCard__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.svcCard:hover .svcCard__img {
+  transform: scale(1.04);
+}
+
+.svcCard__mediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+.svcCard__badgeRow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.svcCard__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  color: #0c0c0c;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.svcCard__badgeIcon {
+  color: #BE1E2D;
+  font-size: 0.95rem;
+}
+
+/* Content */
+.svcCard__content {
+  padding: 36px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .svcCard__content {
+    padding: 40px 44px;
+  }
+}
+
+.svcCard__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.svcCard__numBadge {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #BE1E2D;
+  background: #FFE9E9;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  letter-spacing: -0.02em;
+}
+
+.svcCard__cat {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #BE1E2D;
+  margin-bottom: 4px;
+}
+
+.svcCard__title {
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 800;
+  color: #0c0c0c;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.svcCard__desc {
+  font-size: 0.975rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+/* Deliverables checklist */
+.svcCard__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.svcCard__listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.925rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.svcCard__checkIcon {
+  color: #BE1E2D;
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 0.95rem;
+}
+
+/* Action button */
+.svcCard__action {
+  margin-top: auto;
+}
+
+.svcCard__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #0c0c0c;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+
+.svcCard__btn:hover {
+  background: #BE1E2D;
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(190, 30, 45, 0.25);
+}
+
+.svcCard__btnArrow {
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.svcCard__btn:hover .svcCard__btnArrow {
+  transform: translateX(3px);
+}
+
+/* Why Choose Us sub-section */
+.svcWhy {
+  margin-top: 100px;
+  padding-top: 80px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.svcWhy__header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 52px;
+}
+
+.svcWhy__title {
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  font-weight: 800;
+  color: #0c0c0c;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.svcWhy__subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.svcWhy__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .svcWhy__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .svcWhy__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.svcWhy__card {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svcWhy__card:hover {
+  background: #ffffff;
+  border-color: #fecaca;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -8px rgba(190, 30, 45, 0.12);
+}
+
+.svcWhy__iconBox {
+  width: 56px;
+  height: 56px;
+  background: #FFE9E9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.svcWhy__icon {
+  font-size: 1.4rem;
+  color: #BE1E2D;
+}
+
+.svcWhy__cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0c0c0c;
+  margin: 0 0 10px;
+}
+
+.svcWhy__cardDesc {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.55;
+  margin: 0;
+}
