@@ -32,6 +32,8 @@ const TABLE_KEYS = [
   'website',
   'officeHours',
   'majorBanks',
+  'accountant',
+  'legalAdvisor',
   'affiliation',
 ];
 
@@ -76,18 +78,24 @@ const CorporateProfileSection = () => {
         <div className="cp_split">
           <aside className="cp_aside">
             <div className="cp_lead">
-              <span className="cp_lead__mark">DS</span>
+              <div className="cp_lead__photoWrap">
+                <img
+                  className="cp_lead__photo"
+                  src="/image.png"
+                  alt={t('corporate.values.representative')}
+                  width="180"
+                  height="180"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p className="cp_lead__role">{t('corporate.fields.representative')}</p>
               <h2 className="cp_lead__name">{t('corporate.values.representative')}</h2>
               <p className="cp_lead__title">{t('corporate.values.position')}</p>
-            </div>
-            <div className="cp_advisor">
-              <span>{t('corporate.fields.accountant')}</span>
-              <strong>{t('corporate.values.accountant')}</strong>
-            </div>
-            <div className="cp_advisor">
-              <span>{t('corporate.fields.legalAdvisor')}</span>
-              <strong>{t('corporate.values.legalAdvisor')}</strong>
+              <blockquote className="cp_lead__quote">
+                <span className="cp_lead__quoteMark" aria-hidden="true">“</span>
+                <p className="cp_lead__message">{t('corporate.leadMessage')}</p>
+              </blockquote>
             </div>
           </aside>
 
