@@ -113,6 +113,14 @@ const HeroSection = ({ t }) => {
         className={`kg-hero-content kg-fade-up ${visible ? 'kg-visible' : ''}`}
       >
         <div className="kg-hero-eyebrow">{t('aboutUs.hero.eyebrow')}</div>
+        <img
+          className="kg-hero-flags"
+          src="/bangladesh-x-japan.gif"
+          alt="Bangladesh and Japan partnership — Kawaii Group Japan–Bangladesh joint venture"
+          width={320}
+          height={120}
+          decoding="async"
+        />
         <h1 className="kg-hero-title">
           {t('aboutUs.hero.title1')} <span>{t('aboutUs.hero.title2')}</span>
         </h1>
@@ -163,11 +171,17 @@ const IntroSection = ({ t }) => {
           ref={mediaRef}
           className={`kg-story__media kg-fade-left ${mediaVisible ? 'kg-visible' : ''}`}
         >
-          <img loading="lazy" decoding="async"
-            src={getSrc(kawaiiJpeg)}
-            alt="Kawaii Group Japan Bangladesh office"
-            className="kg-story__img"
-          />
+          <figure className="kg-story__frame">
+            <img
+              loading="lazy"
+              decoding="async"
+              src={getSrc(kawaiiJpeg)}
+              alt="Kawaii Group Japan office — Japan–Bangladesh business partnership"
+              className="kg-story__img"
+              width={900}
+              height={1125}
+            />
+          </figure>
         </div>
 
         <div
