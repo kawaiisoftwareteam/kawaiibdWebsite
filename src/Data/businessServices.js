@@ -1,9 +1,7 @@
 import apparelImg from '../Assets/services/Apparel Manufacturing.webp';
-import textileImg from '../Assets/services/Textile Manufacturing.webp';
 import tradingImg from '../Assets/services/ International Trading.webp';
 import techImg from '../Assets/services/Technology Solutions.webp';
 import recruitmentImg from '../Assets/services/Overseas recruitment.webp';
-import hrImg from '../Assets/services/job-career-hiring-recruitment-qualification-graphic.jpg';
 import overseasImg from '../Assets/services/Overseas Employment Support.webp';
 import japaneseImg from '../Assets/services/Japanese Language Education.webp';
 import educationImg from '../Assets/services/International Education Services.webp';
@@ -14,12 +12,16 @@ import visaImg from '../Assets/services/Visa Assistance.webp';
 import globalBusinessImg from '../Assets/services/global-business.webp';
 import partnershipImg from '../Assets/services/Strategic Business Partnerships.webp';
 
+const ecommerceImg = '/bussiness/add-cart-buy-now-online-commerce-graphic-concept.jpg';
+const staffingImg =
+  '/bussiness/business-coworkers-discussing-new-ideas-brainstorming-together-looking-new-project-document.jpg';
+
 export const businessServices = [
   {
     id: 'hr',
-    category: 'Domestic Recruitment',
-    title: 'Domestic recruitment',
-    image: hrImg,
+    category: 'Staffing and Recruitment',
+    title: 'Staffing and Recruitment',
+    image: staffingImg,
     desc: 'We provide optimal talent matching, primarily in IT and specialized fields, while staying close to the needs of each company.',
   },
   {
@@ -31,17 +33,17 @@ export const businessServices = [
   },
   {
     id: 'apparel',
-    category: 'Apparel',
-    title: 'Apparel',
+    category: 'Apparel Sourcing',
+    title: 'Apparel Sourcing',
     image: apparelImg,
     desc: 'With high-quality production lines and flexible capabilities, we provide global apparel manufacturing services, including OEM and ODM.',
   },
   {
-    id: 'textile',
-    category: 'Textile',
-    title: 'Textile Manufacturing',
-    image: textileImg,
-    desc: 'Advanced fabric production, premium material sourcing, and sustainable textile processing tailored to global industry standards.',
+    id: 'ecommerce',
+    category: 'Ecommerce',
+    title: 'Ecommerce',
+    image: ecommerceImg,
+    desc: 'Online store setup, marketplace listing, payment, and logistics support for businesses selling across Japan, Bangladesh, and global e-commerce channels.',
   },
   {
     id: 'trading',

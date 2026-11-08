@@ -19,7 +19,7 @@ export const navData = [
                 path: "sanjana"
             },
             {
-                title: "Kawaii Advanced Technology & Solution Ltd.",
+                title: "Kawaii Advanced Technology & Solution Ltd",
                 path: "/concerns"
             },
             {

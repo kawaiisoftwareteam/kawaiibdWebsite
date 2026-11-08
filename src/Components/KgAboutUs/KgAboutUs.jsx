@@ -64,32 +64,113 @@ const CountUp = ({ end, suffix = '', duration = 1800 }) => {
   );
 };
 
-/* ─── Sakura Petals ─── */
-const SakuraPetals = () => {
-  const petals = Array.from({ length: 14 }, (_, i) => ({
+/* ─── Sakura Petals — fall + messy bottom pile (clears every 60s) ─── */
+/* Extra weight on the right half so coverage matches the left. */
+const FALLING_PETALS = Array.from({ length: 20 }, (_, i) => {
+  const rightBias = i % 5 !== 0; // ~80% spawn on right half
+  const left = rightBias
+    ? 48 + ((i * 11.7) % 48)
+    : (i * 13.1) % 45;
+
+  return {
     id: i,
-    left: `${(i * 7.3) % 100}%`,
-    delay: `${(i * 0.6) % 8}s`,
-    duration: `${6 + (i % 4) * 2}s`,
-    size: `${16 + (i % 3) * 6}px`,
-  }));
+    left: `${left}%`,
+    delay: `${(i * 0.45) % 9}s`,
+    duration: `${5.5 + (i % 5) * 1.6}s`,
+    size: `${15 + (i % 4) * 5}px`,
+    drift: `${-20 + (i % 7) * 8}px`,
+  };
+});
+
+const randomPileLeft = () => {
+  // Prefer right side (~70% of landings between 50–97%)
+  if (Math.random() < 0.7) return 50 + Math.random() * 47;
+  return 2 + Math.random() * 48;
+};
+
+const SakuraPetals = () => {
+  const [pile, setPile] = useState([]);
+  const [clearing, setClearing] = useState(false);
+  const idRef = useRef(0);
+  const clearingRef = useRef(false);
+
+  useEffect(() => {
+    const landInterval = setInterval(() => {
+      if (clearingRef.current) return;
+
+      const petal = {
+        id: ++idRef.current,
+        left: randomPileLeft(),
+        bottom: Math.random() * 36,
+        rotate: -50 + Math.random() * 100,
+        size: 12 + Math.random() * 14,
+        drift: -18 + Math.random() * 36,
+        tilt: -12 + Math.random() * 24,
+      };
+
+      setPile((prev) => {
+        const next = [...prev, petal];
+        return next.length > 90 ? next.slice(-90) : next;
+      });
+    }, 850);
+
+    const cycleInterval = setInterval(() => {
+      clearingRef.current = true;
+      setClearing(true);
+
+      window.setTimeout(() => {
+        setPile([]);
+        clearingRef.current = false;
+        setClearing(false);
+      }, 1400);
+    }, 60_000);
+
+    return () => {
+      clearInterval(landInterval);
+      clearInterval(cycleInterval);
+    };
+  }, []);
 
   return (
-    <div className="kg-sakura-container">
-      {petals.map((p) => (
+    <div className="kg-sakura-container" aria-hidden="true">
+      {FALLING_PETALS.map((p) => (
         <div
-          key={p.id}
+          key={`fall-${p.id}`}
           className="kg-petal"
           style={{
             left: p.left,
             animationDelay: p.delay,
             animationDuration: p.duration,
             fontSize: p.size,
+            '--petal-drift': p.drift,
           }}
         >
           🌸
         </div>
       ))}
+
+      <div className={`kg-sakura-pile ${clearing ? 'kg-sakura-pile--clear' : ''}`}>
+        {pile.map((p) => (
+          <span
+            key={`pile-${p.id}`}
+            className="kg-petal-landed"
+            style={{
+              left: `${p.left}%`,
+              bottom: `${p.bottom}px`,
+              fontSize: `${p.size}px`,
+            }}
+          >
+            <span
+              className="kg-petal-landed__inner"
+              style={{
+                transform: `translateX(${p.drift}px) rotate(${p.rotate}deg) skewX(${p.tilt}deg)`,
+              }}
+            >
+              🌸
+            </span>
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

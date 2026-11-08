@@ -574,8 +574,8 @@
     "contactCta": "Get in Touch",
     "cards": {
       "hr": {
-        "category": "Domestic Recruitment",
-        "title": "Domestic recruitment",
+        "category": "Staffing and Recruitment",
+        "title": "Staffing and Recruitment",
         "desc": "We provide optimal talent matching, primarily in IT and specialized fields, while staying close to the needs of each company."
       },
       "tech": {
@@ -584,14 +584,14 @@
         "desc": "We support efficiency improvements and business growth through system development tailored to each company’s challenges and offshore infrastructure."
       },
       "apparel": {
-        "category": "Apparel",
-        "title": "Apparel",
+        "category": "Apparel Sourcing",
+        "title": "Apparel Sourcing",
         "desc": "With high-quality production lines and flexible capabilities, we provide global apparel manufacturing services, including OEM and ODM."
       },
-      "textile": {
-        "category": "Textile",
-        "title": "Textile Manufacturing",
-        "desc": "Advanced fabric production, premium material sourcing, and sustainable textile processing tailored to global industry standards."
+      "ecommerce": {
+        "category": "Ecommerce",
+        "title": "Ecommerce",
+        "desc": "Online store setup, marketplace listing, payment, and logistics support for businesses selling across Japan, Bangladesh, and global e-commerce channels."
       },
       "trading": {
         "category": "Trading",
@@ -1484,11 +1484,11 @@
       "items": [
         {
           "icon": "👗",
-          "name": "Apparel Manufacturing"
+          "name": "Apparel Sourcing"
         },
         {
-          "icon": "🧵",
-          "name": "Textile Manufacturing"
+          "icon": "🛒",
+          "name": "Ecommerce"
         },
         {
           "icon": "📦",
@@ -1551,7 +1551,7 @@
       "subtitle": "Kawaii Group operates through specialized companies that deliver industry-focused solutions. Together, these companies strengthen our ability to serve customers across local and international markets.",
       "items": [
         {
-          "name": "Kawaii Advance Technology & Solutions BD.",
+          "name": "Kawaii Advanced Technology & Solution Ltd",
           "type": "Technology",
           "desc": "Provides modern technology solutions for businesses, helping organizations improve efficiency through innovative digital services."
         },
@@ -1581,22 +1581,22 @@
           "desc": "Delivers business solutions supporting innovation and market growth, helping organizations achieve sustainable success."
         },
         {
-          "name": "Kawaii Group Japan LTD.",
+          "name": "Kawaii Group Japan Ltd",
           "type": "International Business",
           "desc": "Strengthens business relationships between Bangladesh, Japan, and international markets, supporting strategic global expansion."
         },
         {
-          "name": "Kawaii Japan Career & HR Solutions",
+          "name": "Kawaii Japan Career & HR Solutions Ltd",
           "type": "HR & Recruitment",
           "desc": "Provides national and international recruitment and workforce solutions, connecting skilled professionals with trusted employers."
         },
         {
-          "name": "Kawaii Global Ventures LTD.",
+          "name": "Kawaii Global Ventures Ltd",
           "type": "Investment & Ventures",
           "desc": "Explores investment opportunities and international business development, creating strategic partnerships across diverse industries."
         },
         {
-          "name": "Kawaii International Education Center LTD.",
+          "name": "Kawaii International Education Center Ltd",
           "type": "Education Services",
           "desc": "Prepares students and professionals for international opportunities through language education, academic guidance, and career development."
         }

@@ -45,7 +45,7 @@ const concernLinks = [
   {
     id: 2,
     path: "/concerns",
-    name: "Kawaii Advanced Technology & Solution Ltd.",
+    name: "Kawaii Advanced Technology & Solution Ltd",
     logo: getSrc(katslLogo),
     alt: "KAtslLogo",
     isExternal: false
@@ -53,7 +53,7 @@ const concernLinks = [
   {
     id: 4,
     path: "https://kawaiigroupjapan.jp/",
-    name: "Kawaii Group Japan Limited",
+    name: "Kawaii Group Japan Ltd",
     logo: getSrc(kgjLogo),
     alt: "kgjLogo",
     isExternal: true
@@ -61,7 +61,7 @@ const concernLinks = [
   {
     id: 6,
     path: "/kdd",
-    name: "Japan Kawaii Design & Development Limited",
+    name: "Japan Kawaii Design & Development Ltd",
     logo: getSrc(kddLogo),
     alt: "kddLogo",
     isExternal: false
@@ -69,7 +69,7 @@ const concernLinks = [
   {
     id: 7,
     path: "/khc",
-    name: "Kawaii Human Consultant Limited",
+    name: "Kawaii Human Consultant Ltd",
     logo: getSrc(khcLogo),
     alt: "khcLogo",
     isExternal: false
@@ -77,7 +77,7 @@ const concernLinks = [
   {
     id: 8,
     path: "https://kawaiieducationbd.com/",
-    name: "Kawaii International Education Centre",
+    name: "Kawaii International Education Center Ltd",
     logo: getSrc(kiecLogo),
     alt: "kiecLogo",
     isExternal: true
@@ -85,7 +85,7 @@ const concernLinks = [
   {
     id: 9,
     path: "/kjdl",
-    name: "Japan Kawaii Development Limited",
+    name: "Japan Kawaii Development Ltd",
     logo: getSrc(kjdlLogo),
     alt: "kjdlLogo",
     isExternal: false
@@ -125,7 +125,7 @@ const concernLinks = [
   {
     id: 14,
     path: "/kawaii-global-ventures",
-    name: "Kawaii Global Ventures Limited",
+    name: "Kawaii Global Ventures Ltd",
     logo: getSrc(kgvlLogo),
     alt: "kgvlLogo",
     isExternal: false
@@ -133,7 +133,7 @@ const concernLinks = [
   {
     id: 15,
     path: "/kawaii-japan-career-hr",
-    name: "Kawaii Japan Career & HR Solutions",
+    name: "Kawaii Japan Career & HR Solutions Ltd",
     logo: getSrc(kjchsLogo),
     alt: "kjchsLogo",
     isExternal: false

@@ -40,15 +40,15 @@ const TABLE_KEYS = [
 const STAT_KEYS = ['established', 'capital', 'employees'];
 
 const SISTER_CONCERNS = [
-  { name: 'Kawaii Group Japan', href: 'https://kawaiigroupjapan.jp/', logo: kgjLogo },
-  { name: 'Kawaii Global Ventures Limited', path: '/kawaii-global-ventures', logo: kgvlLogo },
-  { name: 'Kawaii Japan Career & HR Solutions', path: '/kawaii-japan-career-hr', logo: kjchsLogo },
+  { name: 'Kawaii Group Japan Ltd', href: 'https://kawaiigroupjapan.jp/', logo: kgjLogo },
+  { name: 'Kawaii Global Ventures Ltd', path: '/kawaii-global-ventures', logo: kgvlLogo },
+  { name: 'Kawaii Japan Career & HR Solutions Ltd', path: '/kawaii-japan-career-hr', logo: kjchsLogo },
   { name: 'M/S Sanjana International', href: 'https://sanjanahr.com/', logo: sanajanaLogo },
   { name: 'Achieve Japan', href: 'https://achievejapanssw.com/', logo: ajLogo },
-  { name: 'Kawaii Advanced Technology & Solution', path: '/concerns', logo: katslLogo },
+  { name: 'Kawaii Advanced Technology & Solution Ltd', path: '/concerns', logo: katslLogo },
   { name: 'Tredmig', href: 'https://tredmig.com/', logo: tredmigLogo },
-  { name: 'Japan Kawaii Design & Development', path: '/concerns', logo: kddlLogo },
-  { name: 'Kawaii International Education Center', href: 'https://kawaiieducationbd.com/', logo: kiecLogo },
+  { name: 'Japan Kawaii Design & Development Ltd', path: '/concerns', logo: kddlLogo },
+  { name: 'Kawaii International Education Center Ltd', href: 'https://kawaiieducationbd.com/', logo: kiecLogo },
   { name: 'Biman Holidays', href: 'https://bimanholidays.com/', logo: bhLogo },
 ];
 

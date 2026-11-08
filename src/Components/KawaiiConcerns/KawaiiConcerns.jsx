@@ -38,6 +38,11 @@ const KawaiiConcerns = () => {
     const [activeTab, setActiveTab] = useState('all');
     const [selectedCompany, setSelectedCompany] = useState(null);
 
+    const selectedBulletsRaw = selectedCompany
+        ? t(`concernsPage.details.${selectedCompany.cardId}.bullets`)
+        : null;
+    const selectedBullets = Array.isArray(selectedBulletsRaw) ? selectedBulletsRaw : [];
+
     const categories = [
         { id: 'all', label: 'All Companies' },
         { id: 'hr', label: 'Recruitment & HR' },
@@ -87,7 +92,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Technology & Software',
             location: 'Bangladesh & Japan',
             flag: '🇧🇩 🇯🇵',
-            concernName: 'Kawaii Advanced Technology & Solution',
+            concernName: 'Kawaii Advanced Technology & Solution Ltd',
             cardImg: hwch_3,
             cardLogo: kastlLogo,
             internalPath: '/concerns',
@@ -98,7 +103,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Global HQ & Operations',
             location: 'Tokyo, Japan',
             flag: '🇯🇵',
-            concernName: 'Kawaii Group Japan',
+            concernName: 'Kawaii Group Japan Ltd',
             cardImg: hwch_6,
             cardLogo: kgjLogo,
             externalLink: 'https://kawaiigroupjapan.jp/',
@@ -121,7 +126,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Design & Manufacturing',
             location: 'Japan & Bangladesh',
             flag: '🇯🇵 🇧🇩',
-            concernName: 'Japan Kawaii Design & Development',
+            concernName: 'Japan Kawaii Design & Development Ltd',
             cardImg: hwch_7,
             cardLogo: kddlLogo
         },
@@ -131,7 +136,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Higher Education Consultancy',
             location: 'Global / Europe / Australia',
             flag: '🎓 🌐',
-            concernName: 'Kawaii International Education Center',
+            concernName: 'Kawaii International Education Center Ltd',
             cardImg: hwch_8,
             cardLogo: kiecLogo,
             externalLink: 'https://kawaiieducationbd.com/'
@@ -142,7 +147,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Joint Venture & Investment',
             location: 'Japan & Bangladesh',
             flag: '🇯🇵 🇧🇩',
-            concernName: 'Kawaii Global Ventures Limited',
+            concernName: 'Kawaii Global Ventures Ltd',
             cardImg: jpBusinessCenter,
             cardLogo: kgvlLogo,
             internalPath: '/kawaii-global-ventures'
@@ -153,7 +158,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Career Placement & HR',
             location: 'Japan & Bangladesh',
             flag: '🇯🇵 🇧🇩',
-            concernName: 'Kawaii Japan Career & HR Solutions',
+            concernName: 'Kawaii Japan Career & HR Solutions Ltd',
             cardImg: hwch_1,
             cardLogo: kjchsLogo,
             internalPath: '/kawaii-japan-career-hr'
@@ -355,11 +360,11 @@ const KawaiiConcerns = () => {
                                     : t(`concernsPage.cards.${selectedCompany.cardId}.desc`)}
                             </p>
 
-                            {t(`concernsPage.details.${selectedCompany.cardId}.bullets`) && (
+                            {selectedBullets.length > 0 && (
                                 <div className="kc-modal-highlights">
                                     <h5 className="kc-modal-h5">Key Services & Highlights</h5>
                                     <ul className="kc-bullets-list">
-                                        {t(`concernsPage.details.${selectedCompany.cardId}.bullets`).map((b, idx) => (
+                                        {selectedBullets.map((b, idx) => (
                                             <li key={idx} className="kc-bullet-item">
                                                 <FontAwesomeIcon icon={faCircleCheck} className="kc-check-icon" />
                                                 <span>{b}</span>

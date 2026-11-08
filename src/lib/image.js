@@ -4,6 +4,14 @@
  */
 
 const PUBLIC_IMAGE_SIZES = {
+  '/bussiness/add-cart-buy-now-online-commerce-graphic-concept.jpg': {
+    width: 5000,
+    height: 3337,
+  },
+  '/bussiness/business-coworkers-discussing-new-ideas-brainstorming-together-looking-new-project-document.jpg': {
+    width: 6000,
+    height: 4000,
+  },
   '/sister-slider/achieve_japan.webp': { width: 1024, height: 1024 },
   '/sister-slider/biman_holidays.webp': { width: 1024, height: 1024 },
   '/sister-slider/katsl_tech.webp': { width: 1024, height: 1024 },

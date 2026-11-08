@@ -83,8 +83,11 @@
 @keyframes sakura-fall {
   0%   { transform: translateY(-60px) rotate(0deg) translateX(0px); opacity: 0; }
   10%  { opacity: 0.8; }
-  90%  { opacity: 0.6; }
-  100% { transform: translateY(700px) rotate(720deg) translateX(80px); opacity: 0; }
+  90%  { opacity: 0.65; }
+  100% {
+    transform: translateY(700px) rotate(720deg) translateX(var(--petal-drift, 20px));
+    opacity: 0;
+  }
 }
 
 @keyframes float {
@@ -244,6 +247,50 @@
   font-size: 22px;
   animation: sakura-fall linear infinite;
   opacity: 0;
+}
+
+.kg-sakura-pile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  height: 72px;
+  z-index: 2;
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.kg-sakura-pile--clear {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.kg-petal-landed {
+  position: absolute;
+  line-height: 1;
+  opacity: 0.78;
+  filter: drop-shadow(0 1px 1px rgba(190, 30, 45, 0.15));
+  animation: sakura-land 0.55s ease-out both;
+  will-change: transform, opacity;
+}
+
+.kg-petal-landed__inner {
+  display: inline-block;
+  line-height: 1;
+}
+
+@keyframes sakura-land {
+  0% {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.85);
+  }
+  70% {
+    opacity: 0.85;
+    transform: translateY(3px) scale(1.05);
+  }
+  100% {
+    opacity: 0.78;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Hero wave divider */
