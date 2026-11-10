@@ -1,0 +1,105 @@
+# Next.js static export on LiteSpeed / Apache (cPanel)
+# Next.js with trailingSlash: true exports pages as folder/index.html
+
+Options -Indexes -MultiViews +FollowSymLinks
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Prefer apex host (matches canonical URLs)
+  RewriteCond %{HTTP_HOST} ^www\.kawaiibd\.com$ [NC]
+  RewriteRule ^(.*)$ https://kawaiibd.com/$1 [R=301,L]
+
+  # Apex `/` → locale home (correct i18n setup — one English URL: /en/)
+  # SF will list this as a 301 "Internal Redirect". That is expected, not a bug.
+  # Do NOT rewrite to /en/index.html (that creates a "Canonicalised" soft duplicate).
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^$ /bn/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^$ /ja/ [R=302,L]
+  RewriteRule ^$ /en/ [R=301,L]
+
+  # Redirect /jp or /jp/ to /ja/
+  RewriteRule ^jp/?(.*)$ /ja/$1 [R=301,L]
+
+  # Legacy /{locale}/home → /{locale}/
+  RewriteRule ^/?(en|bn|ja)/home(/.*)?$ /$1/ [R=301,L,NE,QSA]
+
+  # QR / short links (printed codes use /masterclass and /seminar — do not change QR data)
+  # Honor saved locale cookie; otherwise default to /en/
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^masterclass/?$ /bn/masterclass/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^masterclass/?$ /ja/masterclass/ [R=302,L]
+  RewriteRule ^masterclass/?$ /en/masterclass/ [R=301,L]
+
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^seminar/?$ /bn/seminar/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^seminar/?$ /ja/seminar/ [R=302,L]
+  RewriteRule ^seminar/?$ /en/seminar/ [R=301,L]
+
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=bn([;]|$) [NC]
+  RewriteRule ^career/?$ /bn/career/ [R=302,L]
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)kg_locale=ja([;]|$) [NC]
+  RewriteRule ^career/?$ /ja/career/ [R=302,L]
+  RewriteRule ^career/?$ /en/career/ [R=301,L]
+
+  # Old broken img src="[object Object]" became crawlable relative URLs
+  RewriteRule ^/?(en|bn|ja)/.+/\%5Bobject\%20Object\%5D/?$ /$1/ [R=301,L,NC,NE]
+  RewriteRule ^/?(en|bn|ja)/.+/\[object Object\]/?$ /$1/ [R=301,L,NC,NE]
+
+  # After an internal rewrite, stop
+  RewriteCond %{ENV:REDIRECT_STATUS} 200
+  RewriteRule ^ - [L]
+
+  # Real files — serve as-is
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Real directories — let Apache serve index.html via DirectoryIndex
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Clean URLs fallback for index.html in subfolders (e.g. /en or /en/)
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+  # Clean URLs fallback for .html files
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# Security & SEO Diagnostic Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # CSP: allow Next.js inline/bootstrap, GA, Google Forms fetch, geo lookup, QR images, YouTube embeds
+  Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; form-action 'self' https://docs.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://api.qrserver.com https://www.googletagmanager.com https://www.google-analytics.com https://i.ytimg.com https://*.ytimg.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://api.country.is https://get.geojs.io https://docs.google.com; media-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; upgrade-insecure-requests"
+</IfModule>
+
+# Browser Caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
