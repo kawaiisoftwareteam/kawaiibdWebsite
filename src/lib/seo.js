@@ -29,7 +29,7 @@ export const PAGE_SEO = {
     en: {
       title: 'Kawaii Group | Japan-Bangladesh Partnerships, FDI Consulting & HR',
       description:
-        'Kawaii Group is a leading Japan-Bangladesh joint venture specializing in FDI consulting, human resources and recruitment, Japanese language and international education, technology solutions, manufacturing and trade, and bilateral business partnerships.',
+        'Kawaii Group is a leading Japan-Bangladesh joint venture specializing in FDI consulting, human resources and recruitment, Japanese language and international education, technology solutions, trade, and bilateral business partnerships.',
     },
     bn: {
       title: 'কাওয়াই গ্রুপ | জাপান-বাংলাদেশ পার্টনারশিপ, FDI কনসাল্টিং ও এইচআর',
@@ -63,7 +63,7 @@ export const PAGE_SEO = {
     en: {
       title: 'Our Services | FDI Consulting, HR Recruitment, IT, Trade & Travel | Kawaii Group',
       description:
-        'Comprehensive Japan-Bangladesh services by Kawaii Group: FDI consulting, human resources and recruitment for Japan, Japanese language and international education, technology solutions, manufacturing and trade, travel services, and bilateral business partnerships.',
+        'Comprehensive Japan-Bangladesh services by Kawaii Group: FDI consulting, human resources and recruitment for Japan, Japanese language and international education, technology solutions, trade, travel services, and bilateral business partnerships.',
     },
     bn: {
       title: 'আমাদের সেবা | FDI কনসাল্টিং, এইচআর নিয়োগ, প্রযুক্তি, বাণিজ্য ও ভ্রমণ | কাওয়াই গ্রুপ',

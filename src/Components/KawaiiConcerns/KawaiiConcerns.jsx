@@ -81,7 +81,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Trade & Consultancy',
             location: 'Global Operations',
             flag: '🌐',
-            concernName: 'Tredmig',
+            concernName: 'Tredmig Limited',
             cardImg: hwch_2_1,
             cardLogo: tredmig,
             externalLink: 'https://tredmig.com/'
@@ -136,7 +136,7 @@ const KawaiiConcerns = () => {
             categoryLabel: 'Higher Education Consultancy',
             location: 'Global / Europe / Australia',
             flag: '🎓 🌐',
-            concernName: 'Kawaii International Education Center Ltd',
+            concernName: 'Kawaii International Education Center',
             cardImg: hwch_8,
             cardLogo: kiecLogo,
             externalLink: 'https://kawaiieducationbd.com/'

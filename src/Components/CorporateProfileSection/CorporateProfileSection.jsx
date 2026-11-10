@@ -46,9 +46,9 @@ const SISTER_CONCERNS = [
   { name: 'M/S Sanjana International', href: 'https://sanjanahr.com/', logo: sanajanaLogo },
   { name: 'Achieve Japan', href: 'https://achievejapanssw.com/', logo: ajLogo },
   { name: 'Kawaii Advanced Technology & Solution Ltd', path: '/concerns', logo: katslLogo },
-  { name: 'Tredmig', href: 'https://tredmig.com/', logo: tredmigLogo },
+  { name: 'Tredmig Limited', href: 'https://tredmig.com/', logo: tredmigLogo },
   { name: 'Japan Kawaii Design & Development Ltd', path: '/concerns', logo: kddlLogo },
-  { name: 'Kawaii International Education Center Ltd', href: 'https://kawaiieducationbd.com/', logo: kiecLogo },
+  { name: 'Kawaii International Education Center', href: 'https://kawaiieducationbd.com/', logo: kiecLogo },
   { name: 'Biman Holidays', href: 'https://bimanholidays.com/', logo: bhLogo },
 ];
 

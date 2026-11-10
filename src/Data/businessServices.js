@@ -12,7 +12,7 @@ import visaImg from '../Assets/services/Visa Assistance.webp';
 import globalBusinessImg from '../Assets/services/global-business.webp';
 import partnershipImg from '../Assets/services/Strategic Business Partnerships.webp';
 
-const ecommerceImg = '/bussiness/add-cart-buy-now-online-commerce-graphic-concept.jpg';
+const ecommerceImg = '/bussiness/online-payment-purchase-e-commerce-buy-icon.webp';
 const staffingImg =
   '/bussiness/business-coworkers-discussing-new-ideas-brainstorming-together-looking-new-project-document.jpg';
 

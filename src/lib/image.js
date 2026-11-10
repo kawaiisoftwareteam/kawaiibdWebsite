@@ -4,9 +4,9 @@
  */
 
 const PUBLIC_IMAGE_SIZES = {
-  '/bussiness/add-cart-buy-now-online-commerce-graphic-concept.jpg': {
-    width: 5000,
-    height: 3337,
+  '/bussiness/online-payment-purchase-e-commerce-buy-icon.webp': {
+    width: 1600,
+    height: 1234,
   },
   '/bussiness/business-coworkers-discussing-new-ideas-brainstorming-together-looking-new-project-document.jpg': {
     width: 6000,

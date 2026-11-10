@@ -701,7 +701,7 @@
       "established": "2019",
       "capital": "BDT 10 Crore",
       "employees": "75",
-      "businessActivities": "Human resources and recruitment, Japanese language and international education, technology solutions, manufacturing and trade, travel, and Japan–Bangladesh business partnerships.",
+      "businessActivities": "Human Resources and Recruitment, Japanese Language and International Education, Technology Solutions, Trade, Travel, and Japan–Bangladesh Business Partnerships.",
       "headOffice": "Suite-2A, House # 11, Block-B, Main Road, Banasree, Rampura, Dhaka-1219, Bangladesh",
       "corporateOffice": "Taj Casilina, L-2, 25 Gulshan Avenue, Gulshan-1, Dhaka-1212, Bangladesh",
       "japanOffice": "ITO Daikanyama 1F, 2-17-8 Ebisu-Nishi, Shibuya-ku, Tokyo 150-0021, Japan",
@@ -1408,12 +1408,9 @@
       "title1": "Building Businesses That Create",
       "title2": "Lasting Value",
       "p1": "Our journey began with a clear purpose — to build businesses that create lasting value. Today, our companies serve clients across multiple industries. Every business follows the same commitment to quality, integrity, and customer satisfaction.",
-      "p2": "We believe every partnership deserves trust and transparency. Our experienced team works with precision and care. We focus on quality, timely service, and long-term business success.",
-      "p3": "In addition, we are committed to providing reliable after-service support to ensure continued satisfaction and smooth operations for our partners and clients. From first consultation to ongoing collaboration, we stay close to every stakeholder.",
-      "p4": "Whether you need manufacturing solutions, recruitment support, business partnerships, or educational services, Kawaii Group provides reliable solutions under one trusted brand.",
-      "p5": "From our roots as a Japan-Bangladesh joint venture to our expansion into global markets, we have consistently delivered excellence. Our integrated approach helps businesses and individuals achieve their goals with confidence.",
-      "p6": "Over more than three decades, Kawaii Group has developed deep expertise in apparel and textile manufacturing, international trading, technology solutions, human resource development, Japanese language education, overseas employment support, and travel services. This breadth allows us to design connected solutions rather than isolated services.",
-      "p7": "Our story continues as we invest in people, strengthen Japan-Bangladesh collaboration, and create opportunities that uplift communities. We welcome partners who share our belief that business success and social impact can grow together.",
+      "p2": "We believe every partnership deserves trust and transparency. Our experienced team focuses on quality, timely service, and reliable after-support—from first consultation to ongoing collaboration.",
+      "p3": "Whether you need recruitment support, Japanese language and international education, technology solutions, trade, travel, or Japan–Bangladesh business partnerships, Kawaii Group delivers connected solutions under one trusted brand.",
+      "p4": "From our roots as a Japan–Bangladesh joint venture to markets worldwide, we keep investing in people and collaboration—welcoming partners who believe business success and social impact can grow together.",
       "stats": {
         "companies": "Sister Companies",
         "countries": "Countries Served",
@@ -1576,7 +1573,7 @@
           "desc": "Offers professional travel and tourism solutions including travel planning, visa assistance, and holiday packages."
         },
         {
-          "name": "Tredmig",
+          "name": "Tredmig Limited",
           "type": "Business Solutions",
           "desc": "Delivers business solutions supporting innovation and market growth, helping organizations achieve sustainable success."
         },
@@ -1596,7 +1593,7 @@
           "desc": "Explores investment opportunities and international business development, creating strategic partnerships across diverse industries."
         },
         {
-          "name": "Kawaii International Education Center Ltd",
+          "name": "Kawaii International Education Center",
           "type": "Education Services",
           "desc": "Prepares students and professionals for international opportunities through language education, academic guidance, and career development."
         }

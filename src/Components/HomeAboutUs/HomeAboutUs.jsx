@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import './HomeAboutUs.css';
 import { useLocale } from '../../i18n/LocaleContext';
-import aboutUs1 from '../../Assets/aboutUs1.webp';
+import aboutUs1 from '../../Assets/team-working-together-project.webp';
 import aboutUs2 from '../../Assets/aboutUs2.webp';
 import { resolveImage } from '../../lib/image';
 

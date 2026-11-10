@@ -31,7 +31,7 @@ const sisterConcernsData = [
   },
   {
     id: 'tredmig',
-    name: 'Tredmig',
+    name: 'Tredmig Limited',
     image: '/sister-slider/tredmig_trade.webp',
     externalLink: 'https://tredmig.com/',
   },
@@ -56,7 +56,7 @@ const sisterConcernsData = [
   },
   {
     id: 'kiec',
-    name: 'Kawaii International Education Center Ltd',
+    name: 'Kawaii International Education Center',
     image: '/sister-slider/kiec_edu.webp',
     externalLink: 'https://kawaiieducationbd.com/',
   },

@@ -77,7 +77,7 @@ const concernLinks = [
   {
     id: 8,
     path: "https://kawaiieducationbd.com/",
-    name: "Kawaii International Education Center Ltd",
+    name: "Kawaii International Education Center",
     logo: getSrc(kiecLogo),
     alt: "kiecLogo",
     isExternal: true
@@ -109,7 +109,7 @@ const concernLinks = [
   {
     id: 12,
     path: "https://tredmig.com/",
-    name: "Tredmig",
+    name: "Tredmig Limited",
     logo: getSrc(tredmig_logo),
     alt: "tredmig_logo",
     isExternal: true
